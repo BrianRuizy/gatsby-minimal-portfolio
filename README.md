@@ -4,5 +4,12 @@ Website if viewable at www.brianruizy.com
 ## About 
 This is the third version of portfolio websites that I've made and one I'm proud of, given that I had to self-teach myself all to do with web development; since it's a subject that is untouched in University CS programs. Though, proud, never satisfied. I believe it's important to always find areas to improve in, for ones' own personal growth.
 
+This site features:  
+* Responsive web design, optimized for tablets and mobile devices. 
+* Minimalist flat custom illustrations.
+* Lava background gradient that changes with time, implemented in JS*. may evolve to parallax effect.
+* An entirely CSS, MacOS style window pane with embedded links.
+* A horizontal timeline depicting events, implemented in JS
+
 ## Disclaimer, NOT 
-😎 Feel free to use as a template for your own site, and style it to your taste! Cheers.
+😎 Feel free to use as a template for your own site, improve upon and style it to your taste! Cheers.
