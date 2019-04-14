@@ -97,20 +97,33 @@ a img {
 }
 
 #about {
-
-/*  background-color: #D57878;*/
- /* background-image: linear-gradient(to bottom right, rgb(185, 0, 0), rgb(107, 1, 107), rgb(0, 0, 206));*/
   height: 1020px;
   margin-top:-30px;
+  overflow: hidden;
+  text-align: center;
+  
 }
 
+.center-code{
+  position: absolute;
+  right: 15%;
+  left: 15%;
+}
 
 #code {
-/*  margin-top:150px;*/
-  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 5px; /*round edges*/
   width: 750px;
-  margin: 0 auto;
+  margin: auto;
   
+  /*trying to resolve issues with particles-js 
+
+  position: absolute;  
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  */
+
   background: rgb(212, 212, 212);
   height: 600px;
   font-family: 'Monaco', 'Courier New';
@@ -135,6 +148,7 @@ a img {
           background-color: rgb(0, 199, 0);}
 
 #console {
+  overflow: hidden;
   width:670px;
   padding: 40px;
   height: 500px;
@@ -439,7 +453,19 @@ ul.toc {
   }
   
   .portfolio-thumb {
-    width: 90%;
+    width: 80%;
+  }
+
+  #code, #console {
+    width: 95%;
+    overflow: hidden;
+   
+  }
+
+  .center-code{
+   position: absolute;
+   left: 10%;
+   right: 10%; 
   }
 
   #header{
@@ -463,6 +489,7 @@ ul.toc {
   #code, #console {
     width: 90%;
     overflow: hidden;
+   
   }
 
   #illustration {
@@ -471,8 +498,9 @@ ul.toc {
 
   #illustration img{
     padding-top: 60px;
-    width: 50%;
+    width: 60%;
     min-width:400px;
+    
   }
 
   #resume .inner {
@@ -484,9 +512,7 @@ ul.toc {
   }
 }
 
-@media (max-width: 480px) {
-  
-}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
 /* STYLES GO HERE */
@@ -495,10 +521,11 @@ ul.toc {
     padding-bottom: 60px;
   }
 
-  #illustration img {
-    padding-top: 75px;
+  #code {
+    overflow: hidden;
+    height: auto;
   }
-
+  
   .tagline {
     padding-bottom : 20px; 
   }
@@ -514,20 +541,30 @@ ul.toc {
     padding: 0px 10px 0px 10px;
   }
 
+  #illustration img {
+    padding-top: 75px;
+    width: 50%;
+    min-width: 350px;
+   
+  }
+
   #code, #console {
-    height:auto;
+
+    height: auto;
   }
 
   #console {
-    padding: 20px;
+    overflow: hidden;
+    height: auto;
   }
 
   #code {
     margin-bottom: 20px;
   }
+
 }
 
-/*-------------------------------- timeline-------------------------------- 
+/*------------------- timeline------------------ 
 
 
 Primary style
@@ -942,11 +979,16 @@ Main Components
 */
 
 /* -------particles -------*/
+
+#particles-js canvas {
+    display: block;
+}
+
 #particles-js{
+  display: block;
   width: 100%;
   height: 1020px;
-  padding: 0px;
-  margin: 0px;
+
   margin-top:-25px;
   background: linear-gradient(45deg, rgb(226, 30, 30), rgb(231, 48, 79), rgb(126, 60, 231), #23A6D5, rgb(35, 213, 198), rgb(93, 221, 150));
 	background-size: 400% 400%;
@@ -954,7 +996,6 @@ Main Components
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
 }
-
 
 #particles-js a {
 
