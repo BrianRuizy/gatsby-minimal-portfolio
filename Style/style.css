@@ -446,6 +446,29 @@ ul.toc {
   border-radius: 10px 10px 0 0;
 }
  /* -------------- responsive ---------------- */
+@media screen and (max-width:980px) {
+
+ .portfolio-thumb {
+    width: 80%;
+  }
+
+  #code, #console {
+    width: 95%;
+    overflow: hidden;
+   
+  }
+
+  .center-code{
+   position: absolute;
+   left: 10%;
+   right: 10%; 
+  }
+
+  #resume .inner {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width:860px) {
 
  .toc-holder {
