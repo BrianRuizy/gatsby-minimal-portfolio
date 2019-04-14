@@ -69,7 +69,7 @@ a img {
 
 #illustration img {
   padding-top: 75px;
-  width: 40%;
+  width: 50%;
   min-width:700px;
 }
 
@@ -104,31 +104,6 @@ a img {
   margin-top:-30px;
 }
 
-#gradient
-{
-  width: 100%;
-  height: 1020px;
-  padding: 0px;
-  margin: 0px;
-  margin-top:-25px;
-}
-
-#gradient a {
-
-  color: #1d78b1;
-  text-decoration: none;
-}
-#gradient p {
-  text-align: center;
-  padding-top: 60px;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.3em;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-
-}
 
 #code {
 /*  margin-top:150px;*/
@@ -165,6 +140,7 @@ a img {
   height: 500px;
   margin:0 auto;
   background: rgb(32, 31, 44);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 span.answer {
@@ -212,6 +188,7 @@ span.answer {
   width: 45%;
   margin: 20px;
   background-color: rgb(240, 240, 240);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.0060);
   border-radius: 5px;
   display: inline-block;
   /*//height: 500px;*/
@@ -476,7 +453,7 @@ ul.toc {
   
    #illustration img{
     padding-top: 60px;
-    width: 40%;
+    width: 70%;
     min-width:400px;
   }
 }
@@ -494,7 +471,7 @@ ul.toc {
 
   #illustration img{
     padding-top: 60px;
-    width: 40%;
+    width: 50%;
     min-width:400px;
   }
 
@@ -954,11 +931,80 @@ Main Components
   }
 }
 
-/* * {
+/*  {
 
   for testing, do not uncomment.
   
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
+}
+*/
+
+/* -------particles -------*/
+#particles-js{
+  width: 100%;
+  height: 1020px;
+  padding: 0px;
+  margin: 0px;
+  margin-top:-25px;
+  background: linear-gradient(45deg, rgb(226, 30, 30), rgb(231, 48, 79), rgb(126, 60, 231), #23A6D5, rgb(35, 213, 198), rgb(93, 221, 150));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+
+#particles-js a {
+
+  color: #1d78b1;
+  text-decoration: none;
+}
+#particles-js p {
+  text-align: center;
+  padding-top: 60px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
