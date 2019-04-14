@@ -446,7 +446,7 @@ ul.toc {
   border-radius: 10px 10px 0 0;
 }
  /* -------------- responsive ---------------- */
-@media screen and (max-width:980px) {
+@media screen and (max-width:1080px) {
 
  .portfolio-thumb {
     width: 80%;
