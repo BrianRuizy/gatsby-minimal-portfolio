@@ -1,10 +1,10 @@
 # portfolio-website-3.0 📓
-Web Development - 3rd iteration of my personal Software Development portfolio website, featuring a minimalist UI/UX &amp; responsive design.
+Web Development - 3rd iteration of my personal Software Development portfolio website, featuring a minimalist material UI/UX, and a mobile responsive design.
 
 Website is viewable at www.brianruizy.com
 
 ## About 
-This is the third version of portfolio websites that I've made and one I'm proud of, given that I had to self-teach myself all to do with web development. Though, proud, never satisfied. I believe it's important to always find areas to improve in, for ones' own personal growth...
+This is the third version of portfolio websites that I've made and one I'm proud of, given that I had to self-teach myself web development. Though, proud, never satisfied. I believe it's important to always find areas to improve in, for ones' own personal growth...
 
 This site features:  
 * Responsive web design, optimized for tablets and mobile devices. 
@@ -15,4 +15,5 @@ This site features:
 * **New** entirely CSS based live-gradient effect. Layered with particles-js background effect.
 
 ## Disclaimer, NOT 
-😎 Feel free to use as a template for your own site, improve upon and style it to your taste! Cheers.
+😎 If you like how this website looks and functions, feel free to use code as a template for your own site.
+Improve upon and style it to your taste! Cheers.
