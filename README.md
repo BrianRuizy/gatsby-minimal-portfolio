@@ -1,4 +1,7 @@
 # portfolio-website-3.0 📓
+
+![portfolio gif]("http://umihi.co/thumbnailed-portfolio-websites/gifs/brianruizy-portfolio-website-3.0.gifg" )
+
 Web Development - 3rd iteration of my personal Software Development portfolio website, featuring a minimalist material UI/UX, and a mobile responsive design.
 
 Website is viewable at www.brianruizy.com
