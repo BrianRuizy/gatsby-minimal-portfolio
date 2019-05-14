@@ -1,12 +1,11 @@
 # portfolio-website-3.0 📓
 Web Development - 3rd iteration of my personal Software Development portfolio website, featuring a minimalist material UI/UX, and a mobile responsive design.
-
-<img align="right" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/brianruizy-portfolio-website-3.0.gif" width="40%">
-</img>
 Website is viewable at www.brianruizy.com
 
 
 ## About 
+<img align="right" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/brianruizy-portfolio-website-3.0.gif" width="50%">
+</img>
 This is the third version of portfolio websites that I've made and one I'm proud of, given that I had to self-teach myself web development. Though, proud, never satisfied. I believe it's important to always find areas to improve in, for ones' own personal growth...
 
 This site features:  
