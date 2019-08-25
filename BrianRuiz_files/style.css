@@ -1,3 +1,15 @@
+.site {
+	max-width: 100% !important;
+}
+.site-header {
+	max-width: 100% !important;
+
+}
+#site-header img {
+    width: 100% !important;
+
+}
+
 html {
   font-size: 65.5%;
   -webkit-text-size-adjust: 100%;
@@ -487,8 +499,8 @@ ul.toc {
 
   .center-code{
    position: absolute;
-   left: 10%;
-   right: 10%; 
+   left: 8%;
+   right: 8%; 
   }
 
   #header{
@@ -510,9 +522,20 @@ ul.toc {
 @media screen and (max-width:700px) {
 
   #code, #console {
-    width: 90%;
+    width: 95%;
     overflow: hidden;
    
+  }
+
+  #console{
+
+    padding-left: 10px;
+  }
+
+  .center-code{
+   position: absolute;
+   left: 5%;
+   right: 5%; 
   }
 
   #illustration {
@@ -572,13 +595,13 @@ ul.toc {
   }
 
   #code, #console {
-
     height: auto;
   }
 
   #console {
     overflow: hidden;
     height: auto;
+    padding-left: 10px;
   }
 
   #code {
