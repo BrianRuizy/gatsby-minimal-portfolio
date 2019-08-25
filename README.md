@@ -1,8 +1,6 @@
-# Portfolio Website 3.0 💻💼
-
 <h1 align="center">
-    <img alt="Lumen" title="Lumen" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/Misc/BR%20logoTrans.png" width="140"> </br>
-    Lumen
+    <img alt="Lumen" title="Lumen" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/Misc/BR%20logoTrans.png" width="100"> </br>
+    Portfolio Website 3.0 💻💼
 </h1>
 
 Web Development repo of my personal Software Development portfolio website, featuring a minimalist material UI/UX, and a mobile responsive design.
