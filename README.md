@@ -1,7 +1,11 @@
 <h1 align="center">
     <img alt="Lumen" title="Lumen" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/Misc/BR%20logoTrans.png" width="100"> </br>
-    Portfolio Website 3.0 💻💼
+    Portfolio Website 3.0
 </h1>
+
+<h4 align="center">
+Minimal material UI/UX, and a mobile responsive design. Website is viewable <a href="https://www.brianruizy.com" target="_blank">here.</a>.
+</h4>
 
 Web Development repo of my personal Software Development portfolio website, featuring a minimalist material UI/UX, and a mobile responsive design.
 Website is viewable at www.brianruizy.com
