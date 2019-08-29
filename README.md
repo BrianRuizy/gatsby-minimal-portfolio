@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Lumen" title="Lumen" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/Misc/BR%20logo%20gradient2.png" width="100"> </br>
+    <img alt="logo" title="br logo" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/Misc/BR%20logo%20gradient2.png" width="100"> </br>
     Portfolio Website 3.0
 </h1>
 
