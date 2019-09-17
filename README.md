@@ -26,3 +26,6 @@ This site features:
 ## Disclaimer, NOT 
 😎 If you like how this website looks and functions, feel free to use code as a template for your own site.
 Improve upon and style it to your taste! Cheers.
+
+------
+##### ©[Brian Ruiz](https://github.com/BrianRuizy)
