@@ -12,10 +12,6 @@ Minimal material inspired UI/UX, and a mobile responsive design. Website is view
 ## About 
 <img align="right" src="https://github.com/BrianRuizy/portfolio-website-3.0/blob/master/brianruizy-portfolio-website-3.0.gif" width="40%">
 </img>
-This is the 3rd version of portfolio websites that I've made and one I'm proud of, given that I had to self-teach myself web development. Though, proud, never satisfied. I believe it's important to always find areas to improve in, for ones' own personal growth...
-
-
-##
 
 This site features:  
 * Responsive web design, optimized for tablets and mobile devices. 
