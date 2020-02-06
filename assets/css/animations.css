@@ -1,0 +1,107 @@
+.overlay {
+	position: fixed;
+    background: #191A1E;
+    z-index: 15;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+}
+
+.overlay .logo {
+	display: inline-block;
+	transform: translate(-50%, 0);
+	animation: textAnimation 2s;
+	-moz-animation: textAnimation 2s; /* Firefox */
+	-webkit-animation: textAnimation 2s; /* Safari and Chrome */
+	 -o-animation: textAnimation 2s; /* Opera */
+}
+
+.overlayclick {
+	position: fixed;
+    background: #191A1E;
+	z-index: 15;
+	top: 0;
+	height: 0;
+	width: 100%;
+	left: 0;
+	overflow: hidden;
+	display: block !important;
+}
+
+
+.overlaymenu {
+	position: fixed;
+    background: #191A1E;
+	z-index: 15;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	display: none;
+}
+
+.loaded .overlay {
+    animation: overlayAnimation 1.2s;
+	-moz-animation: overlayAnimation 1.2s; /* Firefox */
+	-webkit-animation: overlayAnimation 1.2s; /* Safari and Chrome */
+    -o-animation: overlayAnimation 1.2s; /* Opera */
+    height: 0; 
+}
+
+@keyframes overlayAnimation {0% {height: 100%;}  100% {height: 0;}}
+@-moz-keyframes overlayAnimation {0% {height: 100%;}  100% {height: 0;}}
+@-webkit-keyframes overlayAnimation {0% {height: 100%;}  100% {height: 0;}}
+@-o-keyframes overlayAnimation {0% {height: 100%;}  100% {height: 0;}}
+
+
+
+
+.loaded .image-box-overlay {
+    width: 0;
+    animation: imgAnimation 2s;
+	-moz-animation: imgAnimation 2s; /* Firefox */
+	-webkit-animation: imgAnimation 2s; /* Safari and Chrome */
+	 -o-animation: imgAnimation 2s; /* Opera */
+}
+
+@keyframes imgAnimation {0% {width: 100%;} 50% {width: 100%;} 100% {width: 0;}}
+@-moz-keyframes imgAnimation {0% {width: 100%;} 50% {width: 100%;} 100% {width: 0;}}
+@-webkit-keyframes imgAnimation {0% {width: 100%;} 50% {width: 100%;} 100% {width: 0;}}
+@-o-keyframes imgAnimation {0% {width: 100%;} 50% {width: 100%;} 100% {width: 0;}}
+
+
+.loaded .header-block {
+    animation: textAnimation 2s;
+	-moz-animation: textAnimation 2s; /* Firefox */
+	-webkit-animation: textAnimation 2s; /* Safari and Chrome */
+    -o-animation: textAnimation 2s; /* Opera */
+}
+
+@keyframes textAnimation {0% {top: 60%; opacity: 0;} 50% {top: 55%; opacity: 0;} 100% {top: 48%; opacity: 1;}}
+@-moz-keyframes textAnimation {0% {top: 60%; opacity: 0;} 50% {top: 55%; opacity: 0;} 100% {top: 48%; opacity: 1;}}
+@-webkit-keyframes textAnimation {0% {top: 60%; opacity: 0;} 50% {top: 55%; opacity: 0;} 100% {top: 48%; opacity: 1;}}
+@-o-keyframes textAnimation {0% {top: 60%; opacity: 0;} 50% {top: 55%; opacity: 0;} 100% {top: 48%; opacity: 1;}}
+
+.progressFillAnimation { 
+	height: 100%;
+	width: 2px;
+	background: rgba(255, 255, 255, 0.295);
+	position: absolute;
+}
+
+.loaded .progressFillAnimation {
+	animation: barAnimation 2s;
+  -moz-animation: barAnimation 2s; /* Firefox */
+  -webkit-animation: barAnimation 2s; /* Safari and Chrome */
+	-o-animation: barAnimation 2s; /* Opera */
+	height: 0;
+	
+}
+
+@keyframes barAnimation {0% {height: 100%;} 50% {height: 100%;} 100% {height: 0;}}
+@-moz-keyframes barAnimation {0% {height: 100%;} 50% {height: 100%;} 100% {height: 0;}}
+@-webkit-keyframes barAnimation {0% {height: 100%;} 50% {height: 100%;} 100% {height: 0;}}
+@-o-keyframes barAnimation {0% {height: 100%;} 50% {height: 100%;} 100% {height: 0;}}
+
