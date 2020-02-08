@@ -246,7 +246,7 @@ html, body {
 /* ------------------------- Header -------------------------------------------------- */
 
 .header {
-	width: 100vw; 
+	width: 100%; 
 	height: 100vh;
     float: left;
     background: #fff;
@@ -361,7 +361,7 @@ html, body {
  /* ------------------------- About Home -------------------------------------------------- */
 
 .home-about {
-    width: 100vw; 
+    width: 100%; 
     background: rgb(24, 26, 31);
     padding: 160px 0;
 }
@@ -415,6 +415,11 @@ a.btn.animatelink.about-btn {
     background: none;
     color: #fff;
     box-shadow: none;
+    padding: 30px 50px 30px 40px;
+}
+
+a.btn.animatelink.about-btn.home {
+    padding: 30px 0px;
 }
 
 @media screen and (max-width: 1260px){
@@ -1753,18 +1758,7 @@ body.work .progressContainer, body.work .footer {
     width: 40%;
 }
 
-.about-info-block .socials {
-    position: absolute;
-    bottom: 80px;
-    top: auto;
-    transform: translate(0, 0);
-    left: auto;
-    width: 120px;
-    height: 40px;
-    margin-left: -8px;
-    z-index: 5;
-    position: absolute;
-}
+
 
 @media screen and (max-width: 1180px){
     .about-info-block .block {
@@ -1773,9 +1767,6 @@ body.work .progressContainer, body.work .footer {
     .about-info-block .block h3 {
         margin-bottom: 20px;
     }
-    .about-info-block .socials {
-        bottom: 40px;
-    }
 }
 
 @media screen and (max-width: 1060px){
@@ -1783,14 +1774,14 @@ body.work .progressContainer, body.work .footer {
         margin-bottom: 80px;
     }
     .about-info-block .block {
-        padding: 40px;
+        padding: 30px;
     }    
     .about-info-block .block h3 {
         margin-bottom: 20px;
     }
-    .about-info-block .socials {
-        bottom: 40px;
-    }   
+    .about-info-block .block p {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 980px){
@@ -1844,16 +1835,7 @@ body.work .progressContainer, body.work .footer {
     .about-info-block .block h3 {
         margin-bottom: 30px;
     }
-    .about-info-block p {
-        margin-bottom: 60px;
-        font-size: 15px;
-        line-height: 30px;
-    }
-    .about-info-block .socials {
-        opacity: 1;
-        visibility: visible;
-        bottom: 40px;
-    }
+
 }
 
 .languages{
@@ -1938,6 +1920,10 @@ span.legend-dot {
     transform: translate(-10%, 0%);
 }
 
+p.w3-tooltip {
+    margin: 0;
+}
+
 .location .location-dot {
     width: 20px;
     height: 20px; 
@@ -1950,7 +1936,7 @@ span.legend-dot {
 }
 
 .location .location-ring {
-    width: 50px;
+    width:  50px;
     height: 50px; 
     border: 2px solid #614DFF;
     border-radius: 25px;
@@ -1964,19 +1950,16 @@ span.legend-dot {
 }
 
 .location .location-dot-visited {
-    width: 10px;
-    height: 10px; 
+    width:  13px;
+    height: 13px; 
     background: rgb(175, 174, 255);
     border-radius: 10px;
     position: absolute;
+    margin: 0;
 }
 
 .location .location-dot-visited.wtv {
-    width: 10px;
-    height: 10px; 
-    background: rgb(232, 163, 241);
-    border-radius: 10px;
-    position: absolute;
+    background: rgb(219, 153, 228);
 }
 
 .zoom {
@@ -2011,7 +1994,10 @@ transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will g
     .location .right {
         padding: 10px 10px 0 10px;
     }
-    
+    .location .location-dot-visited {
+        width:  12px;
+        height: 12px;
+    }
 }
 
 /* ------------------------- About Location  -------------------------------------------------- */
