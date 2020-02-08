@@ -215,11 +215,11 @@
 
 
 #menu .nav-contact .profile-picture {
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	float: left;
-	border-radius: 40px;
-	background: url("../img/brian-pic.jpg") center center;
+	border-radius: 50px;
+	background: url("../img/portrait.jpg") center center;
 	background-size: cover;
 	margin-top: 25px;
 }
