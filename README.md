@@ -9,7 +9,7 @@ Minimal UI/UX, and a mobile responsive design. Website is viewable <a href="http
 ![](https://camo.githubusercontent.com/a307f74a14e41e762300323414ddef81f3d53ae2/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f736f757263657265722d696f2f736f757263657265722d6170702e7376673f636f6c6f72423d666630303030)
     
 <h1 align="center">
-    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/master/Misc/about.png">
+    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/master/Misc/about-page.png">
 </h1>
 
 
