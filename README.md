@@ -13,5 +13,4 @@ Minimal UI/UX, and a mobile responsive design. Website is viewable <a href="http
 </h1>
 
 
-------
 ##### ©[Brian Ruiz](https://github.com/BrianRuizy)
