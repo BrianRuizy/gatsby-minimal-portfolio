@@ -1,3 +1,10 @@
+/* for debugging, uncomment
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
+
 *,
 *:after,
 *:before {
@@ -213,10 +220,13 @@ body {
     left: 0;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 
