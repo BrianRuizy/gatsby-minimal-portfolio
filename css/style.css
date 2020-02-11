@@ -2525,7 +2525,7 @@ p.w3-tooltip {
 
 .contact {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
 }
 
 .contact-back {
@@ -2534,7 +2534,6 @@ p.w3-tooltip {
     top: 0;
     right: 0;
     position: absolute;
-    background: rgb(24, 26, 31) url("../assets/img/line-nav.svg") center center no-repeat;
     background-size: contain;
     overflow: hidden;
 }
