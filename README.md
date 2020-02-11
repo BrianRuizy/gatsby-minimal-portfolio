@@ -16,7 +16,7 @@ Minimal UI/UX, and a mobile responsive design. Website is viewable <a href="http
    
     
 <h1 align="center">
-    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/master/Misc/about-page.png">
+    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/dev/Misc/about-page2.png">
 </h1>
 
 
