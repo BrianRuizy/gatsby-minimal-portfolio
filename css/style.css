@@ -549,12 +549,6 @@ html, body {
     padding: 160px 0;
 }
 
-.brian-pic {
-    background-size: cover;
-    width: 100%;
-    filter: grayscale(0);
-}
-
 .home-about .block-left {
     width: 50%;
     float: left;
