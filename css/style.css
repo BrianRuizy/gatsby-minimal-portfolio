@@ -702,7 +702,7 @@ a.btn.animatelink.about-btn.home {
 
 .roundedcard {
     background: white;
-    border-radius: 15px;
+    border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 13px 0px;
     border: solid #000000 1px;
 }
