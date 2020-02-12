@@ -11,11 +11,9 @@
     <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/master/Misc/portfolio-website-phones-mockup.png">
 </h1>
 
-
-   
     
 <h1 align="center">
-    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/dev/Misc/about-page2.png">
+    <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/dev/Misc/about-page.png">
 </h1>
 
 
