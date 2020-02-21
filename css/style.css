@@ -206,7 +206,7 @@ span.color {
 
 @media screen and (max-width: 340px) {
     h1 {
-        font-size: 32px;
+        font-size: 30px;
         line-height: 42px;
     }
 
@@ -514,7 +514,7 @@ html, body {
     }
 
     .header h1 {
-        font-size: 32px;
+        font-size: 31px;
         line-height: 42px;
         margin-bottom: 30px;
     }
@@ -534,7 +534,7 @@ html, body {
 
 @media screen and (max-width: 340px) {
     .header h1 {
-        font-size: 28px;
+        font-size: 27px;
         line-height: 38px;
         margin-bottom: 20px;
     }
@@ -666,6 +666,12 @@ a.btn.animatelink.about-btn.home {
     }
 }
 
+@media screen and (max-width: 360px) {
+    a.btn.animatelink.about-btn {
+        padding: 30px 25px 30px 40px;
+    }
+}
+
 /* ------------------------- Recent Work Home -------------------------------------------------- */
 
 .home-rw {
@@ -779,9 +785,10 @@ a.btn.animatelink.about-btn.home {
 }
 
 .rw-case img {
+    width: 70%;
     position: absolute;
     top: 50%;
-    left: calc(100% - 90px);
+    left: calc(100% - 95px);
     transform: translate(-50%, -50%);
 }
 
@@ -959,7 +966,7 @@ a.btn.animatelink.about-btn.home {
 
 .footer .btn {
     margin-bottom: 120px;
-    background: rgb(24, 26, 31);
+    background: rgb(29, 32, 39);
     border: 1px solid rgba(25, 26, 30, 0.15);
     color: #fff;
     box-shadow: 0px 0px 10px 0px #000000;
