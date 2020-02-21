@@ -779,9 +779,10 @@ a.btn.animatelink.about-btn.home {
 }
 
 .rw-case img {
+    width: 70%;
     position: absolute;
     top: 50%;
-    left: calc(100% - 90px);
+    left: calc(100% - 95px);
     transform: translate(-50%, -50%);
 }
 
