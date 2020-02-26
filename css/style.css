@@ -895,7 +895,7 @@ a.btn.animatelink.about-btn.home {
 
     .rw-case img {
         width: 45vw;
-        left: 78%;
+        left: 80%;
     }
 
     .rw-case {
@@ -1334,7 +1334,7 @@ body.work .footer {
 
     .work-b .rw-case img {
         width: 45vw;
-        left: 78%;
+        left: 80%;
         top: 50%;
         transform: translate(-50%, -50%);
         padding: 0;
