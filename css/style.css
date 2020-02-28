@@ -771,7 +771,7 @@ a.btn.animatelink.about-btn.home {
     bottom: 50px;
     left: 50px;
     background: url("../assets/img/arrow-big-dark.svg") center center no-repeat;
-    opacity: .5;
+    opacity: .2;
 }
 
 .rw-case .case-title {
