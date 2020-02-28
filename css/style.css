@@ -2095,7 +2095,7 @@ body.work .footer {
 
 .languages {
     width: 100%;
-    height: 30em;
+    height: 31em;
     margin-top: 25px;
     margin-bottom: 60px;
     background: url("../assets/img/sourcerer/languages.png") center center no-repeat;
@@ -2120,7 +2120,7 @@ body.work .footer {
 
     .funfacts {
         background: url("../assets/img/sourcerer/funfacts-tablet.png") center center no-repeat;
-        height: 30em;
+        height: 31em;
         background-size: contain;
 
     }
@@ -2129,7 +2129,7 @@ body.work .footer {
 @media screen and (max-width: 480px) {
     .languages {
         background: url("../assets/img/sourcerer/languages-phone.png") center center no-repeat;
-        height: 45em;
+        height: 50em;
         background-size: contain;
     }
 
