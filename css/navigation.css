@@ -222,6 +222,7 @@
 	background: url("../assets/img/portrait.jpg") center center;
 	background-size: cover;
 	margin-top: 25px;
+	border: 5px solid #614dff;
 }
 
 #menu .nav-contact p, #menu .nav-contact a {
