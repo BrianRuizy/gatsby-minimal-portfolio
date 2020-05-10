@@ -427,6 +427,21 @@ html, body {
     background-size: contain;
 }
 
+.header-block {
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 840px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.header-block h1 {
+    margin: 0 0 40px 0;
+    position: relative;
+}
+
 .hq-small {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
@@ -474,10 +489,28 @@ html, body {
     display: none;
 }
 
+@media screen and (max-width: 1260px) {
+    .header-block {
+        width: 740px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .header-block {
+        width: 740px;
+        padding: 0 40px;
+    }
+}
+
 @media screen and (max-width: 760px) {
     .header {
         background-size: cover;
         /* height: 95vh; */
+    }
+
+    .header-block {
+        width: 100%;
+        padding: 0 40px;
     }
 
     .header h1 {
