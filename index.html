@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/3dba036ddc.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/liveword.css">
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106940902-3"></script>
@@ -37,7 +39,7 @@
     <div class="overlaymenu"></div>
     <div class="overlayclick"></div>
     <div class="overlay"></div>
-    <a class="logo animatelink btn-hover" href="index.html">Brian Ruiz</a>
+    <a class="logo animatelink btn-hover" href="index.html">BR</a>
     <div class="nav-icon">
         <div class="hamburger-bar btn-hover"></div>
     </div>
@@ -91,16 +93,14 @@
         <div class="dot"></div>
         <p>Open to new opportunities</p>
     </div>
-    
-    <div class="header">
-        <div class="header-block">
-            <h3 class="en">Software Developer</h3>
-            <h1>Creating valuable <br><span class="color font-italic">experiences</span> from </br>lines of 
-                <span class="color font-italic">&lt/</span>code<span class="color font-italic">&gt</span>
-            </h1>
-            <a href="projects.html" class="btn animatelink">My work<img
-                    src="assets/img/arrow-small-light.svg">
-            </a>
+
+    <div class="header content">
+        <div class="slideshow">
+            <div class="slide">
+                <h3>Software Developer</h3>
+                <h2 class="word word--1">Brian Ruiz</h2>
+                <a href="projects.html" class="btn animatelink">My work<img src="assets/img/arrow-small-light.svg"></a>
+            </div>
         </div>
     </div>
     <div id="home-about" class="section home-about">
@@ -145,8 +145,8 @@
                 </div>
                 <div class="rw-cases">
                     <a href="https://ncov-dashboard.herokuapp.com" target="_blank" class="rw-case animatelink false roundedcard">
-                        <img data-src="assets/img/covid.jpg" width="600" class="lazy">
-                        <h3><i class="fa fa-star fa-lg" aria-hidden="true"></i>05&nbsp;&nbsp;
+                        <img data-src="https://github.com/BrianRuizy/nCoV-dashboard/raw/master/core/static/assets/img/dashboard-mockup.png" width="600" class="lazy">
+                        <h3><i class="fa fa-star fa-lg" aria-hidden="true"></i>06&nbsp;&nbsp;
                             <i class="fa fa-code-fork fa-lg" aria-hidden="true"></i>03
                         </h3>
                         <div class="arrow"></div>
@@ -154,11 +154,11 @@
                             <h2>COVID-19</h2>
                             <h4 style="color: #618D96;">Django Dashboard</h4>
                         </div>
-                        <p>View project</p>
+                        <p>View site</p>
                         <div class="rw-case-overlay"></div>
                     </a>
                     <a href="https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon" target="_blank" class="rw-case animatelink false roundedcard">
-                        <img data-src="assets/img/bumpIt.png" class="lazy">
+                        <img data-src="https://camo.githubusercontent.com/0494f3028bcf0e77b5eaef1e58c13d41e53942d0/68747470733a2f2f627269616e7275697a792e636f6d2f6173736574732f696d672f62756d7049742e706e67" class="lazy">
                         <h3><i class="fa fa-star fa-lg" aria-hidden="true"></i>05&nbsp;&nbsp;
                             <i class="fa fa-code-fork fa-lg" aria-hidden="true"></i>04
                         </h3>
@@ -167,7 +167,7 @@
                             <h2>🥇Bump.IT</h2>
                             <h4 style="color: #618D96;">Microsoft Hackathon</h4>
                         </div>
-                        <p>View project</p>
+                        <p>View repo</p>
                         <div class="rw-case-overlay"></div>
                     </a>
                 </div>
@@ -180,11 +180,11 @@
                             <h2>CAMS E-Trac</h2>
                             <h4 style="color: #618D96;">SaaS Web-App</h4>
                         </div>
-                        <p>View project</p>
+                        <p>View repo</p>
                         <div class="rw-case-overlay"></div>
                     </a>
                     <a href="https://github.com/KalleHallden/BookOmatic" class="rw-case animatelink false roundedcard">
-                        <h3><i class="fa fa-star fa-lg" aria-hidden="true"></i>346&nbsp;&nbsp;
+                        <h3><i class="fa fa-star fa-lg" aria-hidden="true"></i>350&nbsp;&nbsp;
                             <i class="fa fa-code-fork fa-lg" aria-hidden="true"></i>169
                         </h3>
                         <div class="arrow"></div>
@@ -192,7 +192,7 @@
                             <h2>BookOmatic</h2>
                             <h4 style="color: #618D96;">Smart Booking</h4>
                         </div>
-                        <p>View project</p>
+                        <p>View repo</p>
                         <img data-src=""vwidth="295" class="lazy">
                         <div class="rw-case-overlay"></div>
                     </a>
@@ -220,6 +220,7 @@
         </div>
     </div>
 
+
     <script src="js/navigation.js"></script>
     <script src="js/progress-bar.js"></script>
     <script src="js/lazy-loading.js"></script>
@@ -229,6 +230,11 @@
     <script src="js/flexslider-images.js"></script>
     <script src="js/flexslider-results.js"></script>
     <script src="js/yall.js"></script>
+    		<!-- liveword -->
+    <script src="js/liveword/charming.min.js"></script>
+    <script src="js/liveword/anime.min.js"></script>
+    <script src="js/liveword/wordFx.js"></script>
+    <script src="js/liveword/animate.js"></script>
 </body>
 
 </html>
