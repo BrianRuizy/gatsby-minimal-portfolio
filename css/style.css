@@ -972,7 +972,6 @@ a.btn.animatelink.about-btn.home {
 }
 
 .footer .btn {
-    margin-bottom: 120px;
     background: rgb(29, 32, 39);
     border: 1px solid rgba(25, 26, 30, 0.15);
     color: #fff;
@@ -1034,10 +1033,6 @@ a.btn.animatelink.about-btn.home {
         font-size: 28px;
         line-height: 42px;
         margin-bottom: 25px;
-    }
-
-    .footer .btn {
-        margin-bottom: 90px;
     }
 
     .footer-block:before {
@@ -1611,7 +1606,7 @@ body.work .footer {
 
 .case-intro h2,
 .case-result-text h2 {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 37px;
     margin-bottom: 15px;
 }
@@ -1677,6 +1672,7 @@ body.work .footer {
 .case-images {
     background: #fff;
     overflow: hidden;
+    padding-top: 7rem;
 }
 
 .slider-block-images {
