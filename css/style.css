@@ -1669,9 +1669,13 @@ body.work .footer {
 
 /* ------------------------- Case Images  -------------------------------------------------- */
 
+.section.case-images {
+    z-index: 10;
+}
+
 .case-images {
     background: #fff;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 7rem;
 }
 
@@ -1708,6 +1712,12 @@ body.work .footer {
 .case-images .flexslider-images img {
     width: 100%;
     float: left;
+    transition: transform .5s; /* Animation */
+}
+
+.case-images .flexslider-images img:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
 }
 
 @media screen and (max-width: 1460px) {
@@ -1742,7 +1752,7 @@ body.work .footer {
 }
 
 .case-images .flex-next {
-    background: #fff url("../assets/img/arrow-medium-dark-right.svg") center center no-repeat;
+    background: url("../assets/img/arrow-small-dark.svg") center center no-repeat;
     opacity: 1 !important;
     right: 0px !important;
     float: left;
@@ -1750,18 +1760,18 @@ body.work .footer {
 }
 
 .case-images .flex-next:hover {
-    background: #fff url("../assets/img/arrow-medium-dark-right.svg") center center no-repeat;
+    background: rgba(255, 255, 255, 0.75) url("../assets/img/arrow-small-dark.svg") center center no-repeat;
 }
 
 .case-images .flex-prev {
-    background: #fff url("../assets/img/arrow-medium-dark-left.svg") center center no-repeat;
+    background: url("../assets/img/arrow-small-dark-left.svg") center center no-repeat;
     opacity: 1 !important;
     left: 0px !important;
     z-index: 1;
 }
 
 .case-images .flex-prev:hover {
-    background: #fff url("../assets/img/arrow-medium-dark-left.svg") center center no-repeat;
+    background: rgba(255, 255, 255, 0.75) url("../assets/img/arrow-small-dark-left.svg") center center no-repeat;
 }
 
 .case-images .flex-next.flex-disabled {
