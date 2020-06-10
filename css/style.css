@@ -1615,6 +1615,7 @@ body.work .footer {
 .case-result-text a {
     opacity: 1;
     color: rgba(25, 26, 30, 0.7);
+    padding-bottom: 2.5em;
 }
 
 .case-result-text a span {
@@ -1712,11 +1713,11 @@ body.work .footer {
 .case-images .flexslider-images img {
     width: 100%;
     float: left;
-    transition: transform .5s; /* Animation */
+    transition: transform .25s; /* Animation */
 }
 
 .case-images .flexslider-images img:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.35); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
 }
 
