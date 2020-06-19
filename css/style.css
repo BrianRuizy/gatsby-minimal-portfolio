@@ -589,6 +589,18 @@ html, body {
     font-weight: medium;
 }
 
+.home-about-links {
+    margin-top:1.5em; 
+    line-height:25px;
+}
+
+.home-about-links a{
+    color: #fff;
+}
+.home-about-links .btn{
+    display: unset;
+} 
+
 a.btn.animatelink.about-btn {
     background: none;
     color: #fff;
