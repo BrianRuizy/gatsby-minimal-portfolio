@@ -4,15 +4,16 @@
 .logo {
     color: rgb(255, 255, 255);
 	font-family: 'Montserrat', sans-serif;
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 0px;
 	font-size: 20px;
 	position: fixed;
     left: 30px;
-    top: 42px;
-    mix-blend-mode: difference;
-    z-index: 20
-}
+    top: 25px;
+	padding: 18px 4px;
+    z-index: 20;
+    background: linear-gradient(45deg, #b359fb, #7a4dfe, #614DFE);
+    border-radius: 5px;}
 
 .btn-hover:hover {
 	opacity: .6;
@@ -60,7 +61,7 @@
 	right: 40px;
 	z-index: 5;
 	height: 100px;
-	width: 2px;
+	width: 4px;
 	background: rgba(152, 152, 158, 0.3);
 	overflow: hidden;
 	transform: translate(0, -50%);
@@ -68,8 +69,8 @@
 }
 
 .progressFill {
-	width: 2px;
-	background: #614DFF;
+	width: 4px;
+	background: linear-gradient(0deg, #b359fb, #7a4dfe, #614DFE);
 	height: 0%;
 }
 
@@ -85,7 +86,6 @@
 	width: 40px;
 	position: fixed;
 	top: 50%;
-	
 	transform: translate(0, -50%);
 	left: 20px;
 	border-radius: 20px;
