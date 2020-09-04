@@ -1911,11 +1911,11 @@ body.work .footer {
 }
 
 .about-bottom-bar {
-    background: #F1F1F2;
+    background: #FAFAFA;
     width: 100%;
     position: absolute;
     height: 169px;
-    top: 70em;
+    top: 72em;
     left: 0;
     z-index: 1;
 }
@@ -2142,8 +2142,9 @@ span.legend-dot {
 }
 
 .location {
-    background: #F1F1F2;
-    padding: 120px 0 60px 0;
+    background: white;
+    border-top: 4em solid #F1F1F2;
+    padding: 80px 0 80px 0;
 }
 
 .location h3 {
@@ -2235,15 +2236,14 @@ p.w3-tooltip {
 @media screen and (max-width: 1040px) {
     .location h3 {
         margin-top: 0px;
-        
     }
 }
 
 @media screen and (max-width: 760px) {
     .location {
-        background: #F1F1F2;
-        padding: 60px 0 60px 0;
-        border-top: .8em solid white;
+        background: white;
+        padding: 60px 0 80px 0;
+        border-top: 2em solid #F1F1F2;
     }
 
     .location h3 {
