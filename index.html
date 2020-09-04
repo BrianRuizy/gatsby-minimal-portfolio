@@ -363,11 +363,11 @@
         var hrs = myDate.getHours();
         var greet;
         if (hrs < 11)
-            greet = '🌄 Morning';
-        else if (hrs >= 11 && hrs <= 18)
+            greet = '🌄 Good morning';
+        else if (hrs >= 11 && hrs <= 17)
             greet = '👋 Hello world';
-        else if (hrs >= 18 && hrs <= 24)
-            greet = '🌆 Evening';
+        else if (hrs >= 17 && hrs <= 24)
+            greet = '🌆 Good evening';
         document.getElementById('Greetings').innerHTML = greet + ', ';
     </script>
     <script src="js/navigation.js"></script>
