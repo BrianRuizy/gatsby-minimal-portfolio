@@ -48,7 +48,7 @@ ul {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 46px;
     line-height: 60px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -64,7 +64,7 @@ h2 {
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 30px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -117,14 +117,14 @@ span.color {
 
 @media screen and (max-width: 1260px) {
     h1 {
-        font-size: 48px;
+        font-size: 44px;
         line-height: 64px;
     }
 
     h2 {
         font-size: 28px;
         line-height: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     h3 {
@@ -265,12 +265,9 @@ body {
     float: left;
 }
 
-.sub-wrap.left {
+.sub-wrap.left, .sub-wrap.right  {
     padding-right: 40px;
-}
-
-.sub-wrap.right {
-    padding-left: 40px;
+    z-index: 2;
 }
 
 .stripe {
@@ -351,7 +348,7 @@ body {
 }
 
 .header {
-    padding-top: 250px;
+    padding-top: 220px;
 }
 
 .header p {
@@ -372,7 +369,7 @@ body {
 
 @media screen and (max-width: 1450px) {
     .header {
-        padding-top: 230px;
+        padding-top: 210px;
     }
 }
 
@@ -531,6 +528,107 @@ body {
 .tech h3 {
     margin-bottom: 5px !important;
 }
+
+/* ------------------------- Projects  -------------------------------------------------- */
+.section.projects .row.text-center {
+    border-top: 1em solid white;
+}
+
+.section .projects {
+    margin-top: -2em;
+}
+
+.section.projects .project.col-6 {
+    padding: 4em 0 .5em 0;
+}
+
+.project.project-1.col-6 {
+    padding: 6em 0 .5em 0 !important;
+}
+
+
+img.mx-auto.covid {
+    width: 46em;
+}
+
+img.mx-auto.etrac {
+    width: 28em;
+}
+
+img.mx-auto.favours {
+    width: 26em;
+}
+
+img.mx-auto.bumpit {
+    width: 42em;
+}
+
+
+.project h2 {
+    margin-bottom: 0;
+    line-height: 1.125;
+}
+
+.project h4 {
+    margin: .25em 0 .5em 0;
+    line-height: 1.21053;
+}
+
+.section .projects a{
+    color: #614DFF;
+}
+
+a.col-6 {
+    font-size: 19px;
+}
+
+@media screen and (max-width: 540px) {
+    .section .projects {
+        margin-top: 0em;
+    }
+    
+    .project.project-1.col-6 {
+        padding: 4em 0 .5em 0 !important;
+    }
+
+    .section .projects img {
+        width: 26em;
+    }
+    
+    .section .projects img.favours {
+        width: 20em;
+    }
+
+    img.mx-auto.etrac {
+        width: 20em;
+    }
+
+    img.mx-auto.covid {
+        width: 26em;
+    }
+
+    img.mx-auto.favours {
+        width: 16em;
+    }
+
+    img.mx-auto.bumpit {
+        width: 22em;
+    }
+
+    .section .projects h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .section .projects h4{
+        font-size: 16px;
+        margin: .5em 0 .75em 0;
+    }
+    a.col-6 {
+        font-size: 16px;
+    }
+    
+}
+
 
 /* ------------------------- Recent Work Home -------------------------------------------------- */
 
@@ -1816,8 +1914,8 @@ body.work .footer {
     background: #F1F1F2;
     width: 100%;
     position: absolute;
-    height: 120px;
-    top: 78em;
+    height: 169px;
+    top: 70em;
     left: 0;
     z-index: 1;
 }
@@ -1874,7 +1972,7 @@ body.work .footer {
     color: #fff;
     width: 100%;
     float: left;
-    font-size: 1.35rem;
+    font-size: 16px;
     line-height: 1.625;
 }
 
@@ -1892,7 +1990,7 @@ body.work .footer {
 
 @media screen and (max-width: 1180px) {
     .about-info-block .block {
-        padding: 60px;
+        padding: 30px;
     }
 
     .about-info-block .block h3 {
@@ -1929,7 +2027,7 @@ body.work .footer {
 
     .about-info-block p {
         font-size: 14px;
-        line-height: 27px;
+        line-height: 1.625;
     }
 
     .about-info-block .block h3 {
@@ -2137,6 +2235,7 @@ p.w3-tooltip {
 @media screen and (max-width: 1040px) {
     .location h3 {
         margin-top: 0px;
+        
     }
 }
 
@@ -2144,6 +2243,7 @@ p.w3-tooltip {
     .location {
         background: #F1F1F2;
         padding: 60px 0 60px 0;
+        border-top: .8em solid white;
     }
 
     .location h3 {
@@ -2209,25 +2309,8 @@ p.w3-tooltip {
     margin-bottom: 0;
 }
 
-.timeline-bottom-bar {
-    background: #fff;
-    width: 100%;
-    position: absolute;
-    height: calc((1100px / 6) * 0.6);
-    bottom: 0;
-    left: 0;
-}
-
-@media screen and (max-width: 1260px) {
-    .timeline-bottom-bar {
-        height: calc(((100vw - 180px) / 6) * 0.6);
-    }
-}
 
 @media screen and (max-width: 940px) {
-    .timeline-bottom-bar {
-        height: 80px;
-    }
 
     .timeline h3 {
         margin-bottom: 15px;
