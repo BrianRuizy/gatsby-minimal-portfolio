@@ -96,7 +96,9 @@
         <div class="about-bottom-bar"></div>
 
         <div class="wrap" style="margin-bottom: 5em">
-            <h1 class="fade-in-bottom">👋 Hello world,<br>I'm <span class="">Brian Ruiz</span>.</h1>
+            <h1 class="fade-in-bottom">
+                <span id="Greetings"></span><br>
+                I'm <span class="">Brian Ruiz</span>.</h1>
             <p class="fade-in-bottom" style="max-width: 28em;">
                 I'm a <strong>Software Developer</strong>, specializing in
                 <u style="text-decoration-color:#ffd0f7;">Python</u> full stack development. I'm a
@@ -356,6 +358,18 @@
         </div>
     </div>
 
+    <script>
+        var myDate = new Date();
+        var hrs = myDate.getHours();
+        var greet;
+        if (hrs < 11)
+            greet = '🌄 Morning';
+        else if (hrs >= 11 && hrs <= 18)
+            greet = '👋 Hello world';
+        else if (hrs >= 18 && hrs <= 24)
+            greet = '🌆 Evening';
+        document.getElementById('Greetings').innerHTML = greet + ', ';
+    </script>
     <script src="js/navigation.js"></script>
     <script src="js/progress-bar.js"></script>
     <script src="js/lazy-loading.js"></script>

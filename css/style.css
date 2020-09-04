@@ -118,7 +118,7 @@ span.color {
 @media screen and (max-width: 1260px) {
     h1 {
         font-size: 44px;
-        line-height: 64px;
+        line-height: 45px;
     }
 
     h2 {
@@ -152,7 +152,7 @@ span.color {
 @media screen and (max-width: 760px) {
     h1 {
         font-size: 38px;
-        line-height: 50px;
+        line-height: 40px;
     }
 
     h2 {
