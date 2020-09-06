@@ -158,7 +158,7 @@
     </div>
 
     <div class="section projects" style="padding: 4em auto;">
-        <div class="row text-center" style="background: #FAFAFA;">
+        <div class="row text-center" style="background: #F5F5F7;">
             <div class="project col-6" s>
                 <h2>Favours-io</h2>
                 <h4>Favours-io plays out in the domain<br>of collaborative consumption.<br>
@@ -179,7 +179,6 @@
                 <h4>Powerful Django web application,<br>
                     tracking real-time coronavirus cases,<br>
                     with an intuitive interactive UI.
-                    
                 </h4>
                 <div>
                     <a class="col-6" href="https://github.com/BrianRuizy/covid19-dashboard">Github <i
@@ -362,13 +361,17 @@
         var myDate = new Date();
         var hrs = myDate.getHours();
         var greet;
-        if (hrs < 11)
-            greet = '🌄 Good morning';
+        
+        if (hrs >= 5 && hrs < 11)
+            greet = '🌄 Good morning, ';
         else if (hrs >= 11 && hrs <= 17)
-            greet = '👋 Hello world';
-        else if (hrs >= 17 && hrs <= 24)
-            greet = '🌆 Good evening';
-        document.getElementById('Greetings').innerHTML = greet + ', ';
+            greet = '👋 Hello world, ';
+        else if (hrs >= 17 && hrs <= 23)
+            greet = '🌆 Good evening, ';
+        else if (hrs == 24 || hrs < 5)
+            greet = '🦉 Hello, you night-owl.';
+            
+        document.getElementById('Greetings').innerHTML = greet;
     </script>
     <script src="js/navigation.js"></script>
     <script src="js/progress-bar.js"></script>

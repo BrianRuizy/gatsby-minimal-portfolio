@@ -151,8 +151,8 @@ span.color {
 
 @media screen and (max-width: 760px) {
     h1 {
-        font-size: 38px;
-        line-height: 40px;
+        font-size: 36px;
+        line-height: 42px;
     }
 
     h2 {
@@ -180,8 +180,8 @@ span.color {
 
 @media screen and (max-width: 560px) {
     h1 {
-        font-size: 34px;
-        line-height: 45px;
+        font-size: 32px;
+        line-height: 40px;
     }
 
     h2 {
