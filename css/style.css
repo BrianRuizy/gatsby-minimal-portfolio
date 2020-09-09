@@ -1911,7 +1911,7 @@ body.work .footer {
 }
 
 .about-bottom-bar {
-    background: #FAFAFA;
+    background: #F5F5F7;
     width: 100%;
     position: absolute;
     height: 169px;
@@ -2004,7 +2004,7 @@ body.work .footer {
     }
 
     .about-info-block .block {
-        padding: 30px;
+        padding: 20px;
     }
 
     .about-info-block .block h3 {
@@ -2013,6 +2013,15 @@ body.work .footer {
 
     .about-info-block .block p {
         margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .about-info-block .block li {
+        font-size: 12px;
+    }
+
+    .about-bottom-bar {
+        display: none;
     }
 }
 
@@ -2453,6 +2462,11 @@ p.w3-tooltip {
 @media screen and (max-width: 1260px) {
     .playground .question {
         top: 215px;
+    }
+
+    
+    .about-bottom-bar {
+        display: none;
     }
 }
 
