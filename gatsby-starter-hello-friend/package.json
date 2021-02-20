@@ -1,0 +1,73 @@
+{
+  "name": "gatsby-starter-hello-friend",
+  "description": "A simple starter for Gatsby. That's it.",
+  "version": "0.2.0",
+  "author": "Radek Kozieł <radoslaw.koziel@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "minimal",
+    "starter",
+    "blog",
+    "theme",
+    "dark",
+    "light",
+    "personal site"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby clean && gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "dependencies": {
+    "gatsby": "^2.0.76",
+    "gatsby-awesome-pagination": "^0.3.3",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-postcss": "^2.0.2",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.1.19",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-gatsby": "^0.1.6",
+    "cssnano": "^4.1.8",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-react-hooks": "^1.4.0",
+    "gatsby-remark-embed-video": "^1.7.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.1",
+    "postcss-nested": "^4.1.1",
+    "postcss-preset-env": "^6.5.0",
+    "postcss-url": "^8.0.0",
+    "prettier": "^1.15.2",
+    "rambdax": "^1.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panr/gatsby-starter-hello-friend"
+  },
+  "bugs": {
+    "url": "https://github.com/panr/gatsby-starter-hello-friend/issues"
+  }
+}
