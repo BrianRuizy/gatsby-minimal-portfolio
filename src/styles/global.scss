@@ -99,7 +99,7 @@ a {
 .navigation {
   display: flex;
   align-items: center;
-  font-weight: 300;
+  font-weight: 400;
   a {
     color: #888;
     text-decoration: none;
@@ -126,10 +126,8 @@ a {
 }
 .site-title a {
   color: var(--primary-text-color);
-
-
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   padding: 6px 4px;
   background: linear-gradient(45deg, #b359fb, #7a4dfe, #614DFE);
   border-radius: 5px;
@@ -140,8 +138,9 @@ a {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 }
 .hero-header {
-  padding: 120px 0;
+  padding: 80px 0 120px 0;
   max-width: 980px;
+  @include respond-to(phone){ padding: 50px 0; }
 }
 .headline {
   font-size: 46px;
@@ -150,10 +149,7 @@ a {
   letter-spacing: -.02em;
   line-height: 45px;
   margin-bottom: 20px;
-  
-  @include respond-to(tablet){
-    font-size: 40px;
-  }
+  @include respond-to(tablet){ font-size: 40px; }
   @include respond-to(phone){
     max-width: 300px;
     font-size: 34px;
