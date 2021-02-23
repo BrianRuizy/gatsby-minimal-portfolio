@@ -1,4 +1,28 @@
-$font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+$font-family: 'Montserrat', sans-serif;
+
+$breakpoints: (
+  'phone'  : ( max-width:  640px ),
+  'tablet' : ( max-width:  768px ),
+  'laptop'  : ( max-width: 1024px )
+);
+ 
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
 
 html,
 body {
@@ -101,19 +125,39 @@ a {
   align-items: center;
 }
 .site-title a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 900;
-  text-transform: uppercase;
+  color: var(--primary-text-color);
+
+
+  font-weight: 600;
+  font-size: 18px;
+  padding: 6px 4px;
+  background: linear-gradient(45deg, #b359fb, #7a4dfe, #614DFE);
+  border-radius: 5px;
+  box-shadow: 
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 }
 .hero-header {
-  padding: 0 0 64px;
+  padding: 120px 0;
   max-width: 980px;
 }
 .headline {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 900;
   margin-bottom: 0.5rem;
+  letter-spacing: -.02em;
+  line-height: 45px;
+  margin-bottom: 20px;
+  
+  @include respond-to(tablet){
+    font-size: 40px;
+  }
+  @include respond-to(phone){
+    max-width: 300px;
+    font-size: 34px;
+  }  
 }
 .button {
   padding: 18px 27px;
@@ -143,11 +187,11 @@ a {
   }
 }
 .primary-content {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 32px;
   line-height: 1.5;
-  font-weight: 300;
-  max-width: 40em;
+  font-weight: 400;
+  max-width: 30em;
 }
 .post {
   padding: 0;
