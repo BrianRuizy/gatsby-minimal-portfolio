@@ -99,14 +99,14 @@ a {
 .navigation {
   display: flex;
   align-items: center;
-  font-weight: 400;
+  font-weight: normal;
   a {
     color: #888;
     text-decoration: none;
     margin: 0 8px 0;
     &[aria-current] {
       color: var(--primary-color);
-      font-weight: 700;
+      font-weight: bold;
     }
     &:hover {
       color: var(--primary-color);
@@ -126,7 +126,7 @@ a {
 }
 .site-title a {
   color: var(--primary-text-color);
-  font-weight: 600;
+  font-weight: bold;
   font-size: 20px;
   padding: 6px 4px;
   background: linear-gradient(45deg, #b359fb, #7a4dfe, #614DFE);
@@ -144,10 +144,10 @@ a {
 }
 .headline {
   font-size: 46px;
-  font-weight: 900;
+  font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: -.02em;
-  line-height: 45px;
+  line-height: 40px;
   margin-bottom: 20px;
   @include respond-to(tablet){ font-size: 40px; }
   @include respond-to(phone){
@@ -164,7 +164,7 @@ a {
   text-decoration: none;
   color: var(--btn-text-color);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: normal;
   margin: 0 20px 0 0;
   transition: background-color .3s linear;
   &.-primary {
@@ -186,7 +186,7 @@ a {
   font-size: 22px;
   margin-bottom: 32px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: lighter;
   max-width: 30em;
 }
 .post {
@@ -297,7 +297,7 @@ a {
   margin: 90px 0 16px;
   color: #666;
   a {
-    font-weight: 700;
+    font-weight: bold;
   }
 }
 .form-container {
