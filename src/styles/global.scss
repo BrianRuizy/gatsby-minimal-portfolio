@@ -164,7 +164,7 @@ a {
   @include respond-to(phone){ padding: 60px 0 80px 0 }
 }
 .headline {
-  font-size: 46px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: -.02em;
@@ -206,7 +206,7 @@ a {
   }
 }
 .primary-content {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 32px;
   line-height: 1.5;
   font-weight: lighter;
@@ -245,8 +245,7 @@ a {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
-  background-color: var(--featured-bg);
+ background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
