@@ -1,6 +1,18 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
+var hour = new Date().getHours();
+var greet;
+
+if (hour >= 5 && hour < 11)
+    greet = '🌄 Good morning, ';
+else if (hour >= 11 && hour <= 17)
+    greet = '👋 Good afternoon, ';
+else if (hour >= 17 && hour <= 23)
+    greet = '🌆 Good evening, ';
+else if (hour == 24 || hour < 5)
+    greet = '🦉 Hello, you night-owl.';
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -8,7 +20,7 @@ export default () => (
         site {
           siteMetadata {
             home {
-              title
+              name
               description
             }
           }
@@ -17,7 +29,7 @@ export default () => (
     `}
     render={data => (
       <div className="hero-header">
-        <div className="headline">{data.site.siteMetadata.home.title}</div>
+        <div className="headline">{greet}<br></br> I'm {data.site.siteMetadata.home.name}</div>
         <div className="primary-content">
           <p>
             I'm a <strong>Software Engineer</strong> specializing in&nbsp;
@@ -28,7 +40,7 @@ export default () => (
             <u style={{"textDecorationColor":"#c9ffd2"}}>open-source</u>.
           </p>
         </div>
-        <Link to='/contact' className="button -primary">Get in touch &rarr;</Link>
+        <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link>
       </div>
     )}
   />

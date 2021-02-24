@@ -45,7 +45,7 @@ body.light {
   --card-shadow: #d5d5d5;
   --btn-bg: var(--background);
   --btn-bdr: #d3d6e7;
-  --btn-text-color: #868892;
+  --btn-text-color: #181a1f;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
   --contact-bg: #f7f8fe;
@@ -77,7 +77,10 @@ body.dark {
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
-  border-top: 10px solid var(--primary-color);
+  border-top: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;  
+  border-image-source: linear-gradient(to right, #b359fb, #614DFF);
   background-color: var(--background);
   color: var(--text-color);
 }
@@ -147,20 +150,20 @@ a {
   font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: -.02em;
-  line-height: 40px;
+  line-height: 45px;
   margin-bottom: 20px;
   @include respond-to(tablet){ font-size: 40px; }
   @include respond-to(phone){
-    max-width: 300px;
-    font-size: 34px;
+    max-width: 340px;
+    font-size: 36px;
   }  
 }
 .button {
-  padding: 18px 27px;
+  padding: 20px 30px;
   display: inline-block;
   background: var(--btn-bg);
   border: 1px solid var(--btn-bdr);
-  border-radius: 9px;
+  border-radius: 30px;
   text-decoration: none;
   color: var(--btn-text-color);
   font-size: 16px;
@@ -168,9 +171,12 @@ a {
   margin: 0 20px 0 0;
   transition: background-color .3s linear;
   &.-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--primary-text-color);
+    background-color: var(--background);
+    box-shadow: 
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
+      0 12.5px 10px rgba(0, 0, 0, 0.06), 
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072);
     &:hover {
       background-color: var(--secondary-color);
       color: var(--primary-text-color);
