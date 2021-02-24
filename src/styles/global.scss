@@ -51,17 +51,14 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
-
   .highlights {
     &.-c1 { text-decoration-color: #ff77e6;}
     &.-c2 { text-decoration-color: #916cff;}
     &.-c3 { text-decoration-color: #5888ff;}
-    &.-c4 { text-decoration-color: #52ffff;}
-    &.-c5 { text-decoration-color: #70ff9b;}
+    &.-c4 { text-decoration-color: #52e5ff;}
+    &.-c5 { text-decoration-color: #70ffcf;}
   }
 }
-
-
 body.dark {
   --primary-color: #9984d5;
   --primary-text-color: #fff;
@@ -83,13 +80,12 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-
   .highlights {
-    &.-c1 { text-decoration-color: #ffb6ff;}
-    &.-c2 { text-decoration-color: #c8b6ff;}
-    &.-c3 { text-decoration-color: #a5bfff;}
-    &.-c4 { text-decoration-color: #a5eaff;}
-    &.-c5 { text-decoration-color: #a8ffff;}
+    &.-c1 { text-decoration-color: #ff77e66c;}
+    &.-c2 { text-decoration-color: #916cff6c;}
+    &.-c3 { text-decoration-color: #5888ff6c;}
+    &.-c4 { text-decoration-color: #52e5ff6c;}
+    &.-c5 { text-decoration-color: #70ffcf6c;}
   }
 }
 /* System Fonts as used by Medium and WordPress */
@@ -98,7 +94,7 @@ body {
   border-top: 10px solid;
   border-image-slice: 1;
   border-width: 5px;  
-  border-image-source: linear-gradient(to right, #b359fb, #614DFF);
+  border-image-source: linear-gradient(to right, #b359fb, #7a4dfe, #614DFE);
   background-color: var(--background);
   color: var(--text-color);
 }
@@ -172,7 +168,7 @@ a {
   margin-bottom: 20px;
   @include respond-to(tablet){ font-size: 40px; }
   @include respond-to(phone){
-    max-width: 340px;
+    max-width: 325px;
     font-size: 36px;
   }  
 }
