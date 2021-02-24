@@ -33,11 +33,11 @@ export default () => (
         <div className="primary-content">
           <p>
             I'm a <strong>Software Engineer</strong> specializing in&nbsp;
-            <u style={{"textDecorationColor":"#ffd0f7"}}>Python</u> full stack development. I'm a&nbsp;
-            <u style={{"textDecorationColor":"#c6b3ff"}}>data nerd</u>, know&nbsp;
-            <u style={{"textDecorationColor":"#c5d5ff"}}>cloud computing</u>, enjoy&nbsp;
-            <u style={{"textDecorationColor":"#91ffde"}}>front-end design</u>, & proponent of&nbsp;
-            <u style={{"textDecorationColor":"#c9ffd2"}}>open-source</u>.
+            <u className="highlights -c1">Python</u> full stack development. I'm a&nbsp;
+            <u className="highlights -c2">data nerd</u>, know&nbsp;
+            <u className="highlights -c3">cloud computing</u>, enjoy front-end&nbsp;
+            <u className="highlights -c4">design</u>, & proponent of&nbsp;
+            <u className="highlights -c5">open-source</u>.
           </p>
         </div>
         <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link>
