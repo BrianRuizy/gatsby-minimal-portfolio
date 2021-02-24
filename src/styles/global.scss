@@ -217,9 +217,12 @@ a {
   > .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
-    
-    p {
-      color: var(--text-secondary-color)
+
+    h2, h3 { margin: 25px 0 5px 0 }
+    p { color: var(--text-secondary-color) }
+
+    .gatsby-highlight {
+      margin: -10px 0 20px 0 !important;
     }
   }
   > .blog-post-content *:last-child,
@@ -312,7 +315,7 @@ a {
   }
 }
 .post-meta {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--text-secondary-color);
 }
 .site-footer {
