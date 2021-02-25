@@ -91,10 +91,6 @@ body.dark {
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
-  border-top: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;  
-  border-image-source: linear-gradient(to right, #b359fb, #7a4dfe, #614DFE);
   background-color: var(--background);
   color: var(--text-color);
 }

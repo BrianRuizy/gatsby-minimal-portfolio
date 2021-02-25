@@ -8,6 +8,7 @@
     "url": "https://github.com/W3Layouts/gatsby-starter-delog/issues"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "gatsby": "^2.21.0",
     "gatsby-plugin-dark-mode": "^1.1.1",
     "gatsby-plugin-google-analytics": "^2.1.36",
@@ -25,6 +26,7 @@
     "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.5.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
   },

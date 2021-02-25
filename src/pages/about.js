@@ -1,6 +1,10 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 import Layout from "../components/layout"
 
 const AboutPage = ({
@@ -14,7 +18,14 @@ const AboutPage = ({
         <title>About — {site.siteMetadata.title}</title>
         <meta name="description" content={"About page of " + site.siteMetadata.description} />
       </Helmet>
-      <div className="two-grids -about">
+      <Container>
+        <Row>
+          <Col>1 of 2</Col>
+          <Col>2 of 2</Col>
+        </Row>
+      </Container>
+
+      <Row className="two-grids -about">
         <div className="post-thumbnail" style={{backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`, marginBottom: 0}}>
           <h1 className="post-title">Get in Touch</h1>
           <p>Let me help you kick start your next project &rarr;</p>
@@ -42,7 +53,7 @@ const AboutPage = ({
             </div>
           </form>
         </div>
-      </div>
+      </Row>
     </Layout>
   )
 }
