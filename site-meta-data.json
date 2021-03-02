@@ -4,6 +4,9 @@
   "description": "Software Engineer based in Houston, TX, specializing in Full Stack Python development. Brian is proficient at web development, design, and working with data",
   "home": {
     "name": "Brian Ruiz",
-    "description": "I'm a Software Engineer specializing in Python full stack development. I'm a data nerd, know cloud computing, enjoy front-end design, & proponent of open-source."
+    "role": "Software Engineer",
+    "skills": ["Python full-stack", "web development", "data analytics", "cloud computing"],
+    "availability": "Open to new opportunities.",
+    "preferredLocation": "Houston, TX + Remote"
   }
 }

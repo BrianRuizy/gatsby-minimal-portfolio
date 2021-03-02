@@ -116,8 +116,13 @@ a {
 
 .hero-header {
   padding: 80px 0 120px 0;
-  max-width: 980px;
+  // max-width: 400px;
+  text-align: center;
   @include respond-to(phone){ padding: 60px 0 80px 0 }
+  & img{
+    border: 2px solid;
+    width: 64px;
+  }
 }
 .headline {
   font-size: 40px;
@@ -125,12 +130,16 @@ a {
   margin-bottom: 0.5rem;
   letter-spacing: -.02em;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   @include respond-to(tablet){ font-size: 40px; }
   @include respond-to(phone){
-    max-width: 325px;
+    padding: 0 30px;
     font-size: 36px;
   }  
+  & ul{
+    list-style-type: none;
+    padding: 0;
+  }
 }
 .button {
   padding: 20px 30px;

@@ -1,12 +1,12 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql } from 'gatsby'
+
+import Layout from "../components/layout"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-
-import Layout from "../components/layout"
 
 const AboutPage = ({
   data: {
@@ -29,7 +29,7 @@ const AboutPage = ({
               </h1>
             </Col>
             <Col>
-              <Image style={{backgroundImage: `url('/assets/portrait.png')`}} src="/assets/portrait.png"></Image>
+              <Image src="/assets/portrait.png"></Image>
             </Col>
           </Row>
         </div>

@@ -1,17 +1,10 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
-var hour = new Date().getHours();
-var greet;
-
-if (hour >= 5 && hour < 11)
-    greet = 'Good morning, ';
-else if (hour >= 11 && hour <= 17)
-    greet = 'Good afternoon, ';
-else if (hour >= 17 && hour <= 23)
-    greet = 'Good evening, ';
-else if (hour == 24 || hour < 5)
-    greet = 'Hello, you night-owl.';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 
 export default () => (
   <StaticQuery
@@ -21,27 +14,41 @@ export default () => (
           siteMetadata {
             home {
               name
-              description
+              role
+              skillset
+              preferredLocation
+              availability
             }
           }
         }
       }
     `}
     render={data => (
-      <div className="hero-header">
-        <div className="headline">{greet}<br></br> I'm {data.site.siteMetadata.home.name}</div>
-        <div className="primary-content">
-          <p>
-            I'm a <strong>Software Engineer</strong> specializing in&nbsp;
-            <u className="highlights -c1">Python</u> full stack development. I'm a&nbsp;
-            <u className="highlights -c2">data nerd</u>, know&nbsp;
-            <u className="highlights -c3">cloud computing</u>, enjoy front-end&nbsp;
-            <u className="highlights -c4">design</u>, & proponent of&nbsp;
-            <u className="highlights -c5">open-source</u>.
-          </p>
-        </div>
-        <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link>
-      </div>
+      <Container className="hero-header">
+        <Row>
+          <Col>
+            <div className="headline">
+              {data.site.siteMetadata.home.role};<br></br>
+              {<ul id="skillset">
+                {data.site.siteMetadata.home.skillset.map((skill,index) => 
+                  <li key={index}>{skill},</li> 
+                )}
+              </ul>}
+            </div>
+          </Col>
+        </Row>
+        <Row  className="justify-content-md-center">
+          <Col md="auto">
+            <Image roundedCircle src="/assets/portrait.png"></Image>
+          </Col>
+          <Col md="auto" className="text-left">
+            <b>{data.site.siteMetadata.home.name}, {data.site.siteMetadata.home.role}</b><br></br>
+            {data.site.siteMetadata.home.preferredLocation}<br></br>
+            {data.site.siteMetadata.home.availability}
+          </Col>
+        </Row>
+        {/* <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link> */}
+      </Container>      
     )}
   />
 )
