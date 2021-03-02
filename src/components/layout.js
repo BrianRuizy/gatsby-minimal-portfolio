@@ -17,12 +17,7 @@ export default ({ children }) => {
   )
   return (
     <div className="site-wrapper">
-      <header className="site-header">
-        <div className="site-title">
-          <Link to="/">BR</Link>
-        </div>
-        <Navigation />
-      </header>
+      <Navigation />
       {children}
       <footer className="site-footer">
         <p>

@@ -1,3 +1,6 @@
+// react-bootstrap stylesheets
+@import "~bootstrap/scss/bootstrap";
+
 // Google fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 $font-family: 'Montserrat', sans-serif;
@@ -9,15 +12,11 @@ $breakpoints: (
 );
  
 @mixin respond-to($name) {
-  // If the key exists in the map
   @if map-has-key($breakpoints, $name) {
-    // Prints a media query based on the value
     @media #{inspect(map-get($breakpoints, $name))} {
       @content;
     }
   }
-
-  // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Please make sure it is defined in `$breakpoints` map.";
@@ -34,7 +33,7 @@ body {
 }
 body.light {
   --primary-color: #614DFF;
-  --primary-text-color: #fff;
+  --primary-text-color: #000;
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #10072b;
@@ -51,13 +50,7 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
-  .highlights {
-    &.-c1 { text-decoration-color: #ff77e6;}
-    &.-c2 { text-decoration-color: #916cff;}
-    &.-c3 { text-decoration-color: #5888ff;}
-    &.-c4 { text-decoration-color: #52e5ff;}
-    &.-c5 { text-decoration-color: #70ffcf;}
-  }
+  
 }
 body.dark {
   --primary-color: #9984d5;
@@ -80,13 +73,6 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-  .highlights {
-    &.-c1 { text-decoration-color: #ff77e66c;}
-    &.-c2 { text-decoration-color: #916cff6c;}
-    &.-c3 { text-decoration-color: #5888ff6c;}
-    &.-c4 { text-decoration-color: #52e5ff6c;}
-    &.-c5 { text-decoration-color: #70ffcf6c;}
-  }
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -101,20 +87,11 @@ a {
     text-decoration: underline;
   }
 }
-.site-wrapper {
-  padding: 32px;
-  max-width: 1140px;
-  margin: 0 auto;
-  img {
-    max-width: 100%;
-  }
-}
-.navigation {
-  display: flex;
-  align-items: center;
-  font-weight: normal;
+.navbar {
+  background: var(--background);
+  border-bottom: 1px solid black;
   a {
-    color: #888;
+    color: var(--primary-text-color);
     text-decoration: none;
     margin: 0 8px 0;
     &[aria-current] {
@@ -129,27 +106,14 @@ a {
     }
   }
 }
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  background: var(--site-header);
-  margin-bottom: 32px;
-  align-items: center;
-}
-.site-title a {
-  color: var(--primary-text-color);
+.navbar-light .navbar-brand{
   font-weight: bold;
-  font-size: 20px;
-  padding: 6px 4px;
-  background: linear-gradient(45deg, #b359fb, #7a4dfe, #614DFE);
-  border-radius: 5px;
-  box-shadow: 
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
-    0 12.5px 10px rgba(0, 0, 0, 0.06), 
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+  color: var(--primary-text-color);
 }
+.section {
+  margin: 4em 0;
+}
+
 .hero-header {
   padding: 80px 0 120px 0;
   max-width: 980px;
@@ -327,6 +291,7 @@ a {
   padding: 32px;
   border: 1px solid var(--contact-bdr);
   border-radius: 9px;
+
   label {
     display: block;
     margin-bottom: 0.5rem;
@@ -360,6 +325,7 @@ a {
     }
   }
 }
+
 /* Portrait and Landscape */
 @media only screen 
 and (min-width: 768px) {
@@ -378,7 +344,6 @@ and (min-width: 768px) {
     grid-gap: 64px;
   }
 }
-
 
 // theme-changer
 .theme-changer {

@@ -5,12 +5,8 @@ import Navbar from 'react-bootstrap/Navbar'
 
 export default (props) => (
 
-  <Navbar >
-    <Navbar.Brand href="#home"> 
-      <div className="site-title">
-        <Link to="/">BR</Link>
-      </div>
-    </Navbar.Brand>
+  <Navbar className="py-3" sticky="top" >
+    <Navbar.Brand href="#home">Brian Ruiz</Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Link to="/about">About</Link>

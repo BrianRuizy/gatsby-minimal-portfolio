@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 
 import Layout from "../components/layout"
 
@@ -19,41 +20,20 @@ const AboutPage = ({
         <meta name="description" content={"About page of " + site.siteMetadata.description} />
       </Helmet>
       <Container>
-        <Row>
-          <Col>1 of 2</Col>
-          <Col>2 of 2</Col>
-        </Row>
+        <div className="section about">
+          <Row>
+            <Col md={8} sm={12}>
+              <h1>
+                I enjoy the process of creating and abstract idea 
+                and materializing it into simething that generates <u>value</u>
+              </h1>
+            </Col>
+            <Col>
+              <Image style={{backgroundImage: `url('/assets/portrait.png')`}} src="/assets/portrait.png"></Image>
+            </Col>
+          </Row>
+        </div>
       </Container>
-
-      <Row className="two-grids -about">
-        <div className="post-thumbnail" style={{backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`, marginBottom: 0}}>
-          <h1 className="post-title">Get in Touch</h1>
-          <p>Let me help you kick start your next project &rarr;</p>
-        </div>
-        <div>
-          <form className="form-container" action="https://sendmail.w3layouts.com/SubmitContactForm" method="post">
-            <div>
-              <label htmlFor="w3lName">Name</label>
-              <input type="text" name="w3lName" id="w3lName"/>
-            </div>
-            <div>
-              <label htmlFor="w3lSender">Email</label>
-              <input type="email" name="w3lSender" id="w3lSender"/>
-            </div>
-            <div>
-              <label htmlFor="w3lSubject">Subject</label>
-              <input type="text" name="w3lSubject" id="w3lSubject"/>
-            </div>
-            <div>
-              <label htmlFor="w3lMessage">Message</label>
-              <textarea name="w3lMessage" id="w3lMessage"></textarea>
-            </div>
-            <div style={{display: "flex", justifyContent: "flex-end"}}>
-              <input type="submit" className="button -primary" style={{marginRight: 0}} />
-            </div>
-          </form>
-        </div>
-      </Row>
     </Layout>
   )
 }
