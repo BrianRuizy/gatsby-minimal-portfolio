@@ -17,7 +17,7 @@ const AboutPage = ({
     <Layout>
       <Helmet>
         <title>About — {site.siteMetadata.title}</title>
-        <meta name="description" content={"About page of " + site.siteMetadata.description} />
+        <meta name="description" content={"About page of Brian. " + site.siteMetadata.description} />
       </Helmet>
       <Container>
         <div className="section about">

@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
+import { Container } from "react-bootstrap";
 
 const IndexPage = ({
   data: {
@@ -23,10 +24,12 @@ const IndexPage = ({
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
       <HeroHeader/>
-      <h2>Projects &darr;</h2>
-      <div className="grids">
-        {Posts}
-      </div>
+      <Container>
+        <h2>Projects &darr;</h2>
+        <div className="grids">
+          {Posts}
+        </div>
+      </Container>
     </Layout>
   )
 }
@@ -40,7 +43,9 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }, 
+      filter: {fileAbsolutePath: {regex: "/featured/"}}) {
       edges {
         node {
           id

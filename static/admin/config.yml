@@ -43,7 +43,7 @@ collections:
                 required: false
   - name: blog
     label: Blog
-    folder: _data/blog
+    folder: _data/blog/featured
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
     fields:
@@ -73,3 +73,21 @@ collections:
           config:
             multiple: false
       - { name: body, label: Body, widget: markdown }
+  - name: projects
+    label: projects
+    folder: _data/projects
+    create: true
+    fields:
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: projects,
+        }
+      - { name: title, label: Title }
+      - label: Meta Description
+        name: metaDescription
+        widget: text
+        required: false
+      - { name: body, label: Body, widget: markdown }
+      
