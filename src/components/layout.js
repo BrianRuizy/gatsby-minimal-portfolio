@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Navigation from "../components/navigation"
+import Footer from "../components/footer"
+
 import 'prismjs/themes/prism-tomorrow.css';
 
 export default ({ children }) => {
@@ -19,13 +21,7 @@ export default ({ children }) => {
     <div className="site-wrapper">
       <Navigation />
       {children}
-      <footer className="site-footer">
-        <p>
-          Made with <span role="img" aria-label="love">❤️</span> and
-          <span role="img" aria-label="love"> ☕</span><br></br>
-          &copy; {new Date().getFullYear()} Brian Ruiz 
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }
