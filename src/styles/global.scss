@@ -1,6 +1,9 @@
 // react-bootstrap stylesheets
 @import "~bootstrap/scss/bootstrap";
 
+// Automates responsive resizing, https://github.com/twbs/rfs
+@import "~rfs/scss";
+
 // Google fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 $font-family: 'Montserrat', sans-serif;
@@ -74,6 +77,10 @@ body.dark {
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
 }
+
+h1 {
+  @include rfs(64);
+}
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
@@ -90,7 +97,8 @@ a {
 .navbar {
   background: var(--background);
   border-bottom: 1px solid black;
-  a {
+
+  .justify-content-end a {
     color: var(--primary-text-color);
     text-decoration: none;
     margin: 0 8px 0;
@@ -105,15 +113,12 @@ a {
       margin-right: 0;
     }
   }
+  .navbar-brand a{
+    font-weight: bold;
+    color: var(--primary-text-color);
+  }
 }
-.navbar-light .navbar-brand{
-  font-weight: bold;
-  color: var(--primary-text-color);
-}
-.section {
-  margin: 4em 0;
-}
-
+.container { margin-top: 6em; }
 .hero-header {
   padding: 80px 0 120px 0;
   // max-width: 400px;
@@ -249,6 +254,10 @@ a {
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin-top: 32px;
+
+  & img {
+    width: 100%;
+  }
 }
 .card {
   display: grid;
