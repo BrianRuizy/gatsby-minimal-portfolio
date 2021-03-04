@@ -18,10 +18,13 @@ const Featured = () => {
             excerpt(pruneLength: 100)
             frontmatter {
               title
-              date(formatString: "MMMM DD, YYYY")
               path
+              github
+              demo
               title
+              category
               thumbnail
+              metaDescription
             }
           }
         }
@@ -31,26 +34,27 @@ const Featured = () => {
   return( 
     <Container>
       <h2>Featured &darr;</h2>
-      <div className="grids">
+      <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <article className="card ">
-          <Link to={node.frontmatter.path}>
-            {!!node.frontmatter.thumbnail && (
-              <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
-            )}
-          </Link>
-          <header>
-            <h2 className="post-title">
-              <Link to={node.frontmatter.path} className="post-link">
-                {node.frontmatter.title}
-              </Link>
-            </h2>
-            <div className="post-meta">{node.frontmatter.date}</div>
-          </header>
-        </article>
-        
+          <Col lg={4} xs={12}>
+            <Card className="mb-3">
+              <Card.Header>{node.frontmatter.category}</Card.Header>
+              <Card.Body>
+                <Card.Title>{node.frontmatter.title}</Card.Title>
+                <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
+                <Card.Link><Link to={node.frontmatter.path}>learn more</Link></Card.Link>
+                {node.frontmatter.github && <Card.Link><Link to={node.frontmatter.github} >code</Link></Card.Link>}
+                {node.frontmatter.demo && <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>}
+              </Card.Body>
+              {/* <Link to={node.frontmatter.path}>
+                {!!node.frontmatter.thumbnail && (
+                  <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
+                )}
+              </Link> */}
+            </Card>
+          </Col>
         ))}
-      </div>
+      </Row>
     </Container>
   )
 }

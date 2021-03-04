@@ -1,10 +1,11 @@
 ---
 template: BlogPost
 path: /cams
-date: 2020-02-01T06:15:50.738Z
+date: 2020-02-01
 title: Developing CAMS E-Trac
+category: SaaS
 thumbnail: /assets/cams-mockup.png
-metaDescription: Developing CAMS E-Trac with Python
+metaDescription: 'A robust and modern midstream oil & energy data monitoring web-app. Built with Python on AWS. '
 ---
 ## What was it like to develop a fintech energy analytics project?
 

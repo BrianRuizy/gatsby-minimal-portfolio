@@ -1,9 +1,12 @@
 ---
 template: BlogPost
-path: /remark-kitchen-sink
-date: 2020-02-21T12:12:25.364Z
-title: 'Hello World: The remark Kitchen Sink'
+path: /favours
+github: https://github.com/favours-io/favours
+date: 2020-11-21
+title: Favours app
+category: application
 thumbnail: /assets/image-6.jpg
+metaDescription: 'A local marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
 ---
 # h1 Heading 8-)
 
@@ -145,7 +148,9 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![unsplash](https://images.unsplash.com/photo-1614089916276-eb5be76854bd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80 "unsplash")
+![unsplash](https://images.unsplash.com/photo-1614829574910-e7e09ca1c8bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=654&q=80)
+
+![code](https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80)
 
 ## Plugins
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -18,8 +18,8 @@ const Projects = () => {
             excerpt(pruneLength: 100)
             frontmatter {
               title
-              metaDescription
-              external
+              github
+              demo
               tech
             }
           }
@@ -30,7 +30,7 @@ const Projects = () => {
   return( 
     <Container>
       <h2>Other Projects &darr;</h2>
-      <Row className="mt-4">
+      <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
         <Col lg={3} md={4} sm={6} xs={12}>
           <Card className="mb-3">
@@ -38,8 +38,8 @@ const Projects = () => {
               <Card.Subtitle>Folder</Card.Subtitle>
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <Card.Text>{node.excerpt}</Card.Text>
-              <Card.Link href={node.frontmatter.external}>Github</Card.Link>
-              <Card.Link href="#"></Card.Link>
+              {node.frontmatter.github && <Card.Link><Link to={node.frontmatter.github}>code</Link></Card.Link>}
+              {node.frontmatter.demo && <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>}
             </Card.Body>
           </Card>
         </Col>

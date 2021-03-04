@@ -1,8 +1,7 @@
 ---
 template: projects
 title: Twitter analysis
-metaDescription: Python script
-external: 'https://twitter.com'
+github: 'https://twitter.com'
 tech: 
     - 
 ---

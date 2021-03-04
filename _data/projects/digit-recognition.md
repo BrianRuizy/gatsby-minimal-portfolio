@@ -1,8 +1,7 @@
 ---
 template: projects
 title: ML digit recognition
-metaDescription: Python script
-external: 'https://github.com/'
+github: 'https://github.com/'
 tech: 
     - 
 ---
