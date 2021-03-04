@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
+import { GoPrimitiveDot } from 'react-icons/go'
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -29,22 +31,27 @@ export default () => (
           <Col>
             <div className="headline">
               <h1>{data.site.siteMetadata.home.role};<br></br>
-              {<ul id="skillset">
-                {data.site.siteMetadata.home.skillset.map((skill,index) => 
-                  <li key={index}>{skill},</li> 
-                )}
-              </ul>}</h1>
+                {<ul id="skillset">
+                  {data.site.siteMetadata.home.skillset.map((skill,index) => 
+                    <li key={index}>{skill},</li> 
+                  )}
+                </ul>}
+              </h1>
             </div>
           </Col>
         </Row>
-        <Row  className="justify-content-md-center">
-          <Col md="auto">
+
+        <Row className="justify-content-center">
+          <Col xs="auto">
             <Image roundedCircle src="/assets/portrait.png"></Image>
+            <GoPrimitiveDot style={{ color: "#54b96d", margin: "35px 0 0 -20px", fontSize: "1.5em" }}/>
           </Col>
-          <Col md="auto" className="text-left">
-            <b>{data.site.siteMetadata.home.name}, {data.site.siteMetadata.home.role}</b><br></br>
-            {data.site.siteMetadata.home.preferredLocation}<br></br>
-            {data.site.siteMetadata.home.availability}
+          <Col xs="auto" className="text-left">
+            <p>
+              <b>{data.site.siteMetadata.home.name}, {data.site.siteMetadata.home.role}</b><br></br>
+              {data.site.siteMetadata.home.preferredLocation}<br></br>
+              {data.site.siteMetadata.home.availability}
+            </p>
           </Col>
         </Row>
         {/* <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link> */}

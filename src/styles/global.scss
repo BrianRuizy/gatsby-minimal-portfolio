@@ -1,8 +1,5 @@
-// react-bootstrap stylesheets
-@import "~bootstrap/scss/bootstrap";
-
-// Automates responsive resizing, https://github.com/twbs/rfs
-@import "~rfs/scss";
+@import "~bootstrap/scss/bootstrap"; // react-bootstrap stylesheets
+@import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;600&display=swap");
@@ -13,7 +10,6 @@ $breakpoints: (
   'tablet' : ( max-width:  768px ),
   'laptop'  : ( max-width: 1024px )
 );
- 
 @mixin respond-to($name) {
   @if map-has-key($breakpoints, $name) {
     @media #{inspect(map-get($breakpoints, $name))} {
@@ -25,7 +21,6 @@ $breakpoints: (
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
-
 html,
 body {
   margin: 0;
@@ -77,12 +72,6 @@ body.dark {
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
 }
-
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 4rem;
-  @include rfs(64);
-}
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
@@ -116,36 +105,44 @@ body {
 }
 .container { margin-top: 4rem; }
 .hero-header {
-  padding: 80px 0 120px 0;
-  // max-width: 400px;
   text-align: center;
+  padding: 80px 0 120px 0;
   @include respond-to(phone){ padding: 60px 0 80px 0 }
   & img{
     border: 2px solid;
-    width: 64px;
+    width: 55px;
+  }
+  p {
+    @include font-size(1rem);
+    line-height: 1.25;
+  }
+  .headline {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: -.02rem;
+    line-height: 64px;
+    margin-bottom: 25px;
+    @include respond-to(tablet){ font-size: 40px; }
+    @include respond-to(phone){
+      padding: 0 30px;
+      font-size: 36px;
+    }  
+    & ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    & li:hover {
+      -webkit-text-stroke: 1px var(--primary-text-color);
+      -webkit-text-fill-color: var(--background);
+      transition: -webkit-text-fill-color 0.2s linear,-webkit-text-fill-color 0.2s linear;
+    }
   }
 }
-.headline {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  letter-spacing: -.02rem;
-  line-height: 1.2;
-  margin-bottom: 25px;
-  @include respond-to(tablet){ font-size: 40px; }
-  @include respond-to(phone){
-    padding: 0 30px;
-    font-size: 36px;
-  }  
-  & ul{
-    list-style-type: none;
-    padding: 0;
-  }
-  & li:hover {
-    -webkit-text-stroke: 1px var(--primary-text-color);
-    -webkit-text-fill-color: var(--background);
-    transition: -webkit-text-fill-color 0.2s linear,-webkit-text-fill-color 0.2s linear;
-}
+h1 {
+  font-family: 'DM Serif Display', serif;
+  line-height: 1;
+  @include rfs(4rem);
 }
 .button {
   padding: 20px 30px;
@@ -416,4 +413,10 @@ body.light {
     box-shadow: 0 0 0 2px;
     top: 8px;
     left: 2px
+}
+
+.GoPrimitiveDot {
+  margin-top: 42px;
+  margin-left: -17px;
+  color: #2dc84d;
 }
