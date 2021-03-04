@@ -6,7 +6,8 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 
-import { FaGithub } from "react-icons/fa"
+import { FiGithub } from "react-icons/fi"
+import { FiExternalLink } from "react-icons/fi"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -40,7 +41,7 @@ const Projects = () => {
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <Card.Text>{node.excerpt}</Card.Text>
               { node.frontmatter.github && 
-                <Card.Link><Link to={node.frontmatter.github}><FaGithub/></Link></Card.Link>
+                <Card.Link><Link to={node.frontmatter.github}><FiGithub/></Link></Card.Link>
               }
               { node.frontmatter.demo && 
                 <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>

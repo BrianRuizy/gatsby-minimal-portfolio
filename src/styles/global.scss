@@ -89,13 +89,7 @@ body {
   background-color: var(--background);
   color: var(--text-color);
 }
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
+
 .navbar {
   background: var(--background);
   border-bottom: 1px solid black;
@@ -147,6 +141,11 @@ a {
     list-style-type: none;
     padding: 0;
   }
+  & li:hover {
+    -webkit-text-stroke: 1px var(--primary-text-color);
+    -webkit-text-fill-color: var(--background);
+    transition: -webkit-text-fill-color 0.2s linear,-webkit-text-fill-color 0.2s linear;
+}
 }
 .button {
   padding: 20px 30px;
