@@ -6,6 +6,8 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 
+import { FaExternalLinkAlt } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
@@ -43,8 +45,12 @@ const Featured = () => {
                 <Card.Title>{node.frontmatter.title}</Card.Title>
                 <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
                 <Card.Link><Link to={node.frontmatter.path}>learn more</Link></Card.Link>
-                {node.frontmatter.github && <Card.Link><Link to={node.frontmatter.github} >code</Link></Card.Link>}
-                {node.frontmatter.demo && <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>}
+                {node.frontmatter.github && 
+                  <Card.Link><Link to={node.frontmatter.github}><FaGithub/></Link></Card.Link>
+                }
+                {node.frontmatter.demo && 
+                  <Card.Link><Link to={node.frontmatter.demo}><FaExternalLinkAlt/></Link></Card.Link>
+                }
               </Card.Body>
               {/* <Link to={node.frontmatter.path}>
                 {!!node.frontmatter.thumbnail && (

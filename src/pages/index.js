@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
-import HeroHeader from "../components/sections/heroHeader"
+import Hero from "../components/sections/hero"
 import Featured from "../components/sections/featured";
 import Projects from "../components/sections/projects"
 
@@ -17,7 +17,7 @@ const IndexPage = ({
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
-      <HeroHeader/>
+      <Hero/>
       <Featured />
       <Projects />
     </Layout>

@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 
+import { FaGithub } from "react-icons/fa"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -38,8 +39,12 @@ const Projects = () => {
               <Card.Subtitle>Folder</Card.Subtitle>
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <Card.Text>{node.excerpt}</Card.Text>
-              {node.frontmatter.github && <Card.Link><Link to={node.frontmatter.github}>code</Link></Card.Link>}
-              {node.frontmatter.demo && <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>}
+              { node.frontmatter.github && 
+                <Card.Link><Link to={node.frontmatter.github}><FaGithub/></Link></Card.Link>
+              }
+              { node.frontmatter.demo && 
+                <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>
+              }
             </Card.Body>
           </Card>
         </Col>

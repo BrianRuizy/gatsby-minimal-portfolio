@@ -5,7 +5,7 @@
 @import "~rfs/scss";
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;600&display=swap");
 $font-family: 'Montserrat', sans-serif;
 
 $breakpoints: (
@@ -79,6 +79,8 @@ body.dark {
 }
 
 h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 4rem;
   @include rfs(64);
 }
 /* System Fonts as used by Medium and WordPress */
@@ -118,7 +120,7 @@ a {
     color: var(--primary-text-color);
   }
 }
-.container { margin-top: 6em; }
+.container { margin-top: 4rem; }
 .hero-header {
   padding: 80px 0 120px 0;
   // max-width: 400px;
@@ -133,7 +135,7 @@ a {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  letter-spacing: -.02em;
+  letter-spacing: -.02rem;
   line-height: 1.2;
   margin-bottom: 25px;
   @include respond-to(tablet){ font-size: 40px; }
@@ -175,14 +177,7 @@ a {
     color: var(--btn-hover-text-color);
   }
 }
-.primary-content {
-  font-size: 20px;
-  margin-bottom: 32px;
-  line-height: 1.5;
-  font-weight: lighter;
-  max-width: 30em;
-  color: var(--text-secondary-color)
-}
+
 .post {
   padding: 0;
   background:var(--background);
