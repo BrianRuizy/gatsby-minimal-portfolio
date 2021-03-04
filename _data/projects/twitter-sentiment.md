@@ -1,9 +1,9 @@
 ---
 template: projects
-title: Twitter sentiment analysis
+title: Twitter analysis
 metaDescription: Python script
 external: 'https://twitter.com'
 tech: 
     - 
 ---
-📅 Smart, cloud-based, and lightweight calendar booking web-application. BookO'Mate 
+Project showing natural lanuguage processing of 'tweets' using the Tweepy API, and TextBlob.

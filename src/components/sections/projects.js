@@ -33,9 +33,9 @@ const Projects = () => {
       <Row className="mt-4">
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
         <Col lg={3} md={4} sm={6} xs={12}>
-          <Card>
-            <Card.Header>{node.frontmatter.metaDescription}</Card.Header>
+          <Card className="mb-3">
             <Card.Body>
+              <Card.Subtitle>Folder</Card.Subtitle>
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <Card.Text>{node.excerpt}</Card.Text>
               <Card.Link href={node.frontmatter.external}>Github</Card.Link>

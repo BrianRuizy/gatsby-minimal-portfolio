@@ -7,4 +7,4 @@ external: 'https://leetcode.com'
 tech: 
     - python
 ---
-lorem ipsum
+LeetCode personal track of solutions written in Python. Algorithms, data structures, etc.

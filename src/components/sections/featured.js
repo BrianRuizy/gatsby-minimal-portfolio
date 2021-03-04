@@ -1,7 +1,11 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Container } from "react-bootstrap"
-import PostLink from "../post-link"
+import { useStaticQuery, graphql, Link } from "gatsby"
+
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Card from "react-bootstrap/Card"
+
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
@@ -28,11 +32,24 @@ const Featured = () => {
     <Container>
       <h2>Featured &darr;</h2>
       <div className="grids">
-        {data.allMarkdownRemark.edges.map(
-          ({ node }) => (
-            <PostLink key={node.id} post={node} />
-          )
-        )}
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <article className="card ">
+          <Link to={node.frontmatter.path}>
+            {!!node.frontmatter.thumbnail && (
+              <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
+            )}
+          </Link>
+          <header>
+            <h2 className="post-title">
+              <Link to={node.frontmatter.path} className="post-link">
+                {node.frontmatter.title}
+              </Link>
+            </h2>
+            <div className="post-meta">{node.frontmatter.date}</div>
+          </header>
+        </article>
+        
+        ))}
       </div>
     </Container>
   )
