@@ -1,10 +1,11 @@
 import React from "react"
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby'
+
 import Layout from "../components/layout"
-import PostLink from "../components/post-link"
-import HeroHeader from "../components/heroHeader"
-import Featured from "../components/featured";
+import HeroHeader from "../components/sections/heroHeader"
+import Featured from "../components/sections/featured";
+import Projects from "../components/sections/projects"
 
 const IndexPage = ({
   data: { site }
@@ -18,6 +19,7 @@ const IndexPage = ({
       </Helmet>
       <HeroHeader/>
       <Featured />
+      <Projects />
     </Layout>
   )
 }

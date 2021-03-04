@@ -28,12 +28,12 @@ export default () => (
         <Row>
           <Col>
             <div className="headline">
-              {data.site.siteMetadata.home.role};<br></br>
+              <h1>{data.site.siteMetadata.home.role};<br></br>
               {<ul id="skillset">
                 {data.site.siteMetadata.home.skillset.map((skill,index) => 
                   <li key={index}>{skill},</li> 
                 )}
-              </ul>}
+              </ul>}</h1>
             </div>
           </Col>
         </Row>

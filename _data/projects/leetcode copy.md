@@ -1,10 +1,9 @@
 ---
-date: '2017-11-01'
 template: projects
 title: leetcode
 metaDescription: Leetcode personal
-external: 'https://github.com'
+external: 'https://github.com/brianruizy'
 tech: 
     - python
 ---
-lorem ipsum
+lorem ipsum2222222222222222222222222222

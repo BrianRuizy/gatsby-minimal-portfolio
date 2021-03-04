@@ -43,7 +43,7 @@ collections:
                 required: false
   - name: blog
     label: Blog
-    folder: _data/blog/featured
+    folder: _data/featured
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
     fields:
@@ -89,5 +89,8 @@ collections:
         name: metaDescription
         widget: text
         required: false
+      - label: External
+        name: external
+        widget: text
       - { name: body, label: Body, widget: markdown }
       
