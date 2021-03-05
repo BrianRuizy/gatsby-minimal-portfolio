@@ -54,7 +54,6 @@ export default () => (
             </p>
           </Col>
         </Row>
-        {/* <Link to='/contact' className="button -primary">Reach out &nbsp;&rarr;</Link> */}
       </Container>      
     )}
   />

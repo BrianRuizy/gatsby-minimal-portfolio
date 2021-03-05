@@ -18,7 +18,7 @@ export default ({ children }) => {
     `
   )
   return (
-    <div className="site-wrapper">
+    <div>
       <Navigation />
       {children}
       <Footer />

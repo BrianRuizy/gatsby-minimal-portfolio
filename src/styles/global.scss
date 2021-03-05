@@ -142,50 +142,18 @@ h1 {
   line-height: 1;
   @include font-size(4rem);
 }
-.button {
-  padding: 20px 30px;
-  display: inline-block;
-  background: var(--btn-bg);
-  border: 1px solid var(--btn-bdr);
-  border-radius: 30px;
-  text-decoration: none;
-  color: var(--btn-text-color);
-  font-size: 16px;
-  font-weight: normal;
-  margin: 0 20px 0 0;
-  transition: background-color .3s linear;
-  &.-primary {
-    box-shadow: 
-      0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
-      0 12.5px 10px rgba(0, 0, 0, 0.06), 
-      0 22.3px 17.9px rgba(0, 0, 0, 0.072);
-    &:hover {
-      background-color: var(--secondary-color);
-      color: var(--primary-text-color);
-      text-decoration: none;
-    }
-  }
-  &:hover {
-    background-color: var(--btn-hover-bg);
-    color: var(--btn-hover-text-color);
-  }
-}
 .post {
   padding: 0;
   background:var(--background);
   color: var(--text-color);
   line-height: 1.5;
+  img { width: 100%; }
   > .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
-
     h2, h3 { margin: 25px 0 5px 0 }
     p { color: var(--text-secondary-color) }
-
-    .gatsby-highlight {
-      margin: -10px 0 20px 0 !important;
-    }
+    .gatsby-highlight { margin: -10px 0 20px 0 !important; }
   }
   > .blog-post-content *:last-child,
   > *:last-child {
@@ -194,29 +162,27 @@ h1 {
   .post-title {
     text-align: center;
     margin: 0 0 0.5rem;
-    line-height: 1.3;
-    font-size: 2rem;
+    @include font-size(4rem);
   }
   .post-meta {
-    margin-bottom: 32px;
+    @include font-size(1.5rem);
+    color: var(--text-secondary-color);
     text-align: center;
   }
-
 }
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
- background-color: var(--featured-bg);
+  background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
-  margin-bottom: 36px;
+  border-radius: 30px;
   color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
-  padding: 18px;
+  padding: 20px;
   overflow: hidden;
   &:before {
     content: "";
@@ -231,10 +197,6 @@ h1 {
   > * {
     position: relative;
     z-index: 2;
-  }
-  .post-meta {
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 0;
   }
 }
 .card {
@@ -264,10 +226,6 @@ h1 {
     @include font-size(2rem);
   }
   &.featured .card-text { @include font-size(1.2rem); }
-}
-.post-meta {
-  font-size: 1rem;
-  color: var(--text-secondary-color);
 }
 .site-footer {
   text-align: center;
