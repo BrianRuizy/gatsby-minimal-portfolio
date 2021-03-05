@@ -34,24 +34,33 @@ const Featured = () => {
       }
     }
   `)
-  return( 
+  return (
     <Container>
       <h2>Featured &darr;</h2>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Col key={node.id} lg={node.frontmatter.cardSize} sm={12} style={{display: "flex"}}>
+          <Col
+            key={node.id}
+            lg={node.frontmatter.cardSize}
+            sm={12}
+            style={{ display: "flex" }}
+          >
             <Card className="mb-4 featured">
               <Card.Header>{node.frontmatter.category}</Card.Header>
               <Card.Body>
                 <Card.Title>{node.frontmatter.title}</Card.Title>
                 <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
                 <Card.Link href={node.frontmatter.path}>Learn more</Card.Link>
-                {node.frontmatter.github && 
-                  <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
-                }
-                {node.frontmatter.demo && 
-                  <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
-                }
+                {node.frontmatter.github && (
+                  <Card.Link href={node.frontmatter.github}>
+                    <FiGithub />
+                  </Card.Link>
+                )}
+                {node.frontmatter.demo && (
+                  <Card.Link href={node.frontmatter.demo}>
+                    <FiExternalLink />
+                  </Card.Link>
+                )}
               </Card.Body>
               {/* <Link to={node.frontmatter.path}>
                 {!!node.frontmatter.thumbnail && (
@@ -63,7 +72,7 @@ const Featured = () => {
         ))}
       </Row>
     </Container>
-  )
+  );
 }
 
 export default Featured
