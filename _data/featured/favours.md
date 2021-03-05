@@ -6,9 +6,9 @@ date: 2020-11-21
 title: Favours app
 category: application
 thumbnail: /assets/image-6.jpg
-metaDescription: 'A local marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
+metaDescription: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
 ---
-# h1 Heading 8-)
+## h1 Heading 8-)
 
 ## h2 Heading
 

@@ -3,7 +3,7 @@ template: BlogPost
 path: /covid
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
-date: 2020-06-20
+date: 2021-02-01
 title: COVID-19 dashboard
 category: web app
 thumbnail: /assets/image-5.jpg

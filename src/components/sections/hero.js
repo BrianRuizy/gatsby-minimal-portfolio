@@ -43,7 +43,7 @@ export default () => (
 
         <Row className="justify-content-center">
           <Col xs="auto">
-            <Image roundedCircle src="/assets/portrait.png"></Image>
+            <Link to="/about"><Image roundedCircle src="/assets/portrait.png"></Image></Link>
             <GoPrimitiveDot style={{ color: "#54b96d", margin: "35px 0 0 -20px", fontSize: "1.5em" }}/>
           </Col>
           <Col xs="auto" className="text-left">

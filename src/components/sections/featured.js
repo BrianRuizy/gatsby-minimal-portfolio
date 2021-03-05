@@ -38,18 +38,18 @@ const Featured = () => {
       <h2>Featured &darr;</h2>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Col lg={4} xs={12}>
-            <Card className="mb-3">
+          <Col key={node.id} lg={4} md={6} xs={12} style={{display: "flex"}}>
+            <Card className="mb-3 featured">
               <Card.Header>{node.frontmatter.category}</Card.Header>
               <Card.Body>
                 <Card.Title>{node.frontmatter.title}</Card.Title>
                 <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
-                <Card.Link><Link to={node.frontmatter.path}>learn more</Link></Card.Link>
+                <Card.Link href={node.frontmatter.path}>Learn more</Card.Link>
                 {node.frontmatter.github && 
-                  <Card.Link><Link to={node.frontmatter.github}><FiGithub/></Link></Card.Link>
+                  <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
                 }
                 {node.frontmatter.demo && 
-                  <Card.Link><Link to={node.frontmatter.demo}><FiExternalLink/></Link></Card.Link>
+                  <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
                 }
               </Card.Body>
               {/* <Link to={node.frontmatter.path}>

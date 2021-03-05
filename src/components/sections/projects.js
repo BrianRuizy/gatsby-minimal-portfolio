@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card"
 
 import { FiGithub } from "react-icons/fi"
 import { FiExternalLink } from "react-icons/fi"
+import { AiFillFolder } from "react-icons/ai"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -34,18 +35,22 @@ const Projects = () => {
       <h2>Other Projects &darr;</h2>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
-        <Col lg={3} md={4} sm={6} xs={12}>
+        <Col key={node.id} lg={3} md={4} sm={6} xs={12} style={{display: "flex"}}>
           <Card className="mb-3">
-            <Card.Body>
-              <Card.Subtitle>Folder</Card.Subtitle>
-              <Card.Title>{node.frontmatter.title}</Card.Title>
-              <Card.Text>{node.excerpt}</Card.Text>
-              { node.frontmatter.github && 
-                <Card.Link><Link to={node.frontmatter.github}><FiGithub/></Link></Card.Link>
-              }
-              { node.frontmatter.demo && 
-                <Card.Link><Link to={node.frontmatter.demo}>demo</Link></Card.Link>
-              }
+            <Card.Body className="row">
+              <Col xs={2} sm={12}>
+                <AiFillFolder style={{fontSize: "2rem"}}/>
+              </Col>
+              <Col>
+                <Card.Title>{node.frontmatter.title}</Card.Title>
+                <Card.Text>{node.excerpt}</Card.Text>
+                { node.frontmatter.github && 
+                  <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
+                }
+                { node.frontmatter.demo && 
+                  <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
+                }
+              </Col>
             </Card.Body>
           </Card>
         </Col>

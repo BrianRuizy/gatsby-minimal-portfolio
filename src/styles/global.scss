@@ -4,7 +4,6 @@
 // Google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;600&display=swap");
 $font-family: 'Montserrat', sans-serif;
-
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
   'tablet' : ( max-width:  768px ),
@@ -37,7 +36,7 @@ body.light {
   --secondary-color: #10072b;
   --background: #fff;
   --site-header: var(--background);
-  --card-bg: #fff;
+  --card-bg: #fafafa;
   --card-bdr: #eee;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--card-bg);
@@ -78,11 +77,9 @@ body {
   background-color: var(--background);
   color: var(--text-color);
 }
-
 .navbar {
   background: var(--background);
   border-bottom: 1px solid black;
-
   .justify-content-end a {
     color: var(--primary-text-color);
     text-decoration: none;
@@ -107,7 +104,7 @@ body {
 .hero-header {
   text-align: center;
   padding: 80px 0 120px 0;
-  @include respond-to(phone){ padding: 60px 0 80px 0 }
+  @include respond-to(phone){ padding: 60px 0 80px 0; }
   & img{
     border: 2px solid;
     width: 55px;
@@ -116,6 +113,7 @@ body {
     @include font-size(1rem);
     line-height: 1.25;
   }
+  a { color: unset;}
   .headline {
     font-size: 40px;
     font-weight: bold;
@@ -142,7 +140,7 @@ body {
 h1 {
   font-family: 'DM Serif Display', serif;
   line-height: 1;
-  @include rfs(4rem);
+  @include font-size(4rem);
 }
 .button {
   padding: 20px 30px;
@@ -173,7 +171,6 @@ h1 {
     color: var(--btn-hover-text-color);
   }
 }
-
 .post {
   padding: 0;
   background:var(--background);
@@ -204,7 +201,7 @@ h1 {
     margin-bottom: 32px;
     text-align: center;
   }
-  
+
 }
 .post-thumbnail {
   text-align: center;
@@ -240,7 +237,6 @@ h1 {
     margin-bottom: 0;
   }
 }
-
 .card {
   display: grid;
   background-color: var(--card-bg);
@@ -248,21 +244,26 @@ h1 {
   border: 1px solid var(--card-bdr);
   overflow: hidden;
   line-height: 1.25;
+  > a img { display: block; }
+  > header { padding: 24px; }
+  > h2:first-child { margin: 0 0 0.5rem 0; }
 
-  > a img {
-    display: block;
-  }
-  > header {
-    padding: 24px;
-  }
-  > h2:first-child {
-    margin: 0 0 0.5rem 0;
-  }
   .post-title {
     font-size: 18px;
     margin-bottom: 0.3rem;
   }
-
+  .card-header {
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: inherit;
+    border-bottom: none;
+    font-weight: lighter;
+  }
+  &.featured .card-title {
+    font-weight: 600;
+    @include font-size(2rem);
+  }
+  &.featured .card-text { @include font-size(1.2rem); }
 }
 .post-meta {
   font-size: 1rem;
@@ -281,7 +282,6 @@ h1 {
   padding: 32px;
   border: 1px solid var(--contact-bdr);
   border-radius: 9px;
-
   label {
     display: block;
     margin-bottom: 0.5rem;
@@ -306,26 +306,6 @@ h1 {
     height: 150px;
   }
 }
-.two-grids {
-  display: grid;
-  grid-gap: 32px;
-  &.-contact {
-    .post-thumbnail {
-      min-height: 240px !important;
-    }
-  }
-}
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-width: 1024px) {
-  .two-grids {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 64px;
-  }
-}
-
 // theme-changer
 .theme-changer {
   display: none;
@@ -413,10 +393,4 @@ body.light {
     box-shadow: 0 0 0 2px;
     top: 8px;
     left: 2px
-}
-
-.GoPrimitiveDot {
-  margin-top: 42px;
-  margin-left: -17px;
-  color: #2dc84d;
 }
