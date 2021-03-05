@@ -36,7 +36,7 @@ const Projects = () => {
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
         <Col key={node.id} lg={3} md={4} sm={6} xs={12} style={{display: "flex"}}>
-          <Card className="mb-3">
+          <Card className="mb-3 projects">
             <Card.Body className="row">
               <Col xs={2} sm={12}>
                 <AiFillFolder style={{fontSize: "2rem"}}/>

@@ -27,6 +27,7 @@ const Featured = () => {
               category
               thumbnail
               metaDescription
+              cardSize
             }
           }
         }
@@ -38,8 +39,8 @@ const Featured = () => {
       <h2>Featured &darr;</h2>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Col key={node.id} lg={4} md={6} xs={12} style={{display: "flex"}}>
-            <Card className="mb-3 featured">
+          <Col key={node.id} lg={node.frontmatter.cardSize} sm={12} style={{display: "flex"}}>
+            <Card className="mb-4 featured">
               <Card.Header>{node.frontmatter.category}</Card.Header>
               <Card.Body>
                 <Card.Title>{node.frontmatter.title}</Card.Title>
