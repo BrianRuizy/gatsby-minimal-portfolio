@@ -3,12 +3,11 @@ import {Link} from "gatsby"
 import ThemeChanger from "../components/themeChanger"
 
 import Navbar from "react-bootstrap/Navbar"
-import NavLink from "react-bootstrap/NavLink"
 import NavItem from "react-bootstrap/NavItem"
 
 import { FiHome } from "react-icons/fi"
 import { CgProfile } from "react-icons/cg"
-import { AiOutlineMessage } from "react-icons/ai"
+import { FiMessageSquare } from "react-icons/fi"
 
 const tabs = [{
   route: "/",
@@ -20,7 +19,7 @@ const tabs = [{
   label: "About"
 },{
   route: "/contact",
-  icon: AiOutlineMessage,
+  icon: FiMessageSquare,
   label: "Contact"
 }]
 
@@ -35,7 +34,6 @@ const Navigation = (props) => {
         <Navbar.Collapse className="justify-content-end">
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
-          <ThemeChanger/>
         </Navbar.Collapse>
       </Navbar>
 
