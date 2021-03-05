@@ -2,8 +2,8 @@
 @import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;600&display=swap");
-$font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;700&display=swap");
+$font-family: 'Roboto', sans-serif;
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
   'tablet' : ( max-width:  768px ),
@@ -100,7 +100,7 @@ body {
     color: var(--primary-text-color);
   }
 }
-.container { margin-top: 4rem; }
+.container { margin: 6rem auto }
 .hero-header {
   text-align: center;
   padding: 80px 0 120px 0;
@@ -177,7 +177,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 30px;
+  border-radius: 20px;
   color: var(--featured-text);
   display: grid;
   align-content: center;
@@ -202,14 +202,13 @@ h1 {
 .card {
   display: grid;
   background-color: var(--card-bg);
-  border-radius: 30px;
+  border-radius: 20px;
   border: 1px solid var(--card-bdr);
   overflow: hidden;
   line-height: 1.25;
   > a img { display: block; }
   > header { padding: 24px; }
   > h2:first-child { margin: 0 0 0.5rem 0; }
-
   .post-title {
     font-size: 18px;
     margin-bottom: 0.3rem;
@@ -221,11 +220,18 @@ h1 {
     border-bottom: none;
     font-weight: lighter;
   }
-  &.featured .card-title {
-    font-weight: 600;
-    @include font-size(2rem);
+  &.featured {
+    .card-title {
+      font-weight: 700;
+      @include font-size(2.5rem);
+    }
+    .card-text, .card-link { 
+      @include font-size(1.5rem);
+    }
   }
-  &.featured .card-text { @include font-size(1.2rem); }
+  &.projects {
+    .card-title { font-weight: 400;}
+  }
 }
 .site-footer {
   text-align: center;
