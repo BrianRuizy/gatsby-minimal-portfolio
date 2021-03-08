@@ -38,8 +38,7 @@ body.light {
   --secondary-color: #979797;
   --background: #fff;
   --site-header: var(--background);
-  --card-bg: #fafafa;
-  --card-bdr: #eee;
+  --card-bg: #f5f5f7;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--card-bg);
   --btn-bdr: #d3d6e7;
@@ -50,7 +49,7 @@ body.light {
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
   --link-color: #06c;
-  
+  --bottom-nav-bg: #fff;
 }
 body.dark {
   --primary-color: #9984d5;
@@ -62,7 +61,6 @@ body.dark {
   --text-secondary-color: #a1a1a6;
   --site-header: var(--background);
   --card-bg: #151516;
-  --card-bdr: #232527;
   --card-shadow: #020204;
   --btn-bg: var(--card-bg);
   --btn-bdr: #151516;
@@ -73,6 +71,7 @@ body.dark {
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
   --link-color: #2997ff;
+  --bottom-nav-bg: #232527;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -112,12 +111,22 @@ body {
   border-radius: 25px;
   margin: 1rem 15vw;
   border: 1px solid var(--card-bdr);
-  background-color: var(--background);
+  background-color: var(--bottom-nav-bg);
   box-shadow: var(--card-shadow) 0px 0px 4px;
   .icon { font-size: 2rem; }
   .nav-link { color: var(--secondary-color); }
   .nav-link.active { color: var(--primary-text-color); }
   @include respond-to(tablet){ visibility: visible;}
+}
+.bottom-drawer {
+  .drawer div:nth-child(2) {
+    color: var(--text-secondary-color);
+    background: var(--bottom-nav-bg);
+  }
+  .icon.message {
+    color: var(--secondary-color);
+    margin-top: .5rem;
+  }
 }
 .container { 
   margin: 5rem auto 6rem auto;
@@ -330,7 +339,7 @@ body.light {
   left: 89vw;
   border-radius: 100%;
   border: 1px solid var(--card-bdr);
-  background: var(--background);
+  background: var(--bottom-nav-bg);
   box-shadow: var(--card-shadow) 0px 0px 15px;
   padding: 1.5rem;
   @include respond-to(tablet){

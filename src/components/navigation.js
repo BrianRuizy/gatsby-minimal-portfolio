@@ -1,13 +1,13 @@
 import React from "react"
 import {Link} from "gatsby"
 import ThemeChanger from "../components/themeChanger"
+import BottomDrawer from "../components/bottomDrawer"
 
 import Navbar from "react-bootstrap/Navbar"
 import NavItem from "react-bootstrap/NavItem"
 
 import { FiHome } from "react-icons/fi"
 import { CgProfile } from "react-icons/cg"
-import { FiMessageSquare } from "react-icons/fi"
 
 const tabs = [{
   route: "/",
@@ -17,10 +17,14 @@ const tabs = [{
   route: "/about",
   icon: CgProfile,
   label: "About"
+}]
+
+const buttons = [{
+  label: "Contact-drawer", 
+  action: <BottomDrawer/>,
 },{
-  route: "/contact",
-  icon: FiMessageSquare,
-  label: "Contact"
+  label: "Theme-changer", 
+  action: <ThemeChanger/>,
 }]
 
 const Navigation = (props) => {
@@ -49,9 +53,11 @@ const Navigation = (props) => {
               </Link>
             </NavItem>
           ))}
-          <NavItem>
-            <ThemeChanger/>
-          </NavItem>
+          { buttons.map((tab, index) =>(
+            <NavItem key={`tab-${index}`}>
+              {tab.action}
+            </NavItem>
+          ))}
         </div>
       </Navbar>
     </div>
