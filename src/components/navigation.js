@@ -40,17 +40,15 @@ const Navigation = (props) => {
       {/* bottom bar */}
       <Navbar className="bottom-nav" fixed="bottom" >
         <div className=" d-flex flex-row justify-content-around w-100">
-          {
-            tabs.map((tab, index) =>(
-              <NavItem key={`tab-${index}`}>
-                <Link to={tab.route} className="nav-link" activeClassName="active">
-                  <div className="row d-flex flex-column justify-content-center align-items-center">
-                    {<tab.icon className="icon"/>}
-                  </div>
-                </Link>
-              </NavItem>
-            ))
-          }
+          { tabs.map((tab, index) =>(
+            <NavItem key={`tab-${index}`}>
+              <Link to={tab.route} className="nav-link" activeClassName="active">
+                <div className="row d-flex flex-column justify-content-center align-items-center">
+                  {<tab.icon className="icon"/>}
+                </div>
+              </Link>
+            </NavItem>
+          ))}
           <NavItem>
             <ThemeChanger/>
           </NavItem>

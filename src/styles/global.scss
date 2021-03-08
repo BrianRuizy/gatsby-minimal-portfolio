@@ -33,6 +33,7 @@ body {
 body.light {
   --primary-color: #614DFF;
   --primary-text-color: #000;
+  --text-secondary-color: #1f1f1f;
   --featured-bg: #493b8a;
   --featured-text: #fff;
   --secondary-color: #979797;
@@ -53,19 +54,19 @@ body.light {
 }
 body.dark {
   --primary-color: #9984d5;
-  --primary-text-color: #fff;
+  --primary-text-color: #f5f5f7;
   --featured-bg: #66578d;
-  --featured-text: #fff;
+  --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
-  --background: #1E2123;
+  --background: #000000;
   --text-color: rgba(255,255,255,0.88);
-  --text-secondary-color: rgba(255,255,255,0.66);
+  --text-secondary-color: #a1a1a6;
   --site-header: var(--background);
-  --card-bg: #313437;
+  --card-bg: #151516;
   --card-bdr: #232527;
   --card-shadow: #020204;
   --btn-bg: var(--card-bg);
-  --btn-bdr: #313437;
+  --btn-bdr: #151516;
   --btn-text-color: #b5b6bb;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
@@ -81,7 +82,7 @@ body {
 }
 .navbar {
   background: var(--background);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--card-bg);
   .justify-content-end a {
     color: var(--primary-text-color);
     text-decoration: none;
@@ -107,7 +108,7 @@ body {
 }
 .bottom-nav {
   visibility: hidden;
-  border-radius: 20px;
+  border-radius: 25px;
   margin: 1rem 15vw;
   border: 1px solid var(--card-bdr);
   background-color: var(--background);
@@ -118,7 +119,7 @@ body {
   @include respond-to(tablet){ visibility: visible;}
 }
 .container { 
-  margin: 3rem auto 6rem 0;
+  margin: 3rem auto 6rem auto;
 }
 .hero-header {
   text-align: center;
@@ -131,6 +132,7 @@ body {
   p {
     @include font-size(1rem);
     line-height: 1.25;
+    color: var(--text-secondary-color);
   }
   a { color: unset;}
   .headline {
@@ -171,7 +173,10 @@ h1 {
     max-width: 768px;
     margin: 0 auto;
     h2, h3 { margin: 25px 0 5px 0 }
-    p { color: var(--text-secondary-color) }
+    p { 
+      font-size: 18px;
+      color: var(--text-secondary-color) 
+    }
     .gatsby-highlight { margin: -10px 0 20px 0 !important; }
   }
   > .blog-post-content *:last-child,
@@ -222,7 +227,6 @@ h1 {
   display: grid;
   background-color: var(--card-bg);
   border-radius: 20px;
-  border: 1px solid var(--card-bdr);
   overflow: hidden;
   line-height: 1.25;
   > a img { display: block; }
@@ -238,6 +242,9 @@ h1 {
     background-color: inherit;
     border-bottom: none;
     font-weight: lighter;
+  }
+  .card-text{
+    color: var(--text-secondary-color);
   }
   &.featured {
     .card-title {
@@ -263,7 +270,6 @@ h1 {
 .form-container {
   background-color: var(--contact-bg);
   padding: 32px;
-  border: 1px solid var(--contact-bdr);
   border-radius: 9px;
   label {
     display: block;

@@ -23,10 +23,10 @@ const AboutPage = ({
         <div className="section about">
           <Row>
             <Col md={8} sm={12}>
-              <h1>
+              <h2>
                 I enjoy the process of creating and abstract idea 
                 and materializing it into simething that generates <u>value</u>
-              </h1>
+              </h2>
             </Col>
             <Col>
               <Image src="/assets/portrait.png"></Image>
