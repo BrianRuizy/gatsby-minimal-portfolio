@@ -6,7 +6,7 @@ demo: https://ncov-dashboard.herokuapp.com/
 date: 2021-02
 title: COVID-19 dashboard
 category: web app
-thumbnail: /assets/covid-bg.jpg
+thumbnail: /assets/covid.png
 metaDescription: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive and dilligent UI.'
 cardSize: 8
 ---

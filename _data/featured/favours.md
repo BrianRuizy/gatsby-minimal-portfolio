@@ -2,12 +2,12 @@
 template: BlogPost
 path: /favours
 github: https://github.com/favours-io/favours
-date: 2020-01
+date: 2020-10
 title: Favours app
 category: application
-thumbnail: /assets/image-6.jpg
+thumbnail: /assets/favours.png
 metaDescription: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
-cardSize: 6
+cardSize: 4
 ---
 ## h1 Heading 8-)
 

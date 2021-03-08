@@ -2,12 +2,12 @@
 template: BlogPost
 path: /bumpit
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
-date: 2020-02
+date: 2019-12
 title: Bump.IT Azure  Hackathon
 category: Hackathon
-thumbnail: 
+thumbnail: assets/bumpit.png
 metaDescription: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B dollar issue of road potholes'
-cardSize: 4
+cardSize: 6
 ---
 ## What was it like to develop a fintech energy analytics project?
 

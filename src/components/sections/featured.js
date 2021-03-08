@@ -62,11 +62,11 @@ const Featured = () => {
                   </Card.Link>
                 )}
               </Card.Body>
-              {/* <Link to={node.frontmatter.path}>
+              <Link to={node.frontmatter.path}>
                 {!!node.frontmatter.thumbnail && (
                   <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
                 )}
-              </Link> */}
+              </Link>
             </Card>
           </Col>
         ))}
