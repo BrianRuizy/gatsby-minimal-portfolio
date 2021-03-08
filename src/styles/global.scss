@@ -33,8 +33,7 @@ body {
 body.light {
   --primary-color: #614DFF;
   --primary-text-color: #000;
-  --text-secondary-color: #1f1f1f;
-  --featured-bg: #493b8a;
+  --text-secondary-color: #262626;
   --featured-text: #fff;
   --secondary-color: #979797;
   --background: #fff;
@@ -50,12 +49,12 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
+  --link-color: #06c;
   
 }
 body.dark {
   --primary-color: #9984d5;
   --primary-text-color: #f5f5f7;
-  --featured-bg: #66578d;
   --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
   --background: #000000;
@@ -73,6 +72,7 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
+  --link-color: #2997ff;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -82,17 +82,17 @@ body {
 }
 .navbar {
   background: var(--background);
-  border-bottom: 1px solid var(--card-bg);
+  border-bottom: 1px solid var(--text-secondary-color);
   .justify-content-end a {
-    color: var(--primary-text-color);
+    color: var(--secondary-color);
     text-decoration: none;
     margin: 0 8px 0;
     &[aria-current] {
-      color: var(--primary-color);
+      color: var(--primary-text-color);
       font-weight: bold;
     }
     &:hover {
-      color: var(--primary-color);
+      color: var(--link-color);
     }
     &:last-child {
       margin-right: 0;
@@ -100,6 +100,7 @@ body {
   }
   .navbar-brand a{
     font-weight: bold;
+    font-size: 1.5rem;
     color: var(--primary-text-color);
   }
 }
@@ -119,7 +120,7 @@ body {
   @include respond-to(tablet){ visibility: visible;}
 }
 .container { 
-  margin: 3rem auto 6rem auto;
+  margin: 5rem auto 6rem auto;
 }
 .hero-header {
   text-align: center;
@@ -197,7 +198,7 @@ h1 {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  background-color: var(--featured-bg);
+  background-color: var(--card-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -226,6 +227,7 @@ h1 {
 .card {
   display: grid;
   background-color: var(--card-bg);
+  border: none;
   border-radius: 20px;
   overflow: hidden;
   line-height: 1.25;
@@ -243,9 +245,8 @@ h1 {
     border-bottom: none;
     font-weight: lighter;
   }
-  .card-text{
-    color: var(--text-secondary-color);
-  }
+  .card-text{ color: var(--text-secondary-color); }
+  .card-link{ color: var(--link-color); }
   &.featured {
     .card-title {
       font-weight: 700;
@@ -305,7 +306,7 @@ h1 {
   color: var(--primary-text-color);
   bottom: 2rem;
   left: 89vw;
-  margin-left: 8px;
+  margin-left: 9px;
   @include respond-to(tablet){
     color: var(--secondary-color);
     position: inherit;
@@ -328,10 +329,12 @@ body.light {
   bottom: 1.5rem;
   left: 89vw;
   border-radius: 100%;
+  border: 1px solid var(--card-bdr);
   background: var(--background);
   box-shadow: var(--card-shadow) 0px 0px 15px;
   padding: 1.5rem;
   @include respond-to(tablet){
+    border: none;
     position: inherit;
     background: none;
     box-shadow: none;
