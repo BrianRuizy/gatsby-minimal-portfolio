@@ -35,7 +35,7 @@ const Projects = () => {
       <h2>Other Projects &darr;</h2>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
-        <Col key={node.id} lg={3} md={4} sm={6} xs={12} style={{display: "flex"}}>
+        <Col key={node.id} lg={4} sm={6} xs={12} style={{display: "flex"}}>
           <Card className="mb-3 projects">
             <Card.Body className="row">
               <Col xs={2} sm={12}>
