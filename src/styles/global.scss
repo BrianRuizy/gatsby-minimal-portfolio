@@ -33,12 +33,12 @@ body {
 body.light {
   --primary-color: #614DFF;
   --primary-text-color: #000;
-  --text-secondary-color: #262626;
+  --text-secondary-color: #73737d;
   --featured-text: #fff;
   --secondary-color: #979797;
-  --background: #fff;
+  --background: #fafafa;
   --site-header: var(--background);
-  --card-bg: #f5f5f7;
+  --card-bg: #fff;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--card-bg);
   --btn-bdr: #d3d6e7;
@@ -50,20 +50,21 @@ body.light {
   --input-bg: var(--background);
   --link-color: #06c;
   --bottom-nav-bg: #fff;
+  --card-bdr: rgba(25, 26, 30, 0.15);
 }
 body.dark {
   --primary-color: #9984d5;
   --primary-text-color: #f5f5f7;
   --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
-  --background: #000000;
+  --background: #111216;
   --text-color: rgba(255,255,255,0.88);
   --text-secondary-color: #a1a1a6;
   --site-header: var(--background);
-  --card-bg: #151516;
+  --card-bg: #1D2128;
   --card-shadow: #020204;
   --btn-bg: var(--card-bg);
-  --btn-bdr: #151516;
+  --btn-bdr: #1D2128;
   --btn-text-color: #b5b6bb;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
@@ -112,8 +113,15 @@ body {
   margin: 1rem 15vw;
   border: 1px solid var(--card-bdr);
   background-color: var(--bottom-nav-bg);
-  box-shadow: var(--card-shadow) 0px 0px 4px;
-  .icon { font-size: 2rem; }
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  .icon { font-size: 1.5rem; }
   .nav-link { color: var(--secondary-color); }
   .nav-link.active { color: var(--primary-text-color); }
   @include respond-to(tablet){ visibility: visible;}
@@ -182,10 +190,19 @@ h1 {
   > .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
-    h2, h3 { margin: 25px 0 5px 0 }
+    h2, h3 { 
+      margin: 25px auto 18px auto;
+      @include respond-to(phone){
+      margin: 30px auto 18px auto;
+      }
+    }
     p { 
       font-size: 18px;
-      color: var(--text-secondary-color) 
+      margin: 0px auto 21px;
+      color: var(--text-secondary-color);
+      @include respond-to(phone){
+        margin: 0px auto 21px;
+      }
     }
     .gatsby-highlight { margin: -10px 0 20px 0 !important; }
   }
@@ -211,16 +228,17 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 15px;
   color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
   padding: 20px;
   overflow: hidden;
+  margin-bottom: 3rem;
   &:before {
     content: "";
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.25);
     position: absolute;
     top: 0;
     left: 0;
@@ -237,12 +255,21 @@ h1 {
   display: grid;
   background-color: var(--card-bg);
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   line-height: 1.25;
   > a img { display: block; }
   > header { padding: 24px; }
   > h2:first-child { margin: 0 0 0.5rem 0; }
+  img.card-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   .post-title {
     font-size: 18px;
     margin-bottom: 0.3rem;
@@ -257,6 +284,12 @@ h1 {
   .card-text{ color: var(--text-secondary-color); }
   .card-link{ color: var(--link-color); }
   &.featured {
+    .card-body { padding: 4.5rem 0 4.5rem 5rem }
+    .card-header {
+      padding-left: 0;
+      padding-top: 0;
+      @include font-size(1.5rem);
+    }
     .card-title {
       font-weight: 700;
       @include font-size(2.5rem);
@@ -311,7 +344,7 @@ h1 {
   visibility: visible;
   position: fixed;
   margin-top: .5rem;
-  font-size: 2rem; 
+  font-size: 1.5rem; 
   color: var(--primary-text-color);
   bottom: 2rem;
   left: 89vw;
