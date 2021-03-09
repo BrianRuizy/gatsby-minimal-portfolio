@@ -57,7 +57,7 @@ const Navigation = (props) => {
             </NavItem>
           ))}
           { buttons.map((tab, index) =>(
-            <NavItem key={`tab-${index}`}>
+            <NavItem key={`tab-${index}`} className="text-center">
               {tab.action}
             </NavItem>
           ))}

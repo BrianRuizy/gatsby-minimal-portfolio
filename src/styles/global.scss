@@ -31,77 +31,61 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #614DFF;
   --primary-text-color: #000;
-  --text-secondary-color: #73737d;
+  --secondary-text-color: #444444;
   --featured-text: #fff;
   --secondary-color: #979797;
   --background: #fafafa;
   --site-header: var(--background);
   --card-bg: #fff;
   --card-shadow: #d5d5d5;
-  --btn-bg: var(--card-bg);
-  --btn-bdr: #d3d6e7;
-  --btn-text-color: #181a1f;
-  --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
   --link-color: #06c;
   --bottom-nav-bg: #fff;
-  --card-bdr: rgba(25, 26, 30, 0.15);
+  --border: rgba(25, 26, 30, 0.15);
+  --hr: rgba(0, 0, 0, 0.1);
 }
 body.dark {
-  --primary-color: #9984d5;
-  --primary-text-color: #f5f5f7;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #bdbdc0;
   --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
   --background: #111216;
-  --text-color: rgba(255,255,255,0.88);
-  --text-secondary-color: #a1a1a6;
   --site-header: var(--background);
   --card-bg: #1D2128;
   --card-shadow: #020204;
-  --btn-bg: var(--card-bg);
-  --btn-bdr: #1D2128;
-  --btn-text-color: #b5b6bb;
-  --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-  --link-color: #2997ff;
+  --link-color: #5b92c5;
   --bottom-nav-bg: #232527;
+  --hr: rgba(255, 255, 255, 0.1);
 }
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
   background-color: var(--background);
-  color: var(--text-color);
+  color: var(--primary-text-color);
 }
 .navbar {
   background: var(--background);
-  border-bottom: 1px solid var(--text-secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
   .justify-content-end a {
-    color: var(--secondary-color);
+    color: var(--primary-text-color);
     text-decoration: none;
     margin: 0 8px 0;
-    &[aria-current] {
-      color: var(--primary-text-color);
-      font-weight: bold;
-    }
-    &:hover {
-      color: var(--link-color);
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+    &[aria-current] { border-bottom: 1px solid white; }
+    &:hover { color: var(--link-color); }
+    &:last-child { margin-right: 0; }
   }
   .navbar-brand a{
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--primary-text-color);
+    text-decoration: none;
+    &:hover { color: var(--link-color); }
   }
 }
 .top-nav {
@@ -109,9 +93,9 @@ body {
 }
 .bottom-nav {
   visibility: hidden;
-  border-radius: 25px;
+  border-radius: 20px;
   margin: 1rem 15vw;
-  border: 1px solid var(--card-bdr);
+  border: 1px solid var(--border);
   background-color: var(--bottom-nav-bg);
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -122,13 +106,17 @@ body {
     0 100px 80px rgba(0, 0, 0, 0.12)
   ;
   .icon { font-size: 1.5rem; }
+  .nav-item {
+    height: 40px;
+    width: 32px;
+  }
   .nav-link { color: var(--secondary-color); }
   .nav-link.active { color: var(--primary-text-color); }
   @include respond-to(tablet){ visibility: visible;}
 }
 .bottom-drawer {
   .drawer div:nth-child(2) {
-    color: var(--text-secondary-color);
+    color: var(--secondary-text-color);
     background: var(--bottom-nav-bg);
   }
   .icon.message {
@@ -150,7 +138,7 @@ body {
   p {
     @include font-size(1rem);
     line-height: 1.25;
-    color: var(--text-secondary-color);
+    color: var(--secondary-text-color);
   }
   a { color: unset;}
   .headline {
@@ -184,22 +172,23 @@ h1 {
 .post {
   padding: 0;
   background:var(--background);
-  color: var(--text-color);
+  color: var(--secondary-text-color);
   line-height: 1.5;
   img { width: 100%; }
   > .blog-post-content {
     max-width: 768px;
     margin: 0 auto;
+    a { color: var(--link-color); }
     h2, h3 { 
+      color: var(--primary-text-color);
       margin: 25px auto 18px auto;
       @include respond-to(phone){
-      margin: 30px auto 18px auto;
+        margin: 30px auto 18px auto;
       }
     }
     p { 
       font-size: 18px;
       margin: 0px auto 21px;
-      color: var(--text-secondary-color);
       @include respond-to(phone){
         margin: 0px auto 21px;
       }
@@ -217,7 +206,7 @@ h1 {
   }
   .post-meta {
     @include font-size(1.5rem);
-    color: var(--text-secondary-color);
+    color: var(--secondary-text-color);
     text-align: center;
   }
 }
@@ -253,11 +242,16 @@ h1 {
 }
 .card {
   display: grid;
-  background-color: var(--card-bg);
-  border: none;
-  border-radius: 10px;
   overflow: hidden;
+  border: none;
+  border-radius: 5px;
   line-height: 1.25;
+  background-color: var(--card-bg);
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06)
+  ;
   > a img { display: block; }
   > header { padding: 24px; }
   > h2:first-child { margin: 0 0 0.5rem 0; }
@@ -269,6 +263,9 @@ h1 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    @include respond-to(phone){
+      position: unset;
+    }
   }
   .post-title {
     font-size: 18px;
@@ -281,21 +278,41 @@ h1 {
     border-bottom: none;
     font-weight: lighter;
   }
-  .card-text{ color: var(--text-secondary-color); }
+  .card-text{
+    margin-bottom: 30px;
+    color: var(--secondary-text-color); 
+  }
   .card-link{ color: var(--link-color); }
   &.featured {
-    .card-body { padding: 4.5rem 0 4.5rem 5rem }
+    .card-body {
+      z-index: 1;
+      padding: 4rem 0 4rem 4rem;
+      @include respond-to(tablet){
+        padding: 3rem;
+      }
+      @include respond-to(phone){
+        padding: 2rem;
+      }
+    }
     .card-header {
       padding-left: 0;
       padding-top: 0;
-      @include font-size(1.5rem);
+      @include font-size(1.25rem);
     }
     .card-title {
       font-weight: 700;
-      @include font-size(2.5rem);
+      @include font-size(2rem);
+    }
+    hr {
+      width: 140px;
+      height: 1px;
+      border: medium none;
+      margin-bottom: 30px;
+      background: var(--hr) none repeat scroll 0% 0%;
+      margin-left: 0;
     }
     .card-text, .card-link { 
-      @include font-size(1.5rem);
+      @include font-size(1.25rem);
     }
   }
   &.projects {
@@ -317,14 +334,14 @@ h1 {
   label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-secondary-color);
+    color: var(--secondary-text-color);
   }
   input[type=text],
   input[type=email],
   textarea {
     appearance: none;
     border: 1px solid var(--card-shadow);
-    color: var(--text-secondary-color);
+    color: var(--secondary-text-color);
     border-radius: 6px;
     line-height: 32px;
     padding: 6px 12px;
@@ -371,10 +388,10 @@ body.light {
   bottom: 1.5rem;
   left: 89vw;
   border-radius: 100%;
-  border: 1px solid var(--card-bdr);
+  border: 1px solid var(--border);
   background: var(--bottom-nav-bg);
   box-shadow: var(--card-shadow) 0px 0px 15px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   @include respond-to(tablet){
     border: none;
     position: inherit;

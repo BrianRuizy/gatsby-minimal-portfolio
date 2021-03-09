@@ -37,20 +37,16 @@ const Projects = () => {
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
         <Col key={node.id} lg={4} sm={6} xs={12} style={{display: "flex"}}>
           <Card className="mb-4 projects">
-            <Card.Body className="row">
-              <Col xs={2} sm={12}>
-                <AiFillFolder style={{fontSize: "2rem"}}/>
-              </Col>
-              <Col>
-                <Card.Title>{node.frontmatter.title}</Card.Title>
-                <Card.Text>{node.excerpt}</Card.Text>
-                { node.frontmatter.github && 
-                  <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
-                }
-                { node.frontmatter.demo && 
-                  <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
-                }
-              </Col>
+            <Card.Body>
+              <AiFillFolder style={{fontSize: "2rem"}}/>
+              <Card.Title>{node.frontmatter.title}</Card.Title>
+              <Card.Text>{node.excerpt}</Card.Text>
+              { node.frontmatter.github && 
+                <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
+              }
+              { node.frontmatter.demo && 
+                <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
+              }
             </Card.Body>
           </Card>
         </Col>
