@@ -4,10 +4,10 @@ path: /favours
 github: https://github.com/favours-io/favours
 date: 2020-10
 title: Favours app
-category: application
+subtitle: Application
 thumbnail: /assets/favours.png
 metaDescription: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
-cardSize: 4
+cardSize: 12
 ---
 ## h1 Heading 8-)
 

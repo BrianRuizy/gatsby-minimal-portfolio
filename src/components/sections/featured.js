@@ -24,7 +24,7 @@ const Featured = () => {
               github
               demo
               title
-              category
+              subtitle
               thumbnail
               metaDescription
               cardSize
@@ -36,7 +36,6 @@ const Featured = () => {
   `)
   return (
     <Container>
-      <h2>Featured &darr;</h2>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col
@@ -45,28 +44,34 @@ const Featured = () => {
             sm={12}
             style={{ display: "flex" }}
           >
-            <Card className="mb-4 featured">
-              <Card.Header>{node.frontmatter.category}</Card.Header>
-              <Card.Body>
-                <Card.Title>{node.frontmatter.title}</Card.Title>
-                <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
-                <Card.Link href={node.frontmatter.path}>Learn more</Card.Link>
-                {node.frontmatter.github && (
-                  <Card.Link href={node.frontmatter.github}>
-                    <FiGithub />
-                  </Card.Link>
-                )}
-                {node.frontmatter.demo && (
-                  <Card.Link href={node.frontmatter.demo}>
-                    <FiExternalLink />
-                  </Card.Link>
-                )}
-              </Card.Body>
-              <Link to={node.frontmatter.path}>
-                {!!node.frontmatter.thumbnail && (
-                  <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
-                )}
-              </Link>
+            <Card className="mb-4 featured row">
+            <Row>
+              <Col lg={5}>
+                <Card.Body>
+                  <Card.Header>{node.frontmatter.subtitle}</Card.Header>
+                  <Card.Title>{node.frontmatter.title}</Card.Title>
+                  <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
+                  <Card.Link href={node.frontmatter.path}>Learn more</Card.Link>
+                  {node.frontmatter.github && (
+                    <Card.Link href={node.frontmatter.github}>
+                      <FiGithub />
+                    </Card.Link>
+                  )}
+                  {node.frontmatter.demo && (
+                    <Card.Link href={node.frontmatter.demo}>
+                      <FiExternalLink />
+                    </Card.Link>
+                  )}
+                </Card.Body>
+              </Col>
+              <Col lg={7}>
+                <Link to={node.frontmatter.path}>
+                  {!!node.frontmatter.thumbnail && (
+                    <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
+                  )}
+                </Link>
+              </Col>
+            </Row>
             </Card>
           </Col>
         ))}

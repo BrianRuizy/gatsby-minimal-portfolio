@@ -5,10 +5,10 @@ github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2021-02
 title: COVID-19 dashboard
-category: web app
-thumbnail: /assets/covid-2.png
+subtitle: web app
+thumbnail: /assets/covid.png
 metaDescription: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive and dilligent UI.'
-cardSize: 8
+cardSize: 12
 ---
 ## No, I'll fix it. I'm good at fixing rot
 
