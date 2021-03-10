@@ -1,17 +1,7 @@
----
-template: BlogPost
-path: /favours
-thumbnail: /assets/favours.png
-github: https://github.com/favours-io/favours
-date: 2020-10
-name: Favours app
-subtitle: A location based app
-category: Application
-description: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
-tags: 
-  - Django
-  - REST API
----
+# mardown syntax found here
+
+I don't recommend using h1 in .md file
+
 ## h1 Heading 8-)
 
 ## h2 Heading
@@ -151,6 +141,8 @@ Right aligned columns
 Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
+
+Personally, I love grabbing images from unsplash.com. Check them out!
 
 ![unsplash](https://images.unsplash.com/photo-1614829574910-e7e09ca1c8bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=654&q=80)
 

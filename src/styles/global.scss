@@ -65,6 +65,11 @@ body.dark {
   --bottom-nav-bg: #222831;
   --hr: rgba(255, 255, 255, 0.1);
 }
+$theme-transition:   
+  color .75s ease-in-out, 
+  background-color .75s ease-in-out, 
+  border-color .75s ease-in-out, 
+  box-shadow .75s ease-in-out;
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
@@ -162,7 +167,10 @@ body {
     & li:hover {
       -webkit-text-stroke: 1px var(--primary-text-color);
       -webkit-text-fill-color: var(--background);
-      transition: -webkit-text-fill-color 0.2s linear,-webkit-text-fill-color 0.2s linear;
+      transition: 
+        -webkit-text-fill-color 0.2s linear,
+        -webkit-text-fill-color 0.2s linear
+      ;
     }
   }
 }
@@ -170,6 +178,9 @@ h1 {
   font-family: 'DM Serif Display', serif;
   line-height: 1;
   @include font-size(4rem);
+}
+h1, h2, h3, h4, h5, p, a  {
+  transition: $theme-transition;
 }
 .post {
   padding: 0;
@@ -207,6 +218,7 @@ h1 {
  
 }
 .jumbotron {
+  transition: $theme-transition;
   padding: 2rem 0 1rem 0;
   @include respond-to(phone) {
     padding: 0 0 1rem 0;
@@ -251,7 +263,7 @@ h1 {
   margin-bottom: 3rem;
   &:before {
     content: "";
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.15);
     position: absolute;
     top: 0;
     left: 0;
@@ -315,10 +327,12 @@ h1 {
     .card-header {
       padding-left: 0;
       padding-top: 0;
+      transition: $theme-transition;
       @include font-size(1.25rem);
     }
     .card-title {
       font-weight: 700;
+      transition: $theme-transition;
       @include font-size(2rem);
     }
     .card-text, .card-link { 
