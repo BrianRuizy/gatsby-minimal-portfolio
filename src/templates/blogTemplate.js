@@ -1,9 +1,15 @@
 import React from "react"
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-import Container from 'react-bootstrap/Container'
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+
+import Jumbotron from "react-bootstrap/Jumbotron"
+import Badge from "react-bootstrap/Badge"
+
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -14,23 +20,28 @@ export default function Template({
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.title} | {siteMetadata.title}</title>
-        <meta name="description" content={frontmatter.metaDescription} />
+        <title>{frontmatter.name} | {siteMetadata.title}</title>
+        <meta name="description" content={frontmatter.description} />
       </Helmet>
       <Container>
         <article className="post">
-          {/* if no thumnail is provided, show background color instead */}
-          {!frontmatter.thumbnail && (
-            <div className="post-thumbnail">
-              <h1 className="post-title">{frontmatter.title}</h1>
-              <div className="post-meta">{frontmatter.date}</div>
+          <Jumbotron>
+            <div className="badges">
+              { frontmatter.tags.map((tag, index) =>
+                <Badge key={index} variant="secondary">{tag}</Badge>
+              )}
             </div>
-          )}
+            <h1>{frontmatter.subtitle}</h1>
+            <Row className="post-meta">
+              <Col>{frontmatter.name}</Col>
+              <Col className="text-right">{frontmatter.date}</Col>
+            </Row>
+          </Jumbotron>
           {!!frontmatter.thumbnail && (
-            <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
-              <h1 className="post-title">{frontmatter.title}</h1>
-              <div className="post-meta">{frontmatter.date}</div>
-            </div>
+            <div 
+              className="post-thumbnail" 
+              style={{backgroundImage: `url(${frontmatter.thumbnail})`}}
+            />
           )}
           <div
             className="blog-post-content"
@@ -54,9 +65,12 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
-        title
+        name
+        subtitle
+        category
         thumbnail
-        metaDescription
+        description
+        tags
       }
     }
   }

@@ -31,6 +31,7 @@ body {
   margin-top: 0
 }
 body.light {
+  --primary-color: #614dff;
   --primary-text-color: #000;
   --secondary-text-color: #444444;
   --featured-text: #fff;
@@ -38,16 +39,17 @@ body.light {
   --background: #fafafa;
   --site-header: var(--background);
   --card-bg: #fff;
-  --card-shadow: #d5d5d5;
+  --card-shadow: rgba(0, 0, 0, 0.2);
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
-  --link-color: #06c;
+  --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
   --hr: rgba(0, 0, 0, 0.1);
 }
 body.dark {
+  --primary-color: #9984d5;
   --primary-text-color: #ffffff;
   --secondary-text-color: #bdbdc0;
   --featured-text: #f5f5f7;
@@ -55,12 +57,12 @@ body.dark {
   --background: #111216;
   --site-header: var(--background);
   --card-bg: #1D2128;
-  --card-shadow: #020204;
+  --card-shadow: rgba(0, 0, 0, 0.0);
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-  --link-color: #5b92c5;
-  --bottom-nav-bg: #232527;
+  --link-color: #90b3f4;
+  --bottom-nav-bg: #222831;
   --hr: rgba(255, 255, 255, 0.1);
 }
 /* System Fonts as used by Medium and WordPress */
@@ -77,7 +79,7 @@ body {
     text-decoration: none;
     margin: 0 8px 0;
     &[aria-current] { border-bottom: 1px solid white; }
-    &:hover { color: var(--link-color); }
+    &:hover { color: var(--primary-color); }
     &:last-child { margin-right: 0; }
   }
   .navbar-brand a{
@@ -85,7 +87,7 @@ body {
     font-size: 1.5rem;
     color: var(--primary-text-color);
     text-decoration: none;
-    &:hover { color: var(--link-color); }
+    &:hover { color: var(--primary-color); }
   }
 }
 .top-nav {
@@ -173,41 +175,63 @@ h1 {
   padding: 0;
   background:var(--background);
   color: var(--secondary-text-color);
-  line-height: 1.5;
+  line-height: 1.55;
+  max-width: 768px;
+  margin: 0 auto;
   img { width: 100%; }
+  > .blog-post-content *:last-child,
+  > *:last-child {
+    margin-bottom: 0;
+  }
   > .blog-post-content {
-    max-width: 768px;
-    margin: 0 auto;
-    a { color: var(--link-color); }
-    h2, h3 { 
+    a { color: var(--primary-color); }
+    h2{ 
+      font-weight: 700;
       color: var(--primary-text-color);
-      margin: 25px auto 18px auto;
+      margin-bottom: 2rem;
+      padding-top: 40px;
+      @include font-size(2rem);
       @include respond-to(phone){
         margin: 30px auto 18px auto;
       }
     }
     p { 
-      font-size: 18px;
-      margin: 0px auto 21px;
+      margin: 0 auto 35px;
+      @include font-size(1.125rem);
       @include respond-to(phone){
-        margin: 0px auto 21px;
+        padding: 0 auto 20px;
       }
     }
     .gatsby-highlight { margin: -10px 0 20px 0 !important; }
   }
-  > .blog-post-content *:last-child,
-  > *:last-child {
-    margin-bottom: 0;
+ 
+}
+.jumbotron {
+  padding: 2rem 0 1rem 0;
+  @include respond-to(phone) {
+    padding: 0 0 1rem 0;
   }
-  .post-title {
-    text-align: center;
-    margin: 0 0 0.5rem;
-    @include font-size(4rem);
+  margin-bottom: 0;
+  background: none;
+  color: var(--secondary-text-color);
+  & h1 { 
+    color: var(--primary-text-color); 
+    margin-bottom: 1rem;
+    @include font-size(3rem);
   }
-  .post-meta {
-    @include font-size(1.5rem);
+  & h2 {
     color: var(--secondary-text-color);
-    text-align: center;
+    @include font-size(1.5rem); 
+  }
+  & small { @include font-size(1rem); }
+  .badges{ margin: 1rem 0 }
+  .badge {
+    font-weight: normal;
+    margin-right: .5rem;
+    background-color: var(--background);
+    border: 1px solid var(--secondary-text-color);
+    color: var(--secondary-text-color);
+    @include font-size(1rem);
   }
 }
 .post-thumbnail {
@@ -247,11 +271,7 @@ h1 {
   border-radius: 5px;
   line-height: 1.25;
   background-color: var(--card-bg);
-  box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06)
-  ;
+  box-shadow: 0px 20px 40px var(--card-shadow);
   > a img { display: block; }
   > header { padding: 24px; }
   > h2:first-child { margin: 0 0 0.5rem 0; }
@@ -267,10 +287,6 @@ h1 {
       position: unset;
     }
   }
-  .post-title {
-    font-size: 18px;
-    margin-bottom: 0.3rem;
-  }
   .card-header {
     padding: 1rem 1.25rem;
     margin-bottom: 0;
@@ -282,13 +298,15 @@ h1 {
     margin-bottom: 30px;
     color: var(--secondary-text-color); 
   }
-  .card-link{ color: var(--link-color); }
+  .card-link{ 
+    color: var(--primary-color); 
+  }
   &.featured {
     .card-body {
       z-index: 1;
       padding: 4rem 0 4rem 4rem;
       @include respond-to(tablet){
-        padding: 3rem;
+        padding: 2.5rem;
       }
       @include respond-to(phone){
         padding: 2rem;
@@ -303,6 +321,9 @@ h1 {
       font-weight: 700;
       @include font-size(2rem);
     }
+    .card-text, .card-link { 
+      @include font-size(1.25rem);
+    }
     hr {
       width: 140px;
       height: 1px;
@@ -310,9 +331,6 @@ h1 {
       margin-bottom: 30px;
       background: var(--hr) none repeat scroll 0% 0%;
       margin-left: 0;
-    }
-    .card-text, .card-link { 
-      @include font-size(1.25rem);
     }
   }
   &.projects {
