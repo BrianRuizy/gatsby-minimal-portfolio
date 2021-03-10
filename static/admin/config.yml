@@ -61,7 +61,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - label: Meta Description
-        name: metaDescription
+        name: description
         widget: text
         required: false
       - label: Featured Image
@@ -86,7 +86,7 @@ collections:
         }
       - { name: title, label: Title }
       - label: Meta Description
-        name: metaDescription
+        name: description
         widget: text
         required: false
       - label: External

@@ -9,4 +9,14 @@
     <img alt="about page" title="website" src="https://github.com/BrianRuizy/portfolio-website/blob/master/Misc/longscroll-gh.png">
 </h1>
 
-##### ©[Brian Ruiz](https://github.com/BrianRuizy)
+## Packages
+
+This site's Web design was made possible thanks to these awesome packages!
+
+- "gatsby-plugin-dark-mode": "^1.1.1",
+- "prismjs": "^1.19.0",
+- "react-bootstrap": "^1.5.0",
+- "react-bottom-drawer": "^0.1.0",
+- "react-icons": "^4.2.0",
+- "rfs": "^9.0.3"
+  
