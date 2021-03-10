@@ -1,10 +1,10 @@
 ---
 date: '2017-11-01'
 template: projects
-title: Leetcode
-metaDescription: Algorithms
+name: Leetcode
+description: Algorithms
 github: 'https://leetcode.com'
-tech: 
+tags: 
     - python
 ---
 LeetCode personal track of solutions written in Python. Algorithms, data structures, etc.

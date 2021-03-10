@@ -19,14 +19,13 @@ const Featured = () => {
             id
             excerpt(pruneLength: 100)
             frontmatter {
-              title
               path
               github
               demo
-              title
-              subtitle
+              name
+              category
               thumbnail
-              metaDescription
+              description
             }
           }
         }
@@ -42,9 +41,9 @@ const Featured = () => {
             <Row>
               <Col md={6} sm={12}>
                 <Card.Body>
-                  <Card.Header>{node.frontmatter.subtitle}</Card.Header>
-                  <Card.Title>{node.frontmatter.title}</Card.Title>
-                  <Card.Text>{node.frontmatter.metaDescription}</Card.Text>
+                  <Card.Header>{node.frontmatter.category}</Card.Header>
+                  <Card.Title>{node.frontmatter.name}</Card.Title>
+                  <Card.Text>{node.frontmatter.description}</Card.Text>
                   <hr/>
                   <Card.Link href={node.frontmatter.path}>Learn more</Card.Link>
                   {node.frontmatter.github && (
@@ -62,7 +61,7 @@ const Featured = () => {
               <Col md={6} sm={12}>
                 <Link to={node.frontmatter.path}>
                   {!!node.frontmatter.thumbnail && (
-                    <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.title + "- Featured Shot"} />
+                    <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.name + " - Featured Shot"} />
                   )}
                 </Link>
               </Col>

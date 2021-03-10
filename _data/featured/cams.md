@@ -1,12 +1,15 @@
 ---
 template: BlogPost
 path: /cams
-date: 2019-09
-title: Developing CAMS E-Trac
-subtitle: Enterprise
 thumbnail: /assets/cams-etrac.png
-metaDescription: 'A robust and modern midstream oil & energy data monitoring web-app. Built with Python on AWS. '
-cardSize: 12
+date: 2019-09
+name: CAMS E-Trac
+subtitle: Developing a private-equity SaaS 
+category: Enterprise
+description: 'A robust and modern midstream oil & energy data monitoring web-app. Built with Python on AWS.'
+tags:
+  - Python
+  - Flask
 ---
 ## What was it like to develop a fintech energy analytics project?
 

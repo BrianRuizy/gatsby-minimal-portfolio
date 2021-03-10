@@ -20,10 +20,10 @@ const Projects = () => {
             id
             excerpt(pruneLength: 100)
             frontmatter {
-              title
+              name
               github
               demo
-              tech
+              tags
             }
           }
         }
@@ -39,7 +39,7 @@ const Projects = () => {
           <Card className="mb-4 projects">
             <Card.Body>
               <AiFillFolder style={{fontSize: "2rem"}}/>
-              <Card.Title>{node.frontmatter.title}</Card.Title>
+              <Card.Title>{node.frontmatter.name}</Card.Title>
               <Card.Text>{node.excerpt}</Card.Text>
               { node.frontmatter.github && 
                 <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>

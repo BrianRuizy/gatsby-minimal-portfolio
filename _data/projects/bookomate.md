@@ -1,8 +1,8 @@
 ---
 template: projects
-title: BookOMate
+name: BookOMate
 github: 'https://github.com/brianruizy'
-tech: 
+tags: 
     - 
 ---
 📅 Smart, cloud-based, and lightweight calendar booking web-application. BookO'Mate

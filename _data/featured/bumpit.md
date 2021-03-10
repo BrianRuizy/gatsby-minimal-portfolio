@@ -1,21 +1,33 @@
 ---
 template: BlogPost
 path: /bumpit
+thumbnail: assets/bumpit.png
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
 date: 2019-12
-title: Bump.IT Azure  Hackathon
-subtitle: Hackathon
-thumbnail: assets/bumpit.png
-metaDescription: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B dollar issue of road potholes'
-cardSize: 12
+name: Bump.IT 
+subtitle: This project idea placed first at a Microsoft Azure IoT Hackathon in Houston, Tx.
+category: Hackathon
+description: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B dollar issue of road potholes'
+tags:
+  - Azure
+  - Jupyter
 ---
-## What was it like to develop a fintech energy analytics project?
+## About
 
-Software monitored data from power plants, and provided valuable insights to asset managers and cut 15% off operational costs. Automated data pipeline on AWS EC2 with Flask (Python) framework, pulling data from S3 buckets, processing CSV's files to produce live updating Matplotlib data visualizations. Redesigned apps UI / UX to be cross-platform responsive using Bootstrap and Sass.
+🥇 **Bump.IT** | *Pothole detection and mapping*,  1st Place winners (tie)<br/>
+Hackathon competition partnered with [The Cannon](https://thecannon.com/), Houston TX.
 
-Hello, world! This is a demo post for gatsby-theme-novela. Novela is built by the team at Narative, and built for everyone that loves the web.
+Bump.IT is a solution to the issues costing American drivers **$6.4 billion** dollars per year, that is in both repair and insurance cost's. Additionally, the average price to repair a pothole including labor is about **$30 - $50** / pothole, while the damage that single pothole may cause are up to **$300** /year/vehicle. Thus the effort to fixing the affected roads is extremely cost-effective.
+(2016) [pothole.info](https://www.pothole.info/2016/05/so-many-potholes-so-much-cost/) 
 
-In my experience, the challenges that growing companies struggle with rarely stem from a lack of good ideas. Good ideas are everywhere. In my experience, the challenges that growing companies struggle with rarely stem from a lack of good ideas. Good ideas are everywhere. In my experience, the challenges that growing companies struggle with rarely stem from a lack of good ideas. Good ideas are everywhere.
+Having won the competition, post minimum-viable-product, granted us full access to MS Azure cloud infrastucture. Which we will employ for the future continued development of the application.
 
-But it takes more than good ideas to build and grow a business. It takes people to bring them into reality. Are those people collaborating and sharing their expertise, or are they in conflict and keeping it to themselves? Do they have the resources necessary to execute on their ideas? Or are they constantly under pressure to pluck only the lowest-hanging fruit through bare minimum means, while putting their greatest ambitions on the back-burner?
+## Features (*End goals*)
 
+* Live Computer Vision
+
+<img src="https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon/blob/master/img/pothole-computervision.gif" alt="gif" width="50%">
+
+* Geocoding/Mapping
+
+<img src="https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon/blob/master/img/geocoding.png" alt="geocoding" width="50%">

@@ -1,13 +1,16 @@
 ---
 template: BlogPost
 path: /favours
+thumbnail: /assets/favours.png
 github: https://github.com/favours-io/favours
 date: 2020-10
-title: Favours app
-subtitle: Application
-thumbnail: /assets/favours.png
-metaDescription: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
-cardSize: 12
+name: Favours app
+subtitle: A location based app
+category: Application
+description: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
+tags: 
+  - Django
+  - REST API
 ---
 ## h1 Heading 8-)
 

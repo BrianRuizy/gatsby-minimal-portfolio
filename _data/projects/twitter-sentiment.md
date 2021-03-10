@@ -1,8 +1,8 @@
 ---
 template: projects
-title: Twitter analysis
+name: Twitter analysis
 github: 'https://twitter.com'
-tech: 
+tags: 
     - 
 ---
 Project showing natural lanuguage processing of 'tweets' using the Tweepy API, and TextBlob.

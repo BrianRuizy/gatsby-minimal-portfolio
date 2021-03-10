@@ -1,8 +1,8 @@
 ---
 template: projects
-title: ML digit recognition
+name: ML digit recognition
 github: 'https://github.com/'
-tech: 
+tags: 
     - 
 ---
 Ml supervised learning classification model to predict the value of handwritten digits
