@@ -37,10 +37,8 @@ const Navigation = (props) => {
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           <Link to="/about">About</Link>
-          <Link >
-            
-            <BottomDrawer/>
-          </Link>
+          <BottomDrawer/>
+          
         </Navbar.Collapse>
       </Navbar>
 
@@ -57,7 +55,7 @@ const Navigation = (props) => {
             </NavItem>
           ))}
           { buttons.map((tab, index) =>(
-            <NavItem key={`tab-${index}`} className="text-center">
+            <NavItem key={`tab-${index}`} >
               {tab.action}
             </NavItem>
           ))}

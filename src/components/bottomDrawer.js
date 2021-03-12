@@ -1,15 +1,15 @@
 import React from "react";
 
+import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button"
 
 import Drawer from "react-bottom-drawer";
 import { FiMessageSquare } from "react-icons/fi"
 
-
 export default function App() {
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible, setIsVisible] = React.useState(false);
   const openDrawer = React.useCallback(() => setIsVisible(true), []);
   const closeDrawer = React.useCallback(() => setIsVisible(false), []);
 
@@ -24,20 +24,35 @@ export default function App() {
         isVisible={isVisible}
       >
         <Row>
-          <Col md={6} className="text-center py-5">
-          <form name="contact" netlify>
-            <p>
-              <label>Name <input type="text" name="name" /></label>
-            </p>
-            <p>
-              <label>Email <input type="email" name="email" /></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+          <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
+            <form name="contact" netlify>
+              <label htmlFor="defaultFormContactNameEx" >
+                Your name
+              </label>
+              <input type="text" id="defaultFormContactNameEx" className="form-control" />
+              <br />
+              <label htmlFor="defaultFormContactEmailEx" >
+                Your email
+              </label>
+              <input type="email" id="defaultFormContactEmailEx" className="form-control" />
+              <br />
+              <label htmlFor="defaultFormContactSubjectEx" >
+                Subject
+              </label>
+              <input type="text" id="defaultFormContactSubjectEx" className="form-control" />
+              <br />
+              <label htmlFor="defaultFormContactMessageEx" >
+                Your message
+              </label>
+              <textarea type="text" id="defaultFormContactMessageEx" className="form-control" rows="3" />
+              <div className="mt-4">
+                <Button type="submit" size="md">send</Button>
+              </div>
+              
+              </form>
           </Col>
         </Row>
+        
       </Drawer>
     </div>
 
