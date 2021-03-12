@@ -26,6 +26,7 @@ export default function App() {
         <Row>
           <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
             <form name="contact" netlify>
+              <input type="hidden" name="form-name" value="contact">
               <label htmlFor="defaultFormContactNameEx" >
                 Your name
               </label>
@@ -45,10 +46,8 @@ export default function App() {
                 Your message
               </label>
               <textarea type="text" id="defaultFormContactMessageEx" className="form-control" rows="3" />
-              <div className="mt-4">
-                <Button type="submit" size="md">send</Button>
-              </div>
-              
+              <Button className="mt-4" type="submit" size="md">Send</Button>
+
               </form>
           </Col>
         </Row>

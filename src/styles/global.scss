@@ -40,11 +40,11 @@ body.light {
   --site-header: var(--background);
   --card-bg: #fff;
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --input-bg: var(--background);
   --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
   --hr: rgba(0, 0, 0, 0.1);
+  --input-field: #ebebec;
 }
 body.dark {
   --primary-color: #9984d5;
@@ -56,10 +56,10 @@ body.dark {
   --site-header: var(--background);
   --card-bg: #1D2128;
   --card-shadow: rgba(0, 0, 0, 0.25);
-  --input-bg: var(--card-bg);
   --link-color: #90b3f4;
   --bottom-nav-bg: #222831;
   --hr: rgba(255, 255, 255, 0.1);
+  --input-field: #222831;
 }
 $theme-transition:   
   color .75s ease-in-out, 
@@ -239,7 +239,6 @@ h1, h2, h3, h4, h5, p, a  {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
@@ -401,13 +400,13 @@ body.light {
 }
 .contact-form {
   max-width: 768px;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   text-align: left;
   label { @include font-size(1rem); }
   input, textarea {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--primary-text-color);
-    background-color: #222831 ;
+    background-color: var(--input-field);
     border: none;
     &:focus {
       background-color: var(--background);
@@ -417,12 +416,16 @@ body.light {
     }
   }
   .btn.btn-primary { 
+    font-weight: 700;
     padding: .5rem 2rem;
+    color: var(--featured-text);
     border-color: var(--primary-color); 
-    background: var(--card-bg);
-    &:hover, &:active {
-      background: var(--primary-color); 
-      border-color: #000;
+    background: var(--primary-color);
+    &:hover, &:active, &:focus {
+      color: var(--primary-color);
+      background: var(--background); 
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem var(--primary-color);
     }
   }
 }
