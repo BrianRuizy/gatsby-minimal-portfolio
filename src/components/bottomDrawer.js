@@ -25,7 +25,7 @@ export default function App() {
       >
         <Row>
           <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
-            <form name="contact" netlify>
+            <form name="contact" method="POST" data-netlify="true">
               <label htmlFor="defaultFormContactNameEx" >
                 Your name
               </label>
