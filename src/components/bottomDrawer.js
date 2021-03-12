@@ -1,12 +1,15 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import Drawer from "react-bottom-drawer";
 
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
+
+import Drawer from "react-bottom-drawer";
 import { FiMessageSquare } from "react-icons/fi"
 
 
 export default function App() {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(true);
   const openDrawer = React.useCallback(() => setIsVisible(true), []);
   const closeDrawer = React.useCallback(() => setIsVisible(false), []);
 
@@ -22,7 +25,17 @@ export default function App() {
       >
         <Row>
           <Col md={6} className="text-center py-5">
-          <p>asdf</p>
+          <form name="contact" netlify>
+            <p>
+              <label>Name <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Email <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
           </Col>
         </Row>
       </Drawer>

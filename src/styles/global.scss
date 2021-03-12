@@ -39,7 +39,7 @@ body.light {
   --background: #fafafa;
   --site-header: var(--background);
   --card-bg: #fff;
-  --card-shadow: rgba(0, 0, 0, 0.2);
+  --card-shadow: rgba(0, 0, 0, 0.1);
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
@@ -57,7 +57,7 @@ body.dark {
   --background: #111216;
   --site-header: var(--background);
   --card-bg: #1D2128;
-  --card-shadow: rgba(0, 0, 0, 0.0);
+  --card-shadow: rgba(0, 0, 0, 0.25);
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
