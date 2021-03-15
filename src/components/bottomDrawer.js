@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "gatsby"
 
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col";
@@ -15,7 +16,8 @@ export default function App() {
 
   return (
   <div className="bottom-drawer">
-    <FiMessageSquare className="icon message" onClick={openDrawer}></FiMessageSquare>
+    <FiMessageSquare className="icon message d-sm-block d-md-none" onClick={openDrawer}></FiMessageSquare>
+    <a className="d-none d-md-block " onClick={openDrawer}>Contact</a>
     <div className="drawer">
       <Drawer
         duration={250}
@@ -25,30 +27,25 @@ export default function App() {
       >
         <Row>
           <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
-            <form name="contact-form" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact-form"/>
-              <label htmlFor="defaultFormContactNameEx" >
-                Your name
-              </label>
-              <input type="text" id="defaultFormContactNameEx" name="name" className="form-control" />
+            <form name="contactForm" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contactForm"/>
+              
+              <label htmlFor="defaultFormContactNameEx" >Your name</label>
+              <input type="text" id="defaultFormContactNameEx" name="name" className="form-control" required/>
               <br />
-              <label htmlFor="defaultFormContactEmailEx" >
-                Your email
-              </label>
-              <input type="email" id="defaultFormContactEmailEx" name="email" className="form-control" />
+
+              <label htmlFor="defaultFormContactEmailEx" >Email</label>
+              <input type="email" id="defaultFormContactEmailEx" name="email" className="form-control" required/>
               <br />
-              <label htmlFor="defaultFormContactSubjectEx" >
-                Subject
-              </label>
+              
+              <label htmlFor="defaultFormContactSubjectEx" >Subject</label>
               <input type="text" id="defaultFormContactSubjectEx" name="subject" className="form-control" />
               <br />
-              <label htmlFor="defaultFormContactMessageEx" >
-                Your message
-              </label>
-              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" rows="3" />
-              <Button className="mt-4" type="submit" size="md">Send</Button>
 
-              </form>
+              <label htmlFor="defaultFormContactMessageEx" >Message</label>
+              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" rows="3" required/>
+              <Button className="mt-4" type="submit" size="md">Send</Button>
+            </form>
           </Col>
         </Row>
         

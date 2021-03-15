@@ -38,7 +38,6 @@ const Navigation = (props) => {
         <Navbar.Collapse className="justify-content-end">
           <Link to="/about">About</Link>
           <BottomDrawer/>
-          
         </Navbar.Collapse>
       </Navbar>
 

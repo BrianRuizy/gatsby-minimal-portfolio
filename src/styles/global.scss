@@ -2,7 +2,7 @@
 @import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;500;700&display=swap");
 $font-family: 'Roboto', sans-serif;
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
@@ -76,6 +76,7 @@ body {
   background: var(--background);
   border-bottom: 1px solid var(--secondary-color);
   .justify-content-end a {
+    font-size: 1.125rem;
     color: var(--primary-text-color);
     text-decoration: none;
     margin: 0 8px 0;
@@ -98,6 +99,7 @@ body {
   visibility: hidden;
   border-radius: 20px;
   margin: 1rem 15vw;
+  z-index: 5;
   border: 1px solid var(--border);
   background-color: var(--bottom-nav-bg);
   box-shadow:
@@ -221,15 +223,15 @@ h1, h2, h3, h4, h5, p, a  {
     @include font-size(1.5rem); 
   }
   & small { @include font-size(1rem); }
-  .badges{ margin: 1rem 0 }
-  .badge {
-    font-weight: normal;
-    margin-right: .5rem;
-    background-color: var(--background);
-    border: 1px solid var(--secondary-text-color);
-    color: var(--secondary-text-color);
-    @include font-size(1rem);
-  }
+}
+.badges{ margin: 1rem 0 }
+.badge {
+  font-weight: normal;
+  margin-right: .5rem;
+  background-color: transparent;
+  border: 1px solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  @include font-size(1rem);
 }
 .post-thumbnail {
   text-align: center;
@@ -317,10 +319,10 @@ h1, h2, h3, h4, h5, p, a  {
     .card-title {
       font-weight: 700;
       transition: $theme-transition;
-      @include font-size(2rem);
+      @include font-size(2.25rem);
     }
     .card-text, .card-link { 
-      @include font-size(1.25rem);
+      @include font-size(1.35rem);
     }
     hr {
       width: 140px;
@@ -332,7 +334,19 @@ h1, h2, h3, h4, h5, p, a  {
     }
   }
   &.projects {
-    .card-title { font-weight: 400;}
+    padding: 2rem;
+    .folder { 
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+    }
+    .card-title { 
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-top: 1.5rem;
+    }
+    .card-body, .card-link { 
+      padding: 0;
+      font-size: 1.25rem; }
   }
 }
 .site-footer {
@@ -353,7 +367,7 @@ h1, h2, h3, h4, h5, p, a  {
   color: var(--primary-text-color);
   bottom: 2rem;
   left: 89vw;
-  margin-left: 9px;
+  margin-left: 8.5px;
   @include respond-to(tablet){
     color: var(--secondary-color);
     position: inherit;
