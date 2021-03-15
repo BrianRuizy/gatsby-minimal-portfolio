@@ -350,12 +350,10 @@ h1, h2, h3, h4, h5, p, a  {
   }
 }
 .site-footer {
+  font-weight: 300;
+  color: #666;
   text-align: center;
   margin: 90px 0 16px;
-  color: #666;
-  a {
-    font-weight: bold;
-  }
 }
 // theme-changer
 .theme-changer { display: none; }
@@ -429,17 +427,17 @@ body.light {
       box-shadow: 0 0 0 0.2rem var(--primary-color);
     }
   }
-  .btn.btn-primary { 
-    font-weight: 700;
-    padding: .5rem 2rem;
-    color: var(--featured-text);
-    border-color: var(--primary-color); 
-    background: var(--primary-color);
-    &:hover, &:active, &:focus {
-      color: var(--primary-color);
-      background: var(--background); 
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 0.2rem var(--primary-color);
-    }
+}
+.btn{ 
+  font-weight: 700;
+  padding: .5rem 2rem;
+  color: var(--featured-text);
+  border-color: var(--primary-color); 
+  background: var(--primary-color);
+  &:hover, &:active, &:focus {
+    color: var(--primary-color);
+    background: var(--background); 
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem var(--primary-color);
   }
 }

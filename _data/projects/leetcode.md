@@ -5,6 +5,6 @@ name: Leetcode
 description: Algorithms
 github: 'https://leetcode.com'
 tags: 
-    - python
+    - Python
 ---
 LeetCode personal track of solutions written in Python. Algorithms, data structures, etc.
