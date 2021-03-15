@@ -40,7 +40,7 @@ export default function App() {
               <label htmlFor="defaultFormContactSubjectEx" >
                 Subject
               </label>
-              <input type="text" id="defaultFormContactSubjectEx" name="contact" className="form-control" />
+              <input type="text" id="defaultFormContactSubjectEx" name="subject" className="form-control" />
               <br />
               <label htmlFor="defaultFormContactMessageEx" >
                 Your message
