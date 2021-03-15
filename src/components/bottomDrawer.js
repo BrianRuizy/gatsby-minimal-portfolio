@@ -30,22 +30,22 @@ export default function App() {
               <label htmlFor="defaultFormContactNameEx" >
                 Your name
               </label>
-              <input type="text" id="defaultFormContactNameEx" className="form-control" />
+              <input type="text" id="defaultFormContactNameEx" name="name" className="form-control" />
               <br />
               <label htmlFor="defaultFormContactEmailEx" >
                 Your email
               </label>
-              <input type="email" id="defaultFormContactEmailEx" className="form-control" />
+              <input type="email" id="defaultFormContactEmailEx" name="email" className="form-control" />
               <br />
               <label htmlFor="defaultFormContactSubjectEx" >
                 Subject
               </label>
-              <input type="text" id="defaultFormContactSubjectEx" className="form-control" />
+              <input type="text" id="defaultFormContactSubjectEx" name="contact" className="form-control" />
               <br />
               <label htmlFor="defaultFormContactMessageEx" >
                 Your message
               </label>
-              <textarea type="text" id="defaultFormContactMessageEx" className="form-control" rows="3" />
+              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" rows="3" />
               <Button className="mt-4" type="submit" size="md">Send</Button>
 
               </form>
