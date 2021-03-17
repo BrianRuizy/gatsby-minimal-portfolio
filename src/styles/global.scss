@@ -1,0 +1,515 @@
+@import "~bootstrap/scss/bootstrap"; // react-bootstrap stylesheets
+@import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;500;700&display=swap");
+$font-family: 'Roboto', sans-serif;
+$breakpoints: (
+  'phone'  : ( max-width:  640px ),
+  'tablet' : ( max-width:  768px ),
+  'laptop'  : ( max-width: 1024px )
+);
+@mixin respond-to($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+html,
+body {
+  overflow-x:hidden;
+  width:100% !important;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin-top: 0
+}
+body.light {
+  --primary-color: #614dff;
+  --primary-text-color: #000;
+  --secondary-text-color: #444444;
+  --featured-text: #fff;
+  --secondary-color: #979797;
+  --background: #fafafa;
+  --site-header: var(--background);
+  --card-bg: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --link-color: #057ae0;
+  --bottom-nav-bg: #fff;
+  --border: rgba(25, 26, 30, 0.15);
+  --hr: rgba(0, 0, 0, 0.1);
+  --input-field: #ebebec;
+}
+body.dark {
+  --primary-color: #9984d5;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #bdbdc0;
+  --featured-text: #f5f5f7;
+  --secondary-color: #5e5e5e;
+  --background: #111216;
+  --site-header: var(--background);
+  --card-bg: #1D2128;
+  --card-shadow: rgba(0, 0, 0, 0.25);
+  --link-color: #90b3f4;
+  --bottom-nav-bg: #222831;
+  --hr: rgba(255, 255, 255, 0.1);
+  --input-field: #222831;
+}
+$theme-transition:   
+  color .75s ease-in-out, 
+  background-color .75s ease-in-out, 
+  border-color .75s ease-in-out, 
+  box-shadow .75s ease-in-out
+;
+/* System Fonts as used by Medium and WordPress */
+body {
+  font-family: $font-family;
+  background-color: var(--background);
+  color: var(--primary-text-color);
+}
+.navbar {
+  background: var(--background);
+  border-bottom: 1px solid var(--secondary-color);
+  .justify-content-end a {
+    font-size: 1.125rem;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    margin: 0 8px 0;
+    &[aria-current] { border-bottom: 1px solid white; }
+    &:hover { color: var(--primary-color); }
+    &:last-child { margin-right: 0; }
+  }
+  .navbar-brand a{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    &:hover { color: var(--primary-color); }
+  }
+}
+.top-nav {
+  @include respond-to(tablet){ visibility: hidden; }
+}
+.bottom-nav {
+  visibility: hidden;
+  border-radius: 20px;
+  margin: 1rem 15vw;
+  z-index: 5;
+  border: 1px solid var(--border);
+  background-color: var(--bottom-nav-bg);
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  .icon { font-size: 1.5rem; }
+  .nav-item {
+    height: 40px;
+    width: 32px;
+    text-align: center;
+  }
+  .nav-link { color: var(--secondary-color); }
+  .nav-link.active { color: var(--primary-text-color); }
+  @include respond-to(tablet){ visibility: visible; }
+  .nav-item .nav-link { transition: none; }
+}
+.container { 
+  margin: 8rem auto 6rem auto;
+  @include respond-to(tablet){ margin: 6rem auto 6rem auto; }
+  @include respond-to(phone){ margin: 3rem auto 6rem auto; }
+}
+.hero-header {
+  text-align: center;
+  padding: 80px 0 120px 0;
+  @include respond-to(phone){ padding: 60px 0 100px 0; }
+  & img{
+    border: 2px solid;
+    width: 55px;
+  }
+  p {
+    @include font-size(1rem);
+    line-height: 1.25;
+    color: var(--secondary-text-color);
+  }
+  a { color: unset;}
+  .headline {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: -.02rem;
+    line-height: 64px;
+    margin-bottom: 25px;
+    @include respond-to(tablet){ font-size: 40px; }
+    @include respond-to(phone){
+      padding: 0 30px;
+      font-size: 36px;
+    }  
+    & ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    & li:hover {
+      -webkit-text-stroke: 1px var(--primary-text-color);
+      -webkit-text-fill-color: var(--background);
+      transition: 
+        -webkit-text-fill-color 0.2s linear,
+        -webkit-text-fill-color 0.2s linear
+      ;
+    }
+  }
+}
+h1 {
+  font-family: 'DM Serif Display', serif;
+  line-height: 1;
+  @include font-size(4rem);
+}
+h1, h2, h3, h4, h5, p, a  {
+  transition: $theme-transition;
+}
+.post {
+  padding: 0;
+  color: var(--secondary-text-color);
+  line-height: 1.55;
+  max-width: 768px;
+  margin: 0 auto;
+  img { width: 100%; }
+  > .blog-post-content *:last-child,
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  > .blog-post-content {
+    a { color: var(--primary-color); }
+    h2{ 
+      font-weight: 700;
+      color: var(--primary-text-color);
+      margin-bottom: 2rem;
+      padding-top: 40px;
+      @include font-size(2rem);
+      @include respond-to(phone){
+        margin: 30px auto 18px auto;
+      }
+    }
+    p { 
+      margin: 0 auto 35px;
+      @include font-size(1.125rem);
+      @include respond-to(phone){
+        padding: 0 auto 20px;
+      }
+    }
+    .gatsby-highlight { margin: -10px 0 20px 0 !important; }
+  }
+  .back-button {
+    @include font-size(2.5rem);
+    color: var(--primary-color);
+    transition: $theme-transition;
+  }
+}
+.jumbotron {
+  transition: $theme-transition;
+  padding: 2rem 0 1rem 0;
+  @include respond-to(phone) { padding: 1.5rem 0 1rem 0; }
+  margin-bottom: 0;
+  background: none;
+  color: var(--secondary-text-color);
+  & h1 { 
+    color: var(--primary-text-color); 
+    margin-bottom: 1rem;
+    @include font-size(3rem);
+  }
+  & h2 {
+    color: var(--secondary-text-color);
+    @include font-size(1.5rem); 
+  }
+  & small { @include font-size(1rem); }
+}
+.badges{ margin: 1rem 0 }
+.badge {
+  font-weight: normal;
+  margin-right: .5rem;
+  background-color: transparent;
+  border: 1px solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  @include font-size(1rem);
+}
+.post-thumbnail {
+  text-align: center;
+  min-height: 380px;
+  background-color: var(--card-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: grid;
+  align-content: center;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  &:before {
+    content: "";
+    background: rgba(0,0,0,0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+.card {
+  display: grid;
+  overflow: hidden;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.25;
+  background-color: var(--card-bg);
+  box-shadow: 0px 20px 40px var(--card-shadow);
+  > a img { display: block; }
+  > header { padding: 24px; }
+  > h2:first-child { margin: 0 0 0.5rem 0; }
+  img.card-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include respond-to(phone){
+      position: unset;
+    }
+  }
+  .card-header {
+    color: var(--secondary-text-color); 
+    font-weight: lighter;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: inherit;
+    border-bottom: none;
+  }
+  .card-text{
+    margin-bottom: 30px;
+    color: var(--secondary-text-color); 
+  }
+  .card-link{ 
+    color: var(--primary-color); 
+  }
+  &.featured {
+    .card-body {
+      z-index: 1;
+      padding: 4rem 0 4rem 4rem;
+      @include respond-to(tablet){
+        padding: 2.5rem;
+      }
+      @include respond-to(phone){
+        padding: 2rem;
+      }
+    }
+    .card-header {
+      padding-left: 0;
+      padding-top: 0;
+      transition: $theme-transition;
+      @include font-size(1.25rem);
+    }
+    .card-title {
+      font-weight: 700;
+      transition: $theme-transition;
+      @include font-size(2.25rem);
+    }
+    .card-text, .card-link { 
+      @include font-size(1.5rem);
+    }
+    hr {
+      width: 140px;
+      height: 1px;
+      border: medium none;
+      margin-bottom: 30px;
+      background: var(--hr) none repeat scroll 0% 0%;
+      margin-left: 0;
+    }
+  }
+  &.projects {
+    padding: 2rem;
+    .folder { 
+      font-size: 2rem;
+      color: var(--secondary-color);
+    }
+    .card-title { 
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-top: 1.5rem;
+      transition: $theme-transition;
+    }
+    .card-body { 
+      padding: 0;
+      font-size: 1.25rem; 
+    }
+    .card-link { @include font-size(1.5rem); }
+
+  }
+}
+.site-footer {
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+  margin: 90px 0 16px;
+}
+// theme-changer
+.theme-changer { display: none; }
+.moon, .sun { 
+  visibility: visible;
+  position: fixed;
+  margin-top: .5rem;
+  font-size: 1.5rem; 
+  color: var(--primary-text-color);
+  bottom: 2rem;
+  left: 89vw;
+  margin-left: 8.5px;
+  @include respond-to(tablet){
+    color: var(--secondary-color);
+    position: inherit;
+    margin-left: 0;
+  }
+}
+body.dark {
+  .moon {
+    display: none;
+  }
+}
+body.light {
+  .sun {
+    display: none;
+  }
+}
+.mode-container {
+  position: fixed;
+  visibility: visible;
+  bottom: 1.5rem;
+  left: 89vw;
+  border-radius: 100%;
+  border: 1px solid var(--border);
+  background: var(--bottom-nav-bg);
+  box-shadow: var(--card-shadow) 0px 0px 15px;
+  padding: 1.25rem;
+  @include respond-to(tablet){
+    border: none;
+    position: inherit;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+.bottom-drawer {
+  .drawer div:nth-child(2) {
+    color: var(--secondary-text-color);
+    background: var(--card-bg);
+  }
+  .icon.message {
+    color: var(--secondary-color);
+    margin-top: .5rem;
+  }
+}
+.contact-form {
+  max-width: 768px;
+  margin: 1.5rem auto;
+  text-align: left;
+  label { @include font-size(1rem); }
+  input, textarea {
+    font-size: 1.25rem;
+    color: var(--primary-text-color);
+    background-color: var(--input-field);
+    border: none;
+    &:focus {
+      background-color: var(--background);
+      border-color: var(--primary-color);
+      color: var(--primary-text-color);
+      box-shadow: 0 0 0 0.2rem var(--primary-color);
+    }
+  }
+}
+.btn{ 
+  font-weight: 700;
+  padding: .5rem 2rem;
+  color: var(--featured-text);
+  border-color: var(--primary-color); 
+  background: var(--primary-color);
+  &:hover, &:active, &:focus {
+    color: var(--primary-color);
+    background: var(--background); 
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem var(--primary-color);
+  }
+}
+.about {
+  .banner {
+    text-align: center;
+    min-height: 275px;
+    @include respond-to(tablet){ min-height: 250px;}
+    @include respond-to(phone){ min-height: 175px;}
+    background-color: var(--card-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    &:before {
+      content: "";
+      background: rgba(0,0,0,0.20);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .header{
+    z-index: 3;
+    position: relative;
+    top: -10rem;
+    left: 4rem;
+    .text{ 
+      margin-top: 8rem;
+      line-height: 1;
+      @include respond-to(phone) { margin-top: 1rem; }
+      & h2 {
+        margin-bottom: 0;
+        font-weight: 500;
+        @include font-size(2.25rem)}
+      & p {
+        color: var(--secondary-text-color);
+        @include font-size(1.25rem)
+        }
+    }
+    @include respond-to(phone){ 
+      text-align: center;
+      justify-content: center; 
+      left: unset;
+    }
+    & img {
+      border: 4px solid var(--background);
+      width: 200px;
+      @include respond-to(tablet){ width: 175px; }
+      @include respond-to(phone){ width: 150px; }
+   }
+  }
+} 

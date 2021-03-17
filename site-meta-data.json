@@ -1,0 +1,12 @@
+{
+  "title": "Brian Ruiz | SWE",
+  "siteUrl": "https://delog-w3layouts.netlify.com/",
+  "description": "Software Engineer based in Houston, TX, and specializing in Full Stack Python development. Brian is proficient at web development, design, and working with big-data.",
+  "home": {
+    "name": "Brian Ruiz",
+    "role": "Software Engineer",
+    "skillset": ["Python full-stack", "web development", "data analytics", "cloud computing"],
+    "availability": "Open to new opportunities",
+    "location": "Houston, TX"
+  }
+}
