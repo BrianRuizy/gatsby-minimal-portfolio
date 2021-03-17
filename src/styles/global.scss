@@ -506,7 +506,7 @@ body.light {
       left: unset;
     }
     & img {
-      border: 3px solid white;
+      border: 4px solid var(--background);
       width: 200px;
       @include respond-to(tablet){ width: 175px; }
       @include respond-to(phone){ width: 150px; }
