@@ -1,15 +1,15 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-
 import Jumbotron from "react-bootstrap/Jumbotron"
 import Badge from "react-bootstrap/Badge"
 
+import { CgArrowLeft } from "react-icons/cg"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -25,6 +25,9 @@ export default function Template({
       </Helmet>
       <Container>
         <article className="post">
+          <Link to="/">
+            <CgArrowLeft className="back-button"/>
+          </Link>
           <Jumbotron>
             <div className="badges">
               { frontmatter.tags.map((tag, index) =>
