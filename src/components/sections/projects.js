@@ -8,8 +8,8 @@ import Card from "react-bootstrap/Card"
 import Badge from "react-bootstrap/Badge"
 
 import { FiGithub } from "react-icons/fi"
-import { FiExternalLink } from "react-icons/fi"
-import { AiFillFolder } from "react-icons/ai"
+import { BiLinkExternal } from "react-icons/bi"
+import { AiOutlineFolderOpen } from "react-icons/ai"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,10 @@ const Projects = () => {
   `)
   return( 
     <Container>
-      <h2>Other Projects &darr;</h2>
+      <div className="text-center mb-4">
+        <h3 className="mb-0">Miscellaneous Projects</h3>
+        <p style={{color: 'var(--secondary-text-color)'}}>Other noteworthy small projects I've worked on</p>
+      </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
         <Col key={node.id} lg={4} sm={6} xs={12} style={{display: "flex"}}>
@@ -41,13 +44,13 @@ const Projects = () => {
             <Card.Body>
               
               <Row className="post-meta">
-                <Col><AiFillFolder className="folder"/></Col>
+                <Col><AiOutlineFolderOpen className="folder"/></Col>
                 <Col className="text-right">
                   { node.frontmatter.github && 
                   <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>
                   }
                   { node.frontmatter.demo && 
-                    <Card.Link href={node.frontmatter.demo}><FiExternalLink/></Card.Link>
+                    <Card.Link href={node.frontmatter.demo}><BiLinkExternal/></Card.Link>
                   }
                 </Col>
               </Row>

@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 
 import { FiGithub } from "react-icons/fi"
-import { FiExternalLink } from "react-icons/fi"
+import { BiLinkExternal } from "react-icons/bi"
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +34,10 @@ const Featured = () => {
   `)
   return (
     <Container>
+      <div className="text-center mb-4">
+        <h3 className="mb-0">Featured Projects</h3>
+        <p style={{color: 'var(--secondary-text-color)'}}>Some of my favorite or larger projects</p>
+      </div>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col key={node.id} sm={12}>
@@ -53,7 +57,7 @@ const Featured = () => {
                   )}
                   {node.frontmatter.demo && (
                     <Card.Link href={node.frontmatter.demo}>
-                      <FiExternalLink />
+                      <BiLinkExternal />
                     </Card.Link>
                   )}
                 </Card.Body>

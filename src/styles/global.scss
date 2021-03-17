@@ -65,7 +65,8 @@ $theme-transition:
   color .75s ease-in-out, 
   background-color .75s ease-in-out, 
   border-color .75s ease-in-out, 
-  box-shadow .75s ease-in-out;
+  box-shadow .75s ease-in-out
+;
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
@@ -118,10 +119,12 @@ body {
   }
   .nav-link { color: var(--secondary-color); }
   .nav-link.active { color: var(--primary-text-color); }
-  @include respond-to(tablet){ visibility: visible;}
+  @include respond-to(tablet){ visibility: visible; }
+  .nav-item .nav-link { transition: none; }
 }
 .container { 
-  margin: 5rem auto 6rem auto;
+  margin: 8rem auto 6rem auto;
+  @include respond-to(phone){ margin: 2rem auto 6rem auto; }
 }
 .hero-header {
   text-align: center;
@@ -203,13 +206,16 @@ h1, h2, h3, h4, h5, p, a  {
     }
     .gatsby-highlight { margin: -10px 0 20px 0 !important; }
   }
+  .back-button {
+    @include font-size(2.5rem);
+    color: var(--primary-color);
+    transition: $theme-transition;
+  }
 }
 .jumbotron {
   transition: $theme-transition;
   padding: 2rem 0 1rem 0;
-  @include respond-to(phone) {
-    padding: 0 0 1rem 0;
-  }
+  @include respond-to(phone) { padding: 1.5rem 0 1rem 0; }
   margin-bottom: 0;
   background: none;
   color: var(--secondary-text-color);
@@ -286,11 +292,12 @@ h1, h2, h3, h4, h5, p, a  {
     }
   }
   .card-header {
+    color: var(--secondary-text-color); 
+    font-weight: lighter;
     padding: 1rem 1.25rem;
     margin-bottom: 0;
     background-color: inherit;
     border-bottom: none;
-    font-weight: lighter;
   }
   .card-text{
     margin-bottom: 30px;
@@ -322,7 +329,7 @@ h1, h2, h3, h4, h5, p, a  {
       @include font-size(2.25rem);
     }
     .card-text, .card-link { 
-      @include font-size(1.35rem);
+      @include font-size(1.5rem);
     }
     hr {
       width: 140px;
@@ -336,17 +343,21 @@ h1, h2, h3, h4, h5, p, a  {
   &.projects {
     padding: 2rem;
     .folder { 
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: var(--secondary-color);
     }
     .card-title { 
       font-size: 1.5rem;
       font-weight: 500;
       padding-top: 1.5rem;
+      transition: $theme-transition;
     }
-    .card-body, .card-link { 
+    .card-body { 
       padding: 0;
-      font-size: 1.25rem; }
+      font-size: 1.25rem; 
+    }
+    .card-link { @include font-size(1.5rem); }
+
   }
 }
 .site-footer {
@@ -439,5 +450,34 @@ body.light {
     background: var(--background); 
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem var(--primary-color);
+  }
+}
+.banner {
+  text-align: center;
+  min-height: 380px;
+  background-color: var(--card-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: grid;
+  align-content: center;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  &:before {
+    content: "";
+    background: rgba(0,0,0,0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
   }
 }

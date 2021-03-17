@@ -19,20 +19,12 @@ const AboutPage = ({
         <title>About — {site.siteMetadata.title}</title>
         <meta name="description" content={"About page of Brian. " + site.siteMetadata.description} />
       </Helmet>
-      <Container>
-        <div className="section about">
-          <Row>
-            <Col md={8} sm={12}>
-              <h1>
-                I enjoy the process of creating and abstract idea 
-                and materializing it into simething that generates <u>value</u>
-              </h1>
-            </Col>
-            <Col>
-              <Image src="/assets/portrait.png"></Image>
-            </Col>
-          </Row>
-        </div>
+      <Container className="section about">
+          <div 
+            className="banner" 
+            style={{backgroundImage: `url(https://images.unsplash.com/photo-1615996923925-bfe3ab919361?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80)`}}
+          />
+        
       </Container>
     </Layout>
   )
