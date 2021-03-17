@@ -16,8 +16,8 @@ export default function App() {
 
   return (
   <div className="bottom-drawer">
-    <FiMessageSquare className="icon message d-sm-block d-md-none" onClick={openDrawer}></FiMessageSquare>
-    <a className="d-none d-md-block " onClick={openDrawer}>Contact</a>
+    <FiMessageSquare className="icon message d-md-block d-lg-none" onClick={openDrawer}></FiMessageSquare>
+    <a className="d-none d-lg-block " onClick={openDrawer}>Contact</a>
     <div className="drawer">
       <Drawer
         duration={250}

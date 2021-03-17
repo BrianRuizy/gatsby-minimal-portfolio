@@ -18,7 +18,7 @@ export default () => (
               name
               role
               skillset
-              preferredLocation
+              location
               availability
             }
           }
@@ -49,8 +49,8 @@ export default () => (
           <Col xs="auto" className="text-left">
             <p>
               <b>{data.site.siteMetadata.home.name}, {data.site.siteMetadata.home.role}</b><br></br>
-              {data.site.siteMetadata.home.preferredLocation}<br></br>
-              {data.site.siteMetadata.home.availability}
+              {data.site.siteMetadata.home.location} + Remote<br></br>
+              {data.site.siteMetadata.home.availability}.
             </p>
           </Col>
         </Row>

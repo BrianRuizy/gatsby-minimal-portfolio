@@ -124,12 +124,13 @@ body {
 }
 .container { 
   margin: 8rem auto 6rem auto;
-  @include respond-to(phone){ margin: 2rem auto 6rem auto; }
+  @include respond-to(tablet){ margin: 6rem auto 6rem auto; }
+  @include respond-to(phone){ margin: 3rem auto 6rem auto; }
 }
 .hero-header {
   text-align: center;
   padding: 80px 0 120px 0;
-  @include respond-to(phone){ padding: 40px 0 80px 0; }
+  @include respond-to(phone){ padding: 60px 0 100px 0; }
   & img{
     border: 2px solid;
     width: 55px;
@@ -452,32 +453,63 @@ body.light {
     box-shadow: 0 0 0 0.2rem var(--primary-color);
   }
 }
-.banner {
-  text-align: center;
-  min-height: 380px;
-  background-color: var(--card-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  display: grid;
-  align-content: center;
-  position: relative;
-  padding: 20px;
-  overflow: hidden;
-  margin-bottom: 3rem;
-  &:before {
-    content: "";
-    background: rgba(0,0,0,0.15);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  > * {
+.about {
+  .banner {
+    text-align: center;
+    min-height: 275px;
+    @include respond-to(tablet){ min-height: 250px;}
+    @include respond-to(phone){ min-height: 175px;}
+    background-color: var(--card-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    &:before {
+      content: "";
+      background: rgba(0,0,0,0.20);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    > * {
+      position: relative;
+      z-index: 2;
+    }
   }
-}
+  .header{
+    z-index: 5;
+    position: relative;
+    top: -10rem;
+    left: 4rem;
+    .text{ 
+      margin-top: 8rem;
+      line-height: 1;
+      @include respond-to(phone) { margin-top: 1rem; }
+      & h2 {
+        margin-bottom: 0;
+        font-weight: 500;
+        @include font-size(2.25rem)}
+      & p {
+        color: var(--secondary-text-color);
+        @include font-size(1.25rem)
+        }
+    }
+    @include respond-to(phone){ 
+      text-align: center;
+      justify-content: center; 
+      left: unset;
+    }
+    & img {
+      border: 3px solid white;
+      width: 200px;
+      @include respond-to(tablet){ width: 175px; }
+      @include respond-to(phone){ width: 150px; }
+   }
+  }
+} 

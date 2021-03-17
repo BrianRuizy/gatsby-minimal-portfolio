@@ -6,7 +6,7 @@
     "name": "Brian Ruiz",
     "role": "Software Engineer",
     "skillset": ["Python full-stack", "web development", "data analytics", "cloud computing"],
-    "availability": "Open to new opportunities.",
-    "preferredLocation": "Houston, TX + Remote"
+    "availability": "Open to new opportunities",
+    "location": "Houston, TX"
   }
 }
