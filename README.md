@@ -5,11 +5,6 @@
  This is the 3rd and latest version of my portfolio website, modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
 <p align="center">
-  Previous versions:
-  <a href="https://github.com/BrianRuizy/portfolio-website/releases/tag/v1.0" target="_blank">v1.0</a>,
-  <a href="https://github.com/BrianRuizy/portfolio-website/releases/tag/v2.0" target="_blank">v2.0</a>,
-</p>
-<p align="center">
   <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/72511ec5-84cd-416c-81d8-b16489c1b235/deploy-status" alt="Netlify Status" /> 
   </a>
