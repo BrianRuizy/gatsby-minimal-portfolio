@@ -18,6 +18,16 @@
 </p>
 </div>
 
+## Installation
+Like how this project looks? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. Don't forget to leave a star⭐!
+
+```bash
+npm install
+
+```
+```
+gatsby develop
+```
 
 ## Dependencies
 
