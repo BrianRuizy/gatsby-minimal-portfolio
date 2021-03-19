@@ -2,7 +2,7 @@
   Portfolio Website
 </h1>
 <p align="center">
- This is the 3rd and latest version of my portfolio website,
+ This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>,
  modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
 <p align="center">
