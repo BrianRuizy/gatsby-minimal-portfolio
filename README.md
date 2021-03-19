@@ -1,5 +1,5 @@
 <h1 align="center">
-  Gatsby Portfolio Website
+  Portfolio Website
 </h1>
 <p align="center">
  This is the 3rd and latest version of my portfolio website,</br>
