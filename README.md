@@ -19,7 +19,7 @@
 </div>
 
 ## Installation
-Like how this project looks? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. Don't forget to leave a star⭐!
+Like my project? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. Don't forget to leave a star⭐!
 
 ```bash
 npm install
@@ -29,7 +29,7 @@ npm install
 gatsby develop
 ```
 
-## Dependencies
+## Credits
 
 This site's Web design was made possible thanks to these awesome packages / plugins!
 
