@@ -6,14 +6,14 @@
  modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
 <p align="center">
-  <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
+   <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/72511ec5-84cd-416c-81d8-b16489c1b235/deploy-status" alt="Netlify Status" /> 
-  </a>
-   <a href="http://hits.dwyl.com/BrianRuizy/portfolio-website" target="_blank">
-     <img src="http://hits.dwyl.com/BrianRuizy/portfolio-website.svg" alt="hit counter" />
+   </a>
+   <a href="gatsbyjs.com" target="_blank">
+     <img src="https://img.shields.io/badge/Built%20with-Gatsby-%23614dff?logo=gatsby" />
    </a>
    <a>
-     <img src="https://img.shields.io/github/license/BrianRuizy/portfolio-website?color=red&style=flat-square" />
+     <img src="https://img.shields.io/github/license/BrianRuizy/portfolio-website?color=red&style=flat" />
    </a>
 </p>
 </div>
