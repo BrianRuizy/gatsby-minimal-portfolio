@@ -9,8 +9,11 @@
    <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/72511ec5-84cd-416c-81d8-b16489c1b235/deploy-status" alt="Netlify Status" /> 
    </a>
-   <a href="gatsbyjs.com" target="_blank">
+   <a href="https://gatsbyjs.com" target="_blank">
      <img src="https://img.shields.io/badge/Built%20with-Gatsby-%23614dff?logo=gatsby" />
+   </a>
+   <a href="https://reactjs.org/" target="_blank">
+     <img src="https://img.shields.io/badge/Powered%20by-React-%2361dafb?logo=react" />
    </a>
    <a>
      <img src="https://img.shields.io/github/license/BrianRuizy/portfolio-website?color=red&style=flat" />
@@ -34,7 +37,7 @@ gatsby develop
 This site's Web design was made possible thanks to these awesome packages / plugins!
 
 | Function | Package + Link |
-| :------------- | ---------- | 
+| ------------- | ---------- | 
 | UI Library | [react-bootstrap](https://react-bootstrap.github.io/) |
 | Dark Mode | [gatsby-plugin-dark-mode](https://www.gatsbyjs.com/plugins/gatsby-plugin-dark-mode/) |
 | Syntax Highlighting | [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/?=prismjs) |
