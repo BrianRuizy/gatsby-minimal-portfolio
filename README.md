@@ -4,8 +4,9 @@
 </h1>
 
 <p align="center">
- This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>.</br>
+ This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>.
  Modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+</br>Don't forget to leave a star⭐!
 </p>
 <p align="center">
    <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
@@ -33,7 +34,7 @@ Using this portfolio website and adding your own content is super easy! Simply a
 
 ## Installation
 
-Like my project? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. Don't forget to leave a star⭐!
+Like my project? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy.
 
 ```bash
 npm install
