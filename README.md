@@ -24,7 +24,7 @@
 </p>
 </div>
 
-![open-graph-site-preview](https://user-images.githubusercontent.com/23439187/112022247-1ac04080-8b00-11eb-8f0c-2954ac58f221.png)
+![brianruizy-portfolio-website](https://user-images.githubusercontent.com/23439187/112066205-efefdf80-8b33-11eb-85a1-96c40baf2a8d.png)
 
 ## Quick Start
 
