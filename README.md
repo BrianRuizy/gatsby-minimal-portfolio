@@ -26,64 +26,51 @@
 
 ![open-graph-site-preview](https://user-images.githubusercontent.com/23439187/112022247-1ac04080-8b00-11eb-8f0c-2954ac58f221.png)
 
+## Quick Start
+
+Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) and [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more details or issues with initial project installation.
+
+1. **Install Project**
+
+    Create new site using `gastby new` command. This command will also install the project dependencies.
+
+    ```bash
+    gatsby new portfolio-website https://github.com/BrianRuizy/portfolio-website
+    ```
+
+2. **Start Developing**
+
+    Navigate into your new site’s directory and start it up using `gatsby develop` command.
+
+    ```bash
+    gatsby develop
+
+    DONE - Compiled successful
+    You can now view Brian-Ruiz-Portfolio in the browser.
+    http://localhost:8000/
+    ```
+
 ## Usage
 
-Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html.
+Using this portfolio website and adding your own content is super simple! Add your respective project markdown-file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work rendering the markdown file to html. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
-See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks. Same applies for site metadata, add your own content to `site-meta-data.json`.
-
-![remark(1)](https://user-images.githubusercontent.com/23439187/111946523-a65ab280-8aa9-11eb-8be0-7a7170b562eb.png)
-
-## Getting Started
-
-Like this project & want to use it for your own project? **My goal is to make this repo as easy as possible to use**. First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more details.
-
-### Prerequisites
-
-- Node.JS version 13
-  
-```bash
-nvm install 13
-nvm use 13
-```
-
-- Gatsby CLI
-
-```bash
-npm install -g gatsby-cli
-```
-
-### Installing
-
-1. Fork this repo, and git clone to your system.
-
-```bash
-git clone https://github.com/your_username/portfolio-website.git
-cd portfolio-website
-```
-
-2. Install project dependencies.
-
-```bash
-npm install
-```
-
-3. Run local server.
-
-```bash
-gatsby develop
-
-# DONE - Compiled successfully
-# You can now view Brian-Ruiz-Portfolio in the browser
-  # http://localhost:8000/
-```
+![remark](https://user-images.githubusercontent.com/23439187/111946523-a65ab280-8aa9-11eb-8be0-7a7170b562eb.png)
+See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks.
 
 ## Deployment
 
->Netlify is an excellent option for deploying Gatsby sites. Netlify is a unified platform that automates your code to create performant, easily maintainable sites and web apps.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 
-For this project the fastest and easiest way to get a live site running is using [Netlify](https://netlify.com/).
-Visit Gatsby's [Deploying to Netlify](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-netlify/#git-repository-setup) documentation for more details on deploying your website.
+Netlify currently has built in support for GitHub. You gain the ability to redeploy the site by pushing the code to the respective repository, with no need to manually rebuild and upload every time you make changes. See Gatsby's [docs](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-netlify/) for more detail.
+
+1. Login to Netlify.com and you will see a `New site from git` button at the top right corner of the screen. Click on it and connect with the same git provider that you used to host your website and authorize Netlify to use your account.
+
+2. Choose your `website repository` and it will take you to deploy settings with the below options.
+
+     - Branch to deploy: You can specify a branch to monitor. When you push to that particular branch, only then will Netlify build and deploy the site. The default is master.
+     - Build Command: You can specify the command you want Netlify to run when you push to the above branch. The default is npm run build.
+
+3. Click on the `Deploy site` button and Netlify will start the build and deploy process you have specified. You can go to the `Deploys` tab and see the process unfold in the Deploy log. After a few moments, it will give you the live site URL, e.g., random-name.netlify.com.
 
 ## Credits
 
