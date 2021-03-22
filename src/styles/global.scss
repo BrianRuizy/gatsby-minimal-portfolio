@@ -81,7 +81,6 @@ body {
     color: var(--primary-text-color);
     text-decoration: none;
     margin: 0 8px 0;
-    &[aria-current] { border-bottom: 1px solid white; }
     &:hover { color: var(--primary-color); }
     &:last-child { margin-right: 0; }
   }
@@ -124,8 +123,8 @@ body {
 }
 .container { 
   margin: 8rem auto 6rem auto;
-  @include respond-to(tablet){ margin: 6rem auto 6rem auto; }
-  @include respond-to(phone){ margin: 3rem auto 6rem auto; }
+  @include respond-to(tablet){ margin: 4rem auto 6rem auto; }
+  @include respond-to(phone){ margin: 2rem auto 6rem auto; }
 }
 .hero-header {
   text-align: center;
@@ -243,7 +242,7 @@ h1, h2, h3, h4, h5, p, a  {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  background-color: var(--card-bg);
+  background-color: var(--input-field);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -256,7 +255,7 @@ h1, h2, h3, h4, h5, p, a  {
   margin-bottom: 3rem;
   &:before {
     content: "";
-    background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.05);
     position: absolute;
     top: 0;
     left: 0;
@@ -506,7 +505,7 @@ body.light {
       left: unset;
     }
     & img {
-      border: 4px solid var(--background);
+      border: 5px solid var(--background);
       width: 200px;
       @include respond-to(tablet){ width: 175px; }
       @include respond-to(phone){ width: 150px; }
