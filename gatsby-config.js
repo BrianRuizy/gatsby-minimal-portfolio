@@ -58,8 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Brian Ruiz Portfolio Wesbite`,
+        short_name: `brianruizy`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#381696`,
