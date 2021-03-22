@@ -16,7 +16,7 @@ const IndexPage = ({
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
-        <meta property="og:image" content="https://user-images.githubusercontent.com/23439187/112022247-1ac04080-8b00-11eb-8f0c-2954ac58f221.png"/>
+        <meta property="og:image" content="https://raw.githubusercontent.com/BrianRuizy/portfolio-website/master/static/assets/OG_IMAGE.png"/>
         <meta property="og:image:width" content="2139" />
         <meta property="og:image:width" content="1126" />
       </Helmet>
