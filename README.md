@@ -31,6 +31,11 @@ npm install
 ```
 gatsby develop
 ```
+## Usage
+Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the *_data* folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html. See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for more details on markdown syntax and embedding images or codeblocks.
+
+![remark-example-brianruizy](https://user-images.githubusercontent.com/23439187/111939833-4bba5a00-8a9b-11eb-8154-c1f36279cc80.png)
+
 
 ## Credits
 
