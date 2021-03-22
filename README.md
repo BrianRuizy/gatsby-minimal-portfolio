@@ -28,28 +28,63 @@
 
 ## Usage
 
-Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the *_data* folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html. See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for more details on markdown syntax and embedding images or codeblocks.
+Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html. 
+
+See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
 ![remark(1)](https://user-images.githubusercontent.com/23439187/111946523-a65ab280-8aa9-11eb-8be0-7a7170b562eb.png)
 
-## Installation
+## Getting Started
 
 Like my project? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy.
 
+See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more detail.
+
+### Prerequisites
+
+- Node.JS version 12
+  
+```bash
+nvm install 12
+nvm use 12
+```
+
+- Gatsby CLI
+```bash
+npm install -g gatsby-cli
+```
+
+### Installing
+
+1. Install project dependencies.
+
 ```bash
 npm install
+```
 
-```
-```
+2. Run local server.
+
+```bash
 gatsby develop
+
+DONE - Compiled successfully in 3060ms 
+You can now view Brian-Ruiz-Portfolio in the browser.
+  http://localhost:8000/
 ```
+
+## Deployment
+
+>Netlify is an excellent option for deploying Gatsby sites. Netlify is a unified platform that automates your code to create performant, easily maintainable sites and web apps.
+
+For this project the fastest and easiest way to get a live site running is using [Netlify](https://netlify.com/).
+Visit Gatsby's [Deploying to Netlify](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-netlify/#git-repository-setup) documentation for more details on deploying your website.
 
 ## Credits
 
 This site's Web design was made possible thanks to these awesome packages / plugins!
 
 | Function | Package + Link |
-| ------------- | ---------- | 
+| ------------- | ---------- |
 | UI Library | [react-bootstrap](https://react-bootstrap.github.io/) |
 | Dark Mode | [gatsby-plugin-dark-mode](https://www.gatsbyjs.com/plugins/gatsby-plugin-dark-mode/) |
 | Syntax Highlighting | [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/?=prismjs) |
