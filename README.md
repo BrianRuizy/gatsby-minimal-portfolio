@@ -1,6 +1,8 @@
+
 <h1 align="center">
   Portfolio Website
 </h1>
+
 <p align="center">
  This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>.</br>
  Modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
@@ -21,12 +23,13 @@
 </p>
 </div>
 
+![mockup](https://user-images.githubusercontent.com/23439187/111946587-becacd00-8aa9-11eb-96ee-a5399fa2658a.png)
+
 ## Usage
 
 Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the *_data* folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html. See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for more details on markdown syntax and embedding images or codeblocks.
 
-![remark-example-brianruizy](https://user-images.githubusercontent.com/23439187/111939833-4bba5a00-8a9b-11eb-8154-c1f36279cc80.png)
-
+![remark(1)](https://user-images.githubusercontent.com/23439187/111946523-a65ab280-8aa9-11eb-8be0-7a7170b562eb.png)
 
 ## Installation
 
