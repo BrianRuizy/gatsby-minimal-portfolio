@@ -6,7 +6,7 @@
 <p align="center">
  This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>.
  Modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
- Don't forget to leave a star⭐!
+ Don't forget to leave a star ⭐!
 </p>
 <p align="center">
    <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
@@ -28,7 +28,7 @@
 
 ## Usage
 
-Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html. 
+Using this portfolio website and adding your own content is super easy! Simply add your respective project markdown file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work parsing and rendering the markdown file to html.
 
 See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
@@ -36,40 +36,46 @@ See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master
 
 ## Getting Started
 
-Like my project? Want to use it for your own project? First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy.
-
-See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more detail.
+Like this project & want to use it for your own project? **My goal is to make this repo as easy as possible to use**. First, fork the repository, then `git clone` to your local system, and type the following commands to get the project running locally fast and easy. See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more details.
 
 ### Prerequisites
 
-- Node.JS version 12
+- Node.JS version 13
   
 ```bash
-nvm install 12
-nvm use 12
+nvm install 13
+nvm use 13
 ```
 
 - Gatsby CLI
+
 ```bash
 npm install -g gatsby-cli
 ```
 
 ### Installing
 
-1. Install project dependencies.
+1. Fork this repo, and git clone to your system.
+
+```bash
+git clone https://github.com/your_username/portfolio-website.git
+cd portfolio-website
+```
+
+2. Install project dependencies.
 
 ```bash
 npm install
 ```
 
-2. Run local server.
+3. Run local server.
 
 ```bash
 gatsby develop
 
-DONE - Compiled successfully in 3060ms 
-You can now view Brian-Ruiz-Portfolio in the browser.
-  http://localhost:8000/
+# DONE - Compiled successfully
+# You can now view Brian-Ruiz-Portfolio in the browser
+  # http://localhost:8000/
 ```
 
 ## Deployment

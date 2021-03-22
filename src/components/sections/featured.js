@@ -8,7 +8,6 @@ import Card from "react-bootstrap/Card"
 
 import { FiGithub } from "react-icons/fi"
 import { BiLinkExternal } from "react-icons/bi"
-import { FiBookmark } from "react-icons/fi"
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
