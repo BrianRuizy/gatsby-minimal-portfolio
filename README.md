@@ -24,7 +24,7 @@
 </p>
 </div>
 
-![mockup](https://user-images.githubusercontent.com/23439187/111946587-becacd00-8aa9-11eb-96ee-a5399fa2658a.png)
+![open-graph-site-preview](https://user-images.githubusercontent.com/23439187/112022247-1ac04080-8b00-11eb-8f0c-2954ac58f221.png)
 
 ## Usage
 
