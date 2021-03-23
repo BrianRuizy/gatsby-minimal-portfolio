@@ -1,17 +1,17 @@
 {
-  "name": "Brian-Ruiz-Portfolio",
+  "name": "gatsby-minimal-portfolio",
   "description": "Portfolio website for brian ruiz, software engineer in Houston, TX",
   "author": "@brianruizy",
   "version": "1.6.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BrianRuizy/portfolio-website/issues"
+    "url": "https://github.com/BrianRuizy/gatsby-minimal-portfolio/issues"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
     "gatsby": "^2.21.0",
     "gatsby-plugin-dark-mode": "^1.1.1",
-    "gatsby-plugin-google-analytics": "^2.1.36",
+    "gatsby-plugin-google-gtag": "^3.1.0",
     "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-netlify-cms": "^4.1.38",
     "gatsby-plugin-offline": "^3.2.0",
@@ -36,14 +36,14 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/BrianRuizy/portfolio-website/blob/master/README.md",
+  "homepage": "https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/README.md",
   "keywords": [
     "gatsby",
     "netlify cms"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrianRuizy/portfolio-website.git"
+    "url": "git+https://github.com/BrianRuizy/gatsby-minimal-portfolio.git"
   },
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
