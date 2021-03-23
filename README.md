@@ -24,7 +24,7 @@
 </p>
 </div>
 
-![brianruizy-gatsby-minimal-portfolio](https://user-images.githubusercontent.com/23439187/112066205-efefdf80-8b33-11eb-85a1-96c40baf2a8d.png)
+![github image](https://user-images.githubusercontent.com/23439187/112224550-6b679480-8bf9-11eb-9f19-85ade4dbb720.png)
 
 ## Quick Start
 
