@@ -55,7 +55,7 @@ export default () => (
           <Col>
             <h1>
               <span id="greeting">{greet}</span><br></br>
-              I'm <u>@{data.site.siteMetadata.home.username}</u>,<br></br>
+              I'm @<u>{data.site.siteMetadata.home.username}</u>,<br></br>
               {data.site.siteMetadata.home.role}
             </h1>
             <p>{data.site.siteMetadata.home.summary}</p>

@@ -31,7 +31,7 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #614dff;
+  --primary-color: #381696;
   --primary-text-color: #000;
   --secondary-text-color: #444444;
   --featured-text: #fff;
@@ -441,8 +441,8 @@ body.light {
 }
 .btn.btn-primary { 
   color: var(--featured-text);
-  border-color: var(--primary-color);
   background: var(--primary-color);
+  border: 2px solid var(--primary-color);
   font-weight: 700;
   border-radius: 8px;
   padding: .5rem 1.75rem;
