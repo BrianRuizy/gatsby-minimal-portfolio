@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   img {
     margin-bottom: 1.25rem;
-    border: 3px solid;
+    border: 4px solid var(--secondary-color);
     width: 100px;
     @include respond-to(tablet) { width: 90px }
     @include respond-to(phone) { width: 80px }
@@ -446,6 +446,8 @@ body.light {
   font-weight: 700;
   border-radius: 8px;
   padding: .5rem 1.75rem;
+  transition: $theme-transition;
+
   &:hover, &:active, &:focus {
     color: var(--primary-color);
     background: var(--background); 
@@ -459,6 +461,8 @@ body.light {
   border: none;
   border-radius: 8px;
   padding: .5rem 1.75rem;
+  transition: $theme-transition;
+
   &:hover, &:active, &:focus {
     color: var(--secondary-text-color);
     background-color: var(--card-bg);
