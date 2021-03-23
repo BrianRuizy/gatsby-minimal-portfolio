@@ -1,12 +1,29 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
+import Resume from "../../../static/Brian_Ruiz_Resume.pdf"
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
 
 import { GoPrimitiveDot } from 'react-icons/go'
+import { FaFileDownload } from 'react-icons/fa'
+
+
+var hour = new Date().getHours();
+var greet;
+
+if (hour >= 5 && hour < 11)
+    greet = '🌅 Good morning';
+else if (hour >= 11 && hour <= 17)
+    greet = '🏙️ Good afternoon';
+else if (hour >= 17 && hour <= 23)
+    greet = '🌆 Good evening';
+else if (hour === 24 || hour < 5)
+    greet = '🦉 Hello, night-owl';
 
 export default () => (
   <StaticQuery
@@ -16,10 +33,11 @@ export default () => (
           siteMetadata {
             home {
               name
+              username
               role
-              skillset
-              location
+              summary
               availability
+              location
             }
           }
         }
@@ -27,31 +45,24 @@ export default () => (
     `}
     render={data => (
       <Container className="hero-header">
-        <Row>
-          <Col>
-            <div className="headline">
-              <h1>{data.site.siteMetadata.home.role}:<br></br>
-                {<ul id="skillset">
-                  {data.site.siteMetadata.home.skillset.map((skill,index) => 
-                    <li key={index}>{skill},</li> 
-                  )}
-                </ul>}
-              </h1>
-            </div>
-          </Col>
-        </Row>
-
         <Row className="justify-content-center">
           <Col xs="auto">
             <Link to="/about"><Image roundedCircle src="/assets/portrait.png"></Image></Link>
-            <GoPrimitiveDot style={{ color: "#54b96d", margin: "35px 0 0 -20px", fontSize: "1.5em" }}/>
+            <GoPrimitiveDot style={{ color: "#54b96d", margin: "40px 0 0 -30px", fontSize: "2em" }}/>
           </Col>
-          <Col xs="auto" className="text-left">
-            <p>
-              <b>{data.site.siteMetadata.home.name}, {data.site.siteMetadata.home.role}</b><br></br>
-              {data.site.siteMetadata.home.location} + Remote<br></br>
-              {data.site.siteMetadata.home.availability}.
-            </p>
+        </Row>
+        <Row>
+          <Col>
+            <h1>
+              <span id="greeting">{greet}</span><br></br>
+              I'm <u>@{data.site.siteMetadata.home.username}</u>,<br></br>
+              {data.site.siteMetadata.home.role}
+            </h1>
+            <p>{data.site.siteMetadata.home.summary}</p>
+            <div className="cta">
+              <Link to="/about"><Button variant="primary" className="shadow mr-2">About me</Button></Link>
+              <a href={Resume}><Button variant="light"><FaFileDownload className="mr-1"/>Resume</Button></a>
+            </div>
           </Col>
         </Row>
       </Container>      

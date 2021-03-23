@@ -9,7 +9,7 @@ import Badge from "react-bootstrap/Badge"
 
 import { FiGithub } from "react-icons/fi"
 import { BiLinkExternal } from "react-icons/bi"
-import { AiOutlineFolderOpen } from "react-icons/ai"
+import { FiFolder } from "react-icons/fi"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -33,9 +33,9 @@ const Projects = () => {
   `)
   return( 
     <Container>
-      <div style={{color: 'var(--secondary-text-color)'}} className="text-center mb-4">
-        <h3 className="mb-0">Miscallaneous Projects </h3>
-        <p >Other noteworthy projects I've worked on</p>
+      <div style={{color: 'var(--secondary-color)'}} className="text-center mb-4">
+        <h3 className="mb-0">Miscellaneous &darr;</h3>
+        <p>Other noteworthy projects I've worked on</p>
       </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
@@ -44,7 +44,7 @@ const Projects = () => {
             <Card.Body>
               
               <Row className="post-meta">
-                <Col><AiOutlineFolderOpen className="folder"/></Col>
+                <Col><FiFolder className="folder"/></Col>
                 <Col className="text-right">
                   { node.frontmatter.github && 
                   <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>

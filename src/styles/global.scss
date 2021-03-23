@@ -75,6 +75,14 @@ body {
   background: var(--background-gradient);
   color: var(--primary-text-color);
 }
+h1 {
+  font-family: 'DM Serif Display', serif;
+  line-height: 1;
+  @include font-size(3.75rem);
+}
+h1, h2, h3, h4, h5, p, a  {
+  transition: $theme-transition;
+}
 .navbar {
   background: var(--background);
   border-bottom: 1px solid var(--secondary-color);
@@ -124,57 +132,35 @@ body {
   .nav-item .nav-link { transition: none; }
 }
 .container { 
-  margin: 8rem auto 6rem auto;
+  margin: 6rem auto 8rem auto;
   @include respond-to(tablet){ margin: 4rem auto 6rem auto; }
-  @include respond-to(phone){ margin: 2rem auto 6rem auto; }
+  @include respond-to(phone){ margin: 2rem auto 4rem auto; }
 }
 .hero-header {
   text-align: center;
-  padding: 80px 0 120px 0;
-  @include respond-to(phone){ padding: 60px 0 100px 0; }
-  & img{
-    border: 2px solid;
-    width: 55px;
-  }
+  padding: 80px 0 100px 0;
+  h1 { margin-bottom: 1.25rem; }
+  u { text-decoration-color: var(--primary-color); }
+  a { color: unset; }
   p {
-    @include font-size(1rem);
-    line-height: 1.25;
     color: var(--secondary-text-color);
+    display: inline-block;
+    line-height: 1.25;
+    max-width: 32rem;
+    margin-bottom: 1.25rem;
+    @include font-size(2rem);
+    @include respond-to(phone) { max-width: 20rem }
   }
-  a { color: unset;}
-  .headline {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    letter-spacing: -.02rem;
-    line-height: 64px;
-    margin-bottom: 25px;
-    @include respond-to(tablet){ font-size: 40px; }
-    @include respond-to(phone){
-      padding: 0 30px;
-      font-size: 36px;
-    }  
-    & ul{
-      list-style-type: none;
-      padding: 0;
-    }
-    & li:hover {
-      -webkit-text-stroke: 1px var(--primary-text-color);
-      -webkit-text-fill-color: var(--background);
-      transition: 
-        -webkit-text-fill-color 0.2s linear,
-        -webkit-text-fill-color 0.2s linear
-      ;
-    }
+  img {
+    margin-bottom: 1.25rem;
+    border: 3px solid;
+    width: 100px;
+    @include respond-to(tablet) { width: 90px }
+    @include respond-to(phone) { width: 75px }
   }
-}
-h1 {
-  font-family: 'DM Serif Display', serif;
-  line-height: 1;
-  @include font-size(4rem);
-}
-h1, h2, h3, h4, h5, p, a  {
-  transition: $theme-transition;
+  & .cta .btn {
+    @include font-size(1.25rem);
+  }
 }
 .post {
   padding: 0;
@@ -217,10 +203,10 @@ h1, h2, h3, h4, h5, p, a  {
 .jumbotron {
   transition: $theme-transition;
   padding: 2rem 0 1rem 0;
-  @include respond-to(phone) { padding: 1.5rem 0 1rem 0; }
   margin-bottom: 0;
   background: none;
   color: var(--secondary-text-color);
+  @include respond-to(phone) { padding: 1.5rem 0 1rem 0; }
   & h1 { 
     color: var(--primary-text-color); 
     margin-bottom: 1rem;
@@ -230,7 +216,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-text-color);
     @include font-size(1.5rem); 
   }
-  & small { @include font-size(1rem); }
+  .post-meta { @include font-size(1.125rem) }
 }
 .badges{ margin: 1rem 0 }
 .badge {
@@ -343,25 +329,30 @@ h1, h2, h3, h4, h5, p, a  {
       background: var(--hr) none repeat scroll 0% 0%;
       margin-left: 0;
     }
+    .btn.btn-primary {
+      background-color: var(--card-bg);
+      color: var(--primary-color);
+    }
   }
   &.projects {
     padding: 2rem;
     .folder { 
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: var(--secondary-color);
     }
     .card-title { 
-      @include font-size(1.75rem);
+      font-size: 1.5rem; 
       font-weight: 500;
-      padding-top: 1.5rem;
+      padding-top: 1.75rem;
       transition: $theme-transition;
     }
     .card-body { 
       padding: 0;
       font-size: 1.25rem; 
     }
-    .card-link { @include font-size(1.5rem); }
-
+    .card-link { 
+      font-size: 1.5rem;
+    }
   }
 }
 .site-footer {
@@ -430,7 +421,10 @@ body.light {
   max-width: 768px;
   margin: 1.5rem auto;
   text-align: left;
-  label { @include font-size(1rem); }
+  label { 
+    margin-bottom: 0.25rem;
+    @include font-size(1rem); 
+  }
   input, textarea {
     font-size: 1.25rem;
     color: var(--primary-text-color);
@@ -444,17 +438,29 @@ body.light {
     }
   }
 }
-.btn{ 
-  font-weight: 700;
-  padding: .5rem 2rem;
+.btn.btn-primary { 
   color: var(--featured-text);
   border-color: var(--primary-color);
-  border-radius: 8px;
   background: var(--primary-color);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: .5rem 1.75rem;
   &:hover, &:active, &:focus {
     color: var(--primary-color);
     background: var(--background); 
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem var(--primary-color);
+  }
+}
+.btn.btn-light {
+  color: var(--secondary-color);
+  background-color: var(--input-field);
+  border: none;
+  border-radius: 8px;
+  padding: .5rem 1.75rem;
+  &:hover, &:active, &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--card-bg);
     box-shadow: 0 0 0 0.2rem var(--primary-color);
   }
 }
