@@ -1,7 +1,7 @@
 backend:
   name: github
   # change repo to your git repository url
-  repo: BrianRuizy/portfolio-website
+  repo: BrianRuizy/gatsby-minimal-portfolio
 
 media_folder: static/assets
 public_folder: /assets

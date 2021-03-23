@@ -19,23 +19,23 @@
      <img src="https://img.shields.io/badge/Powered%20by-React-%2361dafb?logo=react" />
    </a>
    <a>
-     <img src="https://img.shields.io/github/license/BrianRuizy/portfolio-website?color=red&style=flat" />
+     <img src="https://img.shields.io/github/license/BrianRuizy/gatsby-minimal-portfolio?color=red&style=flat" />
    </a>
 </p>
 </div>
 
-![brianruizy-portfolio-website](https://user-images.githubusercontent.com/23439187/112066205-efefdf80-8b33-11eb-85a1-96c40baf2a8d.png)
+![brianruizy-gatsby-minimal-portfolio](https://user-images.githubusercontent.com/23439187/112066205-efefdf80-8b33-11eb-85a1-96c40baf2a8d.png)
 
 ## Quick Start
 
-Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) and [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) docummentation for more details or issues with initial project installation.
+Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) and [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) documentation for more details or issues with initial project installation.
 
 1. **Install Project**
 
     Create new site using `gastby new` command. This command will also install the project dependencies.
 
     ```bash
-    gatsby new portfolio-website https://github.com/BrianRuizy/portfolio-website
+    gatsby new gatsby-minimal-portfolio https://github.com/BrianRuizy/gatsby-minimal-portfolio
     ```
 
 2. **Start Developing**
@@ -55,7 +55,7 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 Using this portfolio website and adding your own content is super simple! Add your respective project markdown-file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work rendering the markdown file to html. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
 ![remark](https://user-images.githubusercontent.com/23439187/111946523-a65ab280-8aa9-11eb-8be0-7a7170b562eb.png)
-See [data/readme.md](https://github.com/BrianRuizy/portfolio-website/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks.
+See [data/readme.md](https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks.
 
 ## Deployment
 
