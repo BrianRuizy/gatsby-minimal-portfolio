@@ -24,7 +24,7 @@
 </p>
 </div>
 
-![github image](https://user-images.githubusercontent.com/23439187/112224550-6b679480-8bf9-11eb-9f19-85ade4dbb720.png)
+![mockup](https://user-images.githubusercontent.com/23439187/112226974-eaaa9780-8bfc-11eb-99c4-7565292b5732.png)
 
 ## Quick Start
 
