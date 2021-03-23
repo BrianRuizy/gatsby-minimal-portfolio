@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, p, a  {
     object-fit: cover;
     object-position: center;
     @include respond-to(phone){
-      max-width: 18rem;
+      max-height: 18rem;
       position: unset;
     }
   }
