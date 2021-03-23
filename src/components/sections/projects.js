@@ -33,9 +33,9 @@ const Projects = () => {
   `)
   return( 
     <Container>
-      <div className="text-center mb-4">
-        <h3 className="mb-0">Misc. Projects </h3>
-        <p style={{color: 'var(--secondary-text-color)'}}>Other noteworthy projects I've worked on</p>
+      <div style={{color: 'var(--secondary-text-color)'}} className="text-center mb-4">
+        <h3 className="mb-0">Miscallaneous Projects </h3>
+        <p >Other noteworthy projects I've worked on</p>
       </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 

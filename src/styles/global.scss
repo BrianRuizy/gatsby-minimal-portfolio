@@ -37,6 +37,7 @@ body.light {
   --featured-text: #fff;
   --secondary-color: #979797;
   --background: #fafafa;
+  --background-gradient: linear-gradient(180deg, #fafafa 85%, #D9DCE0);
   --site-header: var(--background);
   --card-bg: #fff;
   --card-shadow: rgba(0, 0, 0, 0.1);
@@ -48,11 +49,12 @@ body.light {
 }
 body.dark {
   --primary-color: #9984d5;
-  --primary-text-color: #ffffff;
+  --primary-text-color: #f1f1f1;
   --secondary-text-color: #bdbdc0;
   --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
   --background: #111216;
+  --background-gradient: linear-gradient(180deg, #111216 85%, #262D37);
   --site-header: var(--background);
   --card-bg: #1D2128;
   --card-shadow: rgba(0, 0, 0, 0.25);
@@ -70,7 +72,7 @@ $theme-transition:
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
-  background-color: var(--background);
+  background: var(--background-gradient);
   color: var(--primary-text-color);
 }
 .navbar {
@@ -272,7 +274,7 @@ h1, h2, h3, h4, h5, p, a  {
   display: grid;
   overflow: hidden;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   line-height: 1.25;
   background-color: var(--card-bg);
   box-shadow: 0px 20px 40px var(--card-shadow);
@@ -288,6 +290,7 @@ h1, h2, h3, h4, h5, p, a  {
     object-fit: cover;
     object-position: center;
     @include respond-to(phone){
+      max-width: 18rem;
       position: unset;
     }
   }
@@ -307,6 +310,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--primary-color); 
   }
   &.featured {
+    padding: 1rem 0;
     .card-body {
       z-index: 1;
       padding: 4rem 0 4rem 4rem;
@@ -347,7 +351,7 @@ h1, h2, h3, h4, h5, p, a  {
       color: var(--secondary-color);
     }
     .card-title { 
-      font-size: 1.5rem;
+      @include font-size(1.75rem);
       font-weight: 500;
       padding-top: 1.5rem;
       transition: $theme-transition;
@@ -365,6 +369,7 @@ h1, h2, h3, h4, h5, p, a  {
   color: #666;
   text-align: center;
   margin: 90px 0 16px;
+  & a { color: var(--primary-color); }
 }
 // theme-changer
 .theme-changer { display: none; }
@@ -443,7 +448,8 @@ body.light {
   font-weight: 700;
   padding: .5rem 2rem;
   color: var(--featured-text);
-  border-color: var(--primary-color); 
+  border-color: var(--primary-color);
+  border-radius: 8px;
   background: var(--primary-color);
   &:hover, &:active, &:focus {
     color: var(--primary-color);

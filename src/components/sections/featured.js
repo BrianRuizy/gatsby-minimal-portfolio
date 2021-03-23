@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 import { FiGithub } from "react-icons/fi"
 import { BiLinkExternal } from "react-icons/bi"
@@ -37,7 +38,7 @@ const Featured = () => {
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col key={node.id} sm={12}>
-            <Card className="mb-4 featured">
+            <Card className="mb-5 featured">
             <Row>
               <Col md={6} sm={12}>
                 <Card.Body>
@@ -45,7 +46,9 @@ const Featured = () => {
                   <Card.Title>{node.frontmatter.name}</Card.Title>
                   <Card.Text>{node.frontmatter.description}</Card.Text>
                   <hr/>
-                  <Card.Link href={node.frontmatter.path} className="mr-3">Read Blog</Card.Link>
+                  <Card.Link href={node.frontmatter.path} className="mr-1">
+                    <Button className="shadow">Read Blog</Button>
+                  </Card.Link>
                   {node.frontmatter.github && (
                     <Card.Link href={node.frontmatter.github}>
                       <FiGithub />
@@ -58,7 +61,7 @@ const Featured = () => {
                   )}
                 </Card.Body>
               </Col>
-              <Col md={6} sm={12}>
+              <Col md={6} sm={12} className="text-center">
                 <Link to={node.frontmatter.path}>
                   {!!node.frontmatter.thumbnail && (
                     <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.name + " - Featured Shot"} />
