@@ -78,7 +78,7 @@ body {
 h1 {
   font-family: 'DM Serif Display', serif;
   line-height: 1;
-  @include font-size(3.75rem);
+  @include font-size(4rem);
 }
 h1, h2, h3, h4, h5, p, a  {
   transition: $theme-transition;
@@ -138,7 +138,9 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .hero-header {
   text-align: center;
-  padding: 80px 0 100px 0;
+  padding: 80px 0 120px 0;
+  @include respond-to(tablet) { padding: 60px 0 100px 0;}
+  @include respond-to(phone) { padding: 40px 0 80px 0;}
   h1 { margin-bottom: 1.25rem; }
   u { text-decoration-color: var(--primary-color); }
   a { color: unset; }
@@ -156,7 +158,7 @@ h1, h2, h3, h4, h5, p, a  {
     border: 3px solid;
     width: 100px;
     @include respond-to(tablet) { width: 90px }
-    @include respond-to(phone) { width: 75px }
+    @include respond-to(phone) { width: 80px }
   }
   & .cta .btn {
     @include font-size(1.25rem);
@@ -216,7 +218,6 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-text-color);
     @include font-size(1.5rem); 
   }
-  .post-meta { @include font-size(1.125rem) }
 }
 .badges{ margin: 1rem 0 }
 .badge {
