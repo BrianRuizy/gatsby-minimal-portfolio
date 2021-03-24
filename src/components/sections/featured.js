@@ -35,9 +35,9 @@ const Featured = () => {
   `)
   return (
     <Container>
-      <div className="text-center ">
-        <h3 style={{color: 'var(--secondary-text-color)'}} className="mb-0">Featured &darr;</h3>
-        <p style={{color: 'var(--secondary-color)'}}>Pinned projects with dedicated blog posts</p>
+      <div className="text-center mb-4">
+        <h4 style={{color: 'var(--secondary-text-color)'}} className="mb-0">Featured &darr;</h4>
+        <p style={{color: 'var(--secondary-color)'}}>Projects with dedicated blog posts</p>
       </div>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -51,7 +51,7 @@ const Featured = () => {
                   <Card.Text>{node.frontmatter.description}</Card.Text>
                   <hr/>
                   <Card.Link href={node.frontmatter.path} className="mr-1">
-                    <Button>Read Blog</Button>
+                    <Button variant="outline-primary">Read Blog</Button>
                   </Card.Link>
                   {node.frontmatter.github && (
                     <Card.Link href={node.frontmatter.github}>

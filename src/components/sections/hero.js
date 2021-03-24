@@ -18,12 +18,12 @@ var greet;
 
 if (hour >= 5 && hour < 11)
     greet = '🌅 Good morning';
-else if (hour >= 11 && hour <= 17)
+else if (hour >= 11 && hour <= 16)
     greet = '🏙️ Good afternoon';
-else if (hour >= 17 && hour <= 23)
+else if (hour >= 16 && hour <= 23)
     greet = '🌆 Good evening';
 else if (hour === 24 || hour < 5)
-    greet = '🦉 Hello, night-owl';
+    greet = '🦉 Hello, nightowl';
 
 export default () => (
   <StaticQuery
