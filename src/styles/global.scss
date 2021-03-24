@@ -143,8 +143,9 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(tablet) { padding: 60px 0 100px 0; }
   @include respond-to(phone) { padding: 40px 0 80px 0; }
   h1 {
-    margin-bottom: 1.25rem; 
+    margin-bottom: 1.25rem;
     @include font-size(3.25rem);
+    @include respond-to(phone) { @include font-size(3.75rem); }
 
   }
   u { text-decoration-color: var(--primary-color); }
@@ -313,7 +314,7 @@ h1, h2, h3, h4, h5, p, a  {
   .card-title {
     font-weight: 700;
     transition: $theme-transition;
-    @include font-size(2.25rem);
+    @include font-size(2.125rem);
   }
   .card-body {
     z-index: 1;
@@ -362,7 +363,7 @@ h1, h2, h3, h4, h5, p, a  {
   font-weight: 300;
   color: #666;
   text-align: center;
-  margin: 90px 0 16px;
+  margin: 12rem 0 3rem;
   & a { color: var(--primary-color); }
 }
 // theme-changer
@@ -525,9 +526,9 @@ body.light {
     }
     & img {
       border: 5px solid var(--background);
-      width: 200px;
-      @include respond-to(tablet){ width: 175px; }
-      @include respond-to(phone){ width: 150px; }
+      width: 175px;
+      @include respond-to(tablet){ width: 150px; }
+      @include respond-to(phone){ width: 125px; }
    }
   }
 }
