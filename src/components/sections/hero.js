@@ -19,7 +19,7 @@ var greet;
 if (hour >= 5 && hour < 11)
     greet = '🌅 Good morning';
 else if (hour >= 11 && hour <= 16)
-    greet = '🏙️ Good afternoon';
+    greet = '👋 Good afternoon';
 else if (hour >= 16 && hour <= 23)
     greet = '🌆 Good evening';
 else if (hour === 24 || hour < 5)
@@ -61,7 +61,7 @@ export default () => (
             <p>{data.site.siteMetadata.home.summary}</p>
             <div className="cta">
               <Link to="/about"><Button variant="primary" className="shadow mr-2">About me</Button></Link>
-              <a href={Resume}><Button variant="light"><FaFileDownload className="mr-1"/>Resume</Button></a>
+              <a href={Resume}><Button variant="light"><FaFileDownload className="mr-2"/>Resume</Button></a>
             </div>
           </Col>
         </Row>

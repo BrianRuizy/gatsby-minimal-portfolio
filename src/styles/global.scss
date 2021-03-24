@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, p, a  {
     display: inline-block;
     margin-bottom: 1.25rem;
     max-width: 32rem;
-    line-height: 1.25;
+    line-height: 1.35;
     @include font-size(1.75rem);
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
@@ -291,48 +291,43 @@ h1, h2, h3, h4, h5, p, a  {
   .card-header {
     color: var(--secondary-text-color); 
     font-weight: 300;
-    margin-bottom: 0;
     background-color: inherit;
     border-bottom: none;
-  }
-  .card-text{
-    margin-bottom: 30px;
-    color: var(--secondary-text-color); 
-  }
-  .card-link{ 
-    color: var(--primary-color); 
-  }
-}
-.card.featured {
-  padding: 1rem 0;
-  .card-header {
-    padding-left: 0;
-    padding-top: 0;
+    padding: 0 0 1rem 0;
     transition: $theme-transition;
-    @include font-size(1.125rem);
+    @include font-size(1.25rem);
   }
   .card-title {
     font-weight: 700;
     transition: $theme-transition;
-    @include font-size(2.125rem);
+    margin-bottom: 1rem;
   }
+  .card-text{
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+  }
+  .card-link{ 
+    color: var(--primary-color); 
+    @include font-size(1.5rem);
+  }
+}
+.card.featured {
+  .card-title { @include font-size(2.5rem); }
   .card-body {
-    z-index: 1;
     padding: 4rem 0 4rem 4rem;
     @include respond-to(tablet){ padding: 2.5rem; }
     @include respond-to(phone){ padding: 2rem; }
   }
-  .card-text, .card-link { 
+  .card-text {
     @include font-size(1.5rem);
     @include respond-to(phone) {
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
   }
   hr {
     width: 140px;
     height: 1px;
     border: medium none;
-    margin-bottom: 30px;
     background: var(--hr) none repeat scroll 0% 0%;
     margin-left: 0;
   }
@@ -344,19 +339,18 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-color);
   }
   .card-title { 
-    font-size: 1.5rem; 
-    font-weight: 700;
-    padding-top: 1.75rem;
-    transition: $theme-transition;
+    @include font-size(2rem);
+    margin-top: 1rem;
   }
   .card-body { 
     padding: 0;
-    font-size: 1.25rem; 
-      font-size: 1.25rem; 
-    font-size: 1.25rem; 
   }
-  .card-link { 
-    font-size: 1.5rem;
+  .card-text {
+    margin-bottom: 1.5rem;
+    @include font-size(1.25rem);
+    @include respond-to(phone) {
+      font-size: 1.125rem;
+    }
   }
 }
 .site-footer {
@@ -444,7 +438,7 @@ body.light {
 }
 .btn.btn-primary {
   border-radius: 8px;
-  padding: .5rem 1.75rem;
+  padding: .5rem 1.25rem;
   border: 2px solid var(--primary-color);
   color: var(--featured-text);
   background: var(--primary-color);
@@ -462,7 +456,7 @@ body.light {
 }
 .btn.btn-light {
   border-radius: 8px;
-  padding: .5rem 1.75rem;
+  padding: .5rem 1.25rem;
   border: 2px solid var(--input-field);
   color: var(--secondary-color);
   background: var(--input-field);
