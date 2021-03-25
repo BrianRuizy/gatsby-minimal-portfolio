@@ -54,7 +54,7 @@ module.exports = {
         short_name: `brianruizy`,
         start_url: `/`,
         background_color: `#fafafa`,
-        theme_color: `#039297`,
+        theme_color: `#111216`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },
