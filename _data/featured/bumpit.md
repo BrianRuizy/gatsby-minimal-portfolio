@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /bumpit
-thumbnail: assets/bumpit.png
+thumbnail: /assets/bumpit.png
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
 date: 2019-12
 name: Bump.IT app
@@ -24,10 +24,10 @@ Having won the competition, post minimum-viable-product, granted us full access 
 
 ## Features (*End goals*)
 
-* Live Computer Vision
+### Live Computer Vision
 
-<img src="https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon/blob/master/img/pothole-computervision.gif" alt="gif" width="50%">
+![he](https://raw.githubusercontent.com/BrianRuizy/2019-Microsoft-IoT-hackathon/master/img/pothole-computervision.gif)
 
-* Geocoding/Mapping
+### Geocoding/Mapping
 
-<img src="https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon/blob/master/img/geocoding.png" alt="geocoding" width="50%">
+![hehe](https://raw.githubusercontent.com/BrianRuizy/2019-Microsoft-IoT-hackathon/master/img/geocoding.png)

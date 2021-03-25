@@ -151,7 +151,6 @@ h1, h2, h3, h4, h5, p, a  {
     margin-bottom: 1.25rem;
     @include font-size(3.25rem);
     @include respond-to(phone) { @include font-size(3.75rem); }
-
   }
   u { 
     text-decoration-color: var(--primary-color);
@@ -254,12 +253,9 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 20px;
   overflow: hidden;
   margin-bottom: 4rem;
-  @include respond-to(tablet) { 
+  @include respond-to(tablet) { min-height: 380px; }
+  @include respond-to(phone) { 
     border-radius: 0;
-    min-height: 380px; 
-  }
-  @include respond-to(phone) {
-  
     min-height: 300px; 
   }
 }
