@@ -41,8 +41,8 @@ export default function App() {
               <br />
 
               <label htmlFor="defaultFormContactMessageEx" >Message</label>
-              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" rows="3" required/>
-              <Button className="mt-4" type="submit" size="md">Send</Button>
+              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" placeholder="Something nice 🙂 ..." rows="3" required/>
+              <Button className="mt-4" type="submit" size="md">Email me</Button>
             </form>
           </Col>
         </Row>

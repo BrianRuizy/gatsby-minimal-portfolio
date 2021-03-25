@@ -35,10 +35,6 @@ const Featured = () => {
   `)
   return (
     <Container>
-      <div className="text-center mb-4">
-        <h4 style={{color: 'var(--secondary-text-color)'}} className="mb-0">Featured &darr;</h4>
-        <p style={{color: 'var(--secondary-color)'}}>Projects with dedicated blog posts</p>
-      </div>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col key={node.id} sm={12}>

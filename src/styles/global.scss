@@ -31,13 +31,13 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #381696;
-  --primary-text-color: #000;
+  --primary-color: #039297;
+  --primary-text-color: #111216;
   --secondary-text-color: #444444;
   --featured-text: #fff;
   --secondary-color: #979797;
   --background: #fafafa;
-  --background-gradient: linear-gradient(180deg, #fafafa 85%, #D9DCE0);
+  --background-gradient: linear-gradient(180deg, var(--background) 85%, #d9dce0);
   --site-header: var(--background);
   --card-bg: #fff;
   --card-shadow: rgba(0, 0, 0, 0.1);
@@ -49,15 +49,15 @@ body.light {
   --code-bg: #313437;
 }
 body.dark {
-  --primary-color: #9984d5;
-  --primary-text-color: #f1f1f1;
-  --secondary-text-color: #bdbdc0;
+  --primary-color: #5fdfc1;
+  --primary-text-color: #fafafa;
+  --secondary-text-color: #B0B4C0;
   --featured-text: #f5f5f7;
   --secondary-color: #5e5e5e;
   --background: #111216;
-  --background-gradient: linear-gradient(180deg, #111216 85%, #262D37);
+  --background-gradient: linear-gradient(180deg, var(--background) 85%, #262D37);
   --site-header: var(--background);
-  --card-bg: #1D2128;
+  --card-bg: #191e25;
   --card-shadow: rgba(0, 0, 0, 0.25);
   --link-color: #90b3f4;
   --bottom-nav-bg: #222831;
@@ -66,10 +66,10 @@ body.dark {
   --code-bg: #26292C;
 }
 $theme-transition:   
-  color .75s ease-in-out, 
-  background-color .75s ease-in-out, 
-  border-color .75s ease-in-out, 
-  box-shadow .75s ease-in-out
+  color .25s ease-in-out, 
+  background-color .25s ease-in-out, 
+  border-color .25s ease-in-out, 
+  box-shadow .25s ease-in-out
 ;
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -108,8 +108,9 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .bottom-nav {
   visibility: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 1rem 15vw;
+  padding: .75rem 1rem;
   z-index: 5;
   border: 1px solid var(--border);
   background-color: var(--bottom-nav-bg);
@@ -127,8 +128,8 @@ h1, h2, h3, h4, h5, p, a  {
     width: 32px;
     text-align: center;
   }
-  .nav-link { color: var(--secondary-color); }
-  .nav-link.active { color: var(--primary-text-color); }
+  .nav-link { color: var(--primary-text-color); }
+  .nav-link.active { color: var(--primary-color); }
   @include respond-to(tablet){ visibility: visible; }
   .nav-item .nav-link { transition: none; }
 }
@@ -136,6 +137,10 @@ h1, h2, h3, h4, h5, p, a  {
   margin: 6rem auto 8rem auto;
   @include respond-to(tablet){ margin: 4rem auto 6rem auto; }
   @include respond-to(phone){ margin: 2rem auto 4rem auto; }
+}
+.container-fluid {
+  padding: 0;
+  max-width: 720px;
 }
 .hero-header {
   text-align: center;
@@ -148,13 +153,16 @@ h1, h2, h3, h4, h5, p, a  {
     @include respond-to(phone) { @include font-size(3.75rem); }
 
   }
-  u { text-decoration-color: var(--primary-color); }
+  u { 
+    text-decoration-color: var(--primary-color);
+    text-decoration-thickness: 3px;
+  }
   p {
     color: var(--secondary-text-color);
     display: inline-block;
     margin-bottom: 1.25rem;
     max-width: 32rem;
-    line-height: 1.35;
+    line-height: 1.4;
     @include font-size(1.75rem);
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
@@ -179,14 +187,13 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 0;
   color: var(--secondary-text-color);
   line-height: 1.55;
-  max-width: 768px;
   margin: 0 auto;
   img { width: 100%; }
-  > .blog-post-content *:last-child,
-  > *:last-child {
-    margin-bottom: 0;
+  .container { 
+    max-width: 720px; 
+    margin-bottom: 0rem;
   }
-  > .blog-post-content {
+  .blog-post-content {
     a { color: var(--primary-color); }
     h2 { 
       font-weight: 700;
@@ -197,8 +204,7 @@ h1, h2, h3, h4, h5, p, a  {
     h3 {
       font-weight: 400;
       color: var(--secondary-text-color);
-      @include font-size(1.25rem);
-      // margin: 1.5rem auto 1rem auto;
+      @include font-size(1.25rem);      
     }
     p { 
       margin-bottom: 1.25rem;
@@ -248,21 +254,13 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 20px;
   overflow: hidden;
   margin-bottom: 4rem;
-  @include respond-to(tablet) { min-height: 380px; }
-  @include respond-to(phone) { min-height: 300px; }
-  &:before {
-    content: "";
-    background: rgba(0,0,0,0.05);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  @include respond-to(tablet) { 
+    border-radius: 0;
+    min-height: 380px; 
   }
-  > * {
-    position: relative;
-    z-index: 2;
+  @include respond-to(phone) {
+  
+    min-height: 300px; 
   }
 }
 .card {
@@ -372,7 +370,6 @@ h1, h2, h3, h4, h5, p, a  {
   left: 89vw;
   margin-left: 8.5px;
   @include respond-to(tablet){
-    color: var(--secondary-color);
     position: inherit;
     margin-left: 0;
   }
@@ -411,12 +408,12 @@ body.light {
     background: var(--card-bg);
   }
   .icon.message {
-    color: var(--secondary-color);
+    color: var(--primary-text-color);
     margin-top: .5rem;
   }
 }
 .contact-form {
-  max-width: 768px;
+  max-width: 720px;
   margin: 1.5rem auto;
   text-align: left;
   label { 
@@ -440,7 +437,7 @@ body.light {
   border-radius: 8px;
   padding: .5rem 1.25rem;
   border: 2px solid var(--primary-color);
-  color: var(--featured-text);
+  color: var(--card-bg);
   background: var(--primary-color);
   transition: $theme-transition;
   &:hover, &:active, &:focus {
@@ -458,11 +455,11 @@ body.light {
   border-radius: 8px;
   padding: .5rem 1.25rem;
   border: 2px solid var(--input-field);
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
   background: var(--input-field);
   transition: $theme-transition;
   &:hover, &:active, &:focus {
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     background: var(--background);
   }
 }
