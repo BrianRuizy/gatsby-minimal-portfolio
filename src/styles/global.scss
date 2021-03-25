@@ -2,7 +2,7 @@
 @import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap");
 $font-family: 'Roboto', sans-serif;
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
@@ -57,10 +57,10 @@ body.dark {
   --background: #111216;
   --background-gradient: linear-gradient(180deg, var(--background) 85%, #262D37);
   --site-header: var(--background);
-  --card-bg: #191e25;
-  --card-shadow: rgba(0, 0, 0, 0.25);
+  --card-bg: #191d24;
+  --card-shadow: rgba(0, 0, 0, 0.20);
   --link-color: #90b3f4;
-  --bottom-nav-bg: #222831;
+  --bottom-nav-bg: #262e38;
   --hr: rgba(255, 255, 255, 0.1);
   --input-field: #222831;
   --code-bg: #26292C;
@@ -216,6 +216,16 @@ h1, h2, h3, h4, h5, p, a  {
     transition: $theme-transition;
   }
 }
+.badges{ margin: 1rem 0 }
+.badge {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: normal;
+  margin-right: .5rem;
+  background-color: transparent;
+  border: 1px solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  @include font-size(1rem);
+}
 .jumbotron {
   transition: $theme-transition;
   padding: 2rem 0 1rem 0;
@@ -229,15 +239,6 @@ h1, h2, h3, h4, h5, p, a  {
     line-height: 1;
     @include font-size(3rem);
   }
-}
-.badges{ margin: 1rem 0 }
-.badge {
-  font-weight: normal;
-  margin-right: .5rem;
-  background-color: transparent;
-  border: 1px solid var(--secondary-text-color);
-  color: var(--secondary-text-color);
-  @include font-size(1rem);
 }
 .post-thumbnail {
   text-align: center;
@@ -283,8 +284,8 @@ h1, h2, h3, h4, h5, p, a  {
     }
   }
   .card-header {
+    font-family: 'Roboto Mono', monospace; 
     color: var(--secondary-text-color); 
-    font-weight: 300;
     background-color: inherit;
     border-bottom: none;
     padding: 0 0 1rem 0;
@@ -345,6 +346,16 @@ h1, h2, h3, h4, h5, p, a  {
     @include respond-to(phone) {
       font-size: 1.125rem;
     }
+  }
+}
+.projects-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  // font-family: 'Roboto Mono', monospace; 
+  p { color: var(--secondary-color); }
+  h4 { 
+    margin-bottom: 0;
+    color: var(--secondary-text-color) 
   }
 }
 .site-footer {
@@ -410,14 +421,14 @@ body.light {
 }
 .contact-form {
   max-width: 720px;
-  margin: 1.5rem auto;
+  margin: 1.25rem auto;
   text-align: left;
   label { 
     margin-bottom: 0.25rem;
     @include font-size(1rem); 
   }
   input, textarea {
-    font-size: 1.25rem;
+    @include font-size(1.125rem); 
     color: var(--primary-text-color);
     background-color: var(--input-field);
     border: none;

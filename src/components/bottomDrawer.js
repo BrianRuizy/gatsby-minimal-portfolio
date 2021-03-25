@@ -25,23 +25,23 @@ export default function App() {
       >
         <Row>
           <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
-            <form name="contactForm" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contactForm"/>
+            <form name="EmailContactForm" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="EmailContactForm"/>
               
-              <label htmlFor="defaultFormContactNameEx" >Your name</label>
-              <input type="text" id="defaultFormContactNameEx" name="name" className="form-control" required/>
+              <label htmlFor="defaultFormContactNameEx">Name</label>
+              <input type="text" id="defaultFormContactNameEx" name="name" className="form-control" required focus/>
               <br />
 
-              <label htmlFor="defaultFormContactEmailEx" >Email</label>
+              <label htmlFor="defaultFormContactEmailEx">Email</label>
               <input type="email" id="defaultFormContactEmailEx" name="email" className="form-control" required/>
               <br />
               
-              <label htmlFor="defaultFormContactSubjectEx" >Subject</label>
+              <label htmlFor="defaultFormContactSubjectEx">Subject</label>
               <input type="text" id="defaultFormContactSubjectEx" name="subject" className="form-control" />
               <br />
 
-              <label htmlFor="defaultFormContactMessageEx" >Message</label>
-              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" placeholder="Something nice 🙂 ..." rows="3" required/>
+              <label htmlFor="defaultFormContactMessageEx">Message</label>
+              <textarea type="text" id="defaultFormContactMessageEx" name="message" className="form-control" placeholder="Something nice 🙂 ..." rows="4" required/>
               <Button className="mt-4" type="submit" size="md">Email me</Button>
             </form>
           </Col>

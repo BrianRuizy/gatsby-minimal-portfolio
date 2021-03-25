@@ -21,7 +21,7 @@ const ContactPage = ({
         <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
       </Helmet>
       <Container>
-      <Row>
+        <Row>
           <Col lg={6} md={8} sm={10} xs={11} className="contact-form">
             <form name="contactForm" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contactForm"/>
