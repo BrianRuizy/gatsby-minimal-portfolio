@@ -23,8 +23,8 @@ export default function Template({
         <title>{frontmatter.name} | {siteMetadata.title}</title>
         <meta name="description" content={frontmatter.description} />
       </Helmet>
-      <Container>
-        <article className="post">
+      <article className="post">
+        <Container>
           <Link to="/">
             <CgArrowLeft className="back-button"/>
           </Link>
@@ -40,18 +40,22 @@ export default function Template({
               <Col className="text-right">{frontmatter.date}</Col>
             </Row>
           </Jumbotron>
+        </Container>
+        <Container fluid="md">
           {!!frontmatter.thumbnail && (
             <div 
               className="post-thumbnail" 
               style={{backgroundImage: `url(${frontmatter.thumbnail})`}}
             />
           )}
+        </Container>
+        <Container>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-        </article>
-      </Container>
+        </Container>
+      </article>
     </Layout>
   )
 }
