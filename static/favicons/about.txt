@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: DM Serif Display
+- Font Author: Copyright 2014 - 2017 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. Copyright 2019 Google LLC.
+- Font Source: http://fonts.gstatic.com/s/dmserifdisplay/v4/-nFnOHM81r4j6k0gjAW3mujVU2B2K_d709jy92k.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

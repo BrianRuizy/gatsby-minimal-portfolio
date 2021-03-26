@@ -51,12 +51,24 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Brian Ruiz Portfolio`,
-        short_name: `brianruizy`,
+        short_name: `BR Portfolio`,
         start_url: `/`,
         background_color: `#fafafa`,
         theme_color: `#111216`,
         display: `standalone`,
         icon: "src/images/icon.png",
+        icons : [
+          {
+            "src": "/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+          }
+        ],
       },
     },
     {

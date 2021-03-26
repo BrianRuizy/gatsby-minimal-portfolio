@@ -1,12 +1,12 @@
 {
   "title": "Brian Ruiz | Portfolio",
   "siteUrl": "https://brianruizy.com/",
-  "description": "Brian Ruiz is a software engineer specializing in Python full-stack, web applications, data analytics, and all things tech.",
+  "description": "Brian Ruiz is a Houston based Software Engineer specializing in Python full-stack, web applications and data analytics.",
   "home": {
     "name": "Brian Ruiz",
     "username": "brianruizy",
     "role": "Software Engineer",
-    "summary": "I specialize in Python full-stack development, front-end design, data analytics, cloud computing, & I'm a proponet of open-source software.",
+    "summary": "I specialize in Python full-stack development, front-end design, data analytics, cloud computing, and I'm interested in all things technology.",
     "availability": "Open to new opportunities",
     "location": "Houston, TX"
   }
