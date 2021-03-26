@@ -47,7 +47,7 @@ const Featured = () => {
                   <Card.Text>{node.frontmatter.description}</Card.Text>
                   <hr/>
                   <Card.Link href={node.frontmatter.path} className="mr-1">
-                    <Button variant="outline-primary">Read Blog</Button>
+                    <Button variant="outline-primary">Learn more</Button>
                   </Card.Link>
                   {node.frontmatter.github && (
                     <Card.Link href={node.frontmatter.github}>
