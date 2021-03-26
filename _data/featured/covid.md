@@ -1,14 +1,14 @@
 ---
 template: BlogPost
-path: /covid
-thumbnail: /assets/covid.png
+path: /covid-dashboard
+thumbnail: /assets/covid/covid.png
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2020-12
 name: COVID-19 Dashboard
 subtitle: A powerful and intuitive COVID-19 dashboard used by thousands
 category: Web-app
-description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive and clean UI.'
+description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive & clean UI.'
 tags:
   - Python
   - Django
@@ -68,6 +68,7 @@ class LinkedList:
 ```
 
 ![asdf](https://images.unsplash.com/photo-1601055283742-8b27e81b5553?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)
+<figcaption>This is an image with figure caption</figcaption>
 
 Soluta in molestias ut praesentium explicabo doloribus voluptas. Itaque sed quibusdam sed est qui. Totam quo in et sed vero voluptatem.
 

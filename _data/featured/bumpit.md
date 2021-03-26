@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /bumpit
-thumbnail: /assets/bumpit.png
+thumbnail: /assets/bumpit/bumpit.png
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
 date: 2019-12
 name: Bump.IT app

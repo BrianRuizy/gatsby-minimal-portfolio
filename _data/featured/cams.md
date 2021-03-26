@@ -1,7 +1,7 @@
 ---
 template: BlogPost
-path: /cams
-thumbnail: /assets/cams-etrac.png
+path: /cams-etrac
+thumbnail: /assets/cams/cams-etrac.png
 date: 2019-09
 name: CAMS E-Trac
 subtitle: What was it like to develop a fintech energy analytics SaaS product? 

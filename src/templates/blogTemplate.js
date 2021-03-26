@@ -37,7 +37,7 @@ export default function Template({
             <h1>{frontmatter.subtitle}</h1>
             <Row className="post-meta">
               <Col>{frontmatter.name}</Col>
-              <Col className="text-right">{frontmatter.date}</Col>
+              <Col xs="auto" className="text-right">{frontmatter.date}</Col>
             </Row>
           </Jumbotron>
         </Container>

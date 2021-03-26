@@ -1,7 +1,7 @@
 ---
 template: BlogPost
-path: /favours
-thumbnail: /assets/favours.png
+path: /favours-app
+thumbnail: /assets/favours/logo.png
 github: https://github.com/favours-io/favours
 date: 2020-10
 name: Favours app

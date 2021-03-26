@@ -13,12 +13,11 @@ import { BiLinkExternal } from "react-icons/bi"
 const Featured = () => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {regex: "/featured/"}, excerpt: {}}) {
+      allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {regex: "/featured/"}, frontmatter: {hide: {ne: true}}}) {
         totalCount
         edges {
           node {
             id
-            excerpt(pruneLength: 100)
             frontmatter {
               path
               github
@@ -38,7 +37,7 @@ const Featured = () => {
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col key={node.id} sm={12}>
-            <Card className="mb-5 featured">
+            <Card className="mb-4 featured">
             <Row>
               <Col md={6} sm={12}>
                 <Card.Body>
