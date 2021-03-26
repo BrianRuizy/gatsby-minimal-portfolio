@@ -35,7 +35,7 @@ const Projects = () => {
     <Container>
       <div className="projects-header">
         <h4>Miscellaneous &darr;</h4>
-        <p>Other noteworthy projects</p>
+        <p>Other notable small projects</p>
       </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 

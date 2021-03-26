@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .navbar {
   background: var(--background);
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--input-field);
   .justify-content-end a {
     font-size: 1.125rem;
     color: var(--primary-text-color);
@@ -134,23 +134,22 @@ h1, h2, h3, h4, h5, p, a  {
   .nav-item .nav-link { transition: none; }
 }
 .container { 
-  margin: 6rem auto 8rem auto;
-  @include respond-to(tablet){ margin: 4rem auto 6rem auto; }
+  margin: 6rem auto;
+  @include respond-to(tablet){ margin: 4rem auto 5rem auto; }
   @include respond-to(phone){ margin: 2rem auto 4rem auto; }
 }
 .container-fluid {
   padding: 0;
-  max-width: 720px;
+  max-width: 768px;
 }
 .hero-header {
   text-align: center;
-  padding: 80px 0 120px 0;
-  @include respond-to(tablet) { padding: 60px 0 100px 0; }
-  @include respond-to(phone) { padding: 40px 0 80px 0; }
+  padding: 60px 0 160px 0;
+  @include respond-to(tablet) { padding: 50px 0 140px 0; }
+  @include respond-to(phone) { padding: 40px 0 120px 0; }
   h1 {
-    margin-bottom: 1.25rem;
-    @include font-size(3.25rem);
-    @include respond-to(phone) { @include font-size(3.75rem); }
+    @include font-size(3rem);
+    @include respond-to(phone) { @include font-size(3.5rem); }
   }
   u { 
     text-decoration-color: var(--primary-color);
@@ -159,10 +158,9 @@ h1, h2, h3, h4, h5, p, a  {
   p {
     color: var(--secondary-text-color);
     display: inline-block;
-    margin-bottom: 1.25rem;
-    max-width: 32rem;
+    max-width: 28rem;
     line-height: 1.4;
-    @include font-size(1.75rem);
+    @include font-size(1.5rem);
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
       max-width: 22rem;
@@ -178,8 +176,8 @@ h1, h2, h3, h4, h5, p, a  {
   }
   & .cta .btn {
     font-weight: 400;
-    @include font-size(1.25rem);
-    @include respond-to(phone) { @include font-size(1.125rem); }
+    @include font-size(1.125rem);
+    @include respond-to(phone) { @include font-size(1rem); }
   }
 }
 .post {
@@ -224,11 +222,13 @@ h1, h2, h3, h4, h5, p, a  {
   background-color: transparent;
   border: 1px solid var(--secondary-text-color);
   color: var(--secondary-text-color);
-  @include font-size(1rem);
+  font-size: 1rem;
+  @include respond-to(phone) { font-size: .9rem }
+  
 }
 .jumbotron {
   transition: $theme-transition;
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
   margin-bottom: 0;
   background: none;
   color: var(--secondary-text-color);
@@ -254,7 +254,10 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 20px;
   overflow: hidden;
   margin-bottom: 4rem;
-  @include respond-to(tablet) { min-height: 380px; }
+  @include respond-to(tablet) { 
+    border-radius: 0;
+    min-height: 380px; 
+  }
   @include respond-to(phone) { 
     border-radius: 0;
     min-height: 300px; 
@@ -290,7 +293,7 @@ h1, h2, h3, h4, h5, p, a  {
     border-bottom: none;
     padding: 0 0 1rem 0;
     transition: $theme-transition;
-    @include font-size(1.25rem);
+    @include font-size(1.125rem);
   }
   .card-title {
     font-weight: 700;
@@ -307,24 +310,23 @@ h1, h2, h3, h4, h5, p, a  {
   }
 }
 .card.featured {
-  .card-title { @include font-size(2.5rem); }
+  .card-title { @include font-size(2.25rem); }
   .card-body {
-    padding: 4rem 0 4rem 4rem;
-    @include respond-to(tablet){ padding: 2.5rem; }
-    @include respond-to(phone){ padding: 2rem; }
+    @include respond-to(laptop){ padding: 4rem 0 4rem 4rem; }
+    @include respond-to(tablet){ padding: 2.5rem 0 2.5rem 2.5rem; }
+    @include respond-to(phone){ padding: 2rem}
   }
   .card-text {
-    @include font-size(1.5rem);
-    @include respond-to(phone) {
-      font-size: 1.25rem;
+    @include font-size(1.5rem); 
+    @include respond-to(tablet) { font-size: 1.25rem; }
+    @include respond-to(phone) { font-size: 1.125rem; }
+    hr {
+      width: 140px;
+      height: 1px;
+      border: medium none;
+      background: var(--hr) none repeat scroll 0% 0%;
+      margin-left: 0;
     }
-  }
-  hr {
-    width: 140px;
-    height: 1px;
-    border: medium none;
-    background: var(--hr) none repeat scroll 0% 0%;
-    margin-left: 0;
   }
 }
 .card.projects {
@@ -334,7 +336,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-color);
   }
   .card-title { 
-    @include font-size(2rem);
+    @include font-size(1.75rem);
     margin-top: 1rem;
   }
   .card-body { 
@@ -343,9 +345,7 @@ h1, h2, h3, h4, h5, p, a  {
   .card-text {
     margin-bottom: 1.5rem;
     @include font-size(1.25rem);
-    @include respond-to(phone) {
-      font-size: 1.125rem;
-    }
+    @include respond-to(phone) { font-size: 1.125rem; }
   }
 }
 .projects-header {
