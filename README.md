@@ -55,7 +55,7 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 Using this portfolio website and adding your own content is super simple! Add your respective project markdown-file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work rendering the markdown file to html. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
 ![remark](https://user-images.githubusercontent.com/23439187/112228822-e5028100-8bff-11eb-923f-6f0853021e5c.png)
-See [data/readme.md](https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/_data/readme.md) for examples on markdown syntax and embedding images or codeblocks.
+See [_data/readme.md](https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/_data/readme.md) for examples on .md syntax, or [brianruizy.com/markdown-help/](https://brianruizy/markdown-help).
 
 ## Deployment
 
