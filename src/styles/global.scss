@@ -33,11 +33,12 @@ body {
 body.light {
   --primary-color: #057ae0;
   --primary-text-color: #1d1d1f;
-  --secondary-text-color: #2c2c2e;
-  --featured-text: #fff;
   --secondary-color: #86868b;
+  --secondary-text-color: #2c2c2e;
+  --tertiary-color: #eeeeef;
+  --featured-text: #f1f1f1;
   --background: #fafafa;
-  --background-gradient: linear-gradient(180deg, var(--background) 85%, #d9dce0);
+  --background-gradient: linear-gradient(180deg, var(--background) 88%, #d9dce0);
   --site-header: var(--background);
   --card-bg: #fff;
   --card-shadow: rgba(0, 0, 0, 0.1);
@@ -45,26 +46,25 @@ body.light {
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
   --hr: rgba(0, 0, 0, 0.1);
-  --input-field: #ebebec;
   --code-bg: #313437;
   --translucent: rgba(238, 238, 237, 0.9);
 }
 body.dark {
   --primary-color: #90b3f4;
-  --primary-text-color: #f5f5f7;
-  --secondary-text-color: #a1a1a6;;
-  --featured-text: #f5f5f7;
+  --primary-text-color: #f1f1f1;
   --secondary-color: #818181;
-  --background: #000;
-  --background-gradient: linear-gradient(180deg, var(--background) 85%, #242930);
+  --secondary-text-color: #a1a1a6;
+  --tertiary-color: #2c2c2f;
+  --featured-text: #f5f5f7;
+  --background: #0a0a0a;
+  --background-gradient: linear-gradient(180deg, var(--background) 88%, #2b2b31);
   --site-header: var(--background);
-  --card-bg: #151516;
-  --card-shadow: rgba(0, 0, 0, 0.20);
+  --card-bg: #212124;
+  --card-shadow: rgba(0, 0, 0, 0.0);
   --link-color: #90b3f4;
-  --bottom-nav-bg: #212124;
+  --bottom-nav-bg: #323236;
   --hr: rgba(255, 255, 255, 0.1);
-  --input-field: #2c2c2e;
-  --code-bg: #26292C;
+  --code-bg: #212124;
   --translucent: rgba(29,29,31,0.9);
 }
 $theme-transition:   
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .navbar {
   background: var(--translucent);
-  border-bottom: 1px solid var(--input-field);
+  border-bottom: 1px solid var(--tertiary-color);
   .justify-content-end a {
     font-size: 1.125rem;
     color: var(--primary-text-color);
@@ -184,15 +184,17 @@ h1, h2, h3, h4, h5, p, a  {
   margin: 0 auto;
   img { width: 100%; }
   .container { 
-    max-width: 720px; 
+    max-width: 768px; 
     margin-bottom: 0rem;
   }
   .blog-post-content {
     a { color: var(--primary-color); }
+    hr { border-top: 2px solid var(--tertiary-color); }
+    img { margin: 1rem auto; }
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
-      margin: 2rem auto 1.5rem auto;
+      margin: 3.5rem auto 1rem auto;
       @include font-size(2.5rem);
     }
     h3 {
@@ -200,11 +202,27 @@ h1, h2, h3, h4, h5, p, a  {
       color: var(--primary-text-color);
       @include font-size(1.25rem);      
     }
-    p { 
-      margin-bottom: 1.25rem;
-      
+    p, ul, ol { 
+      margin-bottom: 1.125rem;
       @include font-size(1.25rem);
       @include respond-to(phone) { font-size: 1.125rem }
+    }
+    blockquote {
+      margin-left: 1rem;
+      padding: 0 1em;
+      color: var(--secondary-color);
+      border-left: .25em solid var(--tertiary-color);
+      p { 
+        font-size: 1.125rem;
+        @include respond-to(phone) { font-size: 1rem}
+      }
+    }
+    figcaption {
+      margin: -1.75rem auto 2rem auto;
+      color: var(--secondary-color);
+      text-align: center;
+      font-size: 1.125rem;
+      @include respond-to(phone) { font-size: 1rem}
     }
   }
   .back-button {
@@ -230,13 +248,16 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 1.5rem 0 1rem 0;
   margin-bottom: 0;
   background: none;
-  color: var(--secondary-text-color);
   @include respond-to(phone) { padding: 1rem 0; }
   & h1 { 
     color: var(--primary-text-color); 
     margin-bottom: 1rem;
     line-height: 1;
     @include font-size(3rem);
+  }
+  .post-meta {
+    color: var(--secondary-color);
+    font-size: 1.125rem;
   }
 }
 .post-thumbnail {
@@ -252,7 +273,7 @@ h1, h2, h3, h4, h5, p, a  {
   position: relative;
   padding: 20px;
   overflow: hidden;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   @include respond-to(tablet) { 
     border-radius: 0;
     min-height: 28rem; 
@@ -276,7 +297,7 @@ h1, h2, h3, h4, h5, p, a  {
   display: grid;
   overflow: hidden;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   line-height: 1.25;
   background-color: var(--card-bg);
   box-shadow: 0px 20px 40px var(--card-shadow);
@@ -327,9 +348,9 @@ h1, h2, h3, h4, h5, p, a  {
 .card.featured {
   .card-title { @include font-size(2.25rem); }
   .card-body {
-    padding: 4rem 0 4rem 4rem; 
-    @include respond-to(tablet){ padding: 2.5rem 0 2.5rem 2.5rem; }
-    @include respond-to(phone){ padding: 2rem}
+    padding: 4.25rem 0 4.25rem 3.5rem; 
+    @include respond-to(tablet){ padding: 3rem 0 3rem 2rem; }
+    @include respond-to(phone){ padding: 3rem 2rem 0; }
   }
   .card-text {
     @include font-size(1.5rem); 
@@ -339,7 +360,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   hr {
     width: 140px;
-    height: 1px;
+    height: 2px;
     border: none;
     background: var(--hr) none repeat scroll 0 0;
     margin-left: 0;
@@ -436,7 +457,7 @@ body.light {
   }
 }
 .contact-form {
-  max-width: 720px;
+  max-width: 768px;
   margin: 1.25rem auto;
   text-align: left;
   label { 
@@ -446,7 +467,7 @@ body.light {
   input, textarea {
     @include font-size(1.125rem); 
     color: var(--primary-text-color);
-    background-color: var(--input-field);
+    background-color: var(--tertiary-color);
     border: none;
     &:focus {
       background-color: var(--background);
@@ -457,8 +478,8 @@ body.light {
   }
 }
 .btn.btn-primary {
-  border-radius: 8px;
-  padding: .5rem 1.25rem;
+  border-radius: 10px;
+  padding: .5rem 1rem;
   border: 2px solid var(--primary-color);
   color: var(--card-bg);
   background: var(--primary-color);
@@ -475,11 +496,11 @@ body.light {
   color: var(--primary-color);
 }
 .btn.btn-light {
-  border-radius: 8px;
-  padding: .5rem 1.25rem;
-  border: 2px solid var(--input-field);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  border: 2px solid var(--tertiary-color);
   color: var(--secondary-text-color);
-  background: var(--input-field);
+  background: var(--tertiary-color);
   transition: $theme-transition;
   &:hover, &:active, &:focus {
     color: var(--primary-text-color);
@@ -550,8 +571,7 @@ body.light {
 .gatsby-highlight {
   font-size: 14px;
   margin: 0rem 0 2.5rem 0 !important; 
-  pre[class*="language-"] { 
-    color: var(--primary-text-color);
+  pre[class*="language-"] {
     background: var(--code-bg) !important; 
   }
   .token.operator { color: #F92672; }
