@@ -31,9 +31,15 @@ const Navigation = (props) => {
 	return (
     <div>
       {/* top bar */}
-      <Navbar fixed="top" className="top-nav"  >
-        <Navbar.Brand >
-          <Link to="/">Brian Ruiz</Link>
+      <Navbar fixed="top" className="top-nav">
+        <Navbar.Brand href="/">
+          <img
+            alt="BR LOGO"
+            src="favicons/apple-touch-icon.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top mr-2"
+          />Brian Ruiz
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           <Link to="/about">About</Link>

@@ -152,9 +152,6 @@ cd ~/repos/covid19-dashboard/processdata
 ```bash
 $ python
 
-Python 3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32 
-...
-
 >>> import getdata
 >>> getdata.realtime_growth()
 

@@ -37,11 +37,11 @@ body.light {
   --secondary-text-color: #2c2c2e;
   --tertiary-color: #eeeeef;
   --featured-text: #f1f1f1;
-  --background: #fafafa;
-  --background-gradient: linear-gradient(180deg, var(--background) 88%, #d9dce0);
+  --background: #fff;
+  --background-gradient: linear-gradient(180deg, var(--background) 90%, #d9dce0);
   --site-header: var(--background);
-  --card-bg: #fff;
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-bg: #f1f1f1;
+  --card-shadow: rgba(0, 0, 0, 0.05);
   --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
@@ -57,7 +57,7 @@ body.dark {
   --tertiary-color: #2c2c2f;
   --featured-text: #f5f5f7;
   --background: #0a0a0a;
-  --background-gradient: linear-gradient(180deg, var(--background) 88%, #2b2b31);
+  --background-gradient: linear-gradient(180deg, var(--background) 90%, #2b2b31);
   --site-header: var(--background);
   --card-bg: #212124;
   --card-shadow: rgba(0, 0, 0, 0.0);
@@ -97,11 +97,10 @@ h1, h2, h3, h4, h5, p, a  {
     &:hover { color: var(--primary-color); }
     &:last-child { margin-right: 0; }
   }
-  .navbar-brand a{
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--primary-text-color);
+  .navbar-brand {
+    font-weight: 700;
     text-decoration: none;
+    color: var(--primary-text-color);
     &:hover { color: var(--primary-color); }
   }
 }
@@ -284,7 +283,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   &:before {
     content: "";
-    background: rgba(0,0,0,0.10);
+    background: rgba(0,0,0,0.05);
     position: absolute;
     top: 0;
     left: 0;
@@ -297,16 +296,9 @@ h1, h2, h3, h4, h5, p, a  {
   display: grid;
   overflow: hidden;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   line-height: 1.25;
   background-color: var(--card-bg);
-  box-shadow: 0px 20px 40px var(--card-shadow);
-  box-shadow:
-    0 2px 2.2px rgba(0, 0, 0, 0.034), 
-    0 5.7px 5.3px rgba(0, 0, 0, 0.048), 
-    0 10.5px 5px rgba(0, 0, 0, 0.06), 
-    0 20.3px 7.9px rgba(0, 0, 0, 0.050)
-  ;
   > a img { display: block; }
   > header { padding: 24px; }
   img.card-img {
@@ -360,7 +352,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   hr {
     width: 140px;
-    height: 2px;
+    height: 1px;
     border: none;
     background: var(--hr) none repeat scroll 0 0;
     margin-left: 0;
@@ -396,6 +388,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
 }
 .site-footer {
+  font-size: 1.125rem;
   font-weight: 300;
   color: #666;
   text-align: center;
