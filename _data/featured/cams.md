@@ -2,7 +2,7 @@
 template: BlogPost
 path: /cams-etrac
 thumbnail: /assets/cams/cams-etrac.png
-date: 2019-09
+date: 2019-09-09
 name: CAMS E-Trac
 subtitle: What was it like to develop a fintech energy analytics SaaS product? 
 category: Enterprise
@@ -12,6 +12,8 @@ tags:
   - Flask
   - AWS
   - Docker
+cardsize: 7
+display: contents
 ---
 ## very awesome
 

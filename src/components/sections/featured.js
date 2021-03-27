@@ -26,6 +26,8 @@ const Featured = () => {
               category
               thumbnail
               description
+              cardsize
+              display
             }
           }
         }
@@ -36,10 +38,10 @@ const Featured = () => {
     <Container>
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Col key={node.id} sm={12}>
+          <Col key={node.id} sm={12} md={node.frontmatter.cardsize} className="d-flex">
             <Card className="mb-4 featured">
             <Row>
-              <Col md={6} sm={12}>
+              <Col style={{display: `${node.frontmatter.display}` }}>
                 <Card.Body>
                   <Card.Header>{node.frontmatter.category}</Card.Header>
                   <Card.Title>{node.frontmatter.name}</Card.Title>
@@ -60,7 +62,7 @@ const Featured = () => {
                   )}
                 </Card.Body>
               </Col>
-              <Col md={6} sm={12} className="text-center">
+              <Col>
                 <Link to={node.frontmatter.path}>
                   {!!node.frontmatter.thumbnail && (
                     <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.name + " - Featured Shot"} />

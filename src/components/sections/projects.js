@@ -39,10 +39,9 @@ const Projects = () => {
       </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
-        <Col key={node.id} lg={4} sm={6} xs={12} style={{display: "flex"}}>
+        <Col key={node.id} lg={4} sm={6} xs={12} className="d-flex">
           <Card className="mb-4 projects">
             <Card.Body>
-              
               <Row className="post-meta">
                 <Col><FiFolder className="folder"/></Col>
                 <Col className="text-right">

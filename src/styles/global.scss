@@ -2,8 +2,8 @@
 @import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap");
-$font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&family=Roboto+Mono&display=swap");
+$font-family: 'Inter', sans-serif;
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
   'tablet' : ( max-width:  768px ),
@@ -80,7 +80,7 @@ body {
   color: var(--primary-text-color);
 }
 h1 { 
-  font-family: 'DM Serif Display', serif;
+  font-weight: 800;
   line-height: 1.125;
 }
 h1, h2, h3, h4, h5, p, a  {
@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, p, a  {
       font-weight: 700;
       color: var(--primary-text-color);
       margin: 3.5rem auto 1rem auto;
-      @include font-size(2.5rem);
+      @include font-size(2rem);
     }
     h3 {
       font-weight: 400;
@@ -232,8 +232,8 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .badges{ margin: 1rem 0 }
 .badge {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: normal;
+  // font-family: 'Roboto Mono', monospace;
+  font-weight: 200;
   margin-right: .5rem;
   background-color: transparent;
   border: 1px solid var(--secondary-text-color);
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, p, a  {
   > a img { display: block; }
   > header { padding: 24px; }
   img.card-img {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -315,7 +315,8 @@ h1, h2, h3, h4, h5, p, a  {
     }
   }
   .card-header {
-    font-family: 'Roboto Mono', monospace; 
+    // font-family: 'Roboto Mono', monospace; 
+    font-weight: 200;
     color: var(--secondary-color); 
     background-color: inherit;
     border-bottom: none;
@@ -338,25 +339,27 @@ h1, h2, h3, h4, h5, p, a  {
   }
 }
 .card.featured {
-  .card-title { @include font-size(2.25rem); }
+  text-align: center;
+  max-height: 50rem;
+  .card-title { @include font-size(3rem); }
   .card-body {
-    padding: 4.25rem 0 4.25rem 3.5rem; 
-    @include respond-to(tablet){ padding: 3rem 0 3rem 2rem; }
-    @include respond-to(phone){ padding: 3rem 2rem 0; }
+    padding: 6rem 4rem; 
+    @include respond-to(tablet){ padding: 3rem; }
+    @include respond-to(phone){ padding: 2rem ; }
   }
   .card-text {
-    @include font-size(1.5rem); 
-    @include respond-to(tablet) { font-size: 1.25rem; }
-    @include respond-to(phone) { font-size: 1.125rem; }
+    @include font-size(1.25rem); 
+    // @include respond-to(tablet) { font-size: 1.25rem; }
+    // @include respond-to(phone) { font-size: 1.125rem; }
 
   }
   hr {
-    width: 140px;
+    width: 10rem;
     height: 1px;
     border: none;
     background: var(--hr) none repeat scroll 0 0;
-    margin-left: 0;
   }
+  .col { @include respond-to(phone) { display: contents !important; } }
 }
 .card.projects {
   padding: 2rem;
@@ -365,7 +368,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-color);
   }
   .card-title { 
-    @include font-size(1.75rem);
+    @include font-size(2rem);
     margin-top: 1rem;
   }
   .card-body { 
@@ -373,14 +376,12 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-text {
     margin-bottom: 1.5rem;
-    @include font-size(1.25rem);
-    @include respond-to(phone) { font-size: 1.125rem; }
+    @include font-size(1.125rem);
   }
 }
 .projects-header {
   text-align: center;
-  margin-bottom: 1.5rem;
-  // font-family: 'Roboto Mono', monospace; 
+  margin-bottom: 1.5rem; 
   p { color: var(--secondary-color); }
   h4 { 
     margin-bottom: 0;
@@ -389,7 +390,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .site-footer {
   font-size: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #666;
   text-align: center;
   margin: 12rem 0 3rem;
