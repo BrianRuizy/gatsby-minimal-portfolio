@@ -38,7 +38,7 @@ body.light {
   --tertiary-color: #eeeeef;
   --featured-text: #f1f1f1;
   --background: #fff;
-  --background-gradient: linear-gradient(180deg, var(--background) 90%, #d9dce0);
+  --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
   --site-header: var(--background);
   --card-bg: #f2f2f2;
   --card-shadow: rgba(0, 0, 0, 0.05);
@@ -57,7 +57,7 @@ body.dark {
   --tertiary-color: #2c2c2f;
   --featured-text: #f5f5f7;
   --background: #0a0a0a;
-  --background-gradient: linear-gradient(180deg, var(--background) 90%, #2b2b31);
+  --background-gradient: linear-gradient(180deg, var(--background) 92%, #2b2b31);
   --site-header: var(--background);
   --card-bg: #212124;
   --card-shadow: rgba(0, 0, 0, 0.0);
@@ -320,9 +320,9 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-color); 
     background-color: inherit;
     border-bottom: none;
-    padding: 0 0 1rem 0;
+    padding: 0 0 .5rem 0;
     transition: $theme-transition;
-    @include font-size(1.125rem);
+    font-size: 1rem;
   }
   .card-title {
     font-weight: 700;
@@ -332,6 +332,9 @@ h1, h2, h3, h4, h5, p, a  {
   .card-text{
     margin-bottom: 1rem;
     color: var(--secondary-text-color);
+    font-size: 1.25rem; 
+    @include respond-to(tablet) { font-size: 1.125rem; }
+    @include respond-to(phone) { font-size: 1rem; }
   }
   .card-link{ 
     color: var(--primary-color); 
@@ -341,16 +344,17 @@ h1, h2, h3, h4, h5, p, a  {
 .card.featured {
   text-align: center;
   max-height: 45rem;
-  .card-title { @include font-size(3rem); }
-  .card-body {
-    padding: 3rem 6rem; 
-    @include respond-to(tablet){ padding: 2.5rem 2.5rem ; }
-    @include respond-to(phone){ padding: 2rem 3rem 0; }
+  .card-title {
+    font-weight: 800;
+    font-size: 3rem;
+    @include respond-to(phone) { font-size: 2.5rem; } 
+    @include respond-to(phone) { font-size: 2.25rem; } 
   }
-  .card-text {
-    @include font-size(1.25rem); 
-    // @include respond-to(tablet) { font-size: 1.25rem; }
-    // @include respond-to(phone) { font-size: 1.125rem; }
+  .card-body {
+    line-height: 1.5;
+    padding: 3rem 6rem; 
+    @include respond-to(tablet){ padding: 4rem 3.5rem; }
+    @include respond-to(phone){ padding: 4rem 3.5rem 0; }
   }
   hr {
     width: 10rem;
@@ -372,10 +376,6 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-body { 
     padding: 0;
-  }
-  .card-text {
-    margin-bottom: 1.5rem;
-    @include font-size(1.125rem);
   }
 }
 .projects-header {

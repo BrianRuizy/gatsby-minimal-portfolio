@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /periship
-thumbnail: /assets/periship/periship-logo.png
+thumbnail: /assets/periship/logo.png
 date: 2020-09-14
 name: PeriShip
 subtitle: This software is used to support on average 100k weekly shipments
@@ -13,7 +13,7 @@ tags:
   - AWS
   - MongoDB
   - Vue.js
-cardsize: 6
+cardsize: 7
 display: contents
 ---
 #
