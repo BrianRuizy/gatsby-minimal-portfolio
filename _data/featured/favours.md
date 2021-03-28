@@ -12,7 +12,7 @@ tags:
   - Django
   - REST API
   - Flutter
-cardsize: 5
+cardsize: 6
 display: contents
 ---
 #

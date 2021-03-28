@@ -9,7 +9,7 @@ import Badge from "react-bootstrap/Badge"
 
 import { FiGithub } from "react-icons/fi"
 import { BiLinkExternal } from "react-icons/bi"
-import { FiFolder } from "react-icons/fi"
+import { AiOutlineFolder } from "react-icons/ai"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -43,7 +43,7 @@ const Projects = () => {
           <Card className="mb-4 projects">
             <Card.Body>
               <Row className="post-meta">
-                <Col><FiFolder className="folder"/></Col>
+                <Col><AiOutlineFolder className="folder"/></Col>
                 <Col className="text-right">
                   { node.frontmatter.github && 
                   <Card.Link href={node.frontmatter.github}><FiGithub/></Card.Link>

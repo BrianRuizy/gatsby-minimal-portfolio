@@ -13,7 +13,7 @@ tags:
   - AWS
   - MongoDB
   - Vue.js
-cardsize: 7
+cardsize: 6
 display: contents
 ---
 #

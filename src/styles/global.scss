@@ -2,7 +2,7 @@
 @import "~rfs/scss"; // Automates responsive resizing, https://github.com/twbs/rfs
 
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap");
 $font-family: 'Inter', sans-serif;
 $breakpoints: (
   'phone'  : ( max-width:  640px ),
@@ -22,8 +22,8 @@ $breakpoints: (
 }
 html,
 body {
-  overflow-x:hidden;
-  width:100% !important;
+  overflow-x: hidden;
+  width: 100% !important;
   margin: 0;
   padding: 0;
 }
@@ -35,7 +35,7 @@ body.light {
   --primary-text-color: #1d1d1f;
   --secondary-color: #86868b;
   --secondary-text-color: #2c2c2e;
-  --tertiary-color: #eeeeef;
+  --tertiary-color: #e7e7e7;
   --featured-text: #f1f1f1;
   --background: #fff;
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
@@ -45,7 +45,6 @@ body.light {
   --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
-  --hr: rgba(0, 0, 0, 0.1);
   --code-bg: #313437;
   --translucent: rgba(238, 238, 237, 0.9);
 }
@@ -63,7 +62,6 @@ body.dark {
   --card-shadow: rgba(0, 0, 0, 0.0);
   --link-color: #90b3f4;
   --bottom-nav-bg: #323236;
-  --hr: rgba(255, 255, 255, 0.1);
   --code-bg: #212124;
   --translucent: rgba(29,29,31,0.9);
 }
@@ -98,7 +96,6 @@ h1, h2, h3, h4, h5, p, a  {
     &:last-child { margin-right: 0; }
   }
   .navbar-brand {
-    font-weight: 700;
     text-decoration: none;
     color: var(--primary-text-color);
     &:hover { color: var(--primary-color); }
@@ -148,10 +145,11 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 10rem 0 15rem 0;
   @include respond-to(tablet) { padding: 6rem 0 10rem 0; }
   h1 {
+    font-weight: 800;
     margin-bottom: 1.25rem;
     font-size: 3rem;
-    @include respond-to(tablet) { font-size: 2.5rem; }
-    @include respond-to(phone) { font-size: 2.25rem; }
+    @include respond-to(tablet) { font-size: 2.25rem; }
+    @include respond-to(phone) { font-size: 1.9rem; }
   }
   u { 
     text-decoration-color: var(--text-secondary-color);
@@ -167,7 +165,7 @@ h1, h2, h3, h4, h5, p, a  {
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
       max-width: 22rem;
-      @include font-size(1.25rem);
+      @include font-size(1.125rem);
     }
   }
   & .cta .btn {
@@ -230,17 +228,14 @@ h1, h2, h3, h4, h5, p, a  {
     transition: $theme-transition;
   }
 }
-.badges{ margin: 1rem 0 }
+.badges{ margin: .75rem 0 }
 .badge {
-  // font-family: 'Roboto Mono', monospace;
   font-weight: 200;
-  margin-right: .5rem;
-  background-color: transparent;
-  border: 1px solid var(--secondary-text-color);
-  color: var(--secondary-text-color);
   font-size: 1rem;
-  @include respond-to(phone) { font-size: .9rem }
-  
+  margin: 0 .5rem .5rem 0;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-text-color);
 }
 .jumbotron {
   transition: $theme-transition;
@@ -255,7 +250,7 @@ h1, h2, h3, h4, h5, p, a  {
     @include font-size(2.5rem);
   }
   .post-meta {
-    color: var(--secondary-color);
+    color: var(--secondary-text-color);
     font-size: 1.125rem;
   }
 }
@@ -283,7 +278,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   &:before {
     content: "";
-    background: rgba(0,0,0,0.05);
+    background: rgba(0,0,0,0.10);
     position: absolute;
     top: 0;
     left: 0;
@@ -309,13 +304,8 @@ h1, h2, h3, h4, h5, p, a  {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    @include respond-to(phone){
-      max-height: 18rem;
-      position: unset;
-    }
   }
   .card-header {
-    // font-family: 'Roboto Mono', monospace; 
     font-weight: 200;
     color: var(--secondary-color); 
     background-color: inherit;
@@ -338,29 +328,28 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-link{ 
     color: var(--primary-color); 
-    @include font-size(1.5rem);
+    @include font-size(1.75rem);
   }
 }
 .card.featured {
   text-align: center;
-  max-height: 45rem;
   .card-title {
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2.75rem;
     @include respond-to(phone) { font-size: 2.5rem; } 
     @include respond-to(phone) { font-size: 2.25rem; } 
   }
   .card-body {
     line-height: 1.5;
-    padding: 3rem 6rem; 
-    @include respond-to(tablet){ padding: 4rem 3.5rem; }
-    @include respond-to(phone){ padding: 4rem 3.5rem 0; }
+    padding: 4rem 4rem; 
+    @include respond-to(tablet){ padding: 4rem 2.75rem; }
+    @include respond-to(phone){ padding: 4rem 3rem 1rem; }
   }
   hr {
     width: 10rem;
-    height: 1px;
+    height: 2px;
     border: none;
-    background: var(--hr) none repeat scroll 0 0;
+    background: var(--tertiary-color) none repeat scroll 0 0;
   }
   .col { @include respond-to(phone) { display: contents !important; } }
 }
@@ -371,7 +360,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-color);
   }
   .card-title { 
-    @include font-size(2rem);
+    @include font-size(1.75rem);
     margin-top: 1rem;
   }
   .card-body { 
@@ -380,7 +369,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .projects-header {
   text-align: center;
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1rem; 
   p { color: var(--secondary-color); }
   h4 { 
     margin-bottom: 0;
@@ -516,7 +505,7 @@ body.light {
     margin-bottom: 3rem;
     &:before {
       content: "";
-      background: rgba(0,0,0,0.20);
+      background: rgba(0,0,0,0.10);
       position: absolute;
       top: 0;
       left: 0;
