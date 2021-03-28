@@ -24,7 +24,7 @@
 </p>
 </div>
 
-![mockup](https://user-images.githubusercontent.com/23439187/112228714-b84e6980-8bff-11eb-8d42-d5d720751d4b.png)
+![mockup](https://user-images.githubusercontent.com/23439187/112764561-bd7c3180-8fce-11eb-8bef-4aa0ea394f7d.png)
 
 ## Quick Start
 
@@ -54,7 +54,7 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 
 Using this portfolio website and adding your own content is super simple! Add your respective project markdown-file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work rendering the markdown file to html. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
-![remark](https://user-images.githubusercontent.com/23439187/112228822-e5028100-8bff-11eb-923f-6f0853021e5c.png)
+![remark](https://user-images.githubusercontent.com/23439187/112764581-c836c680-8fce-11eb-9c45-cd1ba9b7fb91.png)
 See [_data/readme.md](https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/_data/readme.md) for examples on .md syntax, or [brianruizy.com/markdown-help/](https://brianruizy/markdown-help).
 
 ## Deployment
