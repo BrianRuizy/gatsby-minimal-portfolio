@@ -11,7 +11,7 @@ description: '1st place app leverages the latest of Azure and Machine Learning t
 tags:
   - Azure
   - Jupyter
-cardsize: 6
+cardsize: 5
 display: contents
 ---
 #

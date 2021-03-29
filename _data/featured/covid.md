@@ -19,55 +19,9 @@ display: block
 ---
 #
 
-## Lorem Ipsum dolor
-
 Ipsa at odio quia. **Ut repudiandae asperiores hic saepe et hic.** Nobis voluptatem omnis et in. Eligendi eveniet odio incidunt adipisci consectetur aut. Esse neque incidunt voluptatem vitae *rerum maiores*. Minima et reprehenderit est ut temporibus. At provident est rerum vel neque.
 
 Eius a ut est distinctio et. Necessitatibus aut qui natus iure sint consequatur ut. Voluptatem rerum saepe aspernatur tenetur consequuntur necessitatibus consequuntur ea. consequuntur necessitatibus consequuntur ea.
-
-## Reversing a linked list
-
-### 1. Consider efficiency
-
-```py
-# Python program to reverse a linked list
-# Time Complexity : O(n)
-# Space Complexity : O(n) as 'next'
-#variable is getting created in each loop.
-```
-
-### 2. Write node class
-
-```py
-# Node class
-class Node:
- 
-  # Constructor to initialize the node object
-  def __init__(self, data):
-    self.data = data
-    self.next = None
-```
-
-### 2. Write list class
-
-```py
-class LinkedList:
- 
-  # Function to initialize head
-  def __init__(self):
-    self.head = None
-
-  # Function to reverse the linked list
-  def reverse(self):
-    prev = None
-    current = self.head
-    while(current is not None):
-      next = current.next
-      current.next = prev
-      prev = current
-      current = next
-    self.head = prev
-```
 
 ![asdf](https://images.unsplash.com/photo-1601055283742-8b27e81b5553?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)
 <figcaption>This is an image with figure caption</figcaption>
@@ -75,10 +29,6 @@ class LinkedList:
 Soluta in molestias ut praesentium explicabo doloribus voluptas. Itaque sed quibusdam sed est qui. Totam quo in et sed vero voluptatem.
 
 Amet ullam doloribus iure tempore reiciendis quo aut doloremque. Consequatur velit minus laudantium corporis nihil. Nemo laboriosam natus dolor ex blanditiis voluptas. Nesciunt quas unde culpa praesentium laudantium accusamus quo voluptas. Ipsum rerum quasi mollitia.
-
-## Lorem Ipsum dolor
-
-Ipsa at odio quia. **Ut repudiandae asperiores hic saepe et hic.** Nobis voluptatem omnis et in. Eligendi eveniet odio incidunt adipisci consectetur aut. Amet ullam doloribus iure tempore reiciendis quo aut doloremque. Consequatur velit minus laudantium corporis nihil. Nemo laboriosam natus dolor ex blanditiis voluptas. Nesciunt quas unde culpa praesentium laudantium accusamus quo voluptas. Ipsum rerum quasi mollitia nihil ipsa.
 
 ## About
 
@@ -180,7 +130,3 @@ Date
 * Johns Hopkins University: [CSSE](https://systems.jhu.edu/) 2019-ncov data repository, found [here](https://github.com/CSSEGISandData/COVID-19).
 * Our World in Data: [OWID](https://ourworldindata.org/) GitHub Data repository, found [here](https://github.com/owid/covid-19-data/tree/master/public/data).
 * New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data)
-
-## License
-
-[@MIT](https://github.com/BrianRuizy/covid19-dashboard/blob/master/LICENSE.md)

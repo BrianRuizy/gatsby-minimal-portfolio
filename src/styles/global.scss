@@ -66,10 +66,10 @@ body.dark {
   --translucent: rgba(29,29,31,0.9);
 }
 $theme-transition:   
-  color .25s ease-in-out, 
-  background-color .25s ease-in-out, 
-  border-color .25s ease-in-out, 
-  box-shadow .25s ease-in-out
+  color .5s ease-in-out, 
+  background-color .5s ease-in-out, 
+  border-color .5s ease-in-out, 
+  box-shadow .5s ease-in-out
 ;
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -143,7 +143,8 @@ h1, h2, h3, h4, h5, p, a  {
 .hero-header {
   text-align: center;
   padding: 10rem 0 15rem 0;
-  @include respond-to(tablet) { padding: 6rem 0 10rem 0; }
+  @include respond-to(tablet) { padding: 10rem 0 12rem 0; }
+  @include respond-to(phone) { padding: 6rem 0 12rem 0; }
   h1 {
     font-weight: 800;
     margin-bottom: 1.25rem;
@@ -278,7 +279,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   &:before {
     content: "";
-    background: rgba(0,0,0,0.10);
+    background: rgba(0,0,0,0.08);
     position: absolute;
     top: 0;
     left: 0;
@@ -333,6 +334,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .card.featured {
   text-align: center;
+  margin-bottom: 2rem;
   .card-title {
     font-weight: 800;
     font-size: 2.75rem;
@@ -343,7 +345,7 @@ h1, h2, h3, h4, h5, p, a  {
     line-height: 1.5;
     padding: 4rem 4rem; 
     @include respond-to(tablet){ padding: 4rem 2.75rem; }
-    @include respond-to(phone){ padding: 4rem 3rem 1rem; }
+    @include respond-to(phone){ padding: 4rem 3rem 2rem; }
   }
   hr {
     width: 10rem;

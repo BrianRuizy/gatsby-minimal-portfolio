@@ -39,7 +39,7 @@ const Featured = () => {
       <Row>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Col key={node.id} sm={12} md={node.frontmatter.cardsize} className="d-flex">
-            <Card className="mb-4 featured">
+            <Card className=" featured">
             <Row>
               <Col style={{display: `${node.frontmatter.display}` }}>
                 <Card.Body>

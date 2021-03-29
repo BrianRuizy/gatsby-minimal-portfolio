@@ -48,7 +48,7 @@ export default () => (
         </h1>
         <p>{data.site.siteMetadata.home.summary}</p>
         <div className="cta">
-          <Link to="/about"><Button variant="primary" className="mr-3">About me</Button></Link>
+          <Link to="/about"><Button variant="primary" className="mr-2">About me</Button></Link>
           <a href={Resume}><Button variant="light"><FaFileDownload className="mr-1"/>Resume</Button></a>
         </div>
       </Container>      
