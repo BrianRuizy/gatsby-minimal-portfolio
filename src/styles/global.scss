@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(phone) { padding: 6rem 0 12rem 0; }
   h1 {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-bottom: 1.25rem;
     @include respond-to(tablet) { font-size: 2.25rem; }
     @include respond-to(phone) { font-size: 2rem; }
@@ -160,9 +160,9 @@ h1, h2, h3, h4, h5, p, a  {
     margin-bottom: 1.5rem;
     color: var(--secondary-text-color);
     display: inline-block;
-    max-width: 28rem;
+    max-width: 26rem;
     line-height: 1.25;
-    @include font-size(1.5rem);
+    @include font-size(1.25rem);
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
       max-width: 22rem;
@@ -296,14 +296,15 @@ h1, h2, h3, h4, h5, p, a  {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    max-height: 410px;
+    max-height: 400px;
+    @include respond-to(phone) {max-height: 300px; }
   }
   .card-header {
     font-weight: 200;
     color: var(--secondary-color); 
     background-color: inherit;
     border-bottom: none;
-    padding: 0 0 .5rem 0;
+    padding: 0 0 1rem 0;
     transition: $theme-transition;
     font-size: 1rem;
   }
@@ -320,30 +321,27 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-link{ 
     color: var(--primary-color); 
-    @include font-size(1.25rem);
+    @include font-size(1.125rem);
   }
 }
 .card.featured {
-  margin-bottom: 2rem;
-  min-height: 400px;
+  margin-bottom: 30px;
   .card-body {
     line-height: 1.5;
-    padding: 5rem 0 5rem 5rem;
+    padding: 3rem 0 3rem 4rem;
     @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
     @include respond-to(phone){ 
       text-align: center;
-      padding: 4rem 2rem 0; 
+      padding: 3rem 2rem .5rem; 
     }
   }
   .card-title {
     font-weight: 800;
-    font-size: 2.25rem;
-    @include respond-to(tablet) { font-size: 2.5rem; } 
-    @include respond-to(phone) { font-size: 2.25rem; } 
+    font-size: 2.125rem;
   }
   hr {
     width: 10rem;
-    height: 2px;
+    height: 1px;
     border: none;
     margin-left: 0;
     background: var(--tertiary-color) none repeat scroll 0 0;
