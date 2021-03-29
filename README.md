@@ -1,12 +1,11 @@
-
 <h1 align="center">
   Portfolio Website
 </h1>
 
 <p align="center">
- This is the 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>.
- Modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
- Don't forget to leave a star ⭐!
+ 3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>,
+ modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+ </br>Don't forget to leave a star ⭐!
 </p>
 <p align="center">
    <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
@@ -24,7 +23,9 @@
 </p>
 </div>
 
-![mockup](https://user-images.githubusercontent.com/23439187/112764561-bd7c3180-8fce-11eb-8bef-4aa0ea394f7d.png)
+<p align="center">
+  <img align="center" src="https://user-images.githubusercontent.com/23439187/112791552-66567b00-9027-11eb-8cb9-4739b745abf6.gif" width="95%">
+</p>
 
 ## Quick Start
 
@@ -34,11 +35,13 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 
     Create new site using `gastby new` command. This command will also install the project dependencies.
 
+
     ```bash
     gatsby new gatsby-minimal-portfolio https://github.com/BrianRuizy/gatsby-minimal-portfolio
     ```
 
 2. **Start Developing**
+
 
     Navigate into your new site’s directory and start it up using `gatsby develop` command.
 
