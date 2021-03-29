@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, p, a  {
   min-height: 30rem; 
   background-color: var(--card-bg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 15px;
   display: grid;
@@ -275,7 +275,8 @@ h1, h2, h3, h4, h5, p, a  {
   }
   @include respond-to(phone) { 
     border-radius: 0;
-    min-height: 20rem; 
+    min-height: 20rem;
+    background-size: cover;
   }
 }
 .card {
