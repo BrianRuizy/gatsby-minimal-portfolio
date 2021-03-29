@@ -294,6 +294,7 @@ h1, h2, h3, h4, h5, p, a  {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    max-height: 410px;
   }
   .card-header {
     font-weight: 200;
@@ -329,7 +330,7 @@ h1, h2, h3, h4, h5, p, a  {
     @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
     @include respond-to(phone){ 
       text-align: center;
-      padding: 4rem 2rem 1rem; 
+      padding: 4rem 2rem 0; 
     }
   }
   .card-title {
