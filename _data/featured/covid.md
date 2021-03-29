@@ -14,8 +14,7 @@ tags:
   - Django
   - Plotly
   - Pandas
-cardsize: 12
-display: block
+
 ---
 #
 

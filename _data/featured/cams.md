@@ -12,8 +12,7 @@ tags:
   - Flask
   - AWS
   - Docker
-cardsize: 7
-display: contents
+
 ---
 ## very awesome
 

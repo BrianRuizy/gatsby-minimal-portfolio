@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(phone) { padding: 6rem 0 12rem 0; }
   h1 {
     font-weight: 800;
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     margin-bottom: 1.25rem;
     @include respond-to(tablet) { font-size: 2.25rem; }
     @include respond-to(phone) { font-size: 2rem; }
@@ -288,7 +288,6 @@ h1, h2, h3, h4, h5, p, a  {
   > a img { display: block; }
   > header { padding: 24px; }
   img.card-img {
-    position: relative;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -313,38 +312,40 @@ h1, h2, h3, h4, h5, p, a  {
   .card-text{
     margin-bottom: 1rem;
     color: var(--secondary-text-color);
-    font-size: 1.25rem; 
-    @include respond-to(tablet) { font-size: 1.125rem; }
+    font-size: 1.125rem; 
     @include respond-to(phone) { font-size: 1rem; }
   }
   .card-link{ 
     color: var(--primary-color); 
-    @include font-size(1.75rem);
+    @include font-size(1.25rem);
   }
 }
 .card.featured {
-  text-align: center;
   margin-bottom: 2rem;
-  min-height: 29rem;
-  .card-title {
-    font-weight: 800;
-    font-size: 2.5rem;
-    @include respond-to(phone) { font-size: 2.5rem; } 
-    @include respond-to(phone) { font-size: 2.25rem; } 
-  }
+  min-height: 400px;
   .card-body {
     line-height: 1.5;
-    padding: 4rem 4rem 1rem; 
-    @include respond-to(tablet){ padding: 4rem 2.75rem 1rem; }
-    @include respond-to(phone){ padding: 4rem 3rem 1rem; }
+    padding: 5rem 0 5rem 5rem;
+    @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
+    @include respond-to(phone){ 
+      text-align: center;
+      padding: 4rem 2rem 1rem; 
+    }
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 2.25rem;
+    @include respond-to(tablet) { font-size: 2.5rem; } 
+    @include respond-to(phone) { font-size: 2.25rem; } 
   }
   hr {
     width: 10rem;
     height: 2px;
     border: none;
+    margin-left: 0;
     background: var(--tertiary-color) none repeat scroll 0 0;
+    @include respond-to(phone) { margin-left: revert; } 
   }
-  .col { @include respond-to(phone) { display: contents !important; } }
 }
 .card.projects {
   padding: 2rem;

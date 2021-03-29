@@ -12,8 +12,6 @@ tags:
   - Django
   - AWS
   - MongoDB
-cardsize: 7
-display: contents
 ---
 #
 
