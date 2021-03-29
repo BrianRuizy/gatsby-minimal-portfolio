@@ -5,7 +5,7 @@ path: /markdown-help
 thumbnail: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Foriginal%2F001%2F273%2F780%2Ff05.png&f=1&nofb=1'
 date: 2021-03-26
 name: README Tutorial
-subtitle: 'This is a tutorial on how to format your blog posts using my template'
+title: 'This is a tutorial on how to format your blog posts using my template'
 category: help
 description: HOW TO FORMAT YOUR BLOG POSTS
 tags: 

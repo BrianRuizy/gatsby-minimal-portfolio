@@ -34,7 +34,7 @@ export default function Template({
                 <Badge key={index} variant="secondary">{tag}</Badge>
               )}
             </div>
-            <h1>{frontmatter.subtitle}</h1>
+            <h1>{frontmatter.title}</h1>
             <Row className="post-meta">
               <Col>{frontmatter.name}</Col>
               <Col xs="auto" className="text-right">{frontmatter.date}</Col>
@@ -73,7 +73,7 @@ export const pageQuery = graphql`
         date(formatString: "DD MMM, YYYY")
         path
         name
-        subtitle
+        title
         category
         thumbnail
         description

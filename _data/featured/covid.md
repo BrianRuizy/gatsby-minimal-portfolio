@@ -6,8 +6,8 @@ github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2020-05-03
 name: COVID-19 Dashboard
-subtitle: A powerful and intuitive COVID-19 dashboard used by thousands
-category: Web-app
+title: A powerful and intuitive COVID-19 dashboard used by thousands
+category: Web application
 description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive & clean UI.'
 tags:
   - Python

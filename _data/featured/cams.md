@@ -3,9 +3,9 @@ template: BlogPost
 path: /cams-etrac
 thumbnail: /assets/cams/cams-etrac.png
 date: 2019-09-09
-name: CAMS E-Trac
-subtitle: What was it like to develop a fintech energy analytics SaaS product? 
-category: Enterprise
+name: CAMS E-TRaC
+title: What was it like to develop a fintech energy analytics SaaS product? 
+category: Enterprise Software
 description: 'A robust and modern midstream oil & energy data monitoring web-app. Built with Python on AWS.'
 tags:
   - Python

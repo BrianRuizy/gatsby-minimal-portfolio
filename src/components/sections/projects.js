@@ -32,7 +32,7 @@ const Projects = () => {
     }
   `)
   return( 
-    <Container>
+    <Container style={{ "marginTop": "12rem" }}>
       <div className="projects-header">
         <h4>Miscellaneous &darr;</h4>
         <p>Other notable small projects</p>
