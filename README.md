@@ -27,6 +27,16 @@
   <img align="center" src="https://user-images.githubusercontent.com/23439187/112791552-66567b00-9027-11eb-8cb9-4739b745abf6.gif" width="95%">
 </p>
 
+## Features
+
+- PWA ready, installable on Android and iOS
+- Blog ready, easily add own blog posts
+- Toggable dark mode
+- Mobile friendly nav-dock, and bottom drawer
+- Netlify contact form with seamless [setup](https://docs.netlify.com/forms/setup/)
+- SEO ready, option to Add meta description
+
+
 ## Quick Start
 
 Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) and [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) documentation for more details or issues with initial project installation.
