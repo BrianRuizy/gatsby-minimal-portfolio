@@ -20,8 +20,8 @@ export default function Template({
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.name} | {siteMetadata.title}</title>
-        <meta name="description" content={frontmatter.description} />
+        <title>{frontmatter.name} | by {siteMetadata.home.name} | {frontmatter.date}</title>
+        <meta name="description" content={frontmatter.title} />
       </Helmet>
       <article className="post">
         <Container>
@@ -65,6 +65,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        home {
+          name
+        }
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
