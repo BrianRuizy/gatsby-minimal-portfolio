@@ -4,7 +4,7 @@ path: /covid-dashboard
 thumbnail: /assets/covid/covid.png
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
-date: 2020-05-03
+date: 2020-12-01
 name: COVID-19 Dashboard
 title: A powerful and intuitive COVID-19 dashboard used by thousands
 category: Web application
@@ -14,7 +14,6 @@ tags:
   - Django
   - Plotly
   - Pandas
-
 ---
 #
 
