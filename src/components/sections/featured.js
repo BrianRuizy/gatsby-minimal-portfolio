@@ -24,7 +24,7 @@ const Featured = () => {
               demo
               name
               category
-              thumbnail
+              mockup
               description
             }
           }
@@ -62,8 +62,8 @@ const Featured = () => {
               </Col>
               <Col md={6} sm={12}>
                 <Link to={node.frontmatter.path}>
-                  {!!node.frontmatter.thumbnail && (
-                    <Card.Img src={node.frontmatter.thumbnail} alt={node.frontmatter.name + " - Featured Shot"} />
+                  {!!node.frontmatter.mockup && (
+                    <Card.Img src={node.frontmatter.mockup} alt={node.frontmatter.name + " - Mockup"} />
                   )}
                 </Link>
               </Col>

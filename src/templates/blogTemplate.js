@@ -36,12 +36,12 @@ export default function Template({
             </div>
             <h1>{frontmatter.title}</h1>
             <Row className="post-meta">
-              <Col>{frontmatter.name}</Col>
+              <Col>{frontmatter.name} <span className="category">&#8226; {frontmatter.category}</span></Col>
               <Col xs="auto" className="text-right">{frontmatter.date}</Col>
             </Row>
           </Jumbotron>
         </Container>
-        <Container fluid="md">
+        <Container fluid="lg">
           {!!frontmatter.thumbnail && (
             <div 
               className="post-thumbnail" 
@@ -73,7 +73,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "DD MMM, YYYY")
+        date(formatString: "MM/YYYY")
         path
         name
         title

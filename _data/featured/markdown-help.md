@@ -2,6 +2,7 @@
 hide: true
 template: BlogPost
 path: /markdown-help
+mockup: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Foriginal%2F001%2F273%2F780%2Ff05.png&f=1&nofb=1'
 thumbnail: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Foriginal%2F001%2F273%2F780%2Ff05.png&f=1&nofb=1'
 date: 2021-03-26
 name: README Tutorial

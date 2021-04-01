@@ -1,12 +1,13 @@
 ---
 template: BlogPost
 path: /bumpit
-thumbnail: /assets/bumpit/bumpit.png
+mockup: /assets/bumpit/bumpit.png
+thumbnail: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
 date: 2019-12
 name: Bump.IT
-title: This project idea placed first at a Microsoft Azure IoT Hackathon in Houston, Tx.
-category: Microsoft Hackathon
+title: This app concept placed first at the 2019 Microsoft Azure hosted IoT Hackathon in Houston, TX.
+category: Hackathon
 description: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B dollar issue of road potholes'
 tags:
   - Azure

@@ -1,13 +1,14 @@
 ---
 template: BlogPost
 path: /covid-dashboard
-thumbnail: /assets/covid/covid.png
+mockup: /assets/covid/covid.png
+thumbnail: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80'
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2020-12-01
 name: COVID-19 Dashboard
 title: A powerful and intuitive COVID-19 dashboard used by thousands
-category: Web application
+category: Web app
 description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive & clean UI.'
 tags:
   - Python

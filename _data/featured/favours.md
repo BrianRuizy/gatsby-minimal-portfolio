@@ -1,11 +1,12 @@
 ---
 template: BlogPost
 path: /favours-app
-thumbnail: /assets/favours/logo.png
+mockup: /assets/favours/logo.png
+thumbnail: 'https://images.unsplash.com/photo-1569437061241-a848be43cc82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
 github: https://github.com/favours-io/favours
 date: 2020-07-01
 name: Favours
-title: A local marketplace for small-jobs.
+title: Creating local marketplace app for small-jobs, and making it as easy as a 'click of a button'.
 category: Application
 description: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
 tags: 

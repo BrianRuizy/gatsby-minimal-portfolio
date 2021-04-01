@@ -36,12 +36,10 @@ body.light {
   --secondary-color: #86868b;
   --secondary-text-color: #2c2c2e;
   --tertiary-color: #e7e7e7;
-  --featured-text: #f1f1f1;
-  --background: #fff;
+  --background: #fafafa;
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
   --site-header: var(--background);
-  --card-bg: #f2f2f2;
-  --card-shadow: rgba(0, 0, 0, 0.05);
+  --card-bg: #fff;
   --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
@@ -51,15 +49,13 @@ body.light {
 body.dark {
   --primary-color: #90b3f4;
   --primary-text-color: #f1f1f1;
-  --secondary-color: #818181;
-  --secondary-text-color: #a1a1a6;
+  --secondary-color: #707070;
+  --secondary-text-color: #b2b2b6;
   --tertiary-color: #2c2c2f;
-  --featured-text: #f5f5f7;
   --background: #0a0a0a;
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #2b2b31);
   --site-header: var(--background);
   --card-bg: #212124;
-  --card-shadow: rgba(0, 0, 0, 0.0);
   --link-color: #90b3f4;
   --bottom-nav-bg: #323236;
   --code-bg: #212124;
@@ -94,6 +90,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .navbar-brand {
     text-decoration: none;
+    font-weight: 700;
     color: var(--primary-text-color);
     &:hover { color: var(--primary-color); }
   }
@@ -133,10 +130,7 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(tablet){ margin: 4rem auto 5rem auto; }
   @include respond-to(phone){ margin: 2rem auto 4rem auto; }
 }
-.container-fluid {
-  padding: 0;
-  max-width: 768px;
-}
+
 .hero-header {
   text-align: center;
   padding: 10rem 0 15rem 0;
@@ -144,7 +138,7 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(phone) { padding: 6rem 0 12rem 0; }
   h1 {
     font-weight: 800;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     margin-bottom: 1.25rem;
     @include respond-to(tablet) { font-size: 2.25rem; }
     @include respond-to(phone) { font-size: 2rem; }
@@ -185,7 +179,7 @@ h1, h2, h3, h4, h5, p, a  {
   .blog-post-content {
     a { color: var(--primary-color); }
     hr { border-top: 2px solid var(--tertiary-color); }
-    img { margin: 1rem auto; }
+    img { margin: 2rem auto; }
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
@@ -214,7 +208,7 @@ h1, h2, h3, h4, h5, p, a  {
       }
     }
     figcaption {
-      margin: -1.75rem auto 2rem auto;
+      margin: -3rem auto 2.5rem auto;
       color: var(--secondary-color);
       text-align: center;
       font-size: 1.125rem;
@@ -226,7 +220,9 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--primary-color);
     transition: $theme-transition;
   }
+  .container-fluid { padding: 0; }
 }
+
 .badges{ margin: .75rem 0 }
 .badge {
   font-weight: 200;
@@ -238,46 +234,51 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .jumbotron {
   transition: $theme-transition;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1rem 0; 
   margin-bottom: 0;
   background: none;
-  @include respond-to(phone) { padding: 1rem 0; }
   & h1 { 
     color: var(--primary-text-color); 
     margin-bottom: 1rem;
-    @include font-size(2.5rem);
+    @include font-size(2.75rem);
   }
   .post-meta {
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     font-size: 1.125rem;
     @include respond-to(phone) { font-size: 1rem; }
+    .category { color: var(--secondary-color); }
   }
 }
 .post-thumbnail {
-  text-align: center;
-  min-height: 30rem; 
   background-color: var(--card-bg);
+  text-align: center;
+  min-height: 35rem;
+  max-width: 65rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
   display: grid;
   align-content: center;
   position: relative;
-  padding: 100px;
   overflow: hidden;
-  margin-bottom: 5rem;
+  margin: 1rem auto 8rem auto;
   background-origin: content-box;
+  box-shadow: 
+   rgba(0, 0, 0, 0.20) 0px 30px 60px -10px, 
+   rgba(0, 0, 0, 0.40) 0px 18px 36px -18px
+  ;
   @include respond-to(tablet) { 
-    border-radius: 0;
-    min-height: 28rem; 
+    min-height: 26rem; 
+    box-shadow: none;
+
   }
   @include respond-to(phone) { 
-    border-radius: 0;
-    min-height: 20rem;
+    min-height: 16rem;
+    margin: 1rem 0 6rem 0;
     padding: 0;
   }
 }
+
 .card {
   display: grid;
   overflow: hidden;
@@ -285,6 +286,14 @@ h1, h2, h3, h4, h5, p, a  {
   border-radius: 5px;
   line-height: 1.25;
   background-color: var(--card-bg);
+  box-shadow: 
+    0 2.8px 0.2px rgba(0, 0, 0, 0.005), 
+    0 6.7px 5.3px rgba(0, 0, 0, 0.004), 
+    0 12.5px 10px rgba(0, 0, 0, 0.015), 
+    -1px 7px 20px rgba(0, 0, 0, 0.022), 
+    0px 9px 20px rgba(0, 0, 0, 0.026), 
+    -1px 6px 20px rgba(0, 0, 0, 0.01)
+  ;
   > a img { display: block; }
   > header { padding: 24px; }
   img.card-img {
@@ -304,7 +313,7 @@ h1, h2, h3, h4, h5, p, a  {
     border-bottom: none;
     padding: 0 0 1rem 0;
     transition: $theme-transition;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   .card-title {
     font-weight: 700;
@@ -335,7 +344,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-title {
     font-weight: 800;
-    font-size: 2.125rem;
+    font-size: 2.25rem;
   }
   hr {
     width: 10rem;
@@ -411,7 +420,7 @@ body.light {
   border-radius: 100%;
   border: 1px solid var(--border);
   background: var(--bottom-nav-bg);
-  box-shadow: var(--card-shadow) 0px 0px 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 15px;
   padding: 1.25rem;
   @include respond-to(tablet){
     border: none;

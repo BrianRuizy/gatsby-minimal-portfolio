@@ -72,6 +72,14 @@ collections:
         media_library:
           config:
             multiple: false
+      - label: Mockup Image
+        name: mockup
+        widget: image
+        hint: "trasnparent and 1x1 ratio works best)"
+        required: false
+        media_library:
+          config:
+            multiple: false
       - { name: body, label: Body, widget: markdown }
   - name: projects
     label: projects

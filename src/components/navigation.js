@@ -38,7 +38,7 @@ const Navigation = (props) => {
             src="/favicons/apple-touch-icon.png"
             width="30"
             height="30"
-            className="d-inline-block align-top mr-3"
+            className="d-inline-block align-top mr-2"
           />Brian Ruiz
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
