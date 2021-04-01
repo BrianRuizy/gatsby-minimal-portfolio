@@ -77,10 +77,7 @@ body {
   background: var(--background-gradient);
   color: var(--primary-text-color);
 }
-h1 { 
-  font-weight: 800;
-  line-height: 1.125;
-}
+h1 { font-weight: 800; }
 h1, h2, h3, h4, h5, p, a  {
   transition: $theme-transition;
 }
@@ -198,10 +195,11 @@ h1, h2, h3, h4, h5, p, a  {
     h3 {
       font-weight: 400;
       color: var(--primary-text-color);
+      margin-top: 1.5rem;
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
-      margin-bottom: 1.125rem;
+      margin-bottom: 1.25rem;
       @include font-size(1.25rem);
       @include respond-to(phone) { font-size: 1.125rem }
     }
@@ -247,12 +245,12 @@ h1, h2, h3, h4, h5, p, a  {
   & h1 { 
     color: var(--primary-text-color); 
     margin-bottom: 1rem;
-    line-height: 1;
     @include font-size(2.5rem);
   }
   .post-meta {
     color: var(--secondary-text-color);
     font-size: 1.125rem;
+    @include respond-to(phone) { font-size: 1rem; }
   }
 }
 .post-thumbnail {
