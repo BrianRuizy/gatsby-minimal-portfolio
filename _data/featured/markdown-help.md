@@ -47,11 +47,12 @@ Strikethrough: ~~This is striked through text~~
 
 ## Blockquotes
 
-> Let’s have a toast for the dou*hebags.
-> Let’s have a toast for the as*holes.
-> Let’s have a toast for the sc*mbags.
-> Everyone of them that I know
-Kanye West
+> Let’s have a toast for the dou\*hebags.
+> Let’s have a toast for the as\*holes.
+> Let’s have a toast for the sc\*mbags.
+> Everyone of them that I know.
+
+-Kanye West
 
 ## Lists
 
@@ -99,7 +100,6 @@ example `print('hello')`
 ### Code block + Syntax highlighting
 
 ```py
-
 def fibonacci(num):
   num1 = 0
   num2 = 1
