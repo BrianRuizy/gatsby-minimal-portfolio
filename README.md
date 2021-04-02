@@ -23,7 +23,8 @@
 </p>
 </div>
 
-![mockup](https://user-images.githubusercontent.com/23439187/113368703-1cbaa880-9325-11eb-9562-1eea9453887f.png)
+![dribbble tablet peri](https://user-images.githubusercontent.com/23439187/113445071-bda77300-93ba-11eb-91dc-60478af663f7.png)
+
 
 
 ## Features
@@ -96,5 +97,3 @@ This site's Web design was made possible thanks to these awesome packages / plug
 | UI element(s) | [react-bottom-drawer](https://www.npmjs.com/package/react-bottom-drawer) |
 | Icons | [react-icons](https://react-icons.github.io/react-icons/) |
 | Fonts | [google-fonts](https://fonts.google.com/), [rfs](https://github.com/twbs/rfs) |
-  
-![Uploading image.png…]()
