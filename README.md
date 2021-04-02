@@ -23,9 +23,8 @@
 </p>
 </div>
 
-<p align="center">
-  <img align="center" src="https://user-images.githubusercontent.com/23439187/112791552-66567b00-9027-11eb-8cb9-4739b745abf6.gif" width="95%">
-</p>
+![mockup](https://user-images.githubusercontent.com/23439187/113368703-1cbaa880-9325-11eb-9562-1eea9453887f.png)
+
 
 ## Features
 
@@ -67,7 +66,7 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 
 Using this portfolio website and adding your own content is super simple! Add your respective project markdown-file to the `_data` folder, and Gatsby + GraphQL + Remark does the rest of the work rendering the markdown file to html. Same applies for site metadata, add your own content to `site-meta-data.json`.
 
-![remark](https://user-images.githubusercontent.com/23439187/112764581-c836c680-8fce-11eb-9c45-cd1ba9b7fb91.png)
+![image](https://user-images.githubusercontent.com/23439187/113368846-568baf00-9325-11eb-8212-33f8473e9236.png)
 See [_data/readme.md](https://github.com/BrianRuizy/gatsby-minimal-portfolio/blob/master/_data/readme.md) for examples on .md syntax, or [brianruizy.com/markdown-help/](https://brianruizy/markdown-help).
 
 ## Deployment
@@ -98,3 +97,4 @@ This site's Web design was made possible thanks to these awesome packages / plug
 | Icons | [react-icons](https://react-icons.github.io/react-icons/) |
 | Fonts | [google-fonts](https://fonts.google.com/), [rfs](https://github.com/twbs/rfs) |
   
+![Uploading image.png…]()
