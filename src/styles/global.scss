@@ -203,6 +203,7 @@ h1, h2, h3, h4, h5, p, a  {
       color: var(--secondary-color);
       border-left: .25em solid var(--tertiary-color);
       p { 
+        font-weight: 200;
         font-size: 1.125rem;
         @include respond-to(phone) { font-size: 1rem}
       }
@@ -212,6 +213,7 @@ h1, h2, h3, h4, h5, p, a  {
       color: var(--secondary-color);
       text-align: center;
       font-size: 1.125rem;
+      font-weight: 200;
       @include respond-to(phone) { font-size: 1rem}
     }
   }
@@ -269,11 +271,9 @@ h1, h2, h3, h4, h5, p, a  {
   ;
   @include respond-to(tablet) { 
     min-height: 26rem; 
-    box-shadow: none;
-
   }
   @include respond-to(phone) { 
-    min-height: 16rem;
+    min-height: 18rem;
     margin: 1rem 0 6rem 0;
     padding: 0;
   }
@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-header {
     font-weight: 200;
-    color: var(--secondary-color); 
+    color: var(--secondary-text-color); 
     background-color: inherit;
     border-bottom: none;
     padding: 0 0 1rem 0;
