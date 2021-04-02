@@ -270,7 +270,8 @@ h1, h2, h3, h4, h5, p, a  {
    rgba(0, 0, 0, 0.40) 0px 18px 36px -18px
   ;
   @include respond-to(tablet) { 
-    min-height: 26rem; 
+    min-height: 26rem;
+    box-shadow: none; 
   }
   @include respond-to(phone) { 
     min-height: 18rem;
