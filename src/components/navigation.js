@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "gatsby"
+import { useStaticQuery, Link } from "gatsby"
 import ThemeChanger from "../components/themeChanger"
 import BottomDrawer from "../components/bottomDrawer"
 
@@ -28,6 +28,17 @@ const buttons = [{
 }]
 
 const Navigation = (props) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          home {
+            name
+          }
+        }
+      }
+    }
+  `)
 	return (
     <div>
       {/* top bar */}
@@ -39,11 +50,13 @@ const Navigation = (props) => {
             width="30"
             height="30"
             className="d-inline-block align-top mr-2"
-          />Brian Ruiz
+          />{ data.site.siteMetadata.home.name }
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
+          <a href="https://www.linkedin.com/in/brianruizy/">LinkedIn</a>
+          <a href="https://github.com/BrianRuizy/">GitHub</a>
           <Link to="/about">About</Link>
-          <BottomDrawer/>
+          <div className="btn btn-primary ml-2"><BottomDrawer/></div>
         </Navbar.Collapse>
       </Navbar>
 
