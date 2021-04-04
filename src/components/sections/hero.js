@@ -6,7 +6,7 @@ import Resume from "../../../static/Brian-Ruiz-Resume.pdf"
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
-import { FaFileDownload } from 'react-icons/fa'
+import { FiDownload } from 'react-icons/fi'
 
 
 var hour = new Date().getHours();
@@ -48,8 +48,8 @@ export default () => (
         </h1>
         <p>{data.site.siteMetadata.home.summary}</p>
         <div className="cta">
-          <Link to="/about"><Button variant="primary" className="mr-2">About me</Button></Link>
-          <a href={Resume}><Button variant="light"><FaFileDownload className="mr-1"/>Resume</Button></a>
+          <Link to="/about"><Button variant="light" className="mr-3">About me</Button></Link>
+          <a href={Resume}><Button variant="light"><FiDownload className="mr-1"/>Resume</Button></a>
         </div>
       </Container>      
     )}

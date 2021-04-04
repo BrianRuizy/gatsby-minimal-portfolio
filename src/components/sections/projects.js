@@ -34,7 +34,7 @@ const Projects = () => {
   return( 
     <Container style={{ "marginTop": "12rem" }}>
       <div className="projects-header">
-        <h4>Miscellaneous &darr;</h4>
+        <h4>Miscellaneous</h4>
         <p>Other notable small projects</p>
       </div>
       <Row>
@@ -57,7 +57,7 @@ const Projects = () => {
               <Card.Text>{node.excerpt}</Card.Text>
               <div className="badges">
               { node.frontmatter.tags.map((tag, index) =>
-                <Badge key={index} variant="secondary">{tag}</Badge>
+                <Badge key={index} variant="secondary">#{tag}</Badge>
               )}
             </div>
             </Card.Body>

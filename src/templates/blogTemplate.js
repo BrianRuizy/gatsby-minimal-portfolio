@@ -31,7 +31,7 @@ export default function Template({
           <Jumbotron>
             <div className="badges">
               { frontmatter.tags.map((tag, index) =>
-                <Badge key={index} variant="secondary">{tag}</Badge>
+                <Badge key={index} variant="secondary">#{tag}</Badge>
               )}
             </div>
             <h1>{frontmatter.title}</h1>
@@ -73,7 +73,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MM/YYYY")
+        date(formatString: "MMM YYYY")
         path
         name
         title

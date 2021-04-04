@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, p, a  {
   background-color: var(--card-bg);
   text-align: center;
   min-height: 35rem;
-  max-width: 65rem;
+  max-width: 60rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .card-link{ 
     color: var(--primary-color); 
-    @include font-size(1.125rem);
+    @include font-size(1.25rem);
   }
 }
 .card.featured {
@@ -464,7 +464,6 @@ body.light {
 }
 .btn.btn-primary {
   border-radius: 10px;
-  padding: .5rem 1rem;
   border: 2px solid var(--primary-color);
   color: var(--card-bg);
   background: var(--primary-color);
@@ -482,7 +481,6 @@ body.light {
 }
 .btn.btn-light {
   border-radius: 10px;
-  padding: .5rem 1rem;
   border: 2px solid var(--tertiary-color);
   color: var(--secondary-text-color);
   background: var(--tertiary-color);
