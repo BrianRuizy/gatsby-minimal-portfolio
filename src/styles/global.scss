@@ -90,7 +90,6 @@ h1, h2, h3, h4, h5, p, a  {
   }
   .navbar-brand {
     text-decoration: none;
-    font-weight: 700;
     color: var(--primary-text-color);
     &:hover { color: var(--primary-color); }
   }
@@ -133,7 +132,7 @@ h1, h2, h3, h4, h5, p, a  {
 
 .hero-header {
   text-align: center;
-  padding: 10rem 0;
+  padding: 8rem 0;
   h1 {
     font-weight: 800;
     font-size: 2.5rem;
@@ -167,7 +166,7 @@ h1, h2, h3, h4, h5, p, a  {
 .post {
   padding: 0;
   color: var(--secondary-text-color);
-  line-height: 1.55;
+  line-height: 1.65;
   margin: 0 auto;
   img { width: 100%; }
   .container { 
@@ -177,7 +176,7 @@ h1, h2, h3, h4, h5, p, a  {
   .blog-post-content {
     a { color: var(--primary-color); }
     hr { border-top: 2px solid var(--tertiary-color); }
-    img { margin: 2rem auto; }
+    img { margin: 2rem auto }
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
@@ -185,30 +184,25 @@ h1, h2, h3, h4, h5, p, a  {
       @include font-size(2rem);
     }
     h3 {
-      font-weight: 400;
+      font-weight: 700;
       color: var(--primary-text-color);
       margin-top: 1.5rem;
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.125rem;
       @include font-size(1.25rem);
       @include respond-to(phone) { font-size: 1.125rem }
     }
+    ol, ul { padding-left: 1rem; }
     blockquote {
       margin-left: 1rem;
       padding: 0 1em;
-      color: var(--secondary-color);
       border-left: .25em solid var(--tertiary-color);
-      p { 
-        font-weight: 200;
-        font-size: 1.125rem;
-        @include respond-to(phone) { font-size: 1rem}
-      }
+      p { font-weight: 200; }
     }
     figcaption {
-      margin: -3rem auto 2.5rem auto;
-      color: var(--secondary-color);
+      margin: -2.5rem auto 2.5rem auto;
       text-align: center;
       font-size: 1.125rem;
       font-weight: 200;
@@ -260,7 +254,7 @@ h1, h2, h3, h4, h5, p, a  {
   align-content: center;
   position: relative;
   overflow: hidden;
-  margin: 0rem auto 8rem auto;
+  margin: 1rem auto 8rem auto;
   background-origin: content-box;
   box-shadow: 
    rgba(0, 0, 0, 0.20) 0px 30px 60px -10px, 
@@ -272,7 +266,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   @include respond-to(phone) { 
     min-height: 18rem;
-    margin: 0 0 6rem 0;
+    margin: 1rem 0 6rem 0;
     padding: 0;
   }
 }
@@ -327,7 +321,6 @@ h1, h2, h3, h4, h5, p, a  {
   .card-link{ 
     @include font-size(1.25rem);
     color: var(--primary-color); 
-    margin-left: 1.25rem;
   }
 }
 .card.featured {
@@ -551,9 +544,16 @@ body.light {
 // overriding prism.js syntax highlighting 
 .gatsby-highlight {
   font-size: 14px;
-  margin: 0rem 0 2.5rem 0 !important; 
+  margin: -.5rem 0 2.5rem 0 !important; 
   pre[class*="language-"] {
     background: var(--code-bg) !important; 
   }
   .token.operator { color: #F92672; }
+}
+code[class*="language-"], pre[class*="language-"]{
+  font-size: 14px !important;
+  background: var(--code-bg) !important;
+}
+.language-text {
+  padding: .25rem !important;
 }

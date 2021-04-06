@@ -2,7 +2,7 @@
 template: BlogPost
 path: /favours-app
 mockup: /assets/favours/logo.png
-thumbnail: 'https://images.unsplash.com/photo-1569437061241-a848be43cc82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
+thumbnail: 'https://images.unsplash.com/photo-1596079890701-dd42edf0b7d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
 github: https://github.com/favours-io/favours
 date: 2020-07-01
 name: Favours
@@ -14,8 +14,6 @@ tags:
   - REST API
   - Flutter
 ---
-#
-
 ## What is Favours?
 
 My goal is to create a local marketplace application where users post small-jobs (favours) in exchange for cash; currently in **beta**. Favours-io plays out in the domain of collaborative consumption. Need a favour? Or want to make some quick cash committing to a favour? The application aims at bringing local communities together by leveraging local connections you have through existing social networks. Open-source and free.

@@ -13,8 +13,6 @@ tags:
   - Azure
   - Jupyter
 ---
-#
-
 ## About
 
 🥇 **Bump.IT** | *Pothole detection and mapping*,  1st Place winners (tie)<br/>

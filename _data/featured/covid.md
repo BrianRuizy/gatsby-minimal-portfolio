@@ -2,7 +2,7 @@
 template: BlogPost
 path: /covid-dashboard
 mockup: /assets/covid/covid.png
-thumbnail: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80'
+thumbnail: 'https://images.unsplash.com/photo-1601055283742-8b27e81b5553?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2020-12-01
@@ -16,32 +16,16 @@ tags:
   - Plotly
   - Pandas
 ---
-#
 
-Ipsa at odio quia. **Ut repudiandae asperiores hic saepe et hic.** Nobis voluptatem omnis et in. Eligendi eveniet odio incidunt adipisci consectetur aut. Esse neque incidunt voluptatem vitae *rerum maiores*. Minima et reprehenderit est ut temporibus. At provident est rerum vel neque.
-
-Eius a ut est distinctio et. Necessitatibus aut qui natus iure sint consequatur ut. Voluptatem rerum saepe aspernatur tenetur consequuntur necessitatibus consequuntur ea. consequuntur necessitatibus consequuntur ea.
-
-![asdf](https://images.unsplash.com/photo-1601055283742-8b27e81b5553?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80 "image from unsplash")
-<figcaption>This is an image with figure caption</figcaption>
-
-Soluta in molestias ut praesentium explicabo doloribus voluptas. Itaque sed quibusdam sed est qui. Totam quo in et sed vero voluptatem.
-
-Amet ullam doloribus iure tempore reiciendis quo aut doloremque. Consequatur velit minus laudantium corporis nihil. Nemo laboriosam natus dolor ex blanditiis voluptas. Nesciunt quas unde culpa praesentium laudantium accusamus quo voluptas. Ipsum rerum quasi mollitia.
-
-## About
+The goal of this project is not to build *just another dashboard*. But, to focus on collaborative plot ideas, and a mobile friendly UI/UX. Feel free to open an issue requesting a type of plot, table, or any feature for that matter. Join the repo's [Gitter chat](https://gitter.im/ncov-dashboard/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link).
 
 > Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 > At this time, there are no specific vaccines or treatments for COVID-19. The best way to prevent and slow down transmission is be **well informed** about the COVID-19 virus. [who.int](https://www.who.int/health-topics/coronavirus#tab=tab_1)
 
-The goal of this project is not to build *just another dashboard*. But, to focus on collaborative plot ideas, and a mobile friendly UI/UX. Feel free to open an issue requesting a type of plot, table, or any feature for that matter. Join the repo's [Gitter chat](https://gitter.im/ncov-dashboard/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link).
+![covid-2](/assets/covid/covid-2.png)
+<figcaption>Mobile interactive plots</figcaption>
 
 ## Getting Started
-
-### Prerequisites
-
-* Python; [pyenv](https://github.com/pyenv/pyenv) recommended
-* Pip
 
 ### Installing
 
@@ -50,18 +34,6 @@ Get the project up and running locally in just 5 easy steps.
 1. Create a personal [Fork](https://github.com/login?return_to=%2FBrianRuizy%2Fcovid19-dashboard) of this repository.
 
 2. **Clone** the fork with HTTPS, using your local terminal to a preferred location, and **cd** into the project.
-
-```bash
-git clone https://github.com/your_username/covid19-dashboard.git
-
-Cloning into 'covid19-dashboard'...
-remote: Enumerating objects: 113, done.
-remote: Counting objects: 100% (113/113), done.
-remote: Compressing objects: 100% (80/80), done.
-Receiving objects: 100% (2845/2845), 12.52 MiB | 5.21 MiB/s, done.
-
-cd covid19-dashboard/
-```
 
 3. Create your virtual environment, and activate it.
 
@@ -97,7 +69,7 @@ Heroku app is already configured to this repository for *automatic deploys* from
 You can go through all the available datasets by going into the `/processdata` directory, launching a interactive python shell, importing `getdata` file, and calling any function. See below...
 
 ```bash
-cd ~/repos/covid19-dashboard/processdata
+cd covid19-dashboard/processdata
 ```
 
 ```bash

@@ -15,7 +15,6 @@ tags:
   - Docker
 
 ---
-
 Very cool! Our software (E-TRaC) monitored data from multiple energy projects like conventional power plants, to renewables like wind farms, and provided valuable insights to internal asset managers of the company which helped cut from operational costs. I worked directly on automating that data pipeline on AWS EC2 with Flask (Python) framework, pulling data from S3 buckets, processing CSV's files to produce live updating Matplotlib data visualizations. Redesigned apps UI / UX to be cross-platform responsive using Bootstrap and Sass.
 
 ## 1.1

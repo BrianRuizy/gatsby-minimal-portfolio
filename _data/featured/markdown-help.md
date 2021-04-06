@@ -14,15 +14,14 @@ tags:
   - tag 1
   - tag 2
 ---
-#
 
-## Welome to the markdown syntax tutorial 
+## Welome to the markdown syntax tutorial
 
 **WARNING** this page is intended for developers
 
 ## Headings
 
-I don't recommend using **h1** aka **"##"** in .markdown file,
+I don't recommend using **h1** aka **"#"** in .markdown file,
 because **h1** is already used for the blog title.
 
 ## << h2 Heading >>
