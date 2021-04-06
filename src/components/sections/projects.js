@@ -57,7 +57,7 @@ const Projects = () => {
               <Card.Text>{node.excerpt}</Card.Text>
               <div className="badges">
               { node.frontmatter.tags.map((tag, index) =>
-                <Badge key={index} variant="secondary">#{tag}</Badge>
+                <Badge key={index} variant="secondary">{tag}</Badge>
               )}
             </div>
             </Card.Body>
