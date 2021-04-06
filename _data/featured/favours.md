@@ -6,7 +6,7 @@ thumbnail: 'https://images.unsplash.com/photo-1569437061241-a848be43cc82?ixid=MX
 github: https://github.com/favours-io/favours
 date: 2020-07-01
 name: Favours
-title: Creating local marketplace app for small-jobs, and making it as easy as a 'click of a button'.
+title: Developing a local marketplace for small favors.
 category: Application
 description: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
 tags: 
