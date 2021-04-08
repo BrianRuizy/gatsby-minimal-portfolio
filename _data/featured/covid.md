@@ -27,15 +27,10 @@ The goal of this project is not to build *just another dashboard*. But, to focus
 
 ## Getting Started
 
-### Installing
+Get the project installed and running locally in just a couple quicky and easy steps.
+First, create a personal [Fork](https://github.com/login?return_to=%2FBrianRuizy%2Fcovid19-dashboard) of this repository. Then git **Clone** using your local terminal to a preferred location, and **cd** into the project.
 
-Get the project up and running locally in just 5 easy steps.
-
-1. Create a personal [Fork](https://github.com/login?return_to=%2FBrianRuizy%2Fcovid19-dashboard) of this repository.
-
-2. **Clone** the fork with HTTPS, using your local terminal to a preferred location, and **cd** into the project.
-
-3. Create your virtual environment, and activate it.
+1. Create & activate virtual environment
 
 ```bash
 python -m venv env
@@ -44,13 +39,13 @@ source env/bin/activate  # Linux/Mac
 env/Scripts/activate  # Windows
 ```
 
-4. Install dependencies
+2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Run local server, and **DONE**!
+3. Run local server, and **DONE**!
 
 ```bash
 python manage.py runserver
@@ -66,7 +61,7 @@ Quit the server with CONTROL-C.
 Heroku app is already configured to this repository for *automatic deploys* from any push to the **master** branch. Create a pull request containing your respective changes and wait for merge.
 
 ## Reading data locally
-You can go through all the available datasets by going into the `/processdata` directory, launching a interactive python shell, importing `getdata` file, and calling any function. See below...
+You can go through all the available datasets by going into the `/processdata` directory, launching a interactive python shell, importing `getdata` file, and calling any function.
 
 ```bash
 cd covid19-dashboard/processdata

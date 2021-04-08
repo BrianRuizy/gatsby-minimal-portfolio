@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, p, a  {
   .blog-post-content {
     a { color: var(--primary-color); }
     hr { border-top: 2px solid var(--tertiary-color); }
-    img { margin: 2rem auto }
+    img { margin: 2.5rem auto }
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
@@ -190,24 +190,25 @@ h1, h2, h3, h4, h5, p, a  {
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
-      margin-bottom: 1.125rem;
+      margin-bottom: 1.5rem;
       @include font-size(1.25rem);
       @include respond-to(phone) { font-size: 1.125rem }
     }
     ol, ul { padding-left: 1rem; }
     blockquote {
-      margin-left: 1rem;
+      margin: 2.5rem 1rem;
       padding: 0 1em;
       border-left: .25em solid var(--tertiary-color);
       p { font-weight: 200; }
     }
     figcaption {
-      margin: -2.5rem auto 2.5rem auto;
+      margin-top: -3.5rem;
       text-align: center;
       font-size: 1.125rem;
       font-weight: 200;
       @include respond-to(phone) { font-size: 1rem}
     }
+    li { margin-bottom: .5rem; }
   }
   .back-button {
     @include font-size(2rem);
@@ -543,17 +544,16 @@ body.light {
 }
 // overriding prism.js syntax highlighting 
 .gatsby-highlight {
-  font-size: 14px;
-  margin: -.5rem 0 2.5rem 0 !important; 
+  font-size: 16px;
+  margin: -.5rem 0 2rem 0 !important; 
   pre[class*="language-"] {
     background: var(--code-bg) !important; 
   }
   .token.operator { color: #F92672; }
 }
 code[class*="language-"], pre[class*="language-"]{
-  font-size: 14px !important;
+  font-size: 1rem !important;
   background: var(--code-bg) !important;
+  @include respond-to(phone) { font-size: 14px !important; }
 }
-.language-text {
-  padding: .25rem !important;
-}
+.language-text { padding: .25rem !important; }
