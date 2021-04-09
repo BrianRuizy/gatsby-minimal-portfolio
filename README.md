@@ -5,7 +5,7 @@
 <p align="center">
  3rd and latest version of my portfolio <a href="https://brianruizy.com">website</a>,
  modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby JS</a> and hosted smoothly thanks to <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
- </br>Don't forget to leave a star ⭐!
+ </br>Carefully designed to be minimal and content focused. Don't forget to leave a star ⭐!
 </p>
 <p align="center">
    <a href="https://app.netlify.com/sites/brianruizy/deploys" target="_blank">
