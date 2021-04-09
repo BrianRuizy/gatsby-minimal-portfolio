@@ -25,4 +25,8 @@ Assumenda nulla est et est. Nulla optio quibusdam ab repellendus. Rerum in qui c
 
 ### Store locator
 
+![covid-2](/assets/periship/macbook-map.png)
+<figcaption>Service Center Locator</figcaption>
+
+
 Assumenda nulla est et est. Nulla optio quibusdam ab repellendus. Rerum in qui consequatur ea illo exercitationem saepe. Deserunt repellat pariatur consequatur consequatur. Eius eum repellat non ipsum.Alias magnam sit iure numquam. Et id deleniti at autem et. Vero ut aliquam tenetur nesciunt libero ratione mollitia.
