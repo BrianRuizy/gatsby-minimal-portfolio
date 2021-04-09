@@ -19,7 +19,7 @@ else if (hour >= 11 && hour < 17)
 else if (hour >= 17 && hour < 23)
     greet = '🌆 Good evening';
 else if (hour === 23 || hour < 5)
-    greet = '🦉 Hello, night-owl';
+    greet = '🦉 Hi, night owl';
 
 export default () => (
   <StaticQuery

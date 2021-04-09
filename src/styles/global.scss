@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--secondary-text-color);
     display: inline-block;
     max-width: 26rem;
-    line-height: 1.25;
+    line-height: 1.5;
     @include font-size(1.25rem);
     @include respond-to(tablet) { max-width: 26rem; }
     @include respond-to(phone) { 
@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   & .cta .btn {
     font-weight: 400;
+    padding: .5rem 1rem;
     @include font-size(1.125rem);
     @include respond-to(phone) { @include font-size(1rem); }
   }
@@ -271,13 +272,11 @@ h1, h2, h3, h4, h5, p, a  {
     padding: 0;
   }
 }
-
 .card {
   display: grid;
   overflow: hidden;
   border: none;
   border-radius: 5px;
-  line-height: 1.25;
   background-color: var(--card-bg);
   box-shadow: 
     0 2.8px 0.2px rgba(0, 0, 0, 0.005), 
