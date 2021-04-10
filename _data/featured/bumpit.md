@@ -8,7 +8,7 @@ date: 2019-12
 name: Bump.IT
 title: This app got us first place at a Microsoft Azure Hackathon.
 category: Microsoft Hackathon
-description: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B dollar issue of road potholes'
+description: '1st place app leverages the latest of Azure and Machine Learning to aid a $6.4B potholes issue.'
 tags:
   - Azure
   - Jupyter

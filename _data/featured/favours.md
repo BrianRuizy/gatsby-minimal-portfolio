@@ -8,7 +8,7 @@ date: 2020-07-01
 name: Favours
 title: Developing a local marketplace for small favors.
 category: Application
-description: 'A location based marketplace for small-jobs, where users can commit to a posted favour in exchange for cash.'
+description: 'A location based marketplace application for one time small-jobs. Need a favour, give a favour.'
 tags: 
   - Django
   - REST API

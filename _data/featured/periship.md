@@ -4,10 +4,10 @@ path: /periship
 mockup: /assets/periship/mockup.png
 thumbnail: 'https://images.unsplash.com/photo-1565891741441-64926e441838?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80'
 date: 2020-09-14
-name: PeriShip PeriPharma
+name: PeriShip
 title: This customer-facing software is used to support on average 100k weekly shipments.
 category: Enterprise
-description: 'This software is used to support (~100k average) weekly shipments of perishables, pharmaceuticals, and other time sensitive products'
+description: 'This software is used to support thousands of shipments including perishables, pharmaceuticals, and other time sensitive products.'
 tags:
   - Python
   - Django

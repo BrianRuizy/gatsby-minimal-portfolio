@@ -9,7 +9,7 @@ date: 2020-12-01
 name: COVID-19 Dashboard
 title: A powerful yet intuitive COVID-19 analytics dashboard, attracting thousands of users.
 category: Web app
-description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive & clean UI.'
+description: 'Powerful Django web application, tracking real-time coronavirus cases, with an intuitive and clean UI/UX.'
 tags:
   - Python
   - Django

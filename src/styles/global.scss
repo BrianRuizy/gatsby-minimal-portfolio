@@ -325,6 +325,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .card.featured {
   margin-bottom: 30px;
+  width: 100%;
   .card-body {
     line-height: 1.5;
     padding: 3rem 0 3rem 4rem;
@@ -346,6 +347,7 @@ h1, h2, h3, h4, h5, p, a  {
     background: var(--tertiary-color) none repeat scroll 0 0;
     @include respond-to(phone) { margin-left: revert; } 
   }
+  .card-text { max-width: 28rem;}
 }
 .card.projects {
   padding: 2rem;
