@@ -332,7 +332,7 @@ h1, h2, h3, h4, h5, p, a  {
     @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
     @include respond-to(phone){ 
       text-align: center;
-      padding: 3rem 2rem .5rem; 
+      padding: 3rem 2rem 1rem; 
     }
   }
   .card-title {

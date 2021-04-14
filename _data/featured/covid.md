@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /covid-dashboard
-mockup: /assets/covid/covid.png
+mockup: /assets/covid/mockup.png
 thumbnail: 'https://images.pexels.com/photos/3951355/pexels-photo-3951355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
