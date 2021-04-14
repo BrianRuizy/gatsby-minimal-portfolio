@@ -5,7 +5,7 @@ mockup: /assets/covid/covid.png
 thumbnail: 'https://images.pexels.com/photos/3951355/pexels-photo-3951355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
-date: 2020-12-01
+date: 2020-08-01
 name: COVID-19 Dashboard
 title: A powerful yet intuitive COVID-19 analytics dashboard, attracting thousands of users.
 category: Web app
