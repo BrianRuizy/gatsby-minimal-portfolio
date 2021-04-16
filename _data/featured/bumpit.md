@@ -35,3 +35,10 @@ I was responsible to look into ways of plotting our phone GPS data
 ## The result 🥇
 
 Having won the competition, post minimum-viable-product, granted us full access to MS Azure cloud infrastucture. Which we will employ for the future continued development of the application*.
+
+![20191214_085553_2](https://user-images.githubusercontent.com/23439187/114973415-0db81800-9e46-11eb-86af-9b9fa09006ee.jpg)
+![20191214_151801_2](https://user-images.githubusercontent.com/23439187/114973417-0ee94500-9e46-11eb-94d7-55f095da4b46.jpg)
+![20191214_141355](https://user-images.githubusercontent.com/23439187/114971791-b95f6900-9e42-11eb-8c58-b5ebf7907f70.jpg)
+![IMG_20191214_151949](https://user-images.githubusercontent.com/23439187/114971928-05aaa900-9e43-11eb-83ce-326283aef44b.jpg)
+
+
