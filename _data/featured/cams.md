@@ -3,7 +3,7 @@ template: BlogPost
 path: /cams-etrac
 mockup: /assets/cams/cams-etrac.png
 thumbnail: 'https://images.unsplash.com/photo-1467533003447-e295ff1b0435?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
-date: 2019-09-09
+date: 2020-03-01
 name: CAMS E-TRaC
 title: What was it like to develop a fintech energy analytics SaaS? 
 category: Enterprise
@@ -15,7 +15,7 @@ tags:
   - Docker
 
 ---
-Very cool! Our software (E-TRaC) monitored data from multiple energy projects like conventional power plants, to renewables like wind farms, and provided valuable insights to internal asset managers of the company which helped cut from operational costs. I worked directly on automating that data pipeline on AWS EC2 with Flask (Python) framework, pulling data from S3 buckets, processing CSV's files to produce live updating Matplotlib data visualizations. Redesigned apps UI / UX to be cross-platform responsive using Bootstrap and Sass.
+Very cool! Our software (E-TRaC) monitored data fro m multiple energy projects like conventional power plants, to renewables like wind farms, and provided valuable insights to internal asset managers of the company which helped cut from operational costs. I worked directly on automating that data pipeline on AWS EC2 with Flask (Python) framework, pulling data from S3 buckets, processing CSV's files to produce live updating Matplotlib data visualizations. Redesigned apps UI / UX to be cross-platform responsive using Bootstrap and Sass.
 
 ## 1.1
 

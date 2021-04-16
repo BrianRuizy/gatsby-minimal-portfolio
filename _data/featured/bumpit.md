@@ -15,11 +15,13 @@ tags:
 ---
 ## The Challenge
 
-The main objective of the competition revolved around developing innovative solutions for improving the infrastructure of cities. The **[Smart Infrastructure Hackathon](https://www.eventbrite.com/e/smart-infrastructure-hackathon-tickets-76918610635#)** was hosted at The Cannon, in partnership with Microsoft. Thankfully, we had a team of really bright cloud architects for guidance 👍.
+The main objective of the competition revolved around developing innovative solutions for improving the infrastructure of cities. The [Smart Infrastructure Hackathon](https://www.eventbrite.com/e/smart-infrastructure-hackathon-tickets-76918610635#) was hosted at The Cannon, in partnership with Microsoft. Thankfully, we had a team of really bright cloud architects for guidance. 
 
-After brainstorming and juggling several ideas we settled with the issue of road potholes. We found that potholes cost American drivers $6.4 billion dollars per year, that is in both repair and insurance cost's. Additionally, the average price to repair a pothole including labor is about **$30 - $50** per pothole, while the damage that single pothole may cause are up to **$300**/year per vehicle. (2016) [pothole.info](https://www.pothole.info/2016/05/so-many-potholes-so-much-cost/)  Thus the effort to aiding this issue can be extremely cost-effective.
+After brainstorming and juggling several ideas we settled with the issue of road potholes. We found that potholes cost American drivers $6.4 billion dollars per year, that is in both repair and insurance cost's. Additionally, the average price to repair a pothole including labor is about $30 - $50 per pothole, while the damage that single pothole may cause are up to $300/year per vehicle. (2016) [pothole.info](https://www.pothole.info/2016/05/so-many-potholes-so-much-cost/)  Thus the effort to aiding this issue can be extremely cost-effective.
 
 ## Our proposal
+
+The idea of the application to be a simple as possible to prevent road distractions. Therefore, we intended to create an interface that would show a dialog box only when our system predicted there to be a pothole, from there the user would confirm if so.
 
 ### Live Computer Vision
 
@@ -27,7 +29,9 @@ After brainstorming and juggling several ideas we settled with the issue of road
 
 ### Geocoding/Mapping
 
+I was responsible to look into ways of plotting our phone GPS data
 ![hehe](https://raw.githubusercontent.com/BrianRuizy/2019-Microsoft-IoT-hackathon/master/img/geocoding.png)
 
 ## The result 🥇
+
 Having won the competition, post minimum-viable-product, granted us full access to MS Azure cloud infrastucture. Which we will employ for the future continued development of the application*.
