@@ -5,7 +5,7 @@ mockup: /assets/periship/mockup.png
 thumbnail: 'https://images.unsplash.com/photo-1565891741441-64926e441838?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80'
 date: 2020-09-14
 name: PeriShip
-title: This customer-facing software is used to support on average 100k weekly shipments.
+title: This client-facing software is used to support thousands of time-sensitive shipments.
 category: Enterprise
 description: 'This software is used to support thousands of shipments including perishables, pharmaceuticals, and other time sensitive products.'
 tags:
@@ -25,8 +25,7 @@ Assumenda nulla est et est. Nulla optio quibusdam ab repellendus. Rerum in qui c
 
 ### Store locator
 
-![covid-2](/assets/periship/macbook-map.png)
-<figcaption>Service Center Locator</figcaption>
-
-
 Assumenda nulla est et est. Nulla optio quibusdam ab repellendus. Rerum in qui consequatur ea illo exercitationem saepe. Deserunt repellat pariatur consequatur consequatur. Eius eum repellat non ipsum.Alias magnam sit iure numquam. Et id deleniti at autem et. Vero ut aliquam tenetur nesciunt libero ratione mollitia.
+
+![covid-2](/assets/periship/map-dark.png)
+<figcaption>Service Center Locator</figcaption>

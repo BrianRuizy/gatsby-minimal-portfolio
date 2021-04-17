@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, p, a  {
   .blog-post-content {
     a { color: var(--primary-color); }
     hr { border-top: 2px solid var(--tertiary-color); }
-    img { margin: 2.5rem auto }
+    li { margin-bottom: .5rem; }
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
@@ -209,7 +209,11 @@ h1, h2, h3, h4, h5, p, a  {
       font-weight: 200;
       @include respond-to(phone) { font-size: 1rem}
     }
-    li { margin-bottom: .5rem; }
+    img { 
+      margin: 2.5rem auto;
+      background: var(--tertiary-color);
+      border-radius: 10px;
+    }
   }
   .back-button {
     @include font-size(2rem);
@@ -365,12 +369,8 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .projects-header {
   text-align: center;
-  margin-bottom: 1rem; 
-  p { color: var(--secondary-color); }
-  h4 { 
-    margin-bottom: 0;
-    color: var(--secondary-text-color) 
-  }
+  margin-bottom: 1.125rem; 
+  color: var(--secondary-color);
 }
 .site-footer {
   font-size: 1.125rem;

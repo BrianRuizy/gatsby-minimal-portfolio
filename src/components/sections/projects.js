@@ -34,8 +34,7 @@ const Projects = () => {
   return( 
     <Container style={{ "marginTop": "12rem" }}>
       <div className="projects-header">
-        <h4>Miscellaneous</h4>
-        <p>Other notable small projects</p>
+        <p>Other small noteworthy projects &darr;</p>
       </div>
       <Row>
       {data.allMarkdownRemark.edges.map(({ node }) => ( 
