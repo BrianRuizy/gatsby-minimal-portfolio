@@ -22,8 +22,11 @@ The goal of this project is not to build *just another dashboard*. But, to focus
 > Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 > At this time, there are no specific vaccines or treatments for COVID-19. The best way to prevent and slow down transmission is be **well informed** about the COVID-19 virus. [who.int](https://www.who.int/health-topics/coronavirus#tab=tab_1)
 
-![covid-2](/assets/covid/covid-2.png)
-<figcaption>Mobile interactive plots</figcaption>
+![covid-2](/assets/covid/covid-dashboard-3-devices.png)
+<figcaption>Mobile-first designed interactive UI</figcaption>
+
+![covid-2](/assets/covid/covid-dashboard-tab.png)
+<figcaption>Though of course it's responsive!</figcaption>
 
 ## Getting Started
 
