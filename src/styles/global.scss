@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, p, a  {
     h3 {
       font-weight: 700;
       color: var(--primary-text-color);
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
@@ -553,22 +553,30 @@ body.light {
   .token.operator { color: #F92672; }
 }
 code[class*="language-"], pre[class*="language-"]{
-  font-size: 1rem !important;
   background: var(--code-bg) !important;
+  font-size: 1rem !important;
   @include respond-to(phone) { font-size: 14px !important; }
 }
 .language-text { padding: .25rem !important; }
 // tables
-table { margin: 1rem 0 3rem; }
+table {
+  margin: 2rem 0; 
+  overflow-x: scroll;
+  display: block;
+}
 th, td {
   padding: 8px;
   text-align: left;
+  font-size: 1rem !important;
+  @include respond-to(phone) { font-size: 14px !important; }
 }
 th {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-bottom: 3px solid var(--primary-text-color);
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  background-color: var(--code-bg);
+  color: #f1f1f1;
+  border-bottom: 3px solid var(--secondary-text-color);
 }
 tr { color: var(--secondary-text-color);}
 tr:nth-child(even) {background-color: var(--tertiary-color);} 
-tr:hover {background-color: #c9c9c9;} 
+tr:hover {background-color: #dddddd;} 
