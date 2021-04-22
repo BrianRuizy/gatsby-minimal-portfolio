@@ -558,3 +558,17 @@ code[class*="language-"], pre[class*="language-"]{
   @include respond-to(phone) { font-size: 14px !important; }
 }
 .language-text { padding: .25rem !important; }
+// tables
+table { margin: 1rem 0 3rem; }
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-bottom: 3px solid var(--primary-text-color);
+}
+tr { color: var(--secondary-text-color);}
+tr:nth-child(even) {background-color: var(--tertiary-color);} 
+tr:hover {background-color: #c9c9c9;} 
