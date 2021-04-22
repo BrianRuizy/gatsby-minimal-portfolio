@@ -56,7 +56,7 @@ const Navigation = (props) => {
           <a href="https://www.linkedin.com/in/brianruizy/">LinkedIn</a>
           <a href="https://github.com/BrianRuizy/">GitHub</a>
           <Link to="/about">About</Link>
-          <div className="btn btn-primary ml-2"><BottomDrawer/></div>
+          <BottomDrawer/>
         </Navbar.Collapse>
       </Navbar>
 

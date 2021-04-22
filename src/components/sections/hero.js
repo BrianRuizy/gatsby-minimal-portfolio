@@ -49,7 +49,7 @@ export default () => (
         <p>{data.site.siteMetadata.home.summary}</p>
         <div className="cta">
           <Link to="/about"><Button variant="light" className="mr-3">About me</Button></Link>
-          <a href={Resume}><Button variant="light"><FiDownload className="mr-1"/>Resume</Button></a>
+          <a href={Resume}><Button variant="primary"><FiDownload className="mr-1"/>Resume</Button></a>
         </div>
       </Container>      
     )}

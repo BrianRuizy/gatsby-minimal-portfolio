@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, p, a  {
     h3 {
       font-weight: 700;
       color: var(--primary-text-color);
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       @include font-size(1.25rem);      
     }
     p, ul, ol { 

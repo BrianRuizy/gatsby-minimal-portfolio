@@ -15,7 +15,7 @@ export default function App() {
   return (
   <div className="bottom-drawer">
     <FiMessageSquare className="icon message d-md-block d-lg-none" onClick={openDrawer}></FiMessageSquare>
-    <a className="d-none d-lg-block " onClick={openDrawer} style={{ color: 'var(--card-bg)' }}>Contact</a>
+    <a className="d-none d-lg-block " onClick={openDrawer} style={{ color: 'var(--primary-text-color)' }}>Contact</a>
     <div className="drawer">
       <Drawer
         duration={250}
