@@ -15,7 +15,7 @@ tags:
 ---
 ## The Challenge
 
-The main objective of the competition revolved around developing innovative solutions for improving the infrastructure of cities. The [Smart Infrastructure Hackathon](https://www.eventbrite.com/e/smart-infrastructure-hackathon-tickets-76918610635#) was hosted at The Cannon, in partnership with Microsoft. Thankfully, we had a team of really bright cloud architects for guidance. 
+The main objective of the competition revolved around developing innovative solutions for improving the infrastructure of cities. The [Smart Infrastructure Hackathon](https://www.eventbrite.com/e/smart-infrastructure-hackathon-tickets-76918610635#) was hosted at The Cannon, in partnership with Microsoft. Thankfully, we had a team of really bright cloud architects for guidance.
 
 After brainstorming and juggling several ideas we settled with the issue of road potholes. We found that potholes cost American drivers $6.4 billion dollars per year, that is in both repair and insurance cost's. Additionally, the average price to repair a pothole including labor is about $30 - $50 per pothole, while the damage that single pothole may cause are up to $300/year per vehicle. (2016) [pothole.info](https://www.pothole.info/2016/05/so-many-potholes-so-much-cost/)  Thus the effort to aiding this issue can be extremely cost-effective.
 
@@ -44,4 +44,3 @@ Having won the competition, post minimum-viable-product, granted us full access 
 
 ![IMG_20191214_151949](https://user-images.githubusercontent.com/23439187/114971928-05aaa900-9e43-11eb-83ce-326283aef44b.jpg)
 <figcaption>Our winning team!</figcaption>
-

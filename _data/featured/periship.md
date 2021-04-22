@@ -14,8 +14,7 @@ tags:
   - AWS
   - MongoDB
 ---
-Contributing, in full-stack approach, to agile development of Django (Python) web
-applications, tracking ~100k wkly shipments. Develop efficient and scalable ORM algorithms on class-based views to query and interact with MongoDB based models. Integrated AJAX with various SPA's to asynchronously perform HTTP requests.Design, and test dynamic front-end components with jQuery, Vue.js and BS4
+Currently I'm working as a Software Engineer with PeriShip, and contributing to various Django projects, ranging from IT to client-facing web applications. Here I've been able to design and develop with a more full stack approach, for instance writing and working with REST API services, and consuming with more modern front-end frameworks  like React, Vue.JS, and working with AJAX for asynchronous SPA's single page applications.
 
 ## My contributions
 
