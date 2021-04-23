@@ -181,13 +181,13 @@ h1, h2, h3, h4, h5, p, a  {
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
-      margin: 3.5rem auto 1rem auto;
+      margin: 4rem auto 1rem auto;
       @include font-size(2rem);
     }
     h3 {
       font-weight: 700;
       color: var(--primary-text-color);
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
@@ -203,16 +203,16 @@ h1, h2, h3, h4, h5, p, a  {
       p { font-weight: 200; }
     }
     figcaption {
-      margin: -3.5rem auto 3rem;
       text-align: center;
       font-size: 1.125rem;
       font-weight: 200;
-      @include respond-to(phone) { font-size: 1rem}
+      margin: -3.5rem auto 3rem;
+      @include respond-to(phone) { font-size: 1rem; }
     }
     img { 
       margin: 2.5rem auto;
       background: var(--tertiary-color);
-      border-radius: 10px;
+      border-radius: 5px;
     }
   }
   .back-button {
@@ -560,9 +560,10 @@ code[class*="language-"], pre[class*="language-"]{
 .language-text { padding: .25rem !important; }
 // tables
 table {
-  margin: 2rem 0; 
   overflow-x: scroll;
   display: block;
+  margin: 2rem auto;
+  @include respond-to(phone){ margin: 2rem auto; }
 }
 th, td {
   padding: 8px;
@@ -574,8 +575,8 @@ th {
   position: sticky;
   top: 0; /* Don't forget this, required for the stickiness */
   background-color: var(--code-bg);
-  color: #f1f1f1;
-  border-bottom: 3px solid var(--secondary-text-color);
+  color: #d4d4d4;
+  border-bottom: 3px solid var(--secondary-color);
 }
 tr { color: var(--secondary-text-color);}
 tr:nth-child(even) {background-color: var(--tertiary-color);} 
