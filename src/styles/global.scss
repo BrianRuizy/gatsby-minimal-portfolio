@@ -40,7 +40,6 @@ body.light {
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
   --site-header: var(--background);
   --card-bg: #fff;
-  --link-color: #057ae0;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
   --code-bg: #313437;
@@ -56,7 +55,6 @@ body.dark {
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #2b2b31);
   --site-header: var(--background);
   --card-bg: #212124;
-  --link-color: #90b3f4;
   --bottom-nav-bg: #323236;
   --code-bg: #212124;
   --translucent: rgba(29,29,31,0.9);
@@ -562,11 +560,11 @@ code[class*="language-"], pre[class*="language-"]{
 table {
   overflow-x: scroll;
   display: block;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   @include respond-to(phone){ margin: 2rem auto; }
 }
 th, td {
-  padding: 8px;
+  padding: 4px 8px;
   text-align: left;
   font-size: 1rem !important;
   @include respond-to(phone) { font-size: 14px !important; }
@@ -574,10 +572,9 @@ th, td {
 th {
   position: sticky;
   top: 0; /* Don't forget this, required for the stickiness */
-  background-color: var(--code-bg);
-  color: #d4d4d4;
-  border-bottom: 3px solid var(--secondary-color);
+  background-color: var(--tertiary-color);
+  color: var(--primary-text-color);
 }
 tr { color: var(--secondary-text-color);}
-tr:nth-child(even) {background-color: var(--tertiary-color);} 
-tr:hover {background-color: #dddddd;} 
+tr:nth-child(even) {background-color: var(--translucent);} 
+tr:hover {background-color: var(--secondary-color);} 
