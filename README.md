@@ -41,6 +41,11 @@
 
 Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) and [Gatsby CLI](https://www.gatsbyjs.com/docs/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). See Gatsby's [Development Environment Setup](https://www.gatsbyjs.com/docs/tutorial/part-zero/) documentation for more details or issues with initial project installation.
 
+```bash
+nvm install 13
+nvm use 13
+```
+
 1. **Install Project**
 
     Create new site using `gastby new` command. This command will also install the project dependencies.
