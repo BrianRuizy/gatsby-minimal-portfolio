@@ -44,6 +44,8 @@ Prerequisites include [Node.JS v13](https://www.gatsbyjs.com/docs/tutorial/part-
 ```bash
 nvm install 13
 nvm use 13
+
+npm install -g gatsby-cli
 ```
 
 1. **Install Project**
