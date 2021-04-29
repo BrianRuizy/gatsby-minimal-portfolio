@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, p, a  {
     h2 { 
       font-weight: 700;
       color: var(--primary-text-color);
-      margin: 4rem auto 1rem auto;
+      margin: 5rem auto 1rem auto;
       @include font-size(2rem);
     }
     h3 {
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, p, a  {
       @include font-size(1.25rem);      
     }
     p, ul, ol { 
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       @include font-size(1.25rem);
       @include respond-to(phone) { font-size: 1.125rem }
     }
