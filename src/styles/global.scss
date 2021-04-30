@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .container { 
   margin: 8rem auto;
+  max-width: 1200px;
   @include respond-to(tablet){ margin: 4rem auto 5rem auto; }
   @include respond-to(phone){ margin: 2rem auto 4rem auto; }
 }
@@ -169,7 +170,7 @@ h1, h2, h3, h4, h5, p, a  {
   margin: 0 auto;
   img { width: 100%; }
   .container { 
-    max-width: 768px; 
+    max-width: 900px; 
     margin-bottom: 0rem;
   }
   .blog-post-content {
@@ -249,8 +250,8 @@ h1, h2, h3, h4, h5, p, a  {
 .post-thumbnail {
   background-color: var(--card-bg);
   text-align: center;
-  min-height: 35rem;
-  max-width: 60rem;
+  min-height: 45rem;
+  max-width: 70rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
