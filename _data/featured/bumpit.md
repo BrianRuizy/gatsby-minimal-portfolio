@@ -23,7 +23,7 @@ After juggling several ideas we settled with the issue of road potholes. We foun
 
 The idea of the application to be a simple as possible to minimize driving distractions. Therefore, we intended to create an interface that would show a dialog box only when our system predicted there to be a pothole, from there the user would confirm if so. Also, we designed for a 2-layer confirmation of a road pothole, one by the active camera, and secondly using either the user's phone telemetry data.
 
-## 1. Analyzing Mobile Data
+## Analyzing Mobile Data
 
 Every modern smartphone is equipped with very accurate telemetry systems. For instance the GPS and accelerometer, which we leveraged for location and to track any abrupt movement indicating a pothole on the road. One of the difficulties with this approach was that logging every high acceleration movement may result in false positives of a road pothole.
 
@@ -38,13 +38,13 @@ Every modern smartphone is equipped with very accurate telemetry systems. For in
 ![accelerometer data](assets/bumpit/fig1.svg)
 <figcaption>Smartphone accelerometer data</figcaption>
 
-## 2. Live Computer Vision
+## Live Computer Vision
 
 This part was a little more difficult, but this was our second layer for prediction of potholes, implementation done with some guidance from the MS architects. We used Azure Logic Apps to import our road image frames to the cloud, and with OpenCV where able to register a model to start analyzing our content with the conveniently named Azure microservice [Computer Vision](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/).
 
 ![dashcam](https://raw.githubusercontent.com/BrianRuizy/2019-Microsoft-IoT-hackathon/master/img/pothole-computervision.gif)
 
-## 3. Geocoding / Mapping
+## Geocoding / Mapping
 
 Finally we needed to actually plot our GPS data so the city could take action. Our collected data included latitude, longitude, altitude and location accuracy. Location accuracy is important to pinpoint multiple occurrences of the same pothole from different users.
 

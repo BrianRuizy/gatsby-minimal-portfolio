@@ -36,12 +36,10 @@ const AboutPage = ({
         <Row>
           <Col md={9}>
             <h2>
-            About me
 
             </h2>
           </Col>
           <Col md={3}>
-            <p> skills</p>
             
           </Col>
         </Row>

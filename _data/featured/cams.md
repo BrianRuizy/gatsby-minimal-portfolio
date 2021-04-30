@@ -16,12 +16,12 @@ tags:
 
 ---
 
-Our software (E-TRaC) monitored terabytes of real-time and forecasted data such as **system conditions** and **price reports** from multiple energy projects like conventional power plants, to renewable energy sources like wind farms. The goal of the platform was to effectively consolidate all the data that was being collected and have the available data visualizations at any given moment. This was very valuable at providing insights to the clients of the company, and internal asset managers who could use it for statistical analysis. 
+Our software (E-TRaC) monitored terabytes of real-time and forecasted data such as **system conditions** and **price reports** from multiple energy projects like conventional power plants, to renewable energy sources like wind farms. The goal of the platform was to effectively consolidate all the data that was being collected and have the available data visualizations at any given moment. This was found to be very valuable for providing insights into the data to the clients of the company, and internal asset managers who could use it for statistical analysis.
 
-
-![mobile phones mockuo](assets/cams/a32be449-5f55-430d-a39d-d8d8ea13400b.jpeg)
+![Picture with the team](assets/cams/a32be449-5f55-430d-a39d-d8d8ea13400b.jpeg)
 <figcaption>Josh Bryant (Director of Engineering), ME, and Rick Knauth (VP of asset management)</figcaption>
 
+> Brian worked for CAMS over the course of about a year while he was finishing up his studies. We hired him specifically to support the development of a new AWS-hosted application, called CAMS E-TRaC, that we were rolling out to some of our private equity clients. Rick Knauth
 ## Building an analytics data pipeline
 
 I worked hands on with the automated data pipeline for the E-TRaC project. This was my first experience with cloud computing and big-data (most of which came from ERCOT), but I quickly absorbed what it meant to work on AWS EC2 Linux nodes, how to access and store files from scalable AWS S3 buckets, and other tools and services like Docker and SSH. Once our data was processed and cleaned with defined Pandas + NumPy fuctions(s), the site would then render matplotlib based data visualizations onto the respective Flask web applications. And, all of this was being continuously repeated and updated by the minute.
@@ -38,8 +38,19 @@ I worked hands on with the automated data pipeline for the E-TRaC project. This 
 ![](assets/cams/rtmLmp.png)
 <figcaption>Example of time series data visualization</figcaption>
 
-## UI Redesign
+## Interface Redesign
 
-![mobile phones mockuo](assets/cams/cams-devices.png)
-<figcaption>Mobile interface mockup</figcaption>
+Although our applications were very powerful and provided our clients a great amount of insight into their data, the user interface and overall user-experience left more to be desired. Therefore, outside of my regular office hours, I took the initiative to layout some mockups and wireframing using Figma, and presented them to the lead engineer. After getting the approval I designed and implemented a device responsive grid using Bootstrap. 
 
+> He (Brian) also demonstrated a talent for developing a user interface, by designing and creating a new E-TRaC user-interface that is intuitive, fast, and accessible.  Our customers were very pleased with the interface.
+
+My approach was to create a user experience where all the operations were intuitive and not overwhelming given the large amount of functionality. Considering that an estimated 70% of web traffic comes from mobile devices, this is something that cannot be overseen. A good UI not only gives a good looking website but can also lead to potential customers and increased user satisfaction, along building a positive brand image.
+
+![mobile phones mockuo](assets/cams/cams-phones.png)
+<figcaption>Improved mobile interface, showing login, home page, and plots page.</figcaption>
+
+![mobile phones mockuo](assets/cams/cams-all-devices.png)
+<figcaption>Responsive design across different devices.</figcaption>
+
+![mobile phones mockuo](assets/cams/figma.png)
+<figcaption>Figma design layout</figcaption>
