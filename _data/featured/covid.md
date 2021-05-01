@@ -99,3 +99,7 @@ Date
 * Johns Hopkins University: [CSSE](https://systems.jhu.edu/) 2019-ncov data repository, found [here](https://github.com/CSSEGISandData/COVID-19).
 * Our World in Data: [OWID](https://ourworldindata.org/) GitHub Data repository, found [here](https://github.com/owid/covid-19-data/tree/master/public/data).
 * New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data)
+
+
+![covid-2](/assets/covid/site-visits.png)
+<figcaption>Mobile-first designed interactive UI</figcaption>

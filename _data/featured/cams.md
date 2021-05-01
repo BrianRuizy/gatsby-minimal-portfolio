@@ -18,10 +18,11 @@ tags:
 
 Our software (E-TRaC) monitored terabytes of real-time and forecasted data such as **system conditions** and **price reports** from multiple energy projects like conventional power plants, to renewable energy sources like wind farms. The goal of the platform was to effectively consolidate all the data that was being collected and have the available data visualizations at any given moment. This was found to be very valuable for providing insights into the data to the clients of the company, and internal asset managers who could use it for statistical analysis.
 
+> Brian worked for CAMS over the course of about a year while he was finishing up his studies. We hired him specifically to support the development of a new AWS-hosted application, called CAMS E-TRaC, that we were rolling out to some of our private equity clients. Rick Knauth
+
 ![Picture with the team](assets/cams/a32be449-5f55-430d-a39d-d8d8ea13400b.jpeg)
 <figcaption>Josh Bryant (Director of Engineering), ME, and Rick Knauth (VP of asset management)</figcaption>
 
-> Brian worked for CAMS over the course of about a year while he was finishing up his studies. We hired him specifically to support the development of a new AWS-hosted application, called CAMS E-TRaC, that we were rolling out to some of our private equity clients. Rick Knauth
 ## Building an analytics data pipeline
 
 I worked hands on with the automated data pipeline for the E-TRaC project. This was my first experience with cloud computing and big-data (most of which came from ERCOT), but I quickly absorbed what it meant to work on AWS EC2 Linux nodes, how to access and store files from scalable AWS S3 buckets, and other tools and services like Docker and SSH. Once our data was processed and cleaned with defined Pandas + NumPy fuctions(s), the site would then render matplotlib based data visualizations onto the respective Flask web applications. And, all of this was being continuously repeated and updated by the minute.
