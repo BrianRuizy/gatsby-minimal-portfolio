@@ -17,10 +17,11 @@ tags:
   - Pandas
 ---
 
-The goal of this project is not to build *just another dashboard*. But, to focus on collaborative plot ideas, and a mobile friendly UI/UX. Feel free to open an issue requesting a type of plot, table, or any feature for that matter. Join the repo's [Gitter chat](https://gitter.im/ncov-dashboard/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link).
-
 > Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
-> At this time, there are no specific vaccines or treatments for COVID-19. The best way to prevent and slow down transmission is be **well informed** about the COVID-19 virus. [who.int](https://www.who.int/health-topics/coronavirus#tab=tab_1)
+> At this time [May 2020], there are no specific vaccines or treatments for COVID-19. The best way to prevent and slow down transmission is be **well informed** about the COVID-19 virus. [who.int](https://www.who.int/health-topics/coronavirus#tab=tab_1)
+
+When I started this side project the goal of this project was not to add to the collection of existing COVID-19 dashboards. But, to instead focus on creating an open-source project which encouraged  collaborative to derive some creative and functional ideas. And, that's precisely what this project became; we have contributors from Spain, Poland, India, and various places in the U.S. who came together to create something useful and meaningful. Furthermore, the site has accumulated over 10k visits as shown by web analytics. And, the project is still being maintained and improved upon, thanks to the help of developers.
+
 
 ![covid-2](/assets/covid/covid-dashboard-3-devices.png)
 <figcaption>Mobile-first designed interactive UI</figcaption>
@@ -28,7 +29,21 @@ The goal of this project is not to build *just another dashboard*. But, to focus
 ![covid-2](/assets/covid/covid-dashboard-tab.png)
 <figcaption>Though of course it's responsive!</figcaption>
 
-## Getting Started
+## Attribution
+
+### Technology
+
+This project began with some very simple Python + Pandas private Jupyter notebooks, and the use of [Plotly](https://plotly.com/), "the leading front-end for ML & data science models in Python, R, and Julia." [Django](https://www.djangoproject.com/). But we needed a way for this to be accessible to the public therefore I started using the Django Python web-framework, Django is a high-level Web framework that encourages rapid development and clean, pragmatic design. To bootstrap the initial dashboard grid we used [Appseed](https://appseed.us/) and [Bootstrap 4](https://getbootstrap.com/) to fill-in where we needed custom UI elements.
+
+### Datasets
+
+A large portion of the data we comes from one of the original data repositories tracking COVID-19 cases, Johns Hopkins University: [CSSE](https://github.com/CSSEGISandData/COVID-19) 2019-ncov data repository. Additional data collected from  Our World in Data: [OWID](https://ourworldindata.org/)'s GitHub data [repository](https://github.com/owid/covid-19-data/tree/master/public/data). Lastly, to fill in some requirements we retrieved data for daily cases from New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data).
+
+
+![covid-2](/assets/covid/site-visits.png)
+<figcaption>Web traffic of the site</figcaption>
+
+## Getting Started (for devs)
 
 Get the project installed and running locally in just a couple quicky and easy steps.
 First, create a personal [Fork](https://github.com/login?return_to=%2FBrianRuizy%2Fcovid19-dashboard) of this repository. Then git **Clone** using your local terminal to a preferred location, and **cd** into the project.
@@ -59,10 +74,6 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-## Deployment
-
-Heroku app is already configured to this repository for *automatic deploys* from any push to the **master** branch. Create a pull request containing your respective changes and wait for merge.
-
 ## Reading data locally
 You can go through all the available datasets by going into the `/processdata` directory, launching a interactive python shell, importing `getdata` file, and calling any function.
 
@@ -87,19 +98,6 @@ Date
 [195 rows x 3 columns]
 ```
 
-## Built With
+## Deployment
 
-* [Django](https://www.djangoproject.com/) Django is a high-level Web framework that encourages rapid development and clean, pragmatic design.
-* [Plotly](https://plotly.com/) The leading front-end for ML & data science models in Python, R, and Julia.
-* [Appseed](https://appseed.us/)
-* [Bootstrap](https://getbootstrap.com/)
-
-## Data Sources
-
-* Johns Hopkins University: [CSSE](https://systems.jhu.edu/) 2019-ncov data repository, found [here](https://github.com/CSSEGISandData/COVID-19).
-* Our World in Data: [OWID](https://ourworldindata.org/) GitHub Data repository, found [here](https://github.com/owid/covid-19-data/tree/master/public/data).
-* New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data)
-
-
-![covid-2](/assets/covid/site-visits.png)
-<figcaption>Mobile-first designed interactive UI</figcaption>
+Heroku app is already configured to this repository for *automatic deploys* from any push to the **master** branch. Create a pull request containing your respective changes and wait for merge, where there is also a hybrid of Travis CI and Heroku CI in place for checking and testing changes in pull requests.
