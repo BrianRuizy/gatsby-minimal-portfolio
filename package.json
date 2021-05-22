@@ -8,6 +8,9 @@
     "url": "https://github.com/BrianRuizy/gatsby-minimal-portfolio/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
     "bootstrap": "^4.6.0",
     "gatsby": "^2.21.0",
     "gatsby-plugin-dark-mode": "^1.1.1",
