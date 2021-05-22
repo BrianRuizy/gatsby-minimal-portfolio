@@ -42,8 +42,6 @@ const AboutPage = ({
             <p>{site.siteMetadata.home.role}</p>
           </Col>
         </Row>
-      </Container>
-      <Container>
         <Row>
           <Col xs={12} md={6}>
             <div
