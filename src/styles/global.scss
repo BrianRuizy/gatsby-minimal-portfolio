@@ -173,53 +173,56 @@ h1, h2, h3, h4, h5, p, a  {
     max-width: 900px; 
     margin-bottom: 0rem;
   }
-  .blog-post-content {
-    a { color: var(--primary-color); }
-    hr { border-top: 2px solid var(--tertiary-color); }
-    li { margin-bottom: .5rem; }
-    h2 { 
-      font-weight: 700;
-      color: var(--primary-text-color);
-      margin: 4.5rem auto 1rem auto;
-      @include font-size(2rem);
-    }
-    h3 {
-      font-weight: 700;
-      color: var(--primary-text-color);
-      margin-top: 3rem;
-      @include font-size(1.25rem);      
-    }
-    p, ul, ol { 
-      margin-bottom: 1.75rem;
-      @include font-size(1.25rem);
-      @include respond-to(phone) { font-size: 1.125rem }
-    }
-    ol, ul { padding-left: 1rem; }
-    blockquote {
-      margin: 2.5rem 1rem;
-      padding: 0 1em;
-      border-left: .25em solid var(--tertiary-color);
-      p { font-weight: 200; }
-    }
-    figcaption {
-      text-align: center;
-      font-size: 1.125rem;
-      font-weight: 200;
-      margin: -3.5rem auto 3rem;
-      @include respond-to(phone) { font-size: 1rem; }
-    }
-    img { 
-      margin: 2.5rem auto;
-      background: var(--tertiary-color);
-      border-radius: 8px;
-    }
-  }
   .back-button {
     @include font-size(2rem);
     color: var(--primary-color);
     transition: $theme-transition;
   }
   .container-fluid { padding: 0; }
+}
+.blog-post-content {
+  a { color: var(--primary-color); }
+  hr { border-top: 2px solid var(--tertiary-color); }
+  li { margin-bottom: .5rem; }
+  h2 { 
+    font-weight: 700;
+    color: var(--primary-text-color);
+    margin: 4.5rem auto 1rem auto;
+    @include font-size(2rem);
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h3 {
+    font-weight: 700;
+    color: var(--primary-text-color);
+    margin-top: 3rem;
+    @include font-size(1.25rem);      
+  }
+  p, ul, ol { 
+    margin-bottom: 1.75rem;
+    @include font-size(1.25rem);
+    @include respond-to(phone) { font-size: 1.125rem }
+  }
+  ol, ul { padding-left: 1rem; }
+  blockquote {
+    margin: 2.5rem 1rem;
+    padding: 0 1em;
+    border-left: .25em solid var(--tertiary-color);
+    p { font-weight: 200; }
+  }
+  figcaption {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 200;
+    margin: -3.5rem auto 3rem;
+    @include respond-to(phone) { font-size: 1rem; }
+  }
+  img { 
+    margin: 2.5rem auto;
+    background: var(--tertiary-color);
+    border-radius: 8px;
+  }
 }
 .badges{ margin: .5rem 0 }
 .badge {

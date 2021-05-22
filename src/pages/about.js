@@ -8,9 +8,18 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
+import Timeline from '@material-ui/lab/Timeline';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import TimelineConnector from '@material-ui/lab/TimelineConnector';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import TimelineDot from '@material-ui/lab/TimelineDot';
+import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
+import Typography from '@material-ui/core/Typography';
+
 const AboutPage = ({
   data: {
-    site
+    site, markdownRemark
   },
 }) => {
   return (
@@ -20,46 +29,111 @@ const AboutPage = ({
         <meta name="description" content={"About page of Brian. " + site.siteMetadata.description} />
       </Helmet>
       <Container className="section about">
-          <div 
-            className="banner" 
+          <div
+            className="banner"
             style={{backgroundImage: `url(https://images.unsplash.com/photo-1614224353251-501960ff5c5c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1629&q=80)`}}
           />
         <Row className="header">
           <Col sm={12} md="auto">
-            <Image roundedCircle src="/assets/portrait.png"></Image>
+            <Image roundedCircle src="/assets/portrait.jpeg"></Image>
           </Col>
           <Col sm={12} md="auto" className="text">
             <h2>{site.siteMetadata.home.name}</h2>
             <p>{site.siteMetadata.home.role}</p>
           </Col>
         </Row>
+      </Container>
+      <Container>
         <Row>
-          <Col md={9}>
-            <h2>
-
-            </h2>
+          <Col xs={12} md={6}>
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+            />
           </Col>
-          <Col md={3}>
-            
+          <Col xs={12} md={6}> 
+            <Timeline align="right">
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography>Hines</Typography>
+                  <Typography color="textSecondary">lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan sollicitudin nunc a tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae bibendum augue. Cras quam nulla, varius nec enim a, tincidunt eleifend dolor. Suspendisse molestie fringilla mauris.</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined"  />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography>Full Stack Developer</Typography>
+                  <Typography color="textSecondary">05/2021 - Present</Typography>
+                </TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography color="textSecondary">Software Engineer</Typography>
+                  <Typography>PeriShip</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined"  />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography>PeriShip</Typography>
+                </TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography color="textSecondary">Python Programmer</Typography>
+                  <Typography>CAMS</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined"  />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography>CAMS</Typography>
+                </TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography color="textSecondary">Coding Teacher</Typography>
+                  <Typography>University of Houston</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined"  />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography>U. of Houston</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
           </Col>
         </Row>
       </Container>
     </Layout>
   )
 }
-export default AboutPage
 export const pageQuery = graphql`
-  query AboutPageQuery{
+query AboutPageQuery{
     site {
-      siteMetadata {
-        title
-        description
-        home {
-          name
-          role
-          location
-        }
+    siteMetadata {
+      title
+      home {
+        location
+        name
+        role
       }
     }
   }
+  markdownRemark(fileAbsolutePath: {regex: "/about/"}) {
+    html
+    frontmatter {
+      tech
+      socials
+    }
+  }
+}
+
 `
+
+export default AboutPage
