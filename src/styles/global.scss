@@ -486,6 +486,7 @@ body.light {
   }
 }
 .about {
+  color: var(--secondary-text-color);
   .banner {
     text-align: center;
     min-height: 275px;
@@ -582,3 +583,15 @@ th {
 tr { color: var(--secondary-text-color);}
 tr:nth-child(even) {background-color: var(--translucent);} 
 tr:hover {background-color: var(--secondary-color);} 
+
+.MuiTimelineContent-root {
+  p {
+    color: var(--primary-text-color);
+    margin: 0;
+  }
+}
+.MuiTypography-body2 {
+  font-weight: 200 !important;
+  font-size: 1rem !important;
+  color: var(--secondary-text-color) !important;
+}

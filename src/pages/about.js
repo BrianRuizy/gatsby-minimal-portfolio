@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import Badge from "react-bootstrap/Badge"
 
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -19,7 +20,7 @@ import Typography from '@material-ui/core/Typography';
 
 const AboutPage = ({
   data: {
-    site, markdownRemark
+    site, markdownRemark, allMarkdownRemark
   },
 }) => {
   return (
@@ -42,68 +43,37 @@ const AboutPage = ({
             <p>{site.siteMetadata.home.role}</p>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12} md={6}>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-            />
+        <Row >
+          <Col xs={12} md={5} className="blog-post-content mb-5">
+            <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
+            <h2>Technologies</h2>
+            <p>The following are some of the langauges or frameworks I've used in either professional environments or hobby side projects.</p>
+            <div className="badges">
+              { markdownRemark.frontmatter.technologies.map((tech, index) =>
+                <Badge key={index} variant="secondary">{tech}</Badge>
+              )}
+            </div>
           </Col>
-          <Col xs={12} md={6}> 
+          <Col xs={12} md={7}>
             <Timeline align="right">
-              <TimelineItem>
-                <TimelineOppositeContent>
-                  <Typography>Hines</Typography>
-                  <Typography color="textSecondary">lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan sollicitudin nunc a tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae bibendum augue. Cras quam nulla, varius nec enim a, tincidunt eleifend dolor. Suspendisse molestie fringilla mauris.</Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined"  />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography>Full Stack Developer</Typography>
-                  <Typography color="textSecondary">05/2021 - Present</Typography>
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineOppositeContent>
-                  <Typography color="textSecondary">Software Engineer</Typography>
-                  <Typography>PeriShip</Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined"  />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography>PeriShip</Typography>
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineOppositeContent>
-                  <Typography color="textSecondary">Python Programmer</Typography>
-                  <Typography>CAMS</Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined"  />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography>CAMS</Typography>
-                </TimelineContent>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineOppositeContent>
-                  <Typography color="textSecondary">Coding Teacher</Typography>
-                  <Typography>University of Houston</Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot variant="outlined"  />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Typography>U. of Houston</Typography>
-                </TimelineContent>
-              </TimelineItem>
+              {allMarkdownRemark.edges.map(({ node }) => (
+                <TimelineItem key={node.id}>
+                  <TimelineOppositeContent>
+                    <Typography>{node.frontmatter.company}</Typography>
+                    <Typography color="textSecondary">
+                      <span dangerouslySetInnerHTML={{ __html: node.html }}></span>
+                    </Typography>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot variant="outlined"/>
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent style={{flex: '.60'}}>
+                  <Typography>{node.frontmatter.role}</Typography>
+                    <Typography color="textSecondary" variant="body2">{node.frontmatter.date}</Typography>
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
             </Timeline>
           </Col>
         </Row>
@@ -126,8 +96,21 @@ query AboutPageQuery{
   markdownRemark(fileAbsolutePath: {regex: "/about/"}) {
     html
     frontmatter {
-      tech
       socials
+      technologies
+    }
+  }
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/experience/"}}) {
+    edges {
+      node {
+        id
+        html
+        frontmatter {
+          role
+          company
+          date(formatString: "MMM. YYYY")
+        }
+      }
     }
   }
 }
