@@ -100,7 +100,7 @@ query AboutPageQuery{
       technologies
     }
   }
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/experience/"}}) {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {fileAbsolutePath: {regex: "/experience/"}}) {
     edges {
       node {
         id
