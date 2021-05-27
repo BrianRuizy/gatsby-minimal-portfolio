@@ -9,6 +9,14 @@ import NavItem from "react-bootstrap/NavItem"
 import { FiHome } from "react-icons/fi"
 import { CgProfile } from "react-icons/cg"
 
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Box from '@material-ui/core/Box';
+import Slide from '@material-ui/core/Slide';
+import IconButton from '@material-ui/core/IconButton';
+
 const tabs = [{
   route: "/",
   icon: FiHome,
@@ -27,6 +35,18 @@ const buttons = [{
   action: <ThemeChanger/>,
 }]
 
+function HideOnScroll(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  )
+}
+
 const Navigation = (props) => {
   const data = useStaticQuery(graphql`
     {
@@ -42,7 +62,7 @@ const Navigation = (props) => {
 	return (
     <div>
       {/* top bar */}
-      <Navbar fixed="top" className="top-nav">
+      {/* <Navbar fixed="top" className="top-nav">
         <Navbar.Brand href="/">
           <img
             alt="BR LOGO"
@@ -58,7 +78,22 @@ const Navigation = (props) => {
           <Link to="/about">About</Link>
           <BottomDrawer/>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar> */}
+      <HideOnScroll {...props}>
+        <AppBar className="top-nav"> 
+          <Toolbar>
+            <img
+              alt="BR LOGO"
+              src="/favicons/apple-touch-icon.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top mr-2"
+            />
+            <Typography variant="h6">{ data.site.siteMetadata.home.name }</Typography>
+            <IconButton>A</IconButton>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
 
       {/* bottom bar */}
       <Navbar className="bottom-nav" fixed="bottom" >
