@@ -9,13 +9,17 @@ import NavItem from "react-bootstrap/NavItem"
 import { FiHome } from "react-icons/fi"
 import { CgProfile } from "react-icons/cg"
 
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
 import Slide from '@material-ui/core/Slide';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 const tabs = [{
   route: "/",
@@ -35,10 +39,22 @@ const buttons = [{
   action: <ThemeChanger/>,
 }]
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(1),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
+
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
-
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
@@ -48,6 +64,19 @@ function HideOnScroll(props) {
 }
 
 const Navigation = (props) => {
+  const classes = useStyles();
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const data = useStaticQuery(graphql`
     {
       site {
@@ -62,35 +91,42 @@ const Navigation = (props) => {
 	return (
     <div>
       {/* top bar */}
-      {/* <Navbar fixed="top" className="top-nav">
-        <Navbar.Brand href="/">
-          <img
-            alt="BR LOGO"
-            src="/favicons/apple-touch-icon.png"
-            width="30"
-            height="30"
-            className="d-inline-block align-top mr-2"
-          />{ data.site.siteMetadata.home.name }
-        </Navbar.Brand>
-        <Navbar.Collapse className="justify-content-end">
-          <a href="https://www.linkedin.com/in/brianruizy/">LinkedIn</a>
-          <a href="https://github.com/BrianRuizy/">GitHub</a>
-          <Link to="/about">About</Link>
-          <BottomDrawer/>
-        </Navbar.Collapse>
-      </Navbar> */}
       <HideOnScroll {...props}>
-        <AppBar className="top-nav"> 
+        <AppBar className="top-nav" color=""> 
           <Toolbar>
-            <img
-              alt="BR LOGO"
-              src="/favicons/apple-touch-icon.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top mr-2"
-            />
-            <Typography variant="h6">{ data.site.siteMetadata.home.name }</Typography>
-            <IconButton>A</IconButton>
+            <IconButton edge="start" component={Link} to="#home" className={classes.menuButton} color="inherit" aria-label="menu">
+              <img alt="BR LOGO" src="/favicons/apple-touch-icon.png" width="30" height="30"/>
+            </IconButton>
+            <Typography variant="h6" color="inherit" className={classes.title}>{ data.site.siteMetadata.home.name }</Typography>          
+            <Button component={Link} to='/about'>About</Button>
+            <Button>Contact</Button>
+            <Button
+                aria-label="Social links"
+                aria-controls="socials-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+              >
+                Socials
+              </Button>
+              <Menu
+                id="socials-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>LinkedIn</MenuItem>
+                <MenuItem onClick={handleClose}>GitHub</MenuItem>
+                <MenuItem onClick={handleClose}>Instagram</MenuItem>
+              </Menu>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
