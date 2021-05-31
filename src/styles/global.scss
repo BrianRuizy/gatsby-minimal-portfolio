@@ -134,10 +134,8 @@ h1, h2, h3, h4, h5, p, a  {
   padding: 8rem 0;
   h1 {
     font-weight: 800;
-    font-size: 2.5rem;
     margin-bottom: 1.25rem;
-    @include respond-to(tablet) { font-size: 2.25rem; }
-    @include respond-to(phone) { font-size: 2rem; }
+    @include font-size(3rem);
   }
   u { 
     text-decoration-color: var(--text-secondary-color);
@@ -147,20 +145,13 @@ h1, h2, h3, h4, h5, p, a  {
     margin-bottom: 1.5rem;
     color: var(--secondary-text-color);
     display: inline-block;
-    max-width: 26rem;
+    max-width: 25rem;
     line-height: 1.5;
-    @include font-size(1.25rem);
-    @include respond-to(tablet) { max-width: 26rem; }
-    @include respond-to(phone) { 
-      max-width: 22rem;
-      @include font-size(1.125rem);
-    }
+    @include font-size(1.5rem);
   }
   & .cta .btn {
     font-weight: 400;
-    padding: .5rem 1rem;
     @include font-size(1.125rem);
-    @include respond-to(phone) { @include font-size(1rem); }
   }
 }
 .post {
@@ -457,34 +448,34 @@ body.light {
     }
   }
 }
-.btn.btn-primary {
-  border-radius: 10px;
-  border: 2px solid var(--primary-color);
-  color: var(--card-bg);
-  background: var(--primary-color);
-  transition: $theme-transition;
-  &:hover, &:active, &:focus {
-    color: var(--primary-color);
-    background: var(--background);
-    border-color: var(--primary-color);
-  }
-}
-.btn.btn-outline-primary {
-  @extend .btn.btn-primary;
-  background-color: transparent;
-  color: var(--primary-color);
-}
-.btn.btn-light {
-  border-radius: 10px;
-  border: 2px solid var(--tertiary-color);
-  color: var(--secondary-text-color);
-  background: var(--tertiary-color);
-  transition: $theme-transition;
-  &:hover, &:active, &:focus {
-    color: var(--primary-text-color);
-    background: var(--background);
-  }
-}
+// .btn.btn-primary {
+//   border-radius: 10px;
+//   border: 2px solid var(--primary-color);
+//   color: var(--card-bg);
+//   background: var(--primary-color);
+//   transition: $theme-transition;
+//   &:hover, &:active, &:focus {
+//     color: var(--primary-color);
+//     background: var(--background);
+//     border-color: var(--primary-color);
+//   }
+// }
+// .btn.btn-outline-primary {
+//   @extend .btn.btn-primary;
+//   background-color: transparent;
+//   color: var(--primary-color);
+// }
+// .btn.btn-light {
+//   border-radius: 10px;
+//   border: 2px solid var(--tertiary-color);
+//   color: var(--secondary-text-color);
+//   background: var(--tertiary-color);
+//   transition: $theme-transition;
+//   &:hover, &:active, &:focus {
+//     color: var(--primary-text-color);
+//     background: var(--background);
+//   }
+// }
 .about {
   color: var(--secondary-text-color);
   .banner {

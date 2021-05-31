@@ -1,12 +1,14 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import {graphql, useStaticQuery } from "gatsby"
 
 import Resume from "../../../static/Brian-Ruiz-Resume.pdf"
 
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from '@material-ui/core/Typography'
+import Container from "@material-ui/core/Container"
+import Button from "@material-ui/core/Button"
 
-import { FiDownload } from 'react-icons/fi'
+import GetAppOutlinedIcon from '@material-ui/icons/GetAppOutlined'
 
 
 var hour = new Date().getHours();
@@ -21,37 +23,49 @@ else if (hour >= 17 && hour < 23)
 else if (hour === 23 || hour < 5)
     greet = '🦉 Hi, night owl';
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query HeadingQuery {
-        site {
-          siteMetadata {
-            home {
-              name
-              username
-              role
-              summary
-              availability
-              location
-            }
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
+
+const Hero = () => {
+  const classes = useStyles();
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          home {
+            username
+            availability
+            role
+            summary
+            location
+            name
           }
         }
       }
-    `}
-    render={data => (
-      <Container className="hero-header">
-        <h1>
-          <span id="greeting">{greet}</span><br></br>
-          I'm @<u>{data.site.siteMetadata.home.username}</u>,<br></br>
-          {data.site.siteMetadata.home.role}
-        </h1>
-        <p>{data.site.siteMetadata.home.summary}</p>
-        <div className="cta">
-          <Link to="/about"><Button variant="light" className="mr-3">About me</Button></Link>
-          <a href={Resume}><Button variant="primary"><FiDownload className="mr-1"/>Resume</Button></a>
-        </div>
-      </Container>      
-    )}
-  />
-)
+    }
+  `)
+  
+  return (
+    <Container className="hero-header">
+      <Typography variant="h1">
+        <span id="greeting">{greet}</span><br></br>
+        I'm @<u>{data.site.siteMetadata.home.username}</u>,<br></br>
+        {data.site.siteMetadata.home.role}
+      </Typography>
+      <Typography variant="body1">
+        {data.site.siteMetadata.home.summary}
+      </Typography>
+      {/* <p>{data.site.siteMetadata.home.summary}</p> */}
+      <div className="cta">
+        <Button variant="contained" color="default" href={Resume} startIcon={<GetAppOutlinedIcon />}>Resume</Button>
+        <Button className={classes.button} variant="contained" color="primary" href="about">About me</Button>
+      </div>
+    </Container>      
+  );
+}
+
+
+export default Hero
