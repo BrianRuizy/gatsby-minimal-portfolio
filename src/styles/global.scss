@@ -75,23 +75,6 @@ h1 { font-weight: 800; }
 h1, h2, h3, h4, h5, p, a  {
   transition: $theme-transition;
 }
-.navbar {
-  background: var(--translucent);
-  border-bottom: 1px solid var(--tertiary-color);
-  .justify-content-end a {
-    font-size: 1.125rem;
-    color: var(--primary-text-color);
-    text-decoration: none;
-    margin: 0 8px 0;
-    &:hover { color: var(--primary-color); }
-    &:last-child { margin-right: 0; }
-  }
-  .navbar-brand {
-    text-decoration: none;
-    color: var(--primary-text-color);
-    &:hover { color: var(--primary-color); }
-  }
-}
 .top-nav {
   @include respond-to(tablet){ visibility: hidden; }
 }
@@ -131,11 +114,13 @@ h1, h2, h3, h4, h5, p, a  {
 
 .hero-header {
   text-align: center;
-  padding: 8rem 0;
+  margin: 12rem 0 10rem;
   h1 {
     font-weight: 800;
     margin-bottom: 1.25rem;
     @include font-size(3rem);
+    @include respond-to(tablet) { font-size: 2.25rem; }
+    @include respond-to(phone) { font-size: 2rem; }
   }
   u { 
     text-decoration-color: var(--text-secondary-color);
@@ -148,6 +133,11 @@ h1, h2, h3, h4, h5, p, a  {
     max-width: 25rem;
     line-height: 1.5;
     @include font-size(1.5rem);
+    @include respond-to(tablet) { max-width: 26rem; }
+    @include respond-to(phone) { 
+      max-width: 22rem;
+      @include font-size(1.125rem);
+    }
   }
   & .cta .btn {
     font-weight: 400;

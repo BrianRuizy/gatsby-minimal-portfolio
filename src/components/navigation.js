@@ -65,7 +65,6 @@ function HideOnScroll(props) {
 
 const Navigation = (props) => {
   const classes = useStyles();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -92,7 +91,7 @@ const Navigation = (props) => {
     <div>
       {/* top bar */}
       <HideOnScroll {...props}>
-        <AppBar className="top-nav" color=""> 
+        <AppBar className="top-nav" color="defaul"> 
           <Toolbar>
             <IconButton edge="start" component={Link} to="#home" className={classes.menuButton} color="inherit" aria-label="menu">
               <img alt="BR LOGO" src="/favicons/apple-touch-icon.png" width="30" height="30"/>
@@ -127,6 +126,7 @@ const Navigation = (props) => {
                 <MenuItem onClick={handleClose}>GitHub</MenuItem>
                 <MenuItem onClick={handleClose}>Instagram</MenuItem>
               </Menu>
+              <ThemeChanger/>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
