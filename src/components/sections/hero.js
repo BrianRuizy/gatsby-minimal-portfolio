@@ -7,7 +7,6 @@ import { makeStyles } from "@material-ui/core/styles"
 import Typography from '@material-ui/core/Typography'
 import Container from "@material-ui/core/Container"
 import Button from "@material-ui/core/Button"
-
 import GetAppOutlinedIcon from '@material-ui/icons/GetAppOutlined'
 
 
@@ -25,7 +24,7 @@ else if (hour === 23 || hour < 5)
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.5),
   },
 }));
 

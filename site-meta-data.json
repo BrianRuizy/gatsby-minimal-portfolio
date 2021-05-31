@@ -8,6 +8,11 @@
     "role": "Software Engineer",
     "summary": "I specialize in Python full-stack development, front-end design, data analytics, cloud computing, and I'm interested in all things technology.",
     "availability": "Open to new opportunities",
-    "location": "Houston, TX"
+    "location": "Houston, TX",
+    "socials": {
+      "LinkedIn": "https://www.linkedin.com/in/brianruizy/",
+      "GitHub": "https://github.com/BrianRuizy",
+      "instagram": "https://instagram/brianruizy"
+    }
   }
 }
