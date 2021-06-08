@@ -58,9 +58,26 @@ const Hero = () => {
         {data.site.siteMetadata.home.summary}
       </Typography>
       {/* <p>{data.site.siteMetadata.home.summary}</p> */}
-      <div className="cta">
-        <Button variant="contained" color="default" href={Resume} startIcon={<GetAppOutlinedIcon />}>Resume</Button>
-        <Button className={classes.button} variant="contained" color="primary" href="about">About me</Button>
+      <div>
+        <Button 
+          size="large" 
+          variant="contained" 
+          color="default" 
+          href={Resume} 
+          startIcon={<GetAppOutlinedIcon/>}
+          disableElevation
+        >
+          Resume
+        </Button>
+        <Button 
+          size="large" 
+          className={classes.button} 
+          variant="contained" 
+          color="primary" 
+          disableElevation
+        >
+          Reach Out
+        </Button>
       </div>
     </Container>      
   );

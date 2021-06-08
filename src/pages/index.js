@@ -7,11 +7,23 @@ import Hero from "../components/sections/hero"
 import Featured from "../components/sections/featured";
 import Projects from "../components/sections/projects"
 
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      "Inter", 
+      "Roboto"
+    ].join(','),
+  },
+});
+
 const IndexPage = ({
   data: { site }
-}) => {
+  }) => {
 
   return (
+    <ThemeProvider theme={theme}>
     <Layout>
       <Helmet>
         <title>{site.siteMetadata.title}</title>
@@ -24,6 +36,7 @@ const IndexPage = ({
       <Featured />
       <Projects />
     </Layout>
+    </ThemeProvider>
   )
 }
 

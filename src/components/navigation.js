@@ -91,19 +91,20 @@ const Navigation = (props) => {
     <div>
       {/* top bar */}
       <HideOnScroll {...props}>
-        <AppBar className="top-nav" color="defaul"> 
+        <AppBar className="top-nav" color="transparent"> 
           <Toolbar>
             <IconButton edge="start" component={Link} to="#home" className={classes.menuButton} color="inherit" aria-label="menu">
               <img alt="BR LOGO" src="/favicons/apple-touch-icon.png" width="30" height="30"/>
             </IconButton>
             <Typography variant="h6" color="inherit" className={classes.title}>{ data.site.siteMetadata.home.name }</Typography>          
-            <Button component={Link} to='/about'>About</Button>
-            <Button>Contact</Button>
+            <Button component={Link} to='/about' color="inherit">About</Button>
+            <Button color="inherit">Contact</Button>
             <Button
                 aria-label="Social links"
                 aria-controls="socials-appbar"
                 aria-haspopup="true"
                 onClick={handleMenu}
+                color="inherit"
               >
                 Socials
               </Button>

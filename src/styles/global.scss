@@ -114,13 +114,14 @@ h1, h2, h3, h4, h5, p, a  {
 
 .hero-header {
   text-align: center;
-  margin: 12rem 0 10rem;
+  margin: 18rem 0 12rem;
+  @include respond-to(phone) { margin: 10rem 0; }
   h1 {
     font-weight: 800;
     margin-bottom: 1.25rem;
-    @include font-size(3rem);
+    @include font-size(2.75rem);
     @include respond-to(tablet) { font-size: 2.25rem; }
-    @include respond-to(phone) { font-size: 2rem; }
+    @include respond-to(phone) { font-size: 2.125rem; }
   }
   u { 
     text-decoration-color: var(--text-secondary-color);
@@ -130,7 +131,7 @@ h1, h2, h3, h4, h5, p, a  {
     margin-bottom: 1.5rem;
     color: var(--secondary-text-color);
     display: inline-block;
-    max-width: 25rem;
+    max-width: 27rem;
     line-height: 1.5;
     @include font-size(1.5rem);
     @include respond-to(tablet) { max-width: 26rem; }
@@ -138,10 +139,6 @@ h1, h2, h3, h4, h5, p, a  {
       max-width: 22rem;
       @include font-size(1.125rem);
     }
-  }
-  & .cta .btn {
-    font-weight: 400;
-    @include font-size(1.125rem);
   }
 }
 .post {
@@ -259,7 +256,7 @@ h1, h2, h3, h4, h5, p, a  {
     padding: 0;
   }
 }
-.card {
+.card  {
   display: grid;
   overflow: hidden;
   border: none;
@@ -288,7 +285,6 @@ h1, h2, h3, h4, h5, p, a  {
   .card-header {
     font-weight: 200;
     color: var(--secondary-text-color); 
-    background-color: inherit;
     border-bottom: none;
     padding: 0 0 1rem 0;
     transition: $theme-transition;
@@ -311,8 +307,12 @@ h1, h2, h3, h4, h5, p, a  {
   }
 }
 .card.featured {
-  margin-bottom: 30px;
-  width: 100%;
+  // margin-bottom: 30px;
+  // width: 100%;
+  .card-title {
+    font-weight: 800;
+    font-size: 2.25rem;
+  }
   .card-body {
     line-height: 1.5;
     padding: 3rem 0 3rem 4rem;
@@ -321,10 +321,6 @@ h1, h2, h3, h4, h5, p, a  {
       text-align: center;
       padding: 3rem 2rem 2rem; 
     }
-  }
-  .card-title {
-    font-weight: 800;
-    font-size: 2.25rem;
   }
   hr {
     width: 10rem;
