@@ -306,32 +306,32 @@ h1, h2, h3, h4, h5, p, a  {
     color: var(--primary-color); 
   }
 }
-.card.featured {
-  // margin-bottom: 30px;
-  // width: 100%;
-  .card-title {
-    font-weight: 800;
-    font-size: 2.25rem;
-  }
-  .card-body {
-    line-height: 1.5;
-    padding: 3rem 0 3rem 4rem;
-    @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
-    @include respond-to(phone){ 
-      text-align: center;
-      padding: 3rem 2rem 2rem; 
-    }
-  }
-  hr {
-    width: 10rem;
-    height: 1px;
-    border: none;
-    margin-left: 0;
-    background: var(--tertiary-color) none repeat scroll 0 0;
-    @include respond-to(phone) { margin-left: revert; } 
-  }
-  .card-text { max-width: 28rem;}
-}
+// .card.featured {
+//   // margin-bottom: 30px;
+//   // width: 100%;
+//   .card-title {
+//     font-weight: 800;
+//     font-size: 2.25rem;
+//   }
+//   .card-body {
+//     line-height: 1.5;
+//     padding: 3rem 0 3rem 4rem;
+//     @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
+//     @include respond-to(phone){ 
+//       text-align: center;
+//       padding: 3rem 2rem 2rem; 
+//     }
+//   }
+//   hr {
+//     width: 10rem;
+//     height: 1px;
+//     border: none;
+//     margin-left: 0;
+//     background: var(--tertiary-color) none repeat scroll 0 0;
+//     @include respond-to(phone) { margin-left: revert; } 
+//   }
+//   .card-text { max-width: 28rem;}
+// }
 .card.projects {
   padding: 2rem;
   .folder { 

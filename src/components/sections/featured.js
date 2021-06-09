@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from "@material-ui/core/Container"
+import Box from '@material-ui/core/Box';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -23,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   card: {
-    margin: theme.spacing(2.5, 'auto'),
     color: 'var(--secondary-text-color)',
     background:'var(--card-bg)',
     '@media (max-width:600px)': {
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '2.25rem',
-    fontWeight: '700',
+    fontWeight: '600',
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
   },
@@ -78,9 +78,8 @@ const Featured = () => {
     }
   `)
   return (
-
     <Container>
-      <Grid container>
+      <Grid container spacing={5}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
 
         <Grid key={node.id} item xs={12}>

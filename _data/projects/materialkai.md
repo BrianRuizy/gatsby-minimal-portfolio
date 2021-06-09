@@ -7,4 +7,4 @@ tags:
     - VS Code
     - 
 ---
-An elegant Hybrid of Material and Monokai. Diligently tweaked to reduce distractions and increase your productivity
+An elegant Hybrid of Material and Monokai. With over 500+ user installations.
