@@ -23,9 +23,11 @@ else if (hour === 23 || hour < 5)
     greet = '🦉 Hi, night owl';
 
 const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1.5),
-  },
+  buttons: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  }
 }));
 
 const Hero = () => {
@@ -43,10 +45,9 @@ const Hero = () => {
             name
           }
         }
-      }
+      } 
     }
   `)
-  
   return (
     <Container className="hero-header">
       <Typography variant="h1">
@@ -57,10 +58,10 @@ const Hero = () => {
       <Typography variant="body1">
         {data.site.siteMetadata.home.summary}
       </Typography>
-      {/* <p>{data.site.siteMetadata.home.summary}</p> */}
-      <div>
+      <div className={classes.buttons}>
         <Button 
           size="large" 
+          className="btn btn-light"
           variant="contained" 
           color="default" 
           href={Resume} 
@@ -71,7 +72,7 @@ const Hero = () => {
         </Button>
         <Button 
           size="large" 
-          className={classes.button} 
+          className="btn btn-primary" 
           variant="contained" 
           color="primary" 
           disableElevation
@@ -82,6 +83,5 @@ const Hero = () => {
     </Container>      
   );
 }
-
 
 export default Hero

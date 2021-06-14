@@ -11,7 +11,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
 
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -29,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width:600px)': {
       textAlign: 'center',
     },
+  },
+  cardContent: {
+    padding: theme.spacing(0, 8), 
+    '@media (max-width:600px)': {
+      padding: theme.spacing(2, 3.5), 
+    }
   },
   subtitle: {
     fontWeight: '200',
@@ -55,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1)
   },
   media: {
-    maxHeight: '425px',
+    maxHeight: '420px',
     '@media (max-width:600px)': {
       maxHeight: '300px',
       marginTop: '16px',
@@ -95,13 +100,12 @@ const Featured = () => {
           <Card className={classes.card}>
           <CardActionArea>
             <Grid container>
-              <Grid item sm={6} xs={12} component={Box} m='auto' px={6}>
-                <CardContent>
+              <Grid item sm={6} xs={12} component={Box} m='auto'>
+                <CardContent className={classes.cardContent}>
                   <Typography className={classes.subtitle}>{node.frontmatter.category} </Typography>
                   <Typography className={classes.title} gutterBottom>{node.frontmatter.name}</Typography>
                   <Typography className={classes.desc} variant="body1" paragraph>{node.frontmatter.description}</Typography>
-                  <Divider />
-                  <div className={classes.actions} >
+                  <div className={classes.actions}>
                     <Button color="inherit" variant="outlined" href={node.frontmatter.path} className={classes.cardCTA}>
                       Read More
                     </Button>
@@ -128,52 +132,11 @@ const Featured = () => {
               </Grid>
             </Grid>
             </CardActionArea>
-
           </Card>
         </Grid>
       ))}
       </Grid>
     </Container>
-        // <Container>
-    //   <Row>
-    //     {data.allMarkdownRemark.edges.map(({ node }) => (
-    //       <Col key={node.id} sm={12} className="d-flex">
-    //         <Card className="featured">
-    //         <Row className="align-items-center">
-    //           <Col md={6} sm={12}>
-    //             <Card.Body>
-    //               <Card.Header>{node.frontmatter.category}</Card.Header>
-    //               <Card.Title>{node.frontmatter.name}</Card.Title>
-    //               <Card.Text>{node.frontmatter.description}</Card.Text>
-    //               <hr/>
-    //               <Card.Link href={node.frontmatter.path}>
-    //                 <Button variant="outline-primary">Read more</Button>
-    //               </Card.Link>
-    //               {node.frontmatter.github && (
-    //                 <Card.Link href={node.frontmatter.github}>
-    //                   <FiGithub />
-    //                 </Card.Link>
-    //               )}
-    //               {node.frontmatter.demo && (
-    //                 <Card.Link href={node.frontmatter.demo}>
-    //                   <BiLinkExternal />
-    //                 </Card.Link>
-    //               )}
-    //             </Card.Body>
-    //           </Col>
-    //           <Col md={6} sm={12}>
-    //             <Link to={node.frontmatter.path}>
-    //               {!!node.frontmatter.mockup && (
-    //                 <Card.Img src={node.frontmatter.mockup} alt={node.frontmatter.name + " - Mockup"} />
-    //               )}
-    //             </Link>
-    //           </Col>
-    //         </Row>
-    //         </Card>
-    //       </Col>
-    //     ))}
-    //   </Row>
-    // </Container>
   );
 }
 

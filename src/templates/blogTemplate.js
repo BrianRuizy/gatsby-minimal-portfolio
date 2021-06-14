@@ -7,7 +7,9 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Jumbotron from "react-bootstrap/Jumbotron"
-import Badge from "react-bootstrap/Badge"
+
+import Chip from '@material-ui/core/Chip';
+
 
 import { CgArrowLeft } from "react-icons/cg"
 
@@ -29,9 +31,9 @@ export default function Template({
             <CgArrowLeft className="back-button"/>
           </Link>
           <Jumbotron>
-            <div className="badges">
+            <div className="chips">
               { frontmatter.tags.map((tag, index) =>
-                <Badge key={index} variant="secondary">{tag}</Badge>
+                <Chip key={index} variant="secondary" label={tag}></Chip>
               )}
             </div>
             <h1>{frontmatter.title}</h1>

@@ -76,6 +76,8 @@ h1, h2, h3, h4, h5, p, a  {
   transition: $theme-transition;
 }
 .top-nav {
+  background: var(--translucent) !important;
+  color: var(--primary-text-color) !important;
   @include respond-to(tablet){ visibility: hidden; }
 }
 .bottom-nav {
@@ -197,15 +199,14 @@ h1, h2, h3, h4, h5, p, a  {
     border-radius: 8px;
   }
 }
-.chips { margin: 1rem 0; }
+.chips { margin-bottom: 1rem; }
 .MuiChip-root.MuiChip-outlined {
   font-weight: 200;
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0 .5rem .5rem 0;
   background-color: transparent;
   border: 1px solid var(--secondary-color);
   color: var(--secondary-text-color);
-  @include respond-to(phone){ font-size: 1rem;}
 }
 .jumbotron {
   transition: $theme-transition;
@@ -249,96 +250,6 @@ h1, h2, h3, h4, h5, p, a  {
   @include respond-to(phone) { 
     min-height: 18rem;
     margin: 1rem 0 6rem 0;
-    padding: 0;
-  }
-}
-// .card {
-//   display: grid;
-//   overflow: hidden;
-//   border: none;
-//   border-radius: 5px;
-//   background-color: var(--card-bg);
-//   box-shadow: 
-//     0 2.8px 0.2px rgba(0, 0, 0, 0.005), 
-//     0 6.7px 5.3px rgba(0, 0, 0, 0.004), 
-//     0 12.5px 10px rgba(0, 0, 0, 0.015), 
-//     -1px 7px 20px rgba(0, 0, 0, 0.022), 
-//     0px 9px 20px rgba(0, 0, 0, 0.026), 
-//     -1px 6px 20px rgba(0, 0, 0, 0.01)
-//   ;
-//   > a img { display: block; }
-//   > header { padding: 24px; }
-//   img.card-img {
-//     top: 0px;
-//     left: 0px;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     object-position: center;
-//     max-height: 400px;
-//     @include respond-to(phone) {max-height: 300px; }
-//   }
-//   .card-header {
-//     font-weight: 200;
-//     color: var(--secondary-text-color); 
-//     border-bottom: none;
-//     padding: 0 0 1rem 0;
-//     transition: $theme-transition;
-//     font-size: 1.125rem;
-//   }
-//   .card-title {
-//     font-weight: 700;
-//     transition: $theme-transition;
-//     margin-bottom: 1rem;
-//   }
-//   .card-text{
-//     margin-bottom: 1rem;
-//     color: var(--secondary-text-color);
-//     font-size: 1.125rem; 
-//     @include respond-to(phone) { font-size: 1rem; }
-//   }
-//   .card-link{ 
-//     @include font-size(1.25rem);
-//     color: var(--primary-color); 
-//   }
-// }
-// .card.featured {
-//   // margin-bottom: 30px;
-//   // width: 100%;
-//   .card-title {
-//     font-weight: 800;
-//     font-size: 2.25rem;
-//   }
-//   .card-body {
-//     line-height: 1.5;
-//     padding: 3rem 0 3rem 4rem;
-//     @include respond-to(tablet){ padding: 3rem 0 3rem 2.5rem; }
-//     @include respond-to(phone){ 
-//       text-align: center;
-//       padding: 3rem 2rem 2rem; 
-//     }
-//   }
-//   hr {
-//     width: 10rem;
-//     height: 1px;
-//     border: none;
-//     margin-left: 0;
-//     background: var(--tertiary-color) none repeat scroll 0 0;
-//     @include respond-to(phone) { margin-left: revert; } 
-//   }
-//   .card-text { max-width: 28rem;}
-// }
-.card.projects {
-  padding: 2rem;
-  .folder { 
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-  }
-  .card-title { 
-    @include font-size(1.75rem);
-    margin-top: 1rem;
-  }
-  .card-body { 
     padding: 0;
   }
 }
@@ -430,34 +341,26 @@ body.light {
     }
   }
 }
-// .btn.btn-primary {
-//   border-radius: 10px;
-//   border: 2px solid var(--primary-color);
-//   color: var(--card-bg);
-//   background: var(--primary-color);
-//   transition: $theme-transition;
-//   &:hover, &:active, &:focus {
-//     color: var(--primary-color);
-//     background: var(--background);
-//     border-color: var(--primary-color);
-//   }
-// }
-// .btn.btn-outline-primary {
-//   @extend .btn.btn-primary;
-//   background-color: transparent;
-//   color: var(--primary-color);
-// }
-// .btn.btn-light {
-//   border-radius: 10px;
-//   border: 2px solid var(--tertiary-color);
-//   color: var(--secondary-text-color);
-//   background: var(--tertiary-color);
-//   transition: $theme-transition;
-//   &:hover, &:active, &:focus {
-//     color: var(--primary-text-color);
-//     background: var(--background);
-//   }
-// }
+.btn.btn-primary {
+  border: 2px solid var(--primary-color);
+  color: var(--card-bg);
+  background: var(--primary-color);
+  &:hover, &:active, &:focus {
+    color: var(--primary-color);
+    background: var(--background);
+    border-color: var(--primary-color);
+  }
+}
+.btn.btn-outline-primary {
+  @extend .btn.btn-primary;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.btn.btn-light {
+  border: 2px solid var(--tertiary-color);
+  color: var(--secondary-text-color);
+  background: var(--tertiary-color);
+}
 .about {
   color: var(--secondary-text-color);
   .banner {
