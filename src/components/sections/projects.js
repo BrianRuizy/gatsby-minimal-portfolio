@@ -24,10 +24,17 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 
+import Chip from '@material-ui/core/Chip';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+  },
+  header: {
+    marginBottom: '1.125rem',
+    textAlign: 'center',
+    color: 'var(--secondary-color)',
   },
   card: {
     color: 'var(--secondary-text-color)',
@@ -115,7 +122,7 @@ const Projects = () => {
     //   </Row>
     // </Container>
     <Container component={Box} mt={15}>
-      <div className="projects-header">
+      <div className={classes.header}>
         <p>Other small noteworthy projects &darr;</p>
       </div>
       <Grid container spacing={3}>
@@ -124,9 +131,10 @@ const Projects = () => {
           <Card className={classes.card} >
             <CardActionArea>
               <CardContent component={Box} m={2} mb={0}>
-              <div className="badges">
+              <div className="chips">
                 {node.frontmatter.tags.map((tag, index) =>
-                  <Badge key={index} variant="secondary">{tag}</Badge>
+                  <Chip key={index} variant="outlined" label={tag}/>
+                  
                 )}
               </div>
                 <Typography className={classes.title} gutterBottom>{node.frontmatter.name}</Typography>

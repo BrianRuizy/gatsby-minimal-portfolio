@@ -10,8 +10,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '2.25rem',
-    fontWeight: '600',
+    fontWeight: '800',
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
   },
@@ -49,8 +49,18 @@ const useStyles = makeStyles((theme) => ({
   },
   actions: {
     color: 'var(--primary-color)',
-  }
-  
+    margin: theme.spacing(2, 'auto', 0),
+  },
+  cardCTA: {
+    marginRight: theme.spacing(1)
+  },
+  media: {
+    maxHeight: '425px',
+    '@media (max-width:600px)': {
+      maxHeight: '300px',
+      marginTop: '16px',
+    },
+  },
 }));
 
 
@@ -81,36 +91,44 @@ const Featured = () => {
     <Container>
       <Grid container spacing={5}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-
         <Grid key={node.id} item xs={12}>
-          <Card className={classes.card} >
-            <CardActionArea>
-              <CardMedia
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography className={classes.subtitle} >{node.frontmatter.category} </Typography>
-                <Typography className={classes.title} gutterBottom>{node.frontmatter.name}</Typography>
-                <Typography className={classes.desc} variant="body1" paragraph>{node.frontmatter.description}</Typography>
-              </CardContent>
+          <Card className={classes.card}>
+          <CardActionArea>
+            <Grid container>
+              <Grid item sm={6} xs={12} component={Box} m='auto' px={6}>
+                <CardContent>
+                  <Typography className={classes.subtitle}>{node.frontmatter.category} </Typography>
+                  <Typography className={classes.title} gutterBottom>{node.frontmatter.name}</Typography>
+                  <Typography className={classes.desc} variant="body1" paragraph>{node.frontmatter.description}</Typography>
+                  <Divider />
+                  <div className={classes.actions} >
+                    <Button color="inherit" variant="outlined" href={node.frontmatter.path} className={classes.cardCTA}>
+                      Read More
+                    </Button>
+                    {node.frontmatter.github && (
+                      <IconButton color="inherit" href={node.frontmatter.github}>
+                        <FiGithub/>
+                      </IconButton>
+                    )}
+                    {node.frontmatter.demo && (
+                      <IconButton color="inherit" href={node.frontmatter.demo}>
+                        <BiLinkExternal/>
+                      </IconButton>
+                    )}
+                  </div>
+                </CardContent>
+              </Grid>
+              <Grid item sm={6} xs={12}>
+                <CardMedia
+                  component="img"
+                  className={classes.media}
+                  image={node.frontmatter.mockup}
+                  title={node.frontmatter.name + " - Mockup"}
+                />
+              </Grid>
+            </Grid>
             </CardActionArea>
-            <CardActions className={classes.actions}>
-              <Button color="inherit" variant="outlined">
-                Read More
-              </Button>
-             
-              {node.frontmatter.github && (
-                <IconButton color="inherit"  href={node.frontmatter.github}>
-                  <FiGithub/>
-                </IconButton>
-              )}
-              {node.frontmatter.demo && (
-                <IconButton color="inherit"  href={node.frontmatter.demo}>
-                  <BiLinkExternal/>
-                </IconButton>
-              )}
-            </CardActions>
+
           </Card>
         </Grid>
       ))}

@@ -7,4 +7,4 @@ tags:
     - ML
     - SVM
 ---
-AI supervised learning classification model to predict the value of handwritten digits image files.
+AI supervised learning classification model to predict the value of handwritten-digit images
