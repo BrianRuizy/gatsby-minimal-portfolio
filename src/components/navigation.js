@@ -20,6 +20,13 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import FolderIcon from '@material-ui/icons/Folder';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+
 
 const tabs = [{
   route: "/",
@@ -49,19 +56,34 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  stickToBottom: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+  },
 }));
 
 
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
-
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
   )
 }
+
+function HideOnScrollBottom(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+  return (
+    <Slide appear={false} direction="up" in={!trigger}>
+      {children}
+    </Slide>
+  )
+}
+
 
 const Navigation = (props) => {
   const classes = useStyles();
@@ -74,6 +96,12 @@ const Navigation = (props) => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const [value, setValue] = React.useState('recents');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   const data = useStaticQuery(graphql`
@@ -133,7 +161,7 @@ const Navigation = (props) => {
       </HideOnScroll>
 
       {/* bottom bar */}
-      <Navbar className="bottom-nav" fixed="bottom" >
+      {/* <Navbar className="bottom-nav" fixed="bottom" >
         <div className=" d-flex flex-row justify-content-around w-100">
           { tabs.map((tab, index) =>(
             <NavItem key={`tab-${index}`}>
@@ -150,7 +178,18 @@ const Navigation = (props) => {
             </NavItem>
           ))}
         </div>
-      </Navbar>
+      </Navbar> */}
+      <HideOnScrollBottom {...props}>
+
+      <AppBar position="fixed" color="primary" style={{top: "auto", bottom: 0}}>
+        <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNav}>
+          <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
+          <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+        </BottomNavigation>
+      </AppBar>
+      </HideOnScrollBottom>
     </div>
   )
 };

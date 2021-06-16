@@ -17,6 +17,7 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import Typography from '@material-ui/core/Typography';
+import Chip from '@material-ui/core/Chip';
 
 const AboutPage = ({
   data: {
@@ -48,9 +49,9 @@ const AboutPage = ({
             <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
             <h2>Technologies</h2>
             <p>The following are some of the langauges or frameworks I've used in either professional environments or hobby side projects.</p>
-            <div className="badges">
+            <div className="chips">
               { markdownRemark.frontmatter.technologies.map((tech, index) =>
-                <Badge key={index} variant="secondary">{tech}</Badge>
+                <Chip key={index} variant="secondary" label={tech}/>
               )}
             </div>
           </Col>
