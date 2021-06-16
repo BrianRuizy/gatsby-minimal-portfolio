@@ -75,38 +75,6 @@ h1 { font-weight: 800; }
 h1, h2, h3, h4, h5, p, a  {
   transition: $theme-transition;
 }
-.top-nav {
-  background: var(--translucent) !important;
-  color: var(--primary-text-color) !important;
-  @include respond-to(tablet){ visibility: hidden; }
-}
-.bottom-nav {
-  visibility: hidden;
-  // border-radius: 15px;
-  // margin: 1rem 15vw;
-  // padding: .75rem 1rem;
-  // z-index: 5;
-  border: 1px solid var(--border);
-  background-color: var(--bottom-nav-bg) !important;
-  // box-shadow:
-  //   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  //   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  //   0 12.5px 10px rgba(0, 0, 0, 0.06),
-  //   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  //   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  //   0 100px 80px rgba(0, 0, 0, 0.12)
-  // ;
-  // .icon { font-size: 1.5rem; }
-  // .nav-item {
-  //   height: 40px;
-  //   width: 32px;
-  //   text-align: center;
-  // }
-  .nav-link { color: var(--secondary-text-color); }
-  .nav-link.active { color: var(--primary-text-color); }
-  @include respond-to(tablet){ visibility: visible; }
-  .nav-item .nav-link { transition: none; }
-}
 .container { 
   margin: 8rem auto;
   max-width: 1200px;
@@ -199,7 +167,7 @@ h1, h2, h3, h4, h5, p, a  {
     border-radius: 8px;
   }
 }
-.chips { margin-bottom: 1rem; }
+.chips { margin-bottom: 0.35em; }
 .MuiChip-root.MuiChip-outlined {
   font-weight: 200;
   font-size: 1rem;
@@ -207,6 +175,7 @@ h1, h2, h3, h4, h5, p, a  {
   background-color: transparent;
   border: 1px solid var(--secondary-color);
   color: var(--secondary-text-color);
+  @include respond-to(phone) { font-size: 14px; }
 }
 .jumbotron {
   transition: $theme-transition;
@@ -252,11 +221,6 @@ h1, h2, h3, h4, h5, p, a  {
     margin: 1rem 0 6rem 0;
     padding: 0;
   }
-}
-.projects-header {
-  text-align: center;
-  margin-bottom: 1.125rem; 
-  color: var(--secondary-color);
 }
 .site-footer {
   font-size: 1.125rem;

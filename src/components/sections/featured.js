@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     color: 'var(--secondary-text-color)',
+    borderRadius: '10px',
     background:'var(--card-bg)',
     '@media (max-width:600px)': {
       textAlign: 'center',
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(2, 3.5), 
+      padding: theme.spacing(2, 4.5), 
     }
   },
   subtitle: {
@@ -97,7 +98,7 @@ const Featured = () => {
       <Grid container spacing={5}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12}>
-          <Card className={classes.card}>
+          <Card className={classes.card} component={Box} boxShadow={2}>
           <CardActionArea>
             <Grid container>
               <Grid item sm={6} xs={12} component={Box} m='auto'>

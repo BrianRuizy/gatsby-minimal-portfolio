@@ -26,25 +26,29 @@ import FolderIcon from '@material-ui/icons/Folder';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import ChatRoundedIcon from '@material-ui/icons/ChatRounded';
+import Brightness4RoundedIcon from '@material-ui/icons/Brightness4Rounded';
 
 
-const tabs = [{
-  route: "/",
-  icon: FiHome,
-  label: "Home"
-},{
-  route: "/about",
-  icon: CgProfile,
-  label: "About"
-}]
+// const tabs = [{
+//   route: "/",
+//   icon: FiHome,
+//   label: "Home"
+// },{
+//   route: "/about",
+//   icon: CgProfile,
+//   label: "About"
+// }]
 
-const buttons = [{
-  label: "Contact-drawer", 
-  action: <BottomDrawer/>,
-},{
-  label: "Theme-changer", 
-  action: <ThemeChanger/>,
-}]
+// const buttons = [{
+//   label: "Contact-drawer", 
+//   action: <BottomDrawer/>,
+// },{
+//   label: "Theme-changer", 
+//   action: <ThemeChanger/>,
+// }]
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,12 +60,31 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  stickToBottom: {
-    width: '100%',
-    position: 'fixed',
-    bottom: 0,
+  topNav: {
+    background: 'var(--translucent)' ,
+    color: 'var(--primary-text-color)',
+    '@media (max-width:768px)': {
+      visibility: 'hidden'
+    }
   },
-}));
+
+  bottomNav: {
+    visibility: 'hidden',
+    background: 'var(--bottom-nav-bg)' ,
+    '@media (max-width:768px)': {
+      visibility: 'visible'
+    },
+  },
+  bottomNavAction: {
+    '&.MuiBottomNavigationAction-root': {
+      color: 'var(--secondary-color)'
+    },
+    '&.MuiBottomNavigationAction-root.Mui-selected': {
+      color: 'var(--primary-text-color)',
+    }
+  }
+}
+));
 
 
 function HideOnScroll(props) {
@@ -87,8 +110,9 @@ function HideOnScrollBottom(props) {
 
 const Navigation = (props) => {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [value, setValue] = React.useState('recents');
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -98,10 +122,9 @@ const Navigation = (props) => {
     setAnchorEl(null);
   };
 
-  const [value, setValue] = React.useState('recents');
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    
   };
 
   const data = useStaticQuery(graphql`
@@ -119,7 +142,7 @@ const Navigation = (props) => {
     <div>
       {/* top bar */}
       <HideOnScroll {...props}>
-        <AppBar className="top-nav" color="transparent"> 
+        <AppBar className={classes.topNav}> 
           <Toolbar>
             <IconButton edge="start" component={Link} to="#home" className={classes.menuButton} color="inherit" aria-label="menu">
               <img alt="BR LOGO" src="/favicons/apple-touch-icon.png" width="30" height="30"/>
@@ -179,16 +202,15 @@ const Navigation = (props) => {
           ))}
         </div>
       </Navbar> */}
-      <HideOnScrollBottom {...props}>
-
-      <AppBar position="fixed" color="primary" style={{top: "auto", bottom: 0}}>
-        <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNav}>
-          <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-          <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-        </BottomNavigation>
-      </AppBar>
+      <HideOnScrollBottom {...props} >
+        <AppBar position="fixed" color="primary" style={{top: "auto", bottom: 0}} className={classes.bottomAppBar}>
+          <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNav} >
+            <BottomNavigationAction label="Home" value="home" icon={<HomeRoundedIcon />}	 className={classes.bottomNavAction}/>
+            <BottomNavigationAction label="Profile" value="profile" icon={<AccountCircleRoundedIcon /> } className={classes.bottomNavAction}/>
+            <BottomNavigationAction label="Contact" value="contact" icon={<ChatRoundedIcon />} className={classes.bottomNavAction}/>
+            <BottomNavigationAction label="Theme" value="theme" icon={<Brightness4RoundedIcon />} className={classes.bottomNavAction}/>
+          </BottomNavigation>
+        </AppBar>
       </HideOnScrollBottom>
     </div>
   )

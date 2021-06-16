@@ -7,4 +7,4 @@ tags:
     - VS Code
     - Azure
 ---
-An elegant Hybrid of Material and Monokai. With over 500+ user installations.
+An elegant Hybrid of Material and Monokai VS Code themes. With over 500+ user installations.

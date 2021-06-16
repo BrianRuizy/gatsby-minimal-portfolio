@@ -6,7 +6,7 @@ thumbnail: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixid=MX
 github: https://github.com/BrianRuizy/2019-Microsoft-IoT-hackathon
 date: 2019-12
 name: Bump.IT
-title: This app got us first place at a Microsoft Azure Hackathon.
+title: This app idea got us first place at a Microsoft Azure Hackathon.
 category: Microsoft Hackathon
 description: '1st place app idea would leverage latest of Azure and ML to support a $6.4 billion infrastructure issue.'
 tags:

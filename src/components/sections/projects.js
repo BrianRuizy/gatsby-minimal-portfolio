@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     color: 'var(--secondary-text-color)',
     background:'var(--card-bg)',
+    borderRadius: '10px',
   },
   subtitle: {
     fontWeight: '200',
@@ -80,7 +81,7 @@ const Projects = () => {
       <Grid container spacing={3}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12} md={6} lg={4}>
-          <Card className={classes.card} >
+          <Card className={classes.card} component={Box} boxShadow={2}>
             <CardActionArea>
               <CardContent component={Box} m={2} mb={0}>
               <div className="chips">
