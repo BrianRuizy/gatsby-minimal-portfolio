@@ -29,19 +29,17 @@ When I started this side project the goal of this project was not to add to the 
 ![covid-2](/assets/covid/covid-dashboard-tab.png)
 <figcaption>Though of course it's responsive!</figcaption>
 
-## Attribution
-
-### Technology
-
-This project began with some very simple Python + Pandas private Jupyter notebooks, and the use of [Plotly](https://plotly.com/), "the leading front-end for ML & data science models in Python, R, and Julia." [Django](https://www.djangoproject.com/). But we needed a way for this to be accessible to the public therefore I started using the Django Python web-framework, Django is a high-level Web framework that encourages rapid development and clean, pragmatic design. To bootstrap the initial dashboard grid we used [Appseed](https://appseed.us/) and [Bootstrap 4](https://getbootstrap.com/) to fill-in where we needed custom UI elements.
-
-### Datasets
+## Datasets
 
 A large portion of the data we comes from one of the original data repositories tracking COVID-19 cases, Johns Hopkins University: [CSSE](https://github.com/CSSEGISandData/COVID-19) 2019-ncov data repository. Additional data collected from  Our World in Data: [OWID](https://ourworldindata.org/)'s GitHub data [repository](https://github.com/owid/covid-19-data/tree/master/public/data). Lastly, to fill in some requirements we retrieved data for daily cases from New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data).
 
 
 ![covid-2](/assets/covid/site-visits.png)
 <figcaption>Web traffic of the site</figcaption>
+
+## Technology
+
+This project began with some very simple Python + Pandas private Jupyter notebooks, and the use of [Plotly](https://plotly.com/), "the leading front-end for ML & data science models in Python, R, and Julia." [Django](https://www.djangoproject.com/). But we needed a way for this to be accessible to the public therefore I started using the Django Python web-framework, Django is a high-level Web framework that encourages rapid development and clean, pragmatic design. To bootstrap the initial dashboard grid we used [Appseed](https://appseed.us/) and [Bootstrap 4](https://getbootstrap.com/) to fill-in where we needed custom UI elements.
 
 ## Getting Started (for devs)
 
@@ -57,7 +55,7 @@ source env/bin/activate  # Linux/Mac
 env/Scripts/activate  # Windows
 ```
 
-2. Install dependencies
+2. Install project dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -75,6 +73,7 @@ Quit the server with CONTROL-C.
 ```
 
 ## Reading data locally
+
 You can go through all the available datasets by going into the `/processdata` directory, launching a interactive python shell, importing `getdata` file, and calling any function.
 
 ```bash

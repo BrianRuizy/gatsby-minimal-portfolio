@@ -23,7 +23,7 @@ Our software (E-TRaC) monitored terabytes of real-time and forecasted data such 
 ![Picture with the team](assets/cams/a32be449-5f55-430d-a39d-d8d8ea13400b.jpeg)
 <figcaption>Josh Bryant (Director of Engineering), ME, and Rick Knauth (VP of asset management)</figcaption>
 
-## Building an analytics data pipeline
+## Building a modern data analytics pipeline
 
 I worked hands on with the automated data pipeline for the E-TRaC project. This was my first experience with cloud computing and big-data (most of which came from ERCOT), but I quickly absorbed what it meant to work on AWS EC2 Linux nodes, how to access and store files from scalable AWS S3 buckets, and other tools and services like Docker and SSH. Once our data was processed and cleaned with defined Pandas + NumPy fuctions(s), the site would then render matplotlib based data visualizations onto the respective Flask web applications. And, all of this was being continuously repeated and updated by the minute.
 

@@ -12,6 +12,7 @@ description: '1st place app idea would leverage latest of Azure and ML to suppor
 tags:
   - Azure
   - Jupyter
+  - Python
 ---
 ## The Challenge
 
@@ -58,4 +59,4 @@ Having won the competition 🥇, after our minimum-viable-product, granted us cr
 <figcaption>Our project board</figcaption>
 
 ![IMG_20191214_151949](https://user-images.githubusercontent.com/23439187/114971928-05aaa900-9e43-11eb-83ce-326283aef44b.jpg)
-<figcaption>The BumpIt team. Luis, ME, Jordan, Kaleab, MS guy, Moises and Eashrak.</figcaption>
+<figcaption>The BumpIt team from UHD</figcaption>
