@@ -46,11 +46,12 @@ export default function App() {
         <Typography className={classes.subtitle} variant="body1" align="center" paragraph >
           Looking for someone to handle your next project? Or want to work together?
         </Typography>
-        <FormControl className="classes.form" noValidate fullWidth autoComplete="off">
-          <TextField className={classes.textField} id="name" margin="normal" label="Name" variant="outlined" autoComplete="off"/>
+        <FormControl className="classes.form" name="EmailContactForm" method="POST" data-netlify="true" fullWidth autoComplete="off">
+          <input type="hidden" name="form-name" value="EmailContactForm"/> {/*for netlify */}
+          <TextField className={classes.textField} id="name" type="text" margin="normal" label="Name" variant="outlined" autoComplete="off"/>
           <TextField className={classes.textField} id="email" type="email" margin="normal" label="Email" variant="outlined" />
-          <TextField className={classes.textField} id="subject" margin="normal" label="Subject" variant="outlined" autoComplete="off"/>
-          <TextField className={classes.textField} id="body" margin="normal" label="Message" variant="outlined" multiline rows={4} placeholder="Something nice 😸 ..."/>
+          <TextField className={classes.textField} id="subject" type="text" margin="normal" label="Subject" variant="outlined" autoComplete="off"/>
+          <TextField className={classes.textField} id="body" type="text" margin="normal" label="Message" variant="outlined" multiline rows={4} placeholder="Something nice 😸 ..."/>
 
           <Button 
               type="submit"
