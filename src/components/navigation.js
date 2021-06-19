@@ -88,9 +88,10 @@ function HideOnScrollBottom(props) {
 
 const Navigation = (props) => {
   const classes = useStyles();
-  const open = Boolean(anchorEl);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [value, setValue] = React.useState('recents');
+  const open = Boolean(anchorEl);
+
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
