@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql, useStaticQuery } from "gatsby"
+import {graphql, useStaticQuery, Link } from "gatsby"
 
 import Resume from "../../../static/Brian-Ruiz-Resume.pdf"
 
@@ -76,8 +76,10 @@ const Hero = () => {
           variant="contained" 
           color="primary" 
           disableElevation
+          component={Link}
+          to='/about/'
         >
-          Reach Out
+          About me
         </Button>
       </div>
     </Container>      

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     color: 'var(--secondary-text-color)',
-    borderRadius: '10px',
+    borderRadius: '8px',
     background:'var(--card-bg)',
     '@media (max-width:600px)': {
       textAlign: 'center',

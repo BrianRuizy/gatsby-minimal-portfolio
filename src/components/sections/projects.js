@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     color: 'var(--secondary-text-color)',
     background:'var(--card-bg)',
-    borderRadius: '10px',
+    borderRadius: '8px',
   },
   subtitle: {
     fontWeight: '200',
@@ -76,7 +76,7 @@ const Projects = () => {
   return( 
     <Container component={Box} mt={15}>
       <div className={classes.header}>
-        <p>Other small noteworthy projects &darr;</p>
+        <p>More noteworthy projects &darr;</p>
       </div>
       <Grid container spacing={3}>
       {data.allMarkdownRemark.edges.map(({ node }) => (

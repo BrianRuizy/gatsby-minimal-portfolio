@@ -169,6 +169,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .chips { margin-bottom: 0.35em; }
 .MuiChip-root.MuiChip-outlined {
+  height: 30px;
   font-weight: 200;
   font-size: 1rem;
   margin: 0 .5rem .5rem 0;
@@ -176,51 +177,6 @@ h1, h2, h3, h4, h5, p, a  {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-text-color);
   @include respond-to(phone) { font-size: 14px; }
-}
-.jumbotron {
-  transition: $theme-transition;
-  padding: 1rem 0; 
-  margin-bottom: 0;
-  background: none;
-  & h1 { 
-    color: var(--primary-text-color); 
-    margin-bottom: 1rem;
-    @include font-size(2.75rem);
-  }
-  .post-meta {
-    color: var(--primary-text-color);
-    font-size: 1.125rem;
-    @include respond-to(phone) { font-size: 1rem; }
-    .category { color: var(--secondary-color); }
-  }
-}
-.post-thumbnail {
-  background-color: var(--card-bg);
-  text-align: center;
-  min-height: 45rem;
-  max-width: 70rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  align-content: center;
-  position: relative;
-  overflow: hidden;
-  margin: 1rem auto 8rem auto;
-  background-origin: content-box;
-  box-shadow: 
-   rgba(0, 0, 0, 0.20) 0px 30px 60px -10px, 
-   rgba(0, 0, 0, 0.40) 0px 18px 36px -18px
-  ;
-  @include respond-to(tablet) { 
-    min-height: 26rem;
-    box-shadow: none; 
-  }
-  @include respond-to(phone) { 
-    min-height: 18rem;
-    margin: 1rem 0 6rem 0;
-    padding: 0;
-  }
 }
 .site-footer {
   font-size: 1.125rem;
@@ -232,20 +188,7 @@ h1, h2, h3, h4, h5, p, a  {
 }
 // theme-changer
 .theme-changer { display: none; }
-.moon, .sun { 
-  visibility: visible;
-  position: fixed;
-  margin-top: .5rem;
-  font-size: 1.5rem; 
-  color: var(--secondary-text-color);
-  bottom: 2rem;
-  left: 89vw;
-  margin-left: 8.5px;
-  @include respond-to(tablet){
-    position: inherit;
-    margin-left: 0;
-  }
-}
+.moon, .sun {  color: var(--secondary-color); }
 body.dark {
   .moon {
     display: none;
@@ -256,54 +199,9 @@ body.light {
     display: none;
   }
 }
-.mode-container {
-  position: fixed;
-  visibility: visible;
-  bottom: 1.5rem;
-  left: 89vw;
-  border-radius: 100%;
-  border: 1px solid var(--border);
-  background: var(--bottom-nav-bg);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 15px;
-  padding: 1.25rem;
-  @include respond-to(tablet){
-    border: none;
-    position: inherit;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-  }
-}
-.bottom-drawer {
-  .drawer div:nth-child(2) {
-    color: var(--secondary-text-color);
-    background: var(--card-bg);
-  }
-  .icon.message {
-    color: var(--secondary-text-color);
-    margin-top: .5rem;
-  }
-}
-.contact-form {
-  max-width: 768px;
-  margin: 1.25rem auto;
-  text-align: left;
-  label { 
-    margin-bottom: 0.25rem;
-    @include font-size(1rem); 
-  }
-  input, textarea {
-    @include font-size(1.125rem); 
-    color: var(--primary-text-color);
-    background-color: var(--tertiary-color);
-    border: none;
-    &:focus {
-      background-color: var(--background);
-      border-color: var(--primary-color);
-      color: var(--primary-text-color);
-      box-shadow: 0 0 0 0.2rem var(--primary-color);
-    }
-  }
+.MuiDrawer-paper {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 .btn.btn-primary {
   border: 2px solid var(--primary-color);
