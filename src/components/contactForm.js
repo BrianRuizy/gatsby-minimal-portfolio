@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '1',
   },
   title: {
-    fontSize: '1.5rem',
+    fontSize: '1.75rem',
     fontWeight: '700',
   },
 
@@ -51,23 +51,18 @@ export default function App() {
           <TextField className={classes.textField} id="email" type="email" margin="normal" label="Email" variant="outlined" />
           <TextField className={classes.textField} id="subject" margin="normal" label="Subject" variant="outlined" autoComplete="off"/>
           <TextField className={classes.textField} id="body" margin="normal" label="Message" variant="outlined" multiline rows={4} placeholder="Something nice 😸 ..."/>
-          <Grid
-            container
-            direction="row"
-            justify="flex-end"
-            alignItems="flex-end"
-          >
-            <Button 
+
+          <Button 
               type="submit"
-              color="default"
-              size="small"
+              color="primary"
+              variant="contained"
+              size="large"
               disableElevation
-              endIcon={<SendRoundedIcon>send</SendRoundedIcon>}
+              startIcon={<SendRoundedIcon>send</SendRoundedIcon>}
               style={{marginBottom: '.5rem', marginTop: '.5rem'}}
             >
               Send email
-            </Button>
-          </Grid>        
+            </Button>   
         </FormControl>
       </Container>
    

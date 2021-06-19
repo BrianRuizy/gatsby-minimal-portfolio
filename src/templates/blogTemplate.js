@@ -1,20 +1,16 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
 import { makeStyles } from '@material-ui/core/styles';
+import Layout from "../components/layout"
 
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from '@material-ui/core/Typography';
 import IconButton from "@material-ui/core/IconButton";
-
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Jumbotron from "react-bootstrap/Jumbotron"
-
 import Chip from '@material-ui/core/Chip';
+
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 
@@ -53,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: 'var(--primary-text-color)',
     marginBottom: '1rem',
-    fontSize: '2.5rem', 
+    fontSize: '2.5rem',
     fontWeight: '800',
     '@media (max-width:768px)': {
       fontSize: '1.75rem'
@@ -61,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   thumbnail: {
     background: 'var(--card-bg)',
-    minHeight: '45rem',
+    minHeight: '40em',
     maxWidth: '80rem',
     textAlign: 'center',
     backgroundSize: 'cover', 
@@ -100,7 +96,7 @@ export default function Template({
                 </IconButton>
               </Grid>
               <Grid item>
-                <Typography className={classes.postMeta}>
+                <Typography className={classes.postMeta} >
                   {frontmatter.name}
                 </Typography>
               </Grid>
@@ -111,7 +107,7 @@ export default function Template({
               )}
             </div>
             <Typography className={classes.title} variant="h1">{frontmatter.title}</Typography>
-           
+  
             <Grid container direction="row" alignItems="center" justify="space-between" className={classes.postMeta}>
               <Grid item>
                 <IconButton disabled size="small" style={{paddingLeft: '0'}}>
