@@ -1,13 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link } from "gatsby"
 import ThemeChanger from "../components/themeChanger"
-import BottomDrawer from "../components/bottomDrawer"
-
-import Navbar from "react-bootstrap/Navbar"
-import NavItem from "react-bootstrap/NavItem"
-
-import { FiHome } from "react-icons/fi"
-import { CgProfile } from "react-icons/cg"
+import ContactForm from "./contactForm"
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -22,33 +16,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import FolderIcon from '@material-ui/icons/Folder';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import ChatRoundedIcon from '@material-ui/icons/ChatRounded';
-import Brightness4RoundedIcon from '@material-ui/icons/Brightness4Rounded';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
-
-// const tabs = [{
-//   route: "/",
-//   icon: FiHome,
-//   label: "Home"
-// },{
-//   route: "/about",
-//   icon: CgProfile,
-//   label: "About"
-// }]
-
-// const buttons = [{
-//   label: "Contact-drawer", 
-//   action: <BottomDrawer/>,
-// },{
-//   label: "Theme-changer", 
-//   action: <ThemeChanger/>,
-// }]
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,9 +39,12 @@ const useStyles = makeStyles((theme) => ({
       visibility: 'hidden'
     }
   },
-
+  themeChanger: {
+    fontSize: 'initial',
+  },
   bottomNav: {
     visibility: 'hidden',
+    height: '60px',
     background: 'var(--bottom-nav-bg)' ,
     '@media (max-width:768px)': {
       visibility: 'visible'
@@ -77,14 +52,17 @@ const useStyles = makeStyles((theme) => ({
   },
   bottomNavAction: {
     '&.MuiBottomNavigationAction-root': {
-      color: 'var(--secondary-color)'
+      color: 'var(--secondary-color)',
+      padding: 0
     },
     '&.MuiBottomNavigationAction-root.Mui-selected': {
       color: 'var(--primary-text-color)',
+    },
+    '& svg.MuiSvgIcon-root': {
+      fontSize: '1.75rem'
     }
   }
-}
-));
+}));
 
 
 function HideOnScroll(props) {
@@ -124,8 +102,24 @@ const Navigation = (props) => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    
   };
+
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setState({ ...state, [anchor]: open });
+  };
+
+  const form = () => (
+   <ContactForm/>
+  );
 
   const data = useStaticQuery(graphql`
     {
@@ -149,7 +143,7 @@ const Navigation = (props) => {
             </IconButton>
             <Typography variant="h6" color="inherit" className={classes.title}>{ data.site.siteMetadata.home.name }</Typography>          
             <Button component={Link} to='/about' color="inherit">About</Button>
-            <Button color="inherit">Contact</Button>
+            <Button color="inherit" onClick={toggleDrawer('bottom', true)}>Contact</Button>
             <Button
                 aria-label="Social links"
                 aria-controls="socials-appbar"
@@ -178,40 +172,31 @@ const Navigation = (props) => {
                 <MenuItem onClick={handleClose}>GitHub</MenuItem>
                 <MenuItem onClick={handleClose}>Instagram</MenuItem>
               </Menu>
-              <ThemeChanger/>
+              <IconButton className={classes.themeChanger}><ThemeChanger/></IconButton>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
 
       {/* bottom bar */}
-      {/* <Navbar className="bottom-nav" fixed="bottom" >
-        <div className=" d-flex flex-row justify-content-around w-100">
-          { tabs.map((tab, index) =>(
-            <NavItem key={`tab-${index}`}>
-              <Link to={tab.route} className="nav-link" activeClassName="active">
-                <div className="row d-flex flex-column justify-content-center align-items-center">
-                  {<tab.icon className="icon"/>}
-                </div>
-              </Link>
-            </NavItem>
-          ))}
-          { buttons.map((tab, index) =>(
-            <NavItem key={`tab-${index}`} >
-              {tab.action}
-            </NavItem>
-          ))}
-        </div>
-      </Navbar> */}
       <HideOnScrollBottom {...props} >
-        <AppBar position="fixed" color="primary" style={{top: "auto", bottom: 0}} className={classes.bottomAppBar}>
+        <AppBar position="fixed" color="primary" style={{top: "auto", bottom: 0}} className={classes.bottomNav}>
           <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNav} >
-            <BottomNavigationAction label="Home" value="home" icon={<HomeRoundedIcon />}	 className={classes.bottomNavAction}/>
-            <BottomNavigationAction label="Profile" value="profile" icon={<AccountCircleRoundedIcon /> } className={classes.bottomNavAction}/>
-            <BottomNavigationAction label="Contact" value="contact" icon={<ChatRoundedIcon />} className={classes.bottomNavAction}/>
-            <BottomNavigationAction label="Theme" value="theme" icon={<Brightness4RoundedIcon />} className={classes.bottomNavAction}/>
+            <BottomNavigationAction icon={<HomeRoundedIcon />} value="home" className={classes.bottomNavAction} component={Link} to='/'/>
+            <BottomNavigationAction icon={<AccountCircleRoundedIcon /> }  value="about" className={classes.bottomNavAction} component={Link} to='/about/'/>
+            <BottomNavigationAction icon={<ChatRoundedIcon />} className={classes.bottomNavAction} onClick={toggleDrawer('bottom', true)} style={{color: 'var(--secondary-color'}}/>
+            <BottomNavigationAction icon={<ThemeChanger/>} className={classes.bottomNavAction}  />
           </BottomNavigation>
         </AppBar>
       </HideOnScrollBottom>
+
+      <SwipeableDrawer
+        anchor={'bottom'}
+        open={state['bottom']}
+        onClose={toggleDrawer('bottom', false)}
+        onOpen={toggleDrawer('bottom', true)}
+      >
+        {form()}
+      </SwipeableDrawer>
     </div>
   )
 };
