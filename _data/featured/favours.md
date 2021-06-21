@@ -6,7 +6,7 @@ thumbnail: 'https://images.unsplash.com/photo-1596079890701-dd42edf0b7d4?ixid=MX
 github: https://github.com/favours-io/favours
 date: 2020-07-01
 name: Favours
-title: Developing a local marketplace for small favors.
+title: Developing a local peer-to-peer application for small rewarding tasks; favours.
 category: Application
 description: 'A location based marketplace application for one time small-jobs. Need a favour, give a favour.'
 tags: 

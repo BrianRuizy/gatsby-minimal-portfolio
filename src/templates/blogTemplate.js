@@ -3,6 +3,7 @@ import Helmet from "react-helmet"
 import { graphql, Link } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from "../components/layout"
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -14,7 +15,14 @@ import Chip from '@material-ui/core/Chip';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 
 const theme = createMuiTheme({
   typography: {
@@ -58,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   thumbnail: {
     background: 'var(--card-bg)',
     minHeight: '40em',
-    maxWidth: '80rem',
+    maxWidth: '75rem',
     textAlign: 'center',
     backgroundSize: 'cover', 
     backgroundPosition: 'center',
@@ -88,7 +96,7 @@ export default function Template({
           <meta name="description" content={frontmatter.title} />
         </Helmet>
         <article className="post">
-          <Container className={classes.blogHeader}>
+          <Container className={classes.blogHeader} maxWidth="md">
             <Grid container direction="row" alignItems="center" spacing={0,0,1,0} >
               <Grid item>
                 <IconButton component={Link} to="/">
@@ -107,7 +115,6 @@ export default function Template({
               )}
             </div>
             <Typography className={classes.title} variant="h1">{frontmatter.title}</Typography>
-  
             <Grid container direction="row" alignItems="center" justify="space-between" className={classes.postMeta}>
               <Grid item>
                 <IconButton disabled size="small" style={{paddingLeft: '0'}}>
@@ -118,14 +125,12 @@ export default function Template({
               <Grid item>{frontmatter.date}</Grid>
             </Grid>
           </Container>
-
           <Box disableGutters="true">
             {!!frontmatter.thumbnail && (
               <div className={classes.thumbnail}  style={{backgroundImage: `url(${frontmatter.thumbnail})`}}/>
             )}
           </Box>
-
-          <Container>
+          <Container maxWidth="md">
             <div
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}

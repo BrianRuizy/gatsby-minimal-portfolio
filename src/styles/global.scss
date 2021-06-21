@@ -313,14 +313,18 @@ th, td {
   @include respond-to(phone) { font-size: 14px !important; }
 }
 th {
+  font-weight: 600;
   position: sticky;
   top: 0; /* Don't forget this, required for the stickiness */
   background-color: var(--tertiary-color);
   color: var(--primary-text-color);
 }
-tr { color: var(--secondary-text-color);}
-tr:nth-child(even) {background-color: var(--translucent);} 
-tr:hover {background-color: var(--secondary-color);} 
+tr { 
+  color: var(--secondary-text-color);
+  border-bottom: 1px solid var(--tertiary-color);
+}
+// tr:nth-child(even) {background-color: var(--translucent);} 
+tr:hover {background-color: var(--tertiary-color);} 
 
 .MuiTimelineContent-root {
   p {
