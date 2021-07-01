@@ -37,7 +37,7 @@ I worked hands on with the automated data pipeline for the E-TRaC project. This 
 04/26/2021    | 03          | 18599.93           |24217               |23879.8           |19954.3           |4500.74                 |
 
 ![](/assets/cams/rtmLmp.png)
-<figcaption>Example of time series data visualization</figcaption>
+<figcaption>Example of time series data</figcaption>
 
 ## Interface Redesign
 
