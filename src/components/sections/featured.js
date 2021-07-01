@@ -29,11 +29,12 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width:600px)': {
       textAlign: 'center',
     },
+    boxShadow: 'rgba(17, 12, 46, 0.05) 0px 10px 100px 0px',
   },
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(2, 4.5), 
+      padding: theme.spacing(2, 3.75), 
     }
   },
   subtitle: {
@@ -58,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2, 'auto', 0),
   },
   cardCTA: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
+    border: '2px solid var(--primary-color)'
   },
   media: {
     maxHeight: '420px',
@@ -98,7 +100,7 @@ const Featured = () => {
       <Grid container spacing={5}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12}>
-          <Card className={classes.card} component={Box} boxShadow={2}>
+          <Card className={classes.card} variant="outlined">
           <CardActionArea>
             <Grid container>
               <Grid item sm={6} xs={12} component={Box} m='auto'>

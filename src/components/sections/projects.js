@@ -81,8 +81,7 @@ const Projects = () => {
       <Grid container spacing={3}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12} md={6} lg={4}>
-          <Card className={classes.card} component={Box} boxShadow={2}>
-            <CardActionArea>
+          <Card className={classes.card} variant="outlined">
               <CardContent component={Box} m={2} mb={0}>
               <div className="chips">
                 {node.frontmatter.tags.map((tag, index) =>
@@ -92,7 +91,6 @@ const Projects = () => {
                 <Typography className={classes.title} gutterBottom>{node.frontmatter.name}</Typography>
                 <Typography className={classes.desc} variant="body1">{node.excerpt}</Typography>
               </CardContent>
-            </CardActionArea>
             <CardActions className={classes.actions}>             
               {node.frontmatter.github && (
                 <Button color="inherit"  href={node.frontmatter.github}>
