@@ -51,16 +51,13 @@ npm install -g gatsby-cli
 1. **Install Project**
 
     Create new site using `gastby new` command, doing it this way will also install the project dependencies.
-
+    Alternatively, you can manually clone the repository and install dependencies by running ```npm install```.
 
     ```bash
     gatsby new gatsby-minimal-portfolio https://github.com/BrianRuizy/gatsby-minimal-portfolio
     ```
 
-    Alternatively, you can manually clone the repository and install dependencies by running ```npm install```.
-
 2. **Start Developing**
-
 
     Navigate into your new site’s directory and start it up using `gatsby develop` command.
 

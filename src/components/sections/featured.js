@@ -97,11 +97,10 @@ const Featured = () => {
   `)
   return (
     <Container>
-      <Grid container spacing={5}>
+      <Grid container spacing={7}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12}>
           <Card className={classes.card} variant="outlined">
-          <CardActionArea>
             <Grid container>
               <Grid item sm={6} xs={12} component={Box} m='auto'>
                 <CardContent className={classes.cardContent}>
@@ -134,7 +133,6 @@ const Featured = () => {
                 />
               </Grid>
             </Grid>
-            </CardActionArea>
           </Card>
         </Grid>
       ))}

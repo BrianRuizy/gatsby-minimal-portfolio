@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '0'
   },
   postMeta: {
-    color: 'var(--secondary-text-color)',
+    color: 'var(--primary-text-color)',
     fontSize: '1.125rem',
     '@media (max-width:768px)': {
       fontSize: '1rem'
