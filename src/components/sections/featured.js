@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(2, 3.75), 
+      padding: theme.spacing(2, 3.25), 
     }
   },
   subtitle: {
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '800',
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
+    padding: theme.spacing(0, 2.5), 
   },
   desc: {
     fontSize: '1.25rem',
