@@ -185,7 +185,7 @@ const Navigation = (props) => {
             <BottomNavigationAction icon={<HomeRoundedIcon />} value="home" className={classes.bottomNavAction} component={Link} to='/'/>
             <BottomNavigationAction icon={<AccountCircleRoundedIcon /> }  value="about" className={classes.bottomNavAction} component={Link} to='/about/'/>
             <BottomNavigationAction icon={<ChatRoundedIcon />} className={classes.bottomNavAction} onClick={toggleDrawer('bottom', true)} style={{color: 'var(--secondary-color'}}/>
-            <BottomNavigationAction icon={<ThemeChanger/>} className={classes.bottomNavAction}  />
+            <BottomNavigationAction icon={<ThemeChanger/>} className={classes.bottomNavAction} disableRipple />
           </BottomNavigation>
         </AppBar>
       </HideOnScrollBottom>
