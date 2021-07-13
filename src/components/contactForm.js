@@ -24,9 +24,12 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     fontSize: '1rem',
     color: 'var(--secondary-color)',
-    maxWidth: '90%',
-    margin: theme.spacing(0, 'auto', '1.25rem'),
+    maxWidth: '50%',
+    margin: theme.spacing('.5rem', 'auto', '1.25rem'),
     lineHeight: '1',
+    '@media (max-width:768px)': {
+      maxWidth: '80%',
+    },
   },
   title: {
     fontSize: '1.75rem',
@@ -44,7 +47,7 @@ export default function App() {
         <Divider className={classes.dragger} variant="middle" />
         <Typography className={classes.title} variant="h6" align="center">Contact Form</Typography>
         <Typography className={classes.subtitle} variant="body1" align="center" paragraph >
-          Looking for someone to handle your next project? Or want to work together?
+          Looking for someone to handle your next project? Or want to work together? Send me an email!
         </Typography>
         <FormControl className="classes.form" name="EmailContactForm" method="POST" data-netlify="true" fullWidth autoComplete="off">
           <input type="hidden" name="form-name" value="EmailContactForm"/> {/*for netlify */}
