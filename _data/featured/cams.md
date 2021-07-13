@@ -4,7 +4,7 @@ path: /cams-etrac
 mockup: /assets/cams/cams-mockup.png
 thumbnail: 'https://images.unsplash.com/photo-1467533003447-e295ff1b0435?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
 date: 2020-03-01
-name: CAMS E-TRaC
+name: CAMS ETRaC
 title: What was it like to help develop a fintech energy data-analytics SaaS? 
 category: Enterprise
 description: 'A robust and modern midstream oil & energy data monitoring web-app. Built with Python on AWS.'

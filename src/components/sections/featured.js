@@ -48,8 +48,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
     '@media (max-width:600px)': {
-      padding: theme.spacing(0, 2.25
-)
+      padding: theme.spacing(0, 2.5)
     }
   },
   desc: {
