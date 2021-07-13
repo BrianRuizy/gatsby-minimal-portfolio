@@ -47,7 +47,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '800',
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
-    padding: theme.spacing(0, 2.5), 
+    '@media (max-width:600px)': {
+      padding: theme.spacing(0, 2)
+    }
   },
   desc: {
     fontSize: '1.25rem',
