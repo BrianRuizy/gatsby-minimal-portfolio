@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'rgba(0, 0, 0, 0.20) 0px 30px 60px -10px, rgba(0, 0, 0, 0.40) 0px 18px 36px -18px',
     '@media (max-width:768px)': {
       minHeight: '30rem',
+      boxShadow: 'none'
     },
     '@media (max-width:640px)': {
       minHeight: '18rem',

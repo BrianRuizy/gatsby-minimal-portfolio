@@ -44,7 +44,7 @@ const AboutPage = ({
             <p>{site.siteMetadata.home.role}</p>
           </Col>
         </Row>
-        <Row >
+        {/* <Row >
           <Col xs={12} md={5} className="blog-post-content mb-5">
             <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
             <h2>Technologies</h2>
@@ -77,7 +77,7 @@ const AboutPage = ({
               ))}
             </Timeline>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </Layout>
   )
