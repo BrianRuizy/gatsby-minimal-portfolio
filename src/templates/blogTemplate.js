@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1, 0),
     },
-    marginTop: '8rem',
+    marginTop: '10rem',
     '@media (max-width:768px)': {
       marginTop: '2rem',
     }

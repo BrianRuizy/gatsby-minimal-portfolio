@@ -33,8 +33,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   topNav: {
-    background: 'var(--translucent)' ,
+    background: 'var(--background)' ,
     color: 'var(--primary-text-color)',
+    boxShadow: 'none',
     '@media (max-width:768px)': {
       visibility: 'hidden'
     }

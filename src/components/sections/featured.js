@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
     color: 'var(--secondary-text-color)',
     borderRadius: '8px',
     background:'var(--card-bg)',
+    boxShadow: 'rgba(17, 12, 46, 0.05) 0px 10px 100px 0px',
     '@media (max-width:600px)': {
       textAlign: 'center',
     },
-    boxShadow: 'rgba(17, 12, 46, 0.05) 0px 10px 100px 0px',
   },
   cardContent: {
     padding: theme.spacing(0, 8), 
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid var(--primary-color)'
   },
   media: {
-    maxHeight: '420px',
+    maxHeight: '450px',
     '@media (max-width:600px)': {
       maxHeight: '300px',
       marginTop: '16px',

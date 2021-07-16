@@ -35,15 +35,14 @@ body.light {
   --primary-text-color: #1d1d1f;
   --secondary-color: #86868b;
   --secondary-text-color: #2c2c2e;
-  --tertiary-color: #e7e7e7;
-  --background: #fafafa;
+  --tertiary-color: #f2f2f2;
+  --background: #fff;
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
   --site-header: var(--background);
   --card-bg: #fff;
   --bottom-nav-bg: #fff;
   --border: rgba(25, 26, 30, 0.15);
   --code-bg: #313437;
-  --translucent: rgba(238, 238, 237, 0.9);
 }
 body.dark {
   --primary-color: #90b3f4;
@@ -51,13 +50,12 @@ body.dark {
   --secondary-color: #707070;
   --secondary-text-color: #b2b2b6;
   --tertiary-color: #2c2c2f;
-  --background: #0a0a0a;
+  --background: #050505;
   --background-gradient: linear-gradient(180deg, var(--background) 92%, #2b2b31);
   --site-header: var(--background);
-  --card-bg: #212124;
+  --card-bg: #151516;
   --bottom-nav-bg: #323236;
   --code-bg: #212124;
-  --translucent: rgba(29,29,31,0.9);
 }
 $theme-transition:   
   color .5s ease-in-out, 
@@ -177,7 +175,7 @@ h1, h2, h3, h4, h5, p, a  {
   margin: 0 .5rem .5rem 0;
   background-color: transparent;
   border: 1px solid var(--secondary-color);
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   @include respond-to(phone) { font-size: 14px; }
 }
 .site-footer {
@@ -321,7 +319,6 @@ tr {
   color: var(--secondary-text-color);
   border-bottom: 1px solid var(--tertiary-color);
 }
-// tr:nth-child(even) {background-color: var(--translucent);} 
 tr:hover {background-color: var(--tertiary-color);} 
 
 .MuiTimelineContent-root {
