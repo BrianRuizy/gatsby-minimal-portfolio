@@ -98,7 +98,7 @@ export default function Template({
         </Helmet>
         <article className="post">
           <Container className={classes.blogHeader} maxWidth="md">
-            <Grid container direction="row" alignItems="center" spacing={0,0,1,0} >
+            <Grid container direction="row" alignItems="center">
               <Grid item>
                 <IconButton component={Link} to="/">
                   <ArrowBackIcon className={classes.backBtn}/>

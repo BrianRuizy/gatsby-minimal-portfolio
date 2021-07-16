@@ -7,7 +7,7 @@ github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2021-05-15
 name: Hines Interests L.P.
-title: Critical applications which assist the management of $81.7 Billion of assets and investments across the globe.
+title: 'Developing innovative real-estate management solutions.'
 category: Enterprise
 description: 'Critical applications which assist the management of $81.7 Billion of assets and investments across the globe.'
 tags:
