@@ -63,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardCTA: {
     marginRight: theme.spacing(1),
-    border: '2px solid var(--primary-color)'
+    border: '2px solid var(--primary-color)', 
+    borderRadius: '5px'
   },
   media: {
     maxHeight: '450px',
