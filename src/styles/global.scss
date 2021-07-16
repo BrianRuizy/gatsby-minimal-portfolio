@@ -165,6 +165,8 @@ h1, h2, h3, h4, h5, p, a  {
     margin: 2.5rem auto;
     background: var(--tertiary-color);
     border-radius: 8px;
+    @include respond-to(phone) { margin: 2rem auto; }
+
   }
 }
 .chips { margin-bottom: 0.35em; }
