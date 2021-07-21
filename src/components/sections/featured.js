@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     margin: theme.spacing(1),
-    marginBottom: '6rem', 
+    marginBottom: '4rem', 
     maxWidth: '25rem', 
     '@media (max-width:600px)': {
       maxWidth: '15rem', 
@@ -46,8 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     background:'var(--card-bg)',
-    borderRadius: '1.5rem',
-    border: 'none',
+    borderRadius: '1rem',
     color: 'var(--secondary-text-color)',
     '@media (max-width:600px)': {
       textAlign: 'center',
@@ -56,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(2, 3.5), 
+      padding: theme.spacing(3, 3.), 
     }
   },
   subtitle: {
@@ -125,9 +124,9 @@ const Featured = () => {
   return (
     <Container style={{paddingTop: '6rem'}}>
       <div className={classes.heading}>
-        <Typography className={classes.headingTitle} gutterBottom>Featured And Notable Projects</Typography>
+        <Typography className={classes.headingTitle} gutterBottom>Featured Projects</Typography>
         <Typography className={classes.headingSubtitle} gutterBottom>Some of my most noteworthy projects and or contributions, at both large open source and enterprise level.</Typography>
-      </div>
+      </div> 
       <Grid container spacing={7}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12}>

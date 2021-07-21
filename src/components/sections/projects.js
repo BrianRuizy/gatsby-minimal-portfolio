@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     margin: theme.spacing(1),
-    marginBottom: '6rem', 
+    marginBottom: '4rem', 
     marginTop: '20rem', 
     maxWidth: '25rem', 
     '@media (max-width:600px)': {
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     color: 'var(--secondary-text-color)',
     background:'var(--card-bg)',
-    borderRadius: '8px',
+    borderRadius: '1rem',
   },
   subtitle: {
     fontWeight: '200',
