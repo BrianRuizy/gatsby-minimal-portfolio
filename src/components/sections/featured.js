@@ -55,13 +55,13 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(3, 3.), 
+      padding: theme.spacing(3, 3), 
     }
   },
   subtitle: {
     fontWeight: '200',
     margin: theme.spacing(2, 'auto'),
-    color: 'var(--secondary-text-color)',
+    color: 'var(--secondary-color)',
   },
   title: {
     fontSize: '2.5rem',
@@ -74,9 +74,11 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   desc: {
+    color: 'var(--secondary-text-color)',
     fontSize: '1.25rem',
     '@media (max-width:600px)': {
       fontSize: 'initial',
+      padding: theme.spacing(0, 1.5), 
     }
   },
   actions: {

@@ -7,7 +7,7 @@ date: 2020-09-14
 name: PeriShip PeriPharma
 title: This client-facing software is used to support hundreds of thousands of time-sensitive shipments.
 category: Enterprise
-description: 'This software is used to support thousands of shipments including perishables, pharmaceuticals, and more.'
+description: 'This software is used to support thousands of shipments including perishables, pharmaceuticals'
 tags:
   - Python
   - Django

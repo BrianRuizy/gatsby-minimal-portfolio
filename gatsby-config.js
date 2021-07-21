@@ -61,7 +61,7 @@ module.exports = {
         short_name: `BR Portfolio`,
         start_url: `/`,
         background_color: `#fafafa`,
-        theme_color: `#057ae0`,
+        theme_color: `#90b3f4`,
         display: `standalone`,
         icon: "src/images/icon.png",
         icons : [

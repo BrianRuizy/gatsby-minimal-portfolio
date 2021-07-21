@@ -84,7 +84,7 @@ export default function Template({
   const { frontmatter, html, timeToRead } = markdownRemark
   return (
     <ThemeProvider theme={theme}>
-      <style>{'body { background-color: var(--background); }'}</style>
+      <style>{'body { background-color: var(--background-secondary); }'}</style>
       <Layout>
         <Helmet>
           <title>{frontmatter.name} | by {siteMetadata.home.name} | {frontmatter.date}</title>

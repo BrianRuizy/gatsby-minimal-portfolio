@@ -49,9 +49,9 @@ body.dark {
   --primary-text-color: #f5f5f7;
   --secondary-color: #707070;
   --secondary-text-color: #c9c9c9;
-  --tertiary-color: #141414;
+  --tertiary-color: #181818;
   --background: #000;
-  --background-secondary: #050505;
+  --background-secondary: #111111;
   --site-header: var(--background);
   --card-bg: #212124;
   --bottom-nav-bg: #323236;
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, p, a  {
   img { 
     margin: 2.5rem auto;
     background: var(--tertiary-color);
-    border-radius: 1rem;
+    border-radius: 10px;
     @include respond-to(phone) { margin: 2rem auto; }
 
   }
