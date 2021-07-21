@@ -15,10 +15,9 @@ tags:
   - Docker
 
 ---
+> Brian worked for CAMS over the course of about a year while he was finishing up his studies. We hired him specifically to support the development of a new AWS-hosted application, called CAMS E-TRaC, that we were rolling out to some of our private equity clients. Rick Knauth
 
 Pretty awesome. Our software (E-TRaC) monitored terabytes of real-time and forecasted data such as **system conditions** and **price reports** from multiple energy projects like conventional power plants, to renewable energy sources like wind farms. The goal of the platform was to effectively consolidate all the data that was being collected and have the available data visualizations at any given moment. This was found to be very valuable for providing insights into the data to the clients of the company, and internal asset managers who could use it for statistical analysis.
-
-> Brian worked for CAMS over the course of about a year while he was finishing up his studies. We hired him specifically to support the development of a new AWS-hosted application, called CAMS E-TRaC, that we were rolling out to some of our private equity clients. Rick Knauth
 
 ![Picture with the team](/assets/cams/a32be449-5f55-430d-a39d-d8d8ea13400b.jpeg)
 <figcaption>Josh Bryant (Director of Engineering), ME, and Rick Knauth (VP of asset management)</figcaption>
