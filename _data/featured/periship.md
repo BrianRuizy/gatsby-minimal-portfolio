@@ -5,7 +5,7 @@ mockup: /assets/periship/mockup.png
 thumbnail: 'https://images.unsplash.com/photo-1565891741441-64926e441838?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80'
 date: 2020-09-14
 name: PeriShip PeriPharma
-title: This client-facing software is used to support thousands of time-sensitive shipments.
+title: This client-facing software is used to support hundreds of thousands of time-sensitive shipments.
 category: Enterprise
 description: 'This software is used to support thousands of shipments including perishables, pharmaceuticals, and more.'
 tags:

@@ -33,10 +33,6 @@ When I started this side project the goal of this project was not to add to the 
 
 A large portion of the data we comes from one of the original data repositories tracking COVID-19 cases, Johns Hopkins University: [CSSE](https://github.com/CSSEGISandData/COVID-19) 2019-ncov data repository. Additional data collected from  Our World in Data: [OWID](https://ourworldindata.org/)'s GitHub data [repository](https://github.com/owid/covid-19-data/tree/master/public/data). Lastly, to fill in some requirements we retrieved data for daily cases from New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data).
 
-
-![covid-2](/assets/covid/site-visits.png)
-<figcaption>Web traffic of the site</figcaption>
-
 ## Technology
 
 This project began with some very simple Python + Pandas private Jupyter notebooks, and the use of [Plotly](https://plotly.com/), "the leading front-end for ML & data science models in Python, R, and Julia." [Django](https://www.djangoproject.com/). But we needed a way for this to be accessible to the public therefore I started using the Django Python web-framework, Django is a high-level Web framework that encourages rapid development and clean, pragmatic design. To bootstrap the initial dashboard grid we used [Appseed](https://appseed.us/) and [Bootstrap 4](https://getbootstrap.com/) to fill-in where we needed custom UI elements.
@@ -100,3 +96,6 @@ Date
 ## Deployment
 
 Heroku app is already configured to this repository for *automatic deploys* from any push to the **master** branch. Create a pull request containing your respective changes and wait for merge, where there is also a hybrid of Travis CI and Heroku CI in place for checking and testing changes in pull requests.
+
+![covid-2](/assets/covid/site-visits.png)
+<figcaption>Web traffic</figcaption>

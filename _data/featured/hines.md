@@ -2,12 +2,12 @@
 template: BlogPost
 path: /hines
 mockup: /assets/hines/mockup.png
-thumbnail: 'https://images.pexels.com/photos/2021236/pexels-photo-2021236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+thumbnail: 'https://images.unsplash.com/photo-1585144235938-fb43f11b3a3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
 github: https://github.com/BrianRuizy/covid19-dashboard
 demo: https://ncov-dashboard.herokuapp.com/
 date: 2021-05-15
 name: Hines Interests L.P.
-title: 'Developing innovative real-estate investments management solutions.'
+title: 'Developing innovative commercial real-estate investments solutions.'
 category: Enterprise
 description: 'Critical applications which assist the management of $81.7 Billion of assets and investments across the globe.'
 tags:
@@ -17,16 +17,13 @@ tags:
   - Pandas
 ---
 
-Amet aliquam similique alias facilis commodi commodi ad et. Natus non itaque nostrum fugit est. Ut dolores mollitia vel. Delectus aut corporis modi autem assumenda nobis unde.
+> Qui optio tempora voluptatum quis accusantium debitis mollitia adipisci. Aut beatae quibusdam tenetur quo ipsam facere laboriosam. Dolore hic non qui ea ipsam. Debitis voluptatum esse eius aperiam pariatur porro nobis. Commodi velit totam aut enim. Velit est debitis fugiat voluptatem a.  porro nobis. Commodi velit totam aut enim. Velit est debitis fugi
 
-> Qui optio tempora voluptatum quis accusantium debitis mollitia adipisci. Aut beatae quibusdam tenetur quo ipsam facere laboriosam. Dolore hic non qui ea ipsam. Debitis voluptatum esse eius aperiam pariatur porro nobis. Commodi velit totam aut enim. Velit est debitis fugiat voluptatem a.
+Amet aliquam similique alias facilis commodi commodi ad et. Natus non itaque nostrum fugit est. Ut dolores mollitia vel. Delectus aut corporis modi autem assumenda nobis unde.Amet aliquam similique alias facilis commodi commodi ad et. Natus non itaque nostrum fugit est. Ut dolores mollitia vel. Delectus aut corporis modi autem assumenda nobis unde.  Natus non itaque nostrum fugit est. Ut dolores mollitia vel. Delectus aut corporis modi autem assumenda nobis unde.
 
-Vel excepturi culpa fuga possimus. Veniam similique maxime distinctio ea assumenda fuga minima aut. Omnis consectetur repellendus dolorum. Aperiam est eligendi tenetur facere. Magni repellendus fugiat quia asperiores error voluptates neque magni.
-
+![3 devices](/assets/hines/GDH 3 devices.png)
 ![3 devices](/assets/hines/light.png)
 ![floating devices](/assets/hines/floating tablet and mobile.png)
-![3 devices](/assets/hines/GDH 3 devices.png)
-
 
 Corrupti dolorem aut atque repudiandae exercitationem accusamus. Similique velit sit aut facere omnis. Aperiam enim non sed est corporis molestiae non voluptatibus.
 
