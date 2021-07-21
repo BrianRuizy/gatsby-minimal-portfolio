@@ -53,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '800',
     maxWidth: '95%',
     '@media (max-width:768px)': {
-      fontSize: '1.75rem'
+      fontSize: '1.75rem',
+      maxWidth: '98%',
     }
   },
   thumbnail: {
@@ -84,7 +85,7 @@ export default function Template({
   const { frontmatter, html, timeToRead } = markdownRemark
   return (
     <ThemeProvider theme={theme}>
-      <style>{'body { background-color: var(--background-secondary); }'}</style>
+      <style>{'body { background-color: var(--background); }'}</style>
       <Layout>
         <Helmet>
           <title>{frontmatter.name} | by {siteMetadata.home.name} | {frontmatter.date}</title>
