@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1, 0),
     },
-    marginTop: '10rem',
+    marginTop: '12rem',
     '@media (max-width:768px)': {
       marginTop: '2rem',
     }
@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '0'
   },
   postMeta: {
-    color: 'var(--primary-text-color)',
-    fontSize: '1.125rem',
+    color: 'var(--secondary-text-color)',
+    fontSize: '1.25rem',
     '@media (max-width:768px)': {
       fontSize: '1rem'
     }
@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '1rem',
     fontSize: '2.5rem',
     fontWeight: '800',
+    maxWidth: '95%',
     '@media (max-width:768px)': {
       fontSize: '1.75rem'
     }
@@ -83,6 +84,7 @@ export default function Template({
   const { frontmatter, html, timeToRead } = markdownRemark
   return (
     <ThemeProvider theme={theme}>
+      <style>{'body { background-color: var(--background); }'}</style>
       <Layout>
         <Helmet>
           <title>{frontmatter.name} | by {siteMetadata.home.name} | {frontmatter.date}</title>

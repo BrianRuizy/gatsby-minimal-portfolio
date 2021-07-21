@@ -26,7 +26,7 @@ else if (hour === 23 || hour < 5)
 const useStyles = makeStyles((theme) => ({
   buttons: {
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(1.25),
     },
   },
   heroSection: {
@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   hero: {
     textAlign: 'center',
-    padding: theme.spacing('30vh', 0),
+    padding: theme.spacing('20vh', 0, '30vh'),
   },
    greeting: {
     fontWeight: '800',
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     lineHeight: '1.25',
     marginBottom: theme.spacing(2),
     '@media (max-width:600px)': {
@@ -49,10 +49,10 @@ const useStyles = makeStyles((theme) => ({
   summary: {
     color: 'var(--secondary-text-color)',
     display: 'inline-block',
-    fontSize: '1.75rem',
+    fontSize: '1.5rem',
     lineHeight: '1.5',
     marginBottom: '1rem',
-    maxWidth: '35rem',
+    maxWidth: '30rem',
     '@media (max-width:600px)': {
       maxWidth: '22rem', 
       fontSize: '1.125rem',

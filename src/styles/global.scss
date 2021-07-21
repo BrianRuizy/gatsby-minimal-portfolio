@@ -46,10 +46,10 @@ body.light {
 }
 body.dark {
   --primary-color: #90b3f4;
-  --primary-text-color: #f1f1f1;
+  --primary-text-color: #f5f5f7;
   --secondary-color: #707070;
-  --secondary-text-color: #b2b2b6;
-  --tertiary-color: #2c2c2f;
+  --secondary-text-color: #c9c9c9;
+  --tertiary-color: #141414;
   --background: #000;
   --background-secondary: #050505;
   --site-header: var(--background);
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, p, a  {
   img { 
     margin: 2.5rem auto;
     background: var(--tertiary-color);
-    border-radius: 8px;
+    border-radius: 1rem;
     @include respond-to(phone) { margin: 2rem auto; }
 
   }
