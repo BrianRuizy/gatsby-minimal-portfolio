@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
+    borderTop: '1px solid var(--tertiary-color)',
     background: '#000',
     marginTop: '10rem',
     '& a': { 
