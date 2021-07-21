@@ -78,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.25rem',
     '@media (max-width:600px)': {
       fontSize: 'initial',
-      padding: theme.spacing(0, 1.5), 
     }
   },
   actions: {
