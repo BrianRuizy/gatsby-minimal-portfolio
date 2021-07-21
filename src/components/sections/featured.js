@@ -141,7 +141,7 @@ const Featured = () => {
                   <Typography className={classes.desc} variant="body1" paragraph>{node.frontmatter.description}</Typography>
                   <div className={classes.actions}>
                     <Button color="inherit" variant="outlined" href={node.frontmatter.path} className={classes.cardCTA}>
-                      Read More
+                      Read blog
                     </Button>
                     {node.frontmatter.github && (
                       <IconButton color="inherit" href={node.frontmatter.github}>
