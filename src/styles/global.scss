@@ -51,10 +51,10 @@ body.dark {
   --secondary-text-color: #c9c9c9;
   --tertiary-color: #181818;
   --background: #000;
-  --background-secondary: #040404;
+  --background-secondary: #0f0f0f;
   --site-header: var(--background);
-  --card-bg: #151516;
-  --bottom-nav-bg: #040404;
+  --card-bg: #1d1d1d;
+  --bottom-nav-bg: #0a0a0a;
   --code-bg: #151516;
 }
 $theme-transition:   
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, p, a  {
   }
   ol, ul { padding-left: 1rem; }
   blockquote {
-    margin: 2.5rem 2rem;
+    margin: 2.5rem 1.25rem;
     padding: 0 1em;
     border-left: .25em solid var(--tertiary-color);
     p { font-weight: 200; }

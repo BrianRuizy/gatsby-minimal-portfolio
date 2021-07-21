@@ -7,7 +7,7 @@ date: 2020-03-01
 name: CAMS ETRaC
 title: What was it like to help develop a fintech energy data-analytics SaaS? 
 category: Enterprise
-description: 'A robust and modern midstream-energy data monitoring application. Built with Python on AWS.'
+description: 'Robust and modern energy data-monitoring application. Built with Python on Amazon AWS.'
 tags:
   - Python
   - Flask
