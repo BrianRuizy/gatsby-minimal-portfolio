@@ -19,10 +19,31 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  header: {
-    marginBottom: '1.125rem',
-    textAlign: 'center',
-    color: 'var(--secondary-color)',
+  heading: {
+    margin: theme.spacing(1),
+    marginBottom: '6rem', 
+    marginTop: '20rem', 
+    maxWidth: '25rem', 
+    '@media (max-width:600px)': {
+      maxWidth: '15rem', 
+      marginTop: '12.5rem', 
+      
+    },
+  },
+  headingTitle: {
+    color: 'var(--secondary-text-color)',
+    fontSize: '2.125rem',
+    fontWeight: '800',
+    lineHeight: '1.25',
+    '@media (max-width:600px)': {
+      maxWidth: '13rem', 
+    },
+  },
+  headingSubtitle: {
+    fontSize: '1.25rem',
+    lineHeight: '1.5',
+    fontWeight: '700',
+    color: 'var(--secondary-color)', 
   },
   card: {
     color: 'var(--secondary-text-color)',
@@ -75,9 +96,11 @@ const Projects = () => {
   `)
   return( 
     <Container component={Box} mt={15}>
-      <div className={classes.header}>
-        <p>More noteworthy projects &darr;</p>
+      <div className={classes.heading}>
+        <Typography className={classes.headingTitle} gutterBottom>Misc. Projects</Typography>
+        <Typography className={classes.headingSubtitle} gutterBottom>Additional hobbyist projects done in spare time, or just for the fun</Typography>
       </div>
+
       <Grid container spacing={3}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12} md={6} lg={4}>

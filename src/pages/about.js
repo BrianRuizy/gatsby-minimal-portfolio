@@ -7,17 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import Badge from "react-bootstrap/Badge"
 
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip';
 
 const AboutPage = ({
   data: {
@@ -44,40 +34,6 @@ const AboutPage = ({
             <p>{site.siteMetadata.home.role}</p>
           </Col>
         </Row>
-        {/* <Row >
-          <Col xs={12} md={5} className="blog-post-content mb-5">
-            <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
-            <h2>Technologies</h2>
-            <p>The following are some of the langauges or frameworks I've used in either professional environments or hobby side projects.</p>
-            <div className="chips">
-              { markdownRemark.frontmatter.technologies.map((tech, index) =>
-                <Chip key={index} variant="secondary" label={tech}/>
-              )}
-            </div>
-          </Col>
-          <Col xs={12} md={7}>
-            <Timeline align="right">
-              {allMarkdownRemark.edges.map(({ node }) => (
-                <TimelineItem key={node.id}>
-                  <TimelineOppositeContent>
-                    <Typography>{node.frontmatter.company}</Typography>
-                    <Typography color="textSecondary">
-                      <span dangerouslySetInnerHTML={{ __html: node.html }}></span>
-                    </Typography>
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot variant="outlined"/>
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent style={{flex: '.60'}}>
-                  <Typography>{node.frontmatter.role}</Typography>
-                    <Typography color="textSecondary" variant="body2">{node.frontmatter.date}</Typography>
-                  </TimelineContent>
-                </TimelineItem>
-              ))}
-            </Timeline>
-          </Col>
-        </Row> */}
       </Container>
     </Layout>
   )

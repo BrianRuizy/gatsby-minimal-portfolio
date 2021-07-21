@@ -9,7 +9,6 @@ import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import Button from '@material-ui/core/Button';
 
 import Typography from '@material-ui/core/Typography';
@@ -22,11 +21,34 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
-  card: {
+  heading: {
+    margin: theme.spacing(1),
+    marginBottom: '6rem', 
+    maxWidth: '25rem', 
+    '@media (max-width:600px)': {
+      maxWidth: '15rem', 
+    },
+  },
+  headingTitle: {
     color: 'var(--secondary-text-color)',
-    borderRadius: '8px',
+    fontSize: '2rem',
+    fontWeight: '800',
+    lineHeight: '1.25',
+    '@media (max-width:600px)': {
+      maxWidth: '13rem', 
+    },
+  },
+  headingSubtitle: {
+    fontSize: '1.25rem',
+    lineHeight: '1.5',
+    fontWeight: '700',
+    color: 'var(--secondary-color)', 
+  },
+  card: {
     background:'var(--card-bg)',
-    boxShadow: 'rgba(17, 12, 46, 0.05) 0px 10px 100px 0px',
+    borderRadius: '1.5rem',
+    border: 'none',
+    color: 'var(--secondary-text-color)',
     '@media (max-width:600px)': {
       textAlign: 'center',
     },
@@ -34,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   cardContent: {
     padding: theme.spacing(0, 8), 
     '@media (max-width:600px)': {
-      padding: theme.spacing(2, 3.25), 
+      padding: theme.spacing(2, 3.5), 
     }
   },
   subtitle: {
@@ -43,18 +65,19 @@ const useStyles = makeStyles((theme) => ({
     color: 'var(--secondary-text-color)',
   },
   title: {
-    fontSize: '2.25rem',
+    fontSize: '2.5rem',
     fontWeight: '800',
     color: 'var(--primary-text-color)',
     lineHeight: '1.2',
     '@media (max-width:600px)': {
-      padding: theme.spacing(0, 2.5)
+      padding: theme.spacing(0, 3),
+      fontSize: '2.25rem',
     }
   },
   desc: {
     fontSize: '1.25rem',
     '@media (max-width:600px)': {
-      fontSize: 'initial'
+      fontSize: 'initial',
     }
   },
   actions: {
@@ -100,7 +123,11 @@ const Featured = () => {
     }
   `)
   return (
-    <Container>
+    <Container style={{paddingTop: '6rem'}}>
+      <div className={classes.heading}>
+        <Typography className={classes.headingTitle} gutterBottom>Featured And Notable Projects</Typography>
+        <Typography className={classes.headingSubtitle} gutterBottom>Some of my most noteworthy projects and or contributions, at both large open source and enterprise level.</Typography>
+      </div>
       <Grid container spacing={7}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Grid key={node.id} item xs={12}>

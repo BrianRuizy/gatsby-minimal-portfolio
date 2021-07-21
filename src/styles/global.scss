@@ -37,7 +37,7 @@ body.light {
   --secondary-text-color: #2c2c2e;
   --tertiary-color: #f2f2f2;
   --background: #fff;
-  --background-gradient: linear-gradient(180deg, var(--background) 92%, #e3e6eb);
+  --background-secondary: #f5f5f7;
   --site-header: var(--background);
   --card-bg: #fff;
   --bottom-nav-bg: #fff;
@@ -50,10 +50,10 @@ body.dark {
   --secondary-color: #707070;
   --secondary-text-color: #b2b2b6;
   --tertiary-color: #2c2c2f;
-  --background: #050505;
-  --background-gradient: linear-gradient(180deg, var(--background) 92%, #2b2b31);
+  --background: #000;
+  --background-secondary: #050505;
   --site-header: var(--background);
-  --card-bg: #151516;
+  --card-bg: #212124;
   --bottom-nav-bg: #323236;
   --code-bg: #212124;
 }
@@ -63,10 +63,9 @@ $theme-transition:
   border-color .5s ease-in-out, 
   box-shadow .5s ease-in-out
 ;
-/* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family;
-  background: var(--background-gradient);
+  background: var(--background-secondary);
   color: var(--primary-text-color);
 }
 h1 { font-weight: 800; }
@@ -75,21 +74,11 @@ h1, h2, h3, h4, h5, p, a  {
 }
 .container { 
   margin: 8rem auto;
-  max-width: 1200px;
   @include respond-to(tablet){ margin: 4rem auto 5rem auto; }
   @include respond-to(phone){ margin: 2rem auto 4rem auto; }
 }
 .hero-header {
-  text-align: center;
-  margin: 18rem 0 12rem;
-  @include respond-to(phone) { margin: 10rem 0; }
-  h1 {
-    font-weight: 800;
-    margin-bottom: 1.25rem;
-    @include font-size(2.50rem);
-    @include respond-to(tablet) { font-size: 2.25rem; }
-    @include respond-to(phone) { font-size: 2.125rem; }
-  }
+
   p {
     margin-bottom: 1.5rem;
     color: var(--secondary-text-color);
@@ -178,14 +167,16 @@ h1, h2, h3, h4, h5, p, a  {
   color: var(--primary-text-color);
   @include respond-to(phone) { font-size: 14px; }
 }
-.site-footer {
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: #666;
-  text-align: center;
-  margin: 12rem 0 3rem;
-  & a { color: var(--primary-color); }
-}
+// .site-footer {
+//   padding: 4rem 0 2rem;
+//   font-size: 1.125rem;
+//   font-weight: 400;
+//   color: #a1a1a1;
+//   text-align: center;
+//   margin: 12rem 0 0;
+//   background: #000;
+//   & a { color: var(--primary-color); }
+// }
 // theme-changer
 .theme-changer { display: none; }
 .moon, .sun {  color: var(--secondary-color); }
