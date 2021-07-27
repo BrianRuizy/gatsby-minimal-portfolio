@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-Latest version of my portfolio <a href="https://brianruizy.com">website</a>,
- modernized with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+Blog style portfolio <a href="https://gatsby-minimal-portfolio.netlify.app/">website</a>,
+ created with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
  </br>Carefully designed to be minimal and content focused. Don't forget to leave a star ⭐!
 </p>
 <p align="center">
@@ -100,7 +100,7 @@ This site's Web design was made possible thanks to these awesome packages / plug
 
 | Function | Package + Link |
 | ------------- | ---------- |
-| UI Library | [react-bootstrap](https://react-bootstrap.github.io/) |
+| UI Library | [react-bootstrap](https://react-bootstrap.github.io/) / MaterialUI|
 | Dark Mode | [gatsby-plugin-dark-mode](https://www.gatsbyjs.com/plugins/gatsby-plugin-dark-mode/) |
 | Syntax Highlighting | [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/?=prismjs) |
 | UI element(s) | [react-bottom-drawer](https://www.npmjs.com/package/react-bottom-drawer) |
